@@ -359,10 +359,10 @@ export const contacts = [
 ]
 
 // Descriptions of types of builds the portfolio owner can perform
-export const builds = ["Dynamic and responsive websites, and full-stack applications (MERN, Spring/React).", "Custom solutions using various programming languages.", "3D visualizations with Three.js.", "Command-line tools and utilities."]
+export const builds = ["KET Academy (An e-learning platform for secondary and high school students in Africa)", "My Portfolio website (2-one with HTML, CSS and Javascript and another with Typescript)", "Expense Tracker", "AI Customer Support", "AI Flashcards", "IoT recommendation framework"]
 
 // Hobbies of the portfolio owner
-export const hobbies = ['Watching: [YouTube, Series(Crime/FBI movie type), Documentaries].', 'Reading.', "Listening to Podcast", "Playing Chess", "Learning Piano"]
+export const hobbies = ['Watching: [YouTube, Series(Crime/FBI movie type), Documentaries].', 'Reading.', "Listening to Podcast (Diary of a CEO)", "Playing Chess", "Learning Piano"]
 
 // Blog posts available on the portfolio site
 export const posts: Post[] = [

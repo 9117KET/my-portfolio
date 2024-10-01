@@ -44,7 +44,7 @@ export default function AboutMe() {
                 
                 {/* Section on capabilities */}
                 <div className="mt-8">
-                    <p className="pl-0 md:pl-6 text-base sm:text-lg dark:text-gray-300"><span className="text-blue-800">|</span> What am I able to build?</p>
+                    <p className="pl-0 md:pl-6 text-base sm:text-lg dark:text-gray-300"><span className="text-blue-800">|</span> What I have been able to build so far?</p>
                     <ul className="pl-5 sm:pl-10 md:pl-20 mt-4 space-y-2 text-base sm:text-lg dark:text-gray-300">
                         {
                             builds.map((build, key) => (
