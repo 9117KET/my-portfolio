@@ -44,7 +44,11 @@ export default function AboutMe() {
                 
                 {/* Section on capabilities */}
                 <div className="mt-8">
-                    <p className="pl-0 md:pl-6 text-base sm:text-lg dark:text-gray-300"><span className="text-blue-800">|</span> What I have been able to build so far?</p>
+                    <div className="relative flex py-5 items-center">
+                        <div className="flex-grow border-t border-gray-400"></div>
+                        <span className="text-xl sm:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-800">{`>`}</span> What I have been able to build so far?</span>
+                        <div className="flex-grow border-t border-gray-400"></div>
+                    </div>
                     <ul className="pl-5 sm:pl-10 md:pl-20 mt-4 space-y-2 text-base sm:text-lg dark:text-gray-300">
                         {
                             builds.map((build, key) => (
@@ -55,6 +59,7 @@ export default function AboutMe() {
                 </div>
 
                 {/* Current professional status */}
+                <p className="pl-0 md:pl-6 mt-8 text-base sm:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Assistant project manager for YouthTeamUp @ Constructor University</p>
                 <p className="pl-0 md:pl-6 mt-8 text-base sm:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Currently an incoming SWE Fellow @ Headstater AI.</p>
             </div>
         </div>
