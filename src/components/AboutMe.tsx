@@ -1,4 +1,6 @@
 import { builds, hobbies } from "../utils/constants";
+import profileImage from "../utils/images/28-removebg-preview.png";
+
 export default function AboutMe() {
     return (
         <div className="mt-5 mb-[-2%] p-4 sm:p-8 dark:text-gray-300 font-mono">
@@ -17,7 +19,7 @@ export default function AboutMe() {
                 </div>
                 {/* Image container */}
                 <div className="flex justify-center items-center">
-                    <img src="/src/utils/images/28-removebg-preview.png" alt="Kinlo Ephriam Tangiri" 
+                    <img src={profileImage} alt="Kinlo Ephriam Tangiri" 
                         className="w-full sm:w-3/4 md:w-full lg:w-3/4 xl:w-2/3 h-auto" />
                 </div>
             </div>
