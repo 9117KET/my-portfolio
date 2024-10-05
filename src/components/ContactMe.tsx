@@ -9,10 +9,13 @@ export default function ContactMe() {
         <div className="flex-grow border-t border-gray-400"></div>
         </div>
 
-        <ul className="pl-20 mt-4 flex space-x-4 text-lg dark:text-gray-300">
+        <ul className="pl-20 mt-4 flex space-x-4 text-lg dark:text-gray-300 flex-wrap justify-center">
         {
             contacts.map((contact) => (
-            <li key={contact.id}><span className="text-blue-800">{'>'}</span> <a href={contact.link}>{contact.name}</a></li>
+            <li key={contact.id} className="inline-block hover:bg-gray-200 rounded-md transition duration-300 ease-in-out mx-2">
+                <span className="text-blue-800">{'>'}</span>
+                <a href={contact.link} className="hover:text-blue-500">{contact.name}</a>
+            </li>
             ))
         }
         </ul>

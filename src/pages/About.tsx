@@ -7,7 +7,7 @@ import styles from "../utils/style";
 export default function About() {
   // Define the About component
   return (
-    <div className='dark:bg-[#2D2E32] min-h-screen'> {/* Set dark background and minimum screen height */}
+    <div className='dark:bg-[#2D2E32] min-h-screen overflow-hidden'> {/* Set dark background and minimum screen height */}
       <Helmet>
         <title>Kinlo Ephriam Tangiri</title> {/* Set the page title */}
       </Helmet>
