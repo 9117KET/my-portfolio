@@ -1,4 +1,4 @@
-import { builds, hobbies } from "../utils/constants";
+import { builds, hobbies, cvLink } from "../utils/constants"; 
 import profileImage from "../utils/images/28-removebg-preview.png";
 
 export default function AboutMe() {
@@ -13,14 +13,21 @@ export default function AboutMe() {
                         after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-blue-500" >Kinlo-Ephriam-Tangiri</h1>
                     <h2 className="text-xl sm:text-xl md:text-2xl mt-2">Tech Enthusiast & Student Entrepreneur</h2>
                     {/* Introduction list */}
-                    <ul className="list-disc pl-5 text-sm mt-4">
+                    <ul className="list-disc pl-5 text-sm mt-4 font-mono">
                         <li>Hello! I'm Kinlo, often referred to as "Professor." I'm pursuing a major in Computer Science and a minor in Data Science with an elective in Artificial Intelligence and Machine Learning at Constructor University, Bremen, Germany. I have a passion for educational technology. I actively share my knowledge on various social media platforms especially on LinkedIn</li>
                     </ul>
+                    {/* My CV button */}
+                    <p className="mt-4"> 
+                        <a href={cvLink} target="_blank" 
+                           className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition duration-300 ease-in-out shadow-lg">
+                            View My CV
+                        </a>
+                    </p>
                 </div>
                 {/* Image container */}
                 <div className="flex justify-center items-center">
                     <img src={profileImage} alt="Kinlo Ephriam Tangiri" 
-                        className="w-full sm:w-2/3 md:w-full lg:w-3/4 xl:w-2/3 h-auto" />
+                        className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 h-auto" />
                 </div>
             </div>
             <div className="mt-10">

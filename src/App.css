@@ -12,9 +12,24 @@ body {
   overflow-x: hidden;
 }
 
+.some-class {
+    width: 100%; /* Set width once as it does not change */
+}
+
 @media (max-width: 768px) {
     .some-class {
         padding: 10px;
-        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .some-class {
+        padding: 20px; 
+    }
+}
+
+@media (max-width: 1200px) {
+    .some-class {
+        padding: 30px; 
     }
 }

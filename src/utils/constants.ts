@@ -26,6 +26,9 @@ export const navLinks = [
     },
 ]
 
+
+export const cvLink = "https://drive.google.com/file/d/1pxPH2RQwCY9KTOdQgWHcQEwiDcUjnsd9/view?usp=sharing"
+
 // Project details for the portfolio
 export const projects = [
     // Expenses Tracker project details
