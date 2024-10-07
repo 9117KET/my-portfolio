@@ -10,7 +10,8 @@ export default function AboutMe() {
                     {/* Main heading with typewriter and caret animations */}
                     <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold relative w-full md:w-[max-content] font-mono 
                         before:absolute before:inset-0 before:animate-typewriter before:bg-white before:dark:bg-[#2D2E32] 
-                        after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-blue-500">Kinlo-Ephriam-Tangiri</h1>
+                        after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-blue-500
+                        sm:before:w-[calc(100% + 0.125em)]">Kinlo-Ephriam-Tangiri</h1>
                     <h2 className="text-xl sm:text-xl md:text-2xl mt-2">Tech Enthusiast & Student Entrepreneur</h2>
                     {/* Introduction list */}
                     <ul className="list-disc pl-5 text-sm mt-4 font-mono">

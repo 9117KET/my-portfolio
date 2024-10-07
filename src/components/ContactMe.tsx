@@ -9,7 +9,7 @@ export default function ContactMe() {
         <div className="flex-grow border-t border-gray-400"></div>
         </div>
 
-        <ul className="pl-20 mt-4 flex space-x-4 text-lg dark:text-gray-300 flex-wrap justify-center sm:flex-nowrap">
+        <ul className="mt-4 flex space-x-4 text-lg dark:text-gray-300 flex-wrap justify-center sm:flex-nowrap">
         {
             contacts.map((contact) => (
             <li key={contact.id} className="inline-block hover:bg-gray-200 rounded-md transition duration-300 ease-in-out mx-2 sm:mx-1">
