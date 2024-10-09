@@ -34,47 +34,77 @@ export const cvLink = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.car
 export const projects = [
     // Expenses Tracker project details
     {
+        id: "academy",
+        name: "KET Academy",
+        description: "KET Academy is an e-learning platform designed to provide academic resources to secondary and high school students, especially those affected by crises or natural disasters in Africa. The platform empowers students with educational technology skills and provides tailored resources to support their learning journey.",
+        github: "https://github.com/ket-academy/ketacademy",
+        features: [
+            "Resource Access: Tailored academic resources for students in crisis-affected regions.",
+            "Student Empowerment: Enhances students' skills with educational technology.",
+            "Crisis Support: Designed to assist students affected by crises or natural disasters.",
+            "Fully responsive and accessible across various devices and platforms."
+        ],
+        technologies: [
+            "React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"
+        ],
+        demo: "https://ket.academy/"
+    },
+
+    {
         id: "expenses",
         name: "Expenses Tracker",
         description: "Expense Tracker is a simple and efficient full stack web application that helps you keep track of your spending. With a user-friendly interface, you can easily log your expenses, categorize them, and see a detailed history. The app provides insights into your financial habits and helps you manage your budget effectively.",
         github: "https://github.com/9117KET/Expense_Tracker",
-        technologies: ["HTML 5", "Tailwind", "TypeScript", "React", "Node.js", "Express.js", "Firebase"],
-        features: ["User Authentication.", "Expenses Logging: Add new expenses with details such as date, category, description, and amount.", "Expenses Categories, History and Summary.", "Handy search and filter options", "Responsive Design"]
-    },
-    
-    {
-        id: "pantry",
-        name: "Inventory Management Application",
-        description: "Meet the Inventory Management App, your go-to tool for keeping your product inventory in check! With an easy-to-use interface, you can track, filter, and organize your products effortlessly.",
-        github: "https://github.com/oebelus/inventoryManager",
         features: [
-            "Product Management: Add, update, and delete products.",
-            "Inventory Tracking: Monitor product counts and expiration dates.",
-            "Category Filtering: Filter products by categories with case-insensitive search.",
-            "Fully responsive and compatible with all screen sizes!"
+            "User Authentication: Securely log in and manage your personal expenses.",
+            "Expenses Logging: Add new expenses with details such as date, category, description, and amount.",
+            "Expenses Categories, History, and Summary: View expenses based on categories and check summaries for better budget management.",
+            "Handy Search and Filter Options: Easily find specific expenses or categories with search and filter functionalities.",
+            "Responsive Design: Fully adaptable to different screen sizes and devices."
         ],
         technologies: [
-            "React", "TypeScript", "Tailwind CSS", "Java", "Spring Boot", "Hibernate", "MySQL"
+            "HTML 5", "Tailwind", "TypeScript", "React", "Node.js", "Express.js", "Firebase"
         ],
-        demo: "https://youtu.be/mrS1Cxl2RDE"
+        demo: "https://example.com/demo"
     },
+
 
     {
         id: "assistantai",
         name: "AI Customer Assistant Bot",
-        description: "AssistantAi is an AI-powered customer assistant chatbot built with Java and Spring Boot. Designed to provide intelligent and adaptive customer service.",
-        github: "https://github.com/oebelus/AssistantAi",
+        description: "AssistantAI is an AI-powered customer assistant chatbot built with Java and Spring Boot. It is designed to provide intelligent and adaptive customer service, improving user experience and efficiency.",
+        github: "https://github.com/9117KET/aicustomersupport",
         features: [
             "Natural Language Processing (NLP): Understands and responds to customer queries in natural language.",
-            "Contextual Awareness.",
-            "Strict Information Provision within limitations.",
-            "Can be integrated with various platforms such as websites, mobile apps, and CRM systems.",
-            "Customizable and Scalable."
+            "Contextual Awareness: Maintains conversation context to provide relevant answers.",
+            "Strict Information Provision: Provides responses within set guidelines to ensure accuracy and relevance.",
+            "Platform Integration: Can be easily integrated with various platforms, such as websites, mobile apps, and CRM systems.",
+            "Customizable and Scalable: Easily adaptable to specific business needs and scalable to support growing customer bases."
         ],
         technologies: [
-             "Java", "Spring Boot", "MySQL", "Tailwind CSS", "Vanilla TypeScript", "OpenAI GPT", "Groq API"
+            "Java", "Spring Boot", "MySQL", "Tailwind CSS", "Vanilla TypeScript", "OpenAI GPT", "Groq API"
         ],
+        demo: "https://example.com/demo"
     },
+    {
+        id: "aiflashcard",
+        name: "AI Flashcard",
+        description: "AI Flashcard is an intelligent learning tool that uses AI to generate personalized flashcards for studying. This platform allows users to input topics and receive flashcards, multiple-choice questions, and videos tailored to their learning preferences, helping them retain information more effectively.",
+        github: "https://github.com/9117KET/AI-Flashcards",
+        features: [
+            "AI-Generated Flashcards: Automatically creates personalized flashcards based on user-inputted topics.",
+            "Multiple Learning Formats: Offers multiple-choice questions and videos in addition to flashcards.",
+            "Learning Progress Tracking: Keeps track of user progress and suggests areas for improvement.",
+            "Customizable Flashcards: Allows users to edit and organize their flashcards for better retention.",
+            "Responsive Design: Fully responsive and optimized for various devices and platforms."
+        ],
+        technologies: [
+            "React", "Node.js", "Express.js", "Tailwind CSS", "Firebase", "OpenAI API"
+        ],
+        demo: "https://example.com/demo"
+    },
+    
+
 ]
 
 // Experience details for the portfolio
@@ -184,9 +214,9 @@ export const builds = [
 
 // Hobbies of the portfolio owner
 export const hobbies = [
-    'Watching: [YouTube, Series(Crime/FBI movie type), Documentaries].', 
-    'Reading.', 
-    "Listening to Podcast (Diary of a CEO)", 
+    'Watching: [Documentaries, YouTube, Series(Crime/FBI movie type)].', 
+    'Reading, tech articles or self development books', 
+    "Listening to Podcast (Mostly Diary of a CEO by Steven Bartlett or Huberman Lab by Andrew Huberman)", 
     "Playing Chess", 
     "Playing Table Tennis",
     "Learning How to play Piano"]
