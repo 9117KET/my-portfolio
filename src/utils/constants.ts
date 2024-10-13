@@ -36,7 +36,7 @@ export const projects = [
     {
         id: "academy",
         name: "KET Academy",
-        description: "KET Academy is an e-learning platform designed to provide academic resources to secondary and high school students, especially those affected by crises or natural disasters in Africa. The platform empowers students with educational technology skills and provides tailored resources to support their learning journey.",
+        description: "KET Academy is an e-learning platform designed to provide academic resources to secondary and high school students, especially those affected by crises or natural disasters in Africa. The platform also empowers youths (ambassadors) with educational technology skills and provides tailored resources to support their learning journey.",
         github: "https://github.com/ket-academy/ketacademy",
         features: [
             "Resource Access: Tailored academic resources for students in crisis-affected regions.",
@@ -112,14 +112,16 @@ export const experience = [
     {
         id: "exp1",
         role: "Software Engineer",
-        company: "Tech Solutions Inc.",
-        duration: "Jan 2019 - Present",
+        company: "Waziup e.V.",
+        duration: "May 2024 - August 2024",
         responsibilities: [
-            "Develop and maintain web applications using React and Node.js.",
-            "Lead the integration of backend services with modern front-end frameworks.",
-            "Collaborate with cross-functional teams to define, design, and ship new features.",
-            "Implement performance and stability monitoring tools to enhance application efficiency."
-        ]
+            "Collaborated with the RnD hybrid workgroup to build a multipurpose recommendation framework.",
+            "Contributed to both front-end and back-end development for IoT applications.",
+            "Worked with an international team to develop DIY IoT solutions for African entrepreneurs.",
+            "Assisted in creating innovative, affordable, and adaptable IoT solutions for emerging markets.",
+            "Participated in training initiatives and provided cloud support for IoT-based applications."
+        ],
+        companyDescription: "Waziup e.V. is an IoT-focused organization promoting cutting-edge technologies and capacity building in emerging countries. They develop affordable, adaptable, and end-to-end IoT solutions, focusing on empowering 'glocal' (global and local) IoT entrepreneurs."
     },
     {
         id: "exp2",
@@ -127,11 +129,13 @@ export const experience = [
         company: "Innovative Startups LLC",
         duration: "Aug 2016 - Dec 2018",
         responsibilities: [
-            "Assisted in the development of mobile applications using Flutter and Dart.",
-            "Participated in daily scrum meetings to discuss project progress and roadblocks.",
-            "Contributed to the design and implementation of API services.",
-            "Performed unit and integration testing to ensure software quality."
-        ]
+            "Collaborated with the RnD hybrid workgroup to build a multipurpose recommendation framework.",
+            "Contributed to both front-end and back-end development for IoT applications.",
+            "Worked with an international team to develop DIY IoT solutions for African entrepreneurs.",
+            "Assisted in creating innovative, affordable, and adaptable IoT solutions for emerging markets.",
+            "Participated in training initiatives and provided cloud support for IoT-based applications."
+        ],
+        companyDescription: "Waziup e.V. is an IoT-focused organization promoting cutting-edge technologies and capacity building in emerging countries. They develop affordable, adaptable, and end-to-end IoT solutions, focusing on empowering 'glocal' (global and local) IoT entrepreneurs."
     }
 ]
 

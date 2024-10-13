@@ -43,7 +43,7 @@ export default function Experiences() {
             <div className="flex flex-wrap justify-center mt-6">
               {roles.map(role => (
                 <button
-                  key={role} 
+                  key={role}
                   onClick={() => setSelectedRole(role)} 
                   className={`cursor-pointer text-sm border border-lightText dark:border-gray-500 rounded-lg m-1 px-2 py-1 transition-all duration-300 hover:bg-blue-800 dark:hover:bg-blue-900 ${selectedRole === role ? "bg-blue-800" : "bg-gray-100 dark:bg-gray-700"}`}
                   aria-label={`Filter experiences by ${role}`}
