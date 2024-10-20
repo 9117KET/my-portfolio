@@ -32,19 +32,19 @@ export default function Projects() {
         <div className={`${styles.boxWidth}`}>
           <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
             {/* Introduction text */}
-            <h3 className="text-xl dark:text-gray-300 text-black mb-5">
+            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">
               {`-> `}I mostly learn through working on projects. This approach helps me understand concepts better and keeps me motivated to build more because I am
-              actually seeing what I am building and if the I don't get to the end, I basically do not let it go.
+              actually seeing what I am building and if I don't get to the end, I basically do not let it go.
             </h3>
             {/* Divider with "My Projects" text */}
-            <div className="relative flex py-5 items-center">
+            <div className="relative flex py-3 md:py-5 items-center">
               <div className="flex-grow border-t border-gray-400"></div>
-              <span className="text-3xl font-semibold flex-shrink mx-4 text-gray-400">
+              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold flex-shrink mx-2 md:mx-4 text-gray-400">
                 <span className="text-blue-800">{`>`}</span> My Projects:
               </span>
               <div className="flex-grow border-t border-gray-400"></div>
             </div>
-            <h3 className="text-2xl">Here are some of my favourite projects that I have worked on:</h3>
+            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">Here are some of my favourite projects that I have worked on:</h3>
             
             {/* Language filter buttons */}
             <div className="flex flex-wrap justify-center mt-6">

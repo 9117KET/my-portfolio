@@ -8,13 +8,13 @@ export default function AboutMe() {
                 {/* Text container */}
                 <div>
                     {/* Main heading with typewriter and caret animations */}
-                    <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold relative w-full md:w-[max-content] font-mono 
+                    <h1 className="text-xl sm:text-3xl md:text-6xl font-bold relative w-full md:w-[max-content] font-mono 
                         before:absolute before:inset-0 before:animate-typewriter before:bg-white before:dark:bg-[#2D2E32] 
                         after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-blue-500
                         sm:before:w-[calc(100% + 0.125em)]">Kinlo-Ephriam-Tangiri</h1>
-                    <h2 className="text-xl sm:text-xl md:text-2xl mt-2">Tech Enthusiast & Student Entrepreneur</h2>
+                    <h2 className="text-sm sm:text-xl md:text-2xl mt-2">Tech Enthusiast & Student Entrepreneur</h2>
                     {/* Introduction list */}
-                    <ul className="list-disc pl-5 text-sm mt-4 font-mono">
+                    <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
                         <li>Hello! I'm Kinlo, often referred to as "Professor." I'm pursuing a major in Computer Science and a minor in Data Science with an elective in Artificial Intelligence and Machine Learning at Constructor University, Bremen, Germany. I have a passion for educational technology. I actively share my knowledge on various social media platforms especially on LinkedIn</li>
                     </ul>
                     {/* My CV button */}
@@ -39,7 +39,7 @@ export default function AboutMe() {
                         <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-500">{`>`}</span> My Projects</span>
                         <div className="flex-grow border-t border-gray-400"></div>
                     </div>
-                    <ul className="pl-5 sm:pl-10 md:pl-20 mt-4 space-y-2 text-base sm:text-base md:text-lg dark:text-gray-300">
+                    <ul className="pl-5 sm:pl-10 md:pl-20 mt-4 space-y-2 text-xs sm:text-sm md:text-lg dark:text-gray-300">
                         {
                             builds.map((build, key) => (
                                 <li key={key}><span className="text-blue-500">{'>'} </span>{build}</li>       
@@ -60,11 +60,11 @@ export default function AboutMe() {
                     </div>
                     
                     {/* Personal statements */}
-                    <p className="pl-2 md:pl-6 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>I enjoy teaching, problem solving and learning new things.</p>
-                    <p className="pl-2 md:pl-6 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>If I am not studying or coding, I will definitely be:</p>
+                    <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>I enjoy teaching, problem solving and learning new things.</p>
+                    <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>If I am not studying or coding, I will definitely be:</p>
                 
                     {/* List of hobbies */}
-                    <ul className="pl-5 sm:pl-10 md:pl-20 space-y-2 text-base sm:text-base md:text-lg dark:text-gray-300">
+                    <ul className="pl-5 sm:pl-10 md:pl-20 space-y-2 text-xs sm:text-sm md:text-lg dark:text-gray-300">
                         {
                             hobbies.map((hobby, key) => (
                                 <li key={key}><span className="text-blue-500">{'>'} </span>{hobby}</li>       
@@ -80,8 +80,8 @@ export default function AboutMe() {
                         <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-500">{`>`}</span> My Current Role</span>
                         <div className="flex-grow border-t border-gray-400"></div>
                     </div>
-                    <p className="pl-2 md:pl-6 mt-4 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Assistant project manager for YouthTeamUp @ Constructor University</p>
-                    <p className="pl-2 md:pl-6 mt-4 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Currently an incoming SWE Resident at Headstarter.</p>
+                    <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Assistant project manager for YouthTeamUp @ Constructor University</p>
+                    <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Currently an incoming SWE Resident at Headstarter.</p>
                 </div>
             </div>
         </div>

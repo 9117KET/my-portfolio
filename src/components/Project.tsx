@@ -13,7 +13,7 @@ export default function Project({id, name, features, description, github, techno
     <div id={id} className="p-4 border-b border-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:border-gray-600 mt-6">
         {/* Header section with project name and buttons for demo and GitHub */}
         <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold">{name}</h2>
+            <h2 className="text-lg font-semibold md:text-xl lg:text-2xl">{name}</h2>
             <div className="flex gap-4">
                 {/* Conditional rendering for Live Demo button if demo URL is provided */}
                 {
@@ -31,8 +31,8 @@ export default function Project({id, name, features, description, github, techno
             </div>
         </div>
         {/* Project description and features list */}
-        <div className="mb-2 text-sm flex-1 ml-4">
-            <p className="">{description}</p><br/>
+        <div className="mb-2 text-sm flex-1 ml-4 md:text-base lg:text-lg">
+            <p>{description}</p><br/>
             <p>{`> `}Features:</p>
             <ul className="pl-10">
                 {
@@ -45,7 +45,7 @@ export default function Project({id, name, features, description, github, techno
         {/* Technologies used section */}
         <div className="flex flex-wrap">
             {technologies.map(tech => (
-                <span key={tech} className="text-sm border border-lightText dark:border-gray-500 bg-gray-100 dark:bg-gray-700 rounded-lg m-1 px-2 py-1 transition-all duration-300 hover:bg-blue-300 dark:hover:bg-blue-500">{tech}</span> // Mapping technologies to tags
+                <span key={tech} className="text-sm border border-lightText dark:border-gray-500 bg-gray-100 dark:bg-gray-700 rounded-lg m-1 px-2 py-1 transition-all duration-300 hover:bg-blue-300 dark:hover:bg-blue-500 md:text-base lg:text-lg">{tech}</span> // Mapping technologies to tags
             ))}
         </div>
     </div>
