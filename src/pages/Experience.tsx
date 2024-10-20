@@ -6,7 +6,7 @@ import { experience } from "../utils/constants";
 import styles from "../utils/style";
 import { Helmet } from "react-helmet-async";
 
-const roles = ["All", "Software Engineer", "Junior Developer"]; 
+const roles = ["All", "Software Development", "Management & Others"]; 
 
 export default function Experiences() {
   const [selectedRole, setSelectedRole] = useState("All");
@@ -38,7 +38,7 @@ export default function Experiences() {
               </span>
               <div className="flex-grow border-t border-gray-400"></div>
             </div>
-            <h3 className="text-2xl">Here are some of the roles I've held:</h3>
+            <h3 className="text-2xl">Here are some of the roles I have held:</h3>
             
             <div className="flex flex-wrap justify-center mt-6">
               {roles.map(role => (

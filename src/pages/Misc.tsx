@@ -2,16 +2,19 @@ import { useState } from "react"; // Ensure useState is imported
 import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import styles from "../utils/style";
-import { certificates, awards } from "../utils/constants";
+import { certificates, awards, events } from "../utils/constants";
 
 export default function Misc() {
     const [selectedCategory, setSelectedCategory] = useState("All");
 
-    // Assuming you add a 'category' property to your certificates and awards
+    // Assuming you add a 'category' property to your certificates, awards, and events
     const filteredCertificates = certificates.filter(item =>
         selectedCategory === "All" || item.category === selectedCategory
     );
     const filteredAwards = awards.filter(item =>
+        selectedCategory === "All" || item.category === selectedCategory
+    );
+    const filteredEvents = events.filter(item =>
         selectedCategory === "All" || item.category === selectedCategory
     );
 
@@ -30,7 +33,7 @@ export default function Misc() {
                 <div className={`${styles.boxWidth}`}>
                     <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
                         <h3 className="text-xl dark:text-gray-300 text-black mb-5">
-                            Here's a collection of my certifications and awards.
+                            Here's a collection of my certifications, awards, events, competition and more.
                         </h3>
                         <div className="relative flex py-5 items-center">
                             <div className="flex-grow border-t border-gray-400"></div>
@@ -65,6 +68,14 @@ export default function Misc() {
                         <h3 className="text-2xl mb-4 mt-8">Awards</h3>
                         <ul className="list-disc pl-5">
                             {filteredAwards.map((item, index) => (
+                                <li key={index}>{item.title} - {item.description} ({item.date})</li>
+                            ))}
+                        </ul>
+
+                        {/* Display filtered events */}
+                        <h3 className="text-2xl mb-4 mt-8">Relevant Events Attended</h3>
+                        <ul className="list-disc pl-5">
+                            {filteredEvents.map((item, index) => (
                                 <li key={index}>{item.title} - {item.description} ({item.date})</li>
                             ))}
                         </ul>

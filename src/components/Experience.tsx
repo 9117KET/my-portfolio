@@ -7,7 +7,8 @@ interface ExperienceProps {
         company: string,
         duration: string,
         responsibilities: string[],
-        companyDescription: string, // Updated to be a string
+        companyDescription: string,
+        
     }[]
 }
 
@@ -19,7 +20,7 @@ const Experience = ({ experiences }: ExperienceProps) => {
 
     return (
         <div className="experience">
-            {experiences.map(({ id, role, company, duration, responsibilities, companyDescription }) => (
+            {experiences.map(({ id, role, company, duration, responsibilities, companyDescription, }) => (
                 <div key={id} className="p-4 border-b border-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:border-gray-600 mt-6">
                     {/* Header section with role, company, and duration */}
                     <div className="flex justify-between items-center mb-4">

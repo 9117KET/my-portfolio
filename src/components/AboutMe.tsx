@@ -21,7 +21,7 @@ export default function AboutMe() {
                     <p className="mt-4"> 
                         <a href={cvLink} target="_blank" 
                            className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition duration-300 ease-in-out shadow-lg">
-                            View My CV
+                            My CV
                         </a>
                     </p>
                 </div>
@@ -32,37 +32,42 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className="mt-10">
-                {/* Decorative title separator */}
-                <div className="relative flex py-5 items-center">
-                    <div className="flex-grow border-t border-gray-400"></div>
-                    <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-500">{`>`}</span> About Me:</span>
-                    <div className="flex-grow border-t border-gray-400"></div>
-                </div>
-                
-                {/* Personal statements */}
-                <p className="pl-2 md:pl-6 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>I enjoy teaching, problem solving and learning new things.</p>
-                <p className="pl-2 md:pl-6 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>If I am not studying or coding, I will definitely be:</p>
-            
-                {/* List of hobbies */}
-                <ul className="pl-5 sm:pl-10 md:pl-20 space-y-2 text-base sm:text-base md:text-lg dark:text-gray-300">
-                    {
-                        hobbies.map((hobby, key) => (
-                            <li key={key}><span className="text-blue-500">{'>'} </span>{hobby}</li>       
-                        ))
-                    }
-                </ul>
-                
                 {/* Section on capabilities */}
-                <div className="mt-8">
+                <div className="mt-10">
                     <div className="relative flex py-5 items-center">
                         <div className="flex-grow border-t border-gray-400"></div>
-                        <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-500">{`>`}</span> Projects I have been able to build so far?</span>
+                        <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-500">{`>`}</span> My Projects</span>
                         <div className="flex-grow border-t border-gray-400"></div>
                     </div>
                     <ul className="pl-5 sm:pl-10 md:pl-20 mt-4 space-y-2 text-base sm:text-base md:text-lg dark:text-gray-300">
                         {
                             builds.map((build, key) => (
                                 <li key={key}><span className="text-blue-500">{'>'} </span>{build}</li>       
+                            ))
+                        }
+                        <li>
+                            <span>Details of these projects can be seen under the projects on the navbar.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Decorative title separator for "About Me:" */}
+                <div className="mt-8">
+                    <div className="relative flex py-5 items-center">
+                        <div className="flex-grow border-t border-gray-400"></div>
+                        <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-500">{`>`}</span> About Me:</span>
+                        <div className="flex-grow border-t border-gray-400"></div>
+                    </div>
+                    
+                    {/* Personal statements */}
+                    <p className="pl-2 md:pl-6 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>I enjoy teaching, problem solving and learning new things.</p>
+                    <p className="pl-2 md:pl-6 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>If I am not studying or coding, I will definitely be:</p>
+                
+                    {/* List of hobbies */}
+                    <ul className="pl-5 sm:pl-10 md:pl-20 space-y-2 text-base sm:text-base md:text-lg dark:text-gray-300">
+                        {
+                            hobbies.map((hobby, key) => (
+                                <li key={key}><span className="text-blue-500">{'>'} </span>{hobby}</li>       
                             ))
                         }
                     </ul>
@@ -72,11 +77,11 @@ export default function AboutMe() {
                 <div className="mt-8">
                     <div className="relative flex py-5 items-center">
                         <div className="flex-grow border-t border-gray-400"></div>
-                        <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-500">{`>`}</span>My current role</span>
+                        <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400"><span className="text-blue-500">{`>`}</span> My Current Role</span>
                         <div className="flex-grow border-t border-gray-400"></div>
                     </div>
                     <p className="pl-2 md:pl-6 mt-4 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Assistant project manager for YouthTeamUp @ Constructor University</p>
-                    <p className="pl-2 md:pl-6 mt-4 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Currently an incoming SWE Fellow @ Headstater AI.</p>
+                    <p className="pl-2 md:pl-6 mt-4 text-base sm:text-base md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Currently an incoming SWE Resident at Headstarter.</p>
                 </div>
             </div>
         </div>

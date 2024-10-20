@@ -5,10 +5,10 @@ import { projects } from "../utils/constants";
 import styles from "../utils/style";
 import { Helmet } from "react-helmet-async";
 
-const languages = ["All", "C", "C#", "Python", "Java", "TypeScript"]; // Add languages as needed
+const languages = ["All","Fullstack", "Data Science", "Artificial Intelligence"]; // Add languages as needed
 
 export default function Projects() {
-  // State to keep track of the selected programming language
+  // State to keep track of the selected programming language 
   const [selectedLanguage, setSelectedLanguage] = useState("All");
 
   // Filter projects based on the selected language
@@ -33,8 +33,8 @@ export default function Projects() {
           <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
             {/* Introduction text */}
             <h3 className="text-xl dark:text-gray-300 text-black mb-5">
-              {`-> `}I mostly learn through project-based learning. This approach helps me understand concepts better and keeps me motivated to build more because I am
-              actually seeing what I am building and if the I don't get to the end, I basically do not rest.
+              {`-> `}I mostly learn through working on projects. This approach helps me understand concepts better and keeps me motivated to build more because I am
+              actually seeing what I am building and if the I don't get to the end, I basically do not let it go.
             </h3>
             {/* Divider with "My Projects" text */}
             <div className="relative flex py-5 items-center">
