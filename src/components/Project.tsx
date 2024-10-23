@@ -32,12 +32,12 @@ export default function Project({id, name, features, description, github, techno
         </div>
         {/* Project description and features list */}
         <div className="mb-2 text-sm flex-1 ml-4 md:text-base lg:text-lg">
-            <p>{description}</p><br/>
-            <p>{`> `}Features:</p>
-            <ul className="pl-10">
+            <p className="text-base md:text-lg">{description}</p><br/>
+            <p className="font-semibold">{`> `}Features:</p>
+            <ul className="pl-10 list-disc">
                 {
                     features.map(feature => (
-                        <li key={feature}>- {feature}</li> // Mapping features to list items
+                        <li key={feature} className="text-base md:text-lg">- {feature}</li> // Adjusted text size for features
                     ))
                 }
             </ul>
@@ -45,7 +45,7 @@ export default function Project({id, name, features, description, github, techno
         {/* Technologies used section */}
         <div className="flex flex-wrap">
             {technologies.map(tech => (
-                <span key={tech} className="text-sm border border-lightText dark:border-gray-500 bg-gray-100 dark:bg-gray-700 rounded-lg m-1 px-2 py-1 transition-all duration-300 hover:bg-blue-300 dark:hover:bg-blue-500 md:text-base lg:text-lg">{tech}</span> // Mapping technologies to tags
+                <span key={tech} className="text-sm border border-lightText dark:border-gray-500 bg-gray-100 dark:bg-gray-700 rounded-lg m-1 px-2 py-1 transition-all duration-300 hover:bg-blue-300 dark:hover:bg-blue-500 md:text-base lg:text-lg">{tech}</span> // Adjusted text size for technologies
             ))}
         </div>
     </div>

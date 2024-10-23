@@ -1,38 +1,18 @@
 import { Post } from "../types/post"
 
-
-
 // Navigation links for the portfolio site
 export const navLinks = [
-    {
-        id: "",
-        name: "about_me"
-    },
-    {
-        id: "projects",
-        name: "projects"
-    },
-    {
-        id: "experience",
-        name: "experience"
-    },
-    {
-        id: "misc",
-        name: "misc"
-    },
-    {
-        id: "blog",
-        name: "blog"
-    },
-    
+    { id: "", name: "about_me" },
+    { id: "projects", name: "projects" },
+    { id: "experience", name: "experience" },
+    { id: "misc", name: "misc" },
+    { id: "blog", name: "blog" },
 ]
-
 
 export const cvLink = "https://drive.google.com/file/d/1pxPH2RQwCY9KTOdQgWHcQEwiDcUjnsd9/view?usp=sharing"
 
 // Project details for the portfolio
 export const projects = [
-    // Expenses Tracker project details
     {
         id: "academy",
         name: "KET Academy",
@@ -44,12 +24,9 @@ export const projects = [
             "Crisis Support: Designed to assist students affected by crises or natural disasters.",
             "Fully responsive and accessible across various devices and platforms."
         ],
-        technologies: [
-            "React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"
-        ],
+        technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
         demo: "https://ket.academy/"
     },
-
     {
         id: "expenses",
         name: "Expenses Tracker",
@@ -62,13 +39,9 @@ export const projects = [
             "Handy Search and Filter Options: Easily find specific expenses or categories with search and filter functionalities.",
             "Responsive Design: Fully adaptable to different screen sizes and devices."
         ],
-        technologies: [
-            "HTML 5", "Tailwind", "TypeScript", "React", "Node.js", "Express.js", "Firebase"
-        ],
+        technologies: ["HTML 5", "Tailwind", "TypeScript", "React", "Node.js", "Express.js", "Firebase"],
         demo: "https://example.com/demo"
     },
-
-
     {
         id: "assistantai",
         name: "AI Customer Assistant Bot",
@@ -81,9 +54,7 @@ export const projects = [
             "Platform Integration: Can be easily integrated with various platforms, such as websites, mobile apps, and CRM systems.",
             "Customizable and Scalable: Easily adaptable to specific business needs and scalable to support growing customer bases."
         ],
-        technologies: [
-            "Java", "Spring Boot", "MySQL", "Tailwind CSS", "Vanilla TypeScript", "OpenAI GPT", "Groq API"
-        ],
+        technologies: ["Java", "Spring Boot", "MySQL", "Tailwind CSS", "Vanilla TypeScript", "OpenAI GPT", "Groq API"],
         demo: "https://example.com/demo"
     },
     {
@@ -98,13 +69,9 @@ export const projects = [
             "Customizable Flashcards: Allows users to edit and organize their flashcards for better retention.",
             "Responsive Design: Fully responsive and optimized for various devices and platforms."
         ],
-        technologies: [
-            "React", "Node.js", "Express.js", "Tailwind CSS", "Firebase", "OpenAI API"
-        ],
+        technologies: ["React", "Node.js", "Express.js", "Tailwind CSS", "Firebase", "OpenAI API"],
         demo: "https://example.com/demo"
     },
-    
-
 ]
 
 // Experience details for the portfolio
@@ -127,15 +94,14 @@ export const experience = [
         id: "exp2",
         role: "Student Assistant Project Management",
         company: "YouthTeamUp (YTU)",
-        duration: "Jan 2023 - Till present",
+        duration: "Jan 2023 - Present",
         responsibilities: [
             "Planned and organized the Shallow-Virtual-Exchange (SVE) and Deep-Virtual-Exchange (DVE) programs for youths across African and European Universities.",
             "Coordinated the implementation of the Global Impact Project (GIP) for Constructor University students working on their Community Impact Projects.",
             "Assisted in designing marketing materials and updating the YTU website, which has engaged over 2500+ youths from both Africa and Europe."
         ],
         companyDescription: "YouthTeamUp empowers African and European youths to connect and collaborate on creating Global Impact Projects through various virtual exchange programs."
-    }
-    ,
+    },
     {
         id: "exp3",
         role: "Community Engagement and Marketing Specialist",
@@ -148,8 +114,7 @@ export const experience = [
             "Created posts, flyers, organized events, and updated the Synthesis website with the latest information."
         ],
         companyDescription: "The Synthesis-Constructor Entrepreneurship & Innovation Centre supports students by fostering entrepreneurial skills and providing resources for aspiring student founders at Constructor University."
-    }
-    ,
+    },
     {
         id: "exp4",
         role: "Founder and Developer",
@@ -162,8 +127,7 @@ export const experience = [
             "Successfully reached over 1500+ students directly and over 15,000+ indirectly via various social media channels."
         ],
         companyDescription: "KET Academy is an e-learning platform that provides academic resources to secondary and high school students, with a focus on empowering youths in crisis-affected regions of Africa."
-    }
-    ,
+    },
     {
         id: "exp5",
         role: "Teaching Assistant (TA) - Calculus and Linear Algebra",
@@ -181,87 +145,139 @@ export const experience = [
     }
 ]
 
+// Certificates
 export const certificates = [
     {
-        title: "Certified Data Scientist",
-        description: "Certification demonstrating advanced proficiency in data science.",
-        date: "March 2021",
-        category: "Data Science" // Example category
+        id: 'cert-001',
+        title: 'Introduction to Generative AI',
+        description: 'Introductory online course offered by Google',
+        date: 'August 2023'
     },
     {
-        title: "Project Management Professional (PMP)",
-        description: "Certification for project management skills.",
-        date: "July 2020",
-        category: "Management" // Example category
-    }
-];
+        id: 'cert-002',
+        title: 'Introduction to Large Language Model',
+        description: 'Introductory online course offered by Google',
+        date: 'September 2023'
+    },
+    {
+        id: 'cert-003',
+        title: 'Introduction to Design Thinking',
+        description: 'Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University',
+        date: 'March 2023'
+    },
+    {
+        id: 'cert-004',
+        title: 'Ignite Entrepreneurship',
+        description: 'Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University',
+        date: 'March 2023'
+    },
+    {
+        id: 'cert-005',
+        title: 'Explore Entrepreneurship',
+        description: 'Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University',
+        date: 'March 2023'
+    },
+    {
+        id: 'cert-006',
+        title: 'Launch Entrepreneurship',
+        description: 'Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University',
+        date: 'September 2023'
+    },
+    {
+        id: 'cert-007',
+        title: 'Jim Leech Mastercard Foundation Fellowship on Entrepreneurship',
+        description: 'Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University',
+        date: 'September 2023'
+    },
+    {
+        id: 'cert-008',
+        title: 'Digital Marketing for Entrepreneurs by YALI',
+        description: 'The Young African Leadership Initiative (YALI) online course on Digital Marketing',
+        date: 'October 2022'
+    },
+    // {
+    //     id: 'cert-009',
+    //     title: 'The Resilient Entrepreneur by YALI',
+    //     description: 'The Young African Leadership Initiative (YALI) online course on The Resilient Entrepreneur: Planning, Adapting and Persevering.',
+    //     date: 'December 2022'
+    // },
+    // {
+    //     id: 'cert-010',
+    //     title: 'Strategies for Personal Growth and Development by YALI',
+    //     description: 'The Young African Leadership Initiative (YALI) online course on Strategies for Personal Growth and Development',
+    //     date: 'May 2022'
+    // },
+    // {
+    //     id: 'cert-011',
+    //     title: 'Understanding the rights of Women and Girls by YALI',
+    //     description: 'The Young African Leadership Initiative (YALI) online course on Understanding the right of women and girls',
+    //     date: 'March 2022'
+    // },
+    // {
+    //     id: 'cert-012',
+    //     title: 'Community Journalism by YALI',
+    //     description: 'The Young African Leadership Initiative (YALI) online course Community Journalism: Basic Principles for effective storytelling',
+    //     date: 'December 2021'
+    // },
+    // {
+    //     id: 'cert-013',
+    //     title: 'Fundamentals of Personal Money Management by YALI',
+    //     description: 'The Young African Leadership Initiative (YALI) online course on Fundamentals of personal money management',
+    //     date: 'December 2021'
+    // },
+    // {
+    //     id: 'cert-014',
+    //     title: 'Developing Mentoring and Supporting Youth Leadership by YALI',
+    //     description: 'The Young African Leadership Initiative (YALI) online course on Developing mentoring and supporting youth leadership',
+    //     date: 'November 2021'
+    //}
+]
 
+// Awards
 export const awards = [
     {
-        title: "Innovator of the Year",
-        description: "Award received for outstanding innovation in technology.",
-        date: "December 2021",
-        category: "Innovation" // Example category
+        title: "Global Student Top 50 Finalist",
+        description: "Selected as a top 50 finalist from a pool of 3851 students making real impact in education and society.",
+        date: "2023",
+        category: "Global"
     },
     {
-        title: "Best Community Service",
-        description: "Award for exceptional community service.",
-        date: "November 2019",
-        category: "Community Service" // Example category
+        title: "Ambassador Award for Excellent Encouragement",
+        description: "Awarded for ranking 2nd globally as International Youth Maths Competition Ambassador for Cameroon.",
+        date: "2023",
+        category: "Mathematics"
     }
-];
+]
 
+// Events
 export const events = [
     {
-        title: "......................",
-        description: ".................",
-        date: "............",
-        category: "............"
+        title: "Headstarter - Software Engineering Fellow",
+        description: "Built and deployed 4 AI projects in 5 weeks using React JS, Firebase, and more.",
+        date: "2023",
+        category: "Engineering"
     },
-    
     {
-        title: "......................",
-        description: ".................",
-        date: "............",
-        category: "............"
+        title: "McKinsey Forward Program",
+        description: "A three-month program focused on skills for future-proof work.",
+        date: "2023",
+        category: "Leadership"
+    },
+    {
+        title: "Digital Literacy Forum by Meta",
+        description: "Discussed ways of promoting and ensuring online safety.",
+        date: "June 2022",
+        category: "Technology"
     }
-];
+]
 
-// Contact information for the portfolio owner
+// Contact information
 export const contacts = [
-    {
-        id: "github",
-        name: "GitHub",
-        link: "https://github.com/9117KET" 
-    },
-    {
-        id: "linkedin",
-        name: "LinkedIn",
-        link: "https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/" 
-    },
-    {
-        id: "x",
-        name: "X",
-        link: "https://x.com/KinloEphriam" 
-    },
-    {
-        id: "leetcode",
-        name: "LeetCode",
-        link: "https://leetcode.com/u/kinlotangiri911/" 
-    },
-    {
-        id: "hackerrank",
-        name: "HackerRank",
-        link: "https://www.hackerrank.com/profile/kinlotangiri911" 
-    },
-    {
-        id: "email",
-        name: "Email",
-        link: "kinlotangiri911@gmail.com" 
-    },
-
-
-
+    { id: "github", name: "GitHub", link: "https://github.com/9117KET", target: "_blank" },
+    { id: "linkedin", name: "LinkedIn", link: "https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/", target: "_blank" },
+    { id: "x", name: "X", link: "https://x.com/KinloEphriam", target: "_blank" },
+    { id: "leetcode", name: "LeetCode", link: "https://leetcode.com/u/kinlotangiri911/", target: "_blank" },
+    { id: "email", name: "Email", link: "mailto:kinlotangiri911@gmail.com", target: "_blank" }
 ]
 
 // Descriptions of types of builds the portfolio owner can perform
@@ -274,23 +290,24 @@ export const builds = [
     "IoT recommendation framework"
 ]
 
-// Hobbies of the portfolio owner
+// Hobbies
 export const hobbies = [
-    'Watching: [Documentaries, YouTube, Series(Crime/FBI movie type)].', 
-    'Reading, tech articles or self development books', 
-    "Listening to Podcast (Mostly Diary of a CEO by Steven Bartlett or Huberman Lab by Andrew Huberman)", 
+    'Watching: Documentaries, YouTube, Series (Crime/FBI)', 
+    'Reading tech articles or self-development books', 
+    'Listening to podcasts (Diary of a CEO, Huberman Lab)', 
     "Playing Chess", 
-    "Playing Table Tennis",
-    "Learning How to play Piano"]
+    "Playing Table Tennis", 
+    "Learning how to play Piano"
+]
 
-// Blog posts available on the portfolio site
+// Blog posts
 export const posts: Post[] = [
     {
-        id: "beans",
+        id: "ai_africa",
         title: "AI, IoT, Big Data & Africa",
         date: "June 10, 2024",
         category: "AI-Post",
-        description: "The Potential of IoT, AI, and Big Data for Rwanda's Future: A Case Study of Kigali Innovation City (KIC)",
-        content: "The fields of Artificial Intelligence (AI), Big Data, and the Internet of Things (IoT) has been transforming industries globally, and Africa is no different. Below is a historical timeline of AI, IoT and Big Data over 6 decades."
-    },
-];
+        description: "The Potential of IoT, AI, and Big Data for Rwanda's Future: A Case Study of Kigali Innovation City (KIC).",
+        content: "The fields of Artificial Intelligence (AI), Big Data, and the Internet of Things (IoT) have been transforming industries globally, and Africa is no different. This post explores the historical timeline of AI, IoT, and Big Data over the last 6 decades."
+    }
+]

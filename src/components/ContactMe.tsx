@@ -14,7 +14,7 @@ export default function ContactMe() {
             contacts.map((contact) => (
             <li key={contact.id} className="inline-block hover:bg-gray-200 rounded-md transition duration-300 ease-in-out mx-2 sm:mx-1">
                 <span className="text-blue-800">{'>'}</span>
-                <a href={contact.link} className="hover:text-blue-500 text-xs sm:text-sm">{contact.name}</a>
+                <a href={contact.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 text-xs sm:text-sm">{contact.name}</a>
             </li>
             ))
         }
