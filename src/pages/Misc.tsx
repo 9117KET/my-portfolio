@@ -32,15 +32,15 @@ export default function Misc() {
 
                         <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">Certificates</h3>
                         <ul className="list-disc pl-5 space-y-2">
-                            {certificates.map((item) => (
-                                <li key={item.id} className="text-sm sm:text-lg md:text-xl lg:text-2xl hover:text-blue-700 cursor-pointer">{item.title} - {item.description} ({item.date})</li>
+                            {certificates.map((item, index) => (
+                                <li key={`${item.title}-${item.date}`} className="text-sm sm:text-lg md:text-xl lg:text-2xl hover:text-blue-700 cursor-pointer">{item.title} - {item.description} ({item.date})</li>
                             ))}
                         </ul>
 
                         <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">Awards</h3>
                         <ul className="list-disc pl-5 space-y-2">
-                            {awards.map((item) => (
-                                <li key={item.id} className="text-sm sm:text-lg md:text-xl lg:text-2xl hover:text-blue-700 cursor-pointer">{item.title} - {item.description} ({item.date})</li>
+                            {awards.map((item, index) => (
+                                <li key={`${item.title}-${item.date}`} className="text-sm sm:text-lg md:text-xl lg:text-2xl hover:text-blue-700 cursor-pointer">{item.title} - {item.description} ({item.date})</li>
                             ))}
                         </ul>
 
