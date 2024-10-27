@@ -38,14 +38,15 @@ export default function Experiences() {
               </span>
               <div className="flex-grow border-t border-gray-400"></div>
             </div>
-            <h3 className="text-2xl">Here are some of the roles I have held:</h3>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Here are some of the roles I have held:</h3>
             
             <div className="flex flex-wrap justify-center mt-6">
               {roles.map(role => (
                 <button
                   key={role}
                   onClick={() => setSelectedRole(role)} 
-                  className={`cursor-pointer text-sm border border-lightText dark:border-gray-500 rounded-lg m-1 px-2 py-1 transition-all duration-300 hover:bg-blue-800 dark:hover:bg-blue-900 ${selectedRole === role ? "bg-blue-800" : "bg-gray-100 dark:bg-gray-700"}`}
+                  className={`cursor-pointer text-sm font-medium border border-lightText dark:border-gray-500 rounded-lg m-1 px-4 py-2 transition-all duration-300 hover:bg-blue-800 dark:hover:bg-blue-900 ${selectedRole === role ? "bg-blue-800 text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300"}`}
+                  // Updated button classes for consistent styling with the Project section
                   aria-label={`Filter experiences by ${role}`}
                 >
                   {role}

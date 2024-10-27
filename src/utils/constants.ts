@@ -16,13 +16,14 @@ export const projects = [
     {
         id: "academy",
         name: "KET Academy",
-        description: "KET Academy is an e-learning platform designed to provide academic resources to secondary and high school students, especially those affected by crises or natural disasters in Africa. The platform also empowers youths (ambassadors) with educational technology skills and provides tailored resources to support their learning journey.",
+        description: "KET Academy is an e-learning platform designed to provide academic resources to secondary and high school students, especially those affected by crises or natural disasters in Africa. The platform also empowers youths (ambassadors) with educational technology skills and provides tailored resources to support their learning journey. This is a project very close to my heart and one of my motivation for doing CS",
         github: "https://github.com/ket-academy/ketacademy",
         features: [
-            "Resource Access: Tailored academic resources for students in crisis-affected regions.",
-            "Student Empowerment: Enhances students' skills with educational technology.",
-            "Crisis Support: Designed to assist students affected by crises or natural disasters.",
-            "Fully responsive and accessible across various devices and platforms."
+            "Tailored academic resources for students in crisis-affected regions.",
+            "Enhances students' skills with educational technology.",
+            "Designed to assist students affected by crises or natural disasters.",
+            "Fully responsive and accessible across various devices and platforms.",
+            "Since the launch of the first version, we have had over 700 users on the first version"
         ],
         technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
         demo: "https://ket.academy/"
@@ -30,7 +31,7 @@ export const projects = [
     {
         id: "expenses",
         name: "Expenses Tracker",
-        description: "Expense Tracker is a simple and efficient full stack web application that helps you keep track of your spending. With a user-friendly interface, you can easily log your expenses, categorize them, and see a detailed history. The app provides insights into your financial habits and helps you manage your budget effectively.",
+        description: "Expense Tracker is a simple and efficient full stack web application that helps keep track of your spending. With a user-friendly interface, you can easily log your expenses, categorize them, and see a detailed history. The app provides insights into your financial habits and helps you manage your budget effectively.",
         github: "https://github.com/9117KET/Expense_Tracker",
         features: [
             "User Authentication: Securely log in and manage your personal expenses.",
@@ -40,7 +41,7 @@ export const projects = [
             "Responsive Design: Fully adaptable to different screen sizes and devices."
         ],
         technologies: ["HTML 5", "Tailwind", "TypeScript", "React", "Node.js", "Express.js", "Firebase"],
-        demo: "https://example.com/demo"
+        demo: "_blank"
     },
     {
         id: "assistantai",

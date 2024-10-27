@@ -44,7 +44,7 @@ export default function Projects() {
               </span>
               <div className="flex-grow border-t border-gray-400"></div>
             </div>
-            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">Here are some of my favourite projects that I have worked on:</h3>
+            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">Here are some of my favourite projects:</h3>
             
             {/* Language filter buttons */}
             <div className="flex flex-wrap justify-center mt-6">

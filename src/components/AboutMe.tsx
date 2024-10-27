@@ -15,7 +15,7 @@ export default function AboutMe() {
                     <h2 className="text-sm sm:text-xl md:text-2xl mt-2">Tech Enthusiast & Student Entrepreneur</h2>
                     {/* Introduction list */}
                     <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
-                        <li>Hello! I'm Kinlo, often referred to as "Professor." I'm pursuing a major in Computer Science and a minor in Data Science with an elective in Artificial Intelligence and Machine Learning at Constructor University, Bremen, Germany. I have a passion for educational technology. I actively share my knowledge on various social media platforms especially on LinkedIn</li>
+                        <li>Hello! I'm Kinlo. I'm pursuing a major in Computer Science and a minor in Data Science with an elective in Artificial Intelligence and Machine Learning at Constructor University, Bremen-Germany. I have a passion for educational technology. I actively share my knowledge on various social media platforms especially on LinkedIn</li>
                     </ul>
                     {/* My CV button */}
                     <p className="mt-4"> 
@@ -46,7 +46,7 @@ export default function AboutMe() {
                             ))
                         }
                         <li>
-                            <span>Details of these projects can be seen under the projects on the navbar.</span>
+                            <span>For details of these projects, see the project section in the Navbar.</span>
                         </li>
                     </ul>
                 </div>
@@ -81,7 +81,7 @@ export default function AboutMe() {
                         <div className="flex-grow border-t border-gray-400"></div>
                     </div>
                     <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Assistant project manager for YouthTeamUp @ Constructor University</p>
-                    <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Currently an incoming SWE Resident at Headstarter.</p>
+                    <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-800">| </span>Currently a SWE Resident at Headstarter.</p>
                 </div>
             </div>
         </div>

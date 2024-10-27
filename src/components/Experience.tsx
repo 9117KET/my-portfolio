@@ -24,11 +24,11 @@ const Experience = ({ experiences }: ExperienceProps) => {
                 <div key={id} className="p-4 border-b border-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:border-gray-600 mt-6">
                     {/* Header section with role, company, and duration */}
                     <div className="flex justify-between items-center mb-4">
-                        <h2 className="text-lg font-semibold">{role} - {company}</h2>
+                        <h2 className="text-lg font-semibold dark:text-gray-300">{role} - {company}</h2>
                         <span className="text-sm bg-gray-200 dark:bg-gray-800 rounded-lg px-3 py-1">{duration}</span>
                     </div>
                     {/* Responsibilities list */}
-                    <div className="mb-2 text-sm flex-1 ml-4">
+                    <div className="mb-2 text-sm flex-1 ml-4 dark:text-gray-300">
                         <p>{`> `}Responsibilities:</p>
                         <ul className="pl-10">
                             {responsibilities.map((responsibility, index) => (
@@ -37,9 +37,9 @@ const Experience = ({ experiences }: ExperienceProps) => {
                         </ul>
                     </div>
                     {/* Company Description */}
-                    <div className="mb-2 text-sm flex-1 ml-4">
+                    <div className="mb-2 text-sm flex-1 ml-4 dark:text-gray-300">
                         <p>{`>`} Company Description:</p>
-                        <p className="pl-10">{companyDescription}</p> {/* Updated to display as a paragraph */}
+                        <p className="pl-10">{companyDescription}</p>
                     </div>
                 </div>
             ))}
