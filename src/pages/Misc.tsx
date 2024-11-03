@@ -7,14 +7,19 @@ import { certificates, awards, events } from "../utils/constants";
 // Updated categories array to exclude "All"
 const categories = ["Certificates", "Awards", "Events"];
 
+// Define itemsToShow before using it to define Category type
+const itemsToShow = {
+    "Certificates": certificates,
+    "Awards": awards,
+    "Events": events
+};
+
+// Define a type for the keys of itemsToShow
+type Category = keyof typeof itemsToShow;
+
 export default function Misc() {
-    // Default to the first category in the updated list
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-    const itemsToShow = {
-        "Certificates": certificates,
-        "Awards": awards,
-        "Events": events
-    };
+    // Ensure selectedCategory is of type Category
+    const [selectedCategory, setSelectedCategory] = useState<Category>(categories[0] as Category);
 
     return (
         <div className='dark:bg-[#2D2E32] min-h-screen'>
@@ -36,7 +41,7 @@ export default function Misc() {
                         {categories.map(category => (
                             <button
                                 key={category}
-                                onClick={() => setSelectedCategory(category)}
+                                onClick={() => setSelectedCategory(category as Category)}
                                 className={`cursor-pointer text-sm border border-lightText dark:border-gray-500 rounded-lg m-1 px-2 py-1 transition-all duration-300 hover:bg-blue-800 dark:hover:bg-blue-900 ${selectedCategory === category ? "bg-blue-800" : "bg-gray-100 dark:bg-gray-700"}`}
                                 aria-label={`Filter items by ${category}`}
                             >
@@ -53,7 +58,7 @@ export default function Misc() {
                     {/* Display items with sub-headings, descriptions, and dates */}
                     <ul className="space-y-4">
                         {itemsToShow[selectedCategory].map(item => (
-                            <div key={item.id}>
+                            <div key={'id' in item ? item.id : item.title}>
                                 <h4 className="text-md sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black font-bold">
                                     {item.title}: <span className="font-normal">{item.description}</span>
                                 </h4>

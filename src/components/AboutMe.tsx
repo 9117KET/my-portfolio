@@ -60,7 +60,7 @@ export default function AboutMe() {
                     </div>
                     
                     {/* Personal statements */}
-                    <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>I enjoy teaching, problem solving and learning new things.</p>
+                    <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>I enjoy teaching(started teaching in High School), problem solving and learning new things.</p>
                     <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"><span className="text-blue-500">| </span>If I am not studying or coding, I will definitely be:</p>
                 
                     {/* List of hobbies */}

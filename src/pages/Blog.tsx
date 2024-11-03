@@ -14,7 +14,7 @@ export default function Blog() {
 
   // Filter posts based on the selected category
   const filteredPosts = posts.filter(post => {
-    return selectedCategory === 'All' || post.type === selectedCategory;
+    return selectedCategory === 'All' || post.category === selectedCategory;
   });
 
   return (

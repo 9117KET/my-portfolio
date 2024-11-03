@@ -34,7 +34,7 @@ export default function Projects() {
             {/* Introduction text */}
             <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">
               {`-> `}I mostly learn through working on projects. This approach helps me understand concepts better and keeps me motivated to build more because I am
-              actually seeing what I am building and if I don't get to the end, I basically do not let it go.
+              actually see what I am building and if I don't get to the end, I basically do not let it go.
             </h3>
             {/* Divider with "My Projects" text */}
             <div className="relative flex py-3 md:py-5 items-center">

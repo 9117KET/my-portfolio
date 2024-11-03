@@ -41,7 +41,7 @@ export const projects = [
             "Responsive Design: Fully adaptable to different screen sizes and devices."
         ],
         technologies: ["HTML 5", "Tailwind", "TypeScript", "React", "Node.js", "Express.js", "Firebase"],
-        demo: "_blank"
+        demo: "https://example.com/demo"
     },
     {
         id: "assistantai",
@@ -79,17 +79,29 @@ export const projects = [
 export const experience = [
     {
         id: "exp1",
-        role: "Software Engineer",
+        role: "Software Engineer Intern",
         company: "Waziup e.V.",
         duration: "May 2024 - August 2024",
         responsibilities: [
             "Collaborated with the RnD hybrid workgroup to build a multipurpose recommendation framework.",
             "Contributed to both front-end and back-end development for IoT applications.",
             "Worked with an international team to develop DIY IoT solutions for African entrepreneurs.",
-            "Assisted in creating innovative, affordable, and adaptable IoT solutions for emerging markets.",
-            "Participated in training initiatives and provided cloud support for IoT-based applications."
+            "Assisted in creating innovative, affordable, and adaptable IoT solutions for emerging markets."
         ],
         companyDescription: "Waziup e.V. is an IoT-focused organization promoting cutting-edge technologies and capacity building in emerging countries. They develop affordable, adaptable, and end-to-end IoT solutions, focusing on empowering 'glocal' (global and local) IoT entrepreneurs."
+    },
+    {
+        id: "exp4",
+        role: "Founder and Developer",
+        company: "KET Academy",
+        location: "Yaoundé, Cameroon",
+        duration: "2020 - Present",
+        responsibilities: [
+            "Established and led a team of more than 25 youths to build an e-learning platform with resources in video and PDF formats.",
+            "Developed two versions of the platform: one built using HTML, CSS, and JavaScript, and the most recent using TypeScript, React, Firebase, with authentication, personalized dashboards, and AI features.",
+            "Successfully reached over 1500+ students directly and over 15,000+ indirectly via various social media channels."
+        ],
+        companyDescription: "KET Academy is an e-learning platform that provides academic resources to secondary and high school students, with a focus on empowering youths in crisis-affected regions of Africa."
     },
     {
         id: "exp2",
@@ -116,19 +128,7 @@ export const experience = [
         ],
         companyDescription: "The Synthesis-Constructor Entrepreneurship & Innovation Centre supports students by fostering entrepreneurial skills and providing resources for aspiring student founders at Constructor University."
     },
-    {
-        id: "exp4",
-        role: "Founder and Developer",
-        company: "KET Academy",
-        location: "Yaoundé, Cameroon",
-        duration: "2020 - Present",
-        responsibilities: [
-            "Established and led a team of more than 25 youths to build an e-learning platform with resources in video and PDF formats.",
-            "Developed two versions of the platform: one built using HTML, CSS, and JavaScript, and the most recent using TypeScript, React, Firebase, with authentication, personalized dashboards, and AI features.",
-            "Successfully reached over 1500+ students directly and over 15,000+ indirectly via various social media channels."
-        ],
-        companyDescription: "KET Academy is an e-learning platform that provides academic resources to secondary and high school students, with a focus on empowering youths in crisis-affected regions of Africa."
-    },
+
     {
         id: "exp5",
         role: "Teaching Assistant (TA) - Calculus and Linear Algebra",
@@ -284,20 +284,21 @@ export const contacts = [
 // Descriptions of types of builds the portfolio owner can perform
 export const builds = [
     "KET Academy (An e-learning platform for secondary and high school students in Africa)", 
-    "My Portfolio websites (First one with HTML, CSS and Javascript and the second with Typescript)", 
+    "My Portfolio websites (First one with HTML, CSS and Javascript and this one you ara right now on with typescript)", 
     "Expense Tracker", 
     "AI Customer Support", 
     "AI Flashcards", 
-    "IoT recommendation framework"
+    "IoT recommendation framework",
+    "AI-powered Churn Prediction for a bank customer"
 ]
 
 // Hobbies
 export const hobbies = [
-    'Watching: Documentaries, YouTube, Series (Crime/FBI)', 
+    'Watching: Documentaries (About great minds in history), YouTube (tutorials or how to videos), Series (Crime/FBI, investigation movie types)', 
     'Reading tech articles or self-development books', 
-    'Listening to podcasts (Diary of a CEO, Huberman Lab)', 
-    "Playing Chess", 
-    "Playing Table Tennis", 
+    'Listening to podcasts (Diary of a CEO, Huberman Lab, Jordan Peterson...)', 
+    "Playing or studying Chess positions", 
+    "Playing Table Tennis (Ping Pong)", 
     "Learning how to play Piano"
 ]
 
@@ -309,6 +310,7 @@ export const posts: Post[] = [
         date: "June 10, 2024",
         category: "AI-Post",
         description: "The Potential of IoT, AI, and Big Data for Rwanda's Future: A Case Study of Kigali Innovation City (KIC).",
-        content: "The fields of Artificial Intelligence (AI), Big Data, and the Internet of Things (IoT) have been transforming industries globally, and Africa is no different. This post explores the historical timeline of AI, IoT, and Big Data over the last 6 decades."
+        content: "The fields of Artificial Intelligence (AI), Big Data, and the Internet of Things (IoT) have been transforming industries globally, and Africa is no different. This post explores the historical timeline of AI, IoT, and Big Data over the last 6 decades.",
+        type: "Blog"
     }
 ]
