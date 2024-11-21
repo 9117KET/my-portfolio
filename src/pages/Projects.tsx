@@ -33,8 +33,7 @@ export default function Projects() {
           <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
             {/* Introduction text */}
             <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">
-              {`-> `}I mostly learn through working on projects. This approach helps me understand concepts better and keeps me motivated to build more because I am
-              actually see what I am building and if I don't get to the end, I basically do not let it go.
+              {`-> `}I primarily learn by working on projects. This method allows me to understand concepts more deeply and keeps me motivated, as I can see the progress and outcome of what I’m building. If I don’t complete a project, I find it difficult to let it go and remain determined to finish it
             </h3>
             {/* Divider with "My Projects" text */}
             <div className="relative flex py-3 md:py-5 items-center">

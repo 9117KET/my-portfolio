@@ -29,7 +29,7 @@ export default function Experiences() {
         <div className={`${styles.boxWidth}`}>
           <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
             <h3 className="text-xl dark:text-gray-300 text-black mb-5">
-              {`-> `}My professional journey has been a blend of challenging and rewarding experiences that have helped me grow.
+              {`-> `}My professional journey has been a blend of challenging and rewarding experiences that has self driven and highly motivated individual.
             </h3>
             <div className="relative flex py-5 items-center">
               <div className="flex-grow border-t border-gray-400"></div>
