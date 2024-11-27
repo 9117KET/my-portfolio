@@ -354,22 +354,28 @@ export const contacts = [
 // Descriptions of types of builds the portfolio owner can perform
 export const builds = [
   "KET Academy (An e-learning platform for secondary and high school students in Africa)",
-  "My portfolio websites: the first version built with HTML, CSS, and JavaScript, and the one you are currently viewing, built with TypeScript.",
+  "AI Flashcards",
   "Expense Tracker",
   "AI Customer Support",
-  "AI Flashcards",
+  "My portfolio websites",
   "IoT recommendation framework",
+  "Sustainable Shopping Assistant",
+  "Brain Tumor Classification with Neural Network",
   "AI-powered Churn Prediction for a bank customer",
+  
+  
+  
+
 ];
 
 // Hobbies
 export const hobbies = [
-  "Watching: Documentaries (About great minds in history), YouTube (tutorials or how to videos), Series (Crime/FBI, investigation movie types)",
-  "Reading tech articles or self-development books",
-  "Listening to podcasts (Diary of a CEO, Huberman Lab, Jordan Peterson...)",
-  "Playing or studying Chess positions",
-  "Playing Table Tennis (Ping Pong)",
-  "Learning how to play Piano",
+  "Listening to podcasts (Diary of a CEO, Huberman Lab, Jordan Peterson)",
+  "Watching documentaries, tutorials, and FBI/Crime series",
+  //"Reading tech articles and self-development books",
+  "Studying chess positions",
+  "Playing Table Tennis",
+  "Learning Piano"
 ];
 
 // Blog posts

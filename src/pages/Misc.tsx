@@ -30,9 +30,7 @@ export default function Misc() {
 
             <div className={`${styles.flexCenter} w-full`}>
                 <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl dark:text-gray-300 text-black mb-5 font-extrabold">
-                        My Portfolio
-                    </h1>
+                    
                     <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5 font-medium">
                         Here's a collection of my certifications, awards, events, competitions, and more.
                     </h2>
@@ -42,7 +40,7 @@ export default function Misc() {
                             <button
                                 key={category}
                                 onClick={() => setSelectedCategory(category as Category)}
-                                className={`cursor-pointer text-sm border border-lightText dark:border-gray-500 rounded-full m-1 px-4 py-2 transition-all duration-300 hover:bg-blue-600 dark:hover:bg-blue-700 ${selectedCategory === category ? "bg-blue-600 text-white" : "bg-gray-100 dark:bg-gray-700 text-black"}`}
+                                className={`cursor-pointer text-sm border border-lightText dark:border-gray-500 rounded-full m-1 px-4 py-2 transition-all duration-300 hover:bg-blue-600 dark:hover:bg-blue-700 ${selectedCategory === category ? "bg-blue-600 text-white" : "bg-gray-100 dark:bg-gray-700 text-black dark:text-white"}`}
                                 aria-label={`Filter items by ${category}`}
                             >
                                 {category}
