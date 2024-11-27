@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import styles from "../utils/style";
 import { posts } from "../utils/constants";
 import BlogCard from "../components/BlogCard";
+import { useState } from "react";
 
 // Define categories for filtering
 const categories = ['All', 'Post', 'Podcast', 'Article'];
