@@ -283,6 +283,13 @@ export const certificates = [
 // Awards
 export const awards = [
   {
+    title: "Diana Award Recipient Roll of Honor",
+    description:
+      "Selected as a top 200 finalist from a pool of 1700 nominations allover the world for having a creating a positive contribution to society by building a platform that provide academic resources to students in Africa especially those affected by crisis.",
+    date: "2024",
+    category: "Global",
+  },
+  {
     title: "Global Student Top 50 Finalist",
     description:
       "Selected as a top 50 finalist from a pool of 3851 students making real impact in education and society.",
