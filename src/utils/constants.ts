@@ -367,8 +367,10 @@ export const builds = [
   "My portfolio websites",
   "IoT recommendation framework",
   "Sustainable Shopping Assistant",
+  "BMW Group Hackathon on Causal ML",
   "Brain Tumor Classification with Neural Network",
   "AI-powered Churn Prediction for a bank customer",
+  
   
   
   
@@ -378,7 +380,7 @@ export const builds = [
 // Hobbies
 export const hobbies = [
   "Listening to podcasts (Diary of a CEO, Huberman Lab, Jordan Peterson)",
-  "Watching documentaries, tutorials, and FBI/Crime series",
+  "Watching documentaries, tutorials, and CIA/FBI/Crime series",
   //"Reading tech articles and self-development books",
   "Studying chess positions",
   "Playing Table Tennis",

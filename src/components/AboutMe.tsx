@@ -22,11 +22,20 @@ export default function AboutMe() {
           {/* Introduction list */}
           <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
             <li>
-              Hello! I'm Kinlo. I'm pursuing a major in Computer Science and a
-              minor in Data Science with an elective in Artificial Intelligence
-              and Machine Learning at Constructor University, Bremen-Germany. I
-              have a passion for educational technology. I actively share my
-              knowledge on various social media platforms especially on LinkedIn
+              Hello! I'm Kinlo, a final-year Computer Science student with a
+              minor in Data Science and an elective in Artificial Intelligence
+              and Machine Learning at Constructor University, Bremen, Germany. I
+              love building things and constantly seek improvement and striving
+              to become better with every opportunity I get. I actively share my
+              knowledge on various social media platforms, especially on&nbsp;
+              <a
+                href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 underline hover:text-blue-700"
+              >
+                LinkedIn
+              </a>.
             </li>
           </ul>
           {/* My CV button */}
@@ -50,6 +59,41 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="mt-10">
+        {/* Decorative title separator for "About Me:" */}
+        <div className="mt-8">
+          <div className="relative flex py-5 items-center">
+            <div className="flex-grow border-t border-gray-400"></div>
+            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400">
+              <span className="text-blue-500">{`>`}</span> About Me:
+            </span>
+            <div className="flex-grow border-t border-gray-400"></div>
+          </div>
+
+          {/* Personal statements */}
+          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
+            <span className="text-blue-500">| </span>I love building things.
+          </p>
+          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
+            <span className="text-blue-500">| </span>I also enjoy teaching (started
+            with maths in high school and later calculus I & II in university).
+          </p>
+          <div style={{ height: "20px" }}></div>
+          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
+            <span className="text-blue-500">| </span>When not studying or
+            coding, i'll definitely be:
+          </p>
+
+          {/* List of hobbies */}
+          <ul className="pl-5 sm:pl-10 md:pl-20 space-y-2 text-xs sm:text-sm md:text-lg dark:text-gray-300">
+            {hobbies.map((hobby, key) => (
+              <li key={key}>
+                <span className="text-blue-500">{">"} </span>
+                {hobby}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Section on capabilities */}
         <div className="mt-10">
           <div className="relative flex py-5 items-center">
@@ -68,46 +112,10 @@ export default function AboutMe() {
             ))}
             <li>
               <span>
-                For details of these projects, see the project section in the
+                For details of these projects, kindly refer to the project section in the
                 Navbar.
               </span>
             </li>
-          </ul>
-        </div>
-
-        {/* Decorative title separator for "About Me:" */}
-        <div className="mt-8">
-          <div className="relative flex py-5 items-center">
-            <div className="flex-grow border-t border-gray-400"></div>
-            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400">
-              <span className="text-blue-500">{`>`}</span> About Me:
-            </span>
-            <div className="flex-grow border-t border-gray-400"></div>
-          </div>
-
-          {/* Personal statements */}
-          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>I enjoy teaching (started
-            with maths in high school and later calculus I & II in university).
-          </p>
-          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>Problem-solving and
-            learning new things excite me.
-          </p>
-          <div style={{ height: "20px" }}></div>
-          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>When not studying or
-            coding, you'll find me:
-          </p>
-
-          {/* List of hobbies */}
-          <ul className="pl-5 sm:pl-10 md:pl-20 space-y-2 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            {hobbies.map((hobby, key) => (
-              <li key={key}>
-                <span className="text-blue-500">{">"} </span>
-                {hobby}
-              </li>
-            ))}
           </ul>
         </div>
 
