@@ -38,6 +38,29 @@ export const projects = [
     demo: "https://ket.academy/",
   },
   {
+    id: "aiflashcard",
+    name: "AI Flashcard",
+    description:
+      "AI Flashcard is an intelligent learning tool that uses AI to generate personalized flashcards for studying. This platform allows users to input topics and receive flashcards, multiple-choice questions, and videos tailored to their learning preferences, helping them retain information more effectively.",
+    github: "https://github.com/9117KET/AI-Flashcards",
+    features: [
+      "AI-Generated Flashcards: Automatically creates personalized flashcards based on user-inputted topics.",
+      "Multiple Learning Formats: Offers multiple-choice questions and videos in addition to flashcards.",
+      "Learning Progress Tracking: Keeps track of user progress and suggests areas for improvement.",
+      "Customizable Flashcards: Allows users to edit and organize their flashcards for better retention.",
+      "Responsive Design: Fully responsive and optimized for various devices and platforms.",
+    ],
+    technologies: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS",
+      "Firebase",
+      "OpenAI API",
+    ],
+    demo: "https://example.com/demo",
+  },
+  {
     id: "expenses",
     name: "Expenses Tracker",
     description:
@@ -62,6 +85,23 @@ export const projects = [
     demo: "https://example.com/demo",
   },
   {
+    id: "portfolio",
+    name: "My Portfolio Websites",
+    description:
+      "This project, which I assume you are currently on reading this information, was developed with TypeScript, Tailwind CSS, and React. It showcases my skills, projects, experiences, and accomplishments in a professional and interactive manner. The website is fully responsive and user-friendly, designed to provide an engaging experience for visitors.",
+    github: "https://github.com/9117KET/my-portfolio.git",
+    features: [
+      "Project Showcase: Displays my portfolio projects with detailed descriptions, technologies used, and links to demos and repositories.",
+      "Responsive Design: Fully optimized for various devices, including desktops, tablets, and smartphones.",
+      "Dark and Light Modes: Offers a toggle feature to switch between dark and light themes.",
+      "Dynamic Navigation: Smooth and intuitive navigation with categorized sections.",
+      "Customizable Content: Designed to be easily updated with new projects, experiences, and achievements.",
+    ],
+    technologies: ["TypeScript", "React", "Tailwind CSS", "Vercel"],
+    demo: "https://my-portfolio-xi-flame-14.vercel.app/",
+  },
+
+  {
     id: "assistantai",
     name: "AI Customer Assistant Bot",
     description:
@@ -82,29 +122,6 @@ export const projects = [
       "Vanilla TypeScript",
       "OpenAI GPT",
       "Groq API",
-    ],
-    demo: "https://example.com/demo",
-  },
-  {
-    id: "aiflashcard",
-    name: "AI Flashcard",
-    description:
-      "AI Flashcard is an intelligent learning tool that uses AI to generate personalized flashcards for studying. This platform allows users to input topics and receive flashcards, multiple-choice questions, and videos tailored to their learning preferences, helping them retain information more effectively.",
-    github: "https://github.com/9117KET/AI-Flashcards",
-    features: [
-      "AI-Generated Flashcards: Automatically creates personalized flashcards based on user-inputted topics.",
-      "Multiple Learning Formats: Offers multiple-choice questions and videos in addition to flashcards.",
-      "Learning Progress Tracking: Keeps track of user progress and suggests areas for improvement.",
-      "Customizable Flashcards: Allows users to edit and organize their flashcards for better retention.",
-      "Responsive Design: Fully responsive and optimized for various devices and platforms.",
-    ],
-    technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "Tailwind CSS",
-      "Firebase",
-      "OpenAI API",
     ],
     demo: "https://example.com/demo",
   },
@@ -365,16 +382,13 @@ export const builds = [
   "Expense Tracker",
   "AI Customer Support",
   "My portfolio websites",
+  "Inventory management system",
   "IoT recommendation framework",
   "Sustainable Shopping Assistant",
   "BMW Group Hackathon on Causal ML",
   "Brain Tumor Classification with Neural Network",
   "AI-powered Churn Prediction for a bank customer",
-  
-  
-  
-  
-
+  "Pentagon-A real time image generation web app with natural language",
 ];
 
 // Hobbies
@@ -384,7 +398,7 @@ export const hobbies = [
   //"Reading tech articles and self-development books",
   "Studying chess positions",
   "Playing Table Tennis",
-  "Learning Piano"
+  "Learning Piano",
 ];
 
 // Blog posts

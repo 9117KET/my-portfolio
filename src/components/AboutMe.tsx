@@ -71,10 +71,10 @@ export default function AboutMe() {
 
           {/* Personal statements */}
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>I love building things.
+          
           </p>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>I also enjoy teaching (started
+            <span className="text-blue-500">| </span>I enjoy teaching (started
             with maths in high school and later calculus I & II in university).
           </p>
           <div style={{ height: "20px" }}></div>
