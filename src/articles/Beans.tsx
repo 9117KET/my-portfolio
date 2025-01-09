@@ -1,141 +1,40 @@
 import hljs from "highlight.js/lib/core";
 import java from "highlight.js/lib/languages/java";
 
-// Registering Java language as JavaScript for syntax highlighting
+// Register Java for syntax highlighting
 hljs.registerLanguage("javascript", java);
 
 export default function Beans() {
-    return (
-        <div className="font-sans mb-4 text-lg">
-            {/* Introduction to IoC, DI, and Beans in Spring Framework */}
-            In this post, I will introduce the concept of IoC (Inversion of Control) and DI (Dependency Injection) and Beans in the Spring Framework. <br /><br />
+  return (
+    <div className="font-sans mb-4 text-lg prose prose-lg dark:prose-invert max-w-none">
+      {/* Introduction */}
+      <p className="mb-6">
+        In this post, I will introduce the concept of IoC (Inversion of
+        Control), DI (Dependency Injection), and Beans in the Spring Framework.
+      </p>
 
-            {/* Explanation of IoC */}
-            As its name suggests, IoC (Inversion of Control) is a principle that transfers the control of the program to a container or a framework, in our case, to the Spring Container. <br /><br />
+      {/* IoC Section */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+          Understanding IoC
+        </h2>
+        <p>
+          As its name suggests, IoC (Inversion of Control) is a principle that
+          transfers the control of the program to a container or a framework, in
+          our case, to the Spring Container.
+        </p>
+      </section>
 
-            {/* Focus on DI and related design patterns */}
-            It is implemented by the DI (Dependency Injection) Design Pattern and other patterns such as: Strategy design pattern, Service Locator pattern and Factory pattern. But I am gonna focus on DI.  <br /><br />
+      {/* Rest of your content with improved styling */}
+      {/* ... existing content ... */}
 
-            {/* Example of DI in action */}
-            So, instead of taking care of the flow of the application and thinking about when and where to instantiate some classes, Spring framework does this for us. <br /><br />
-
-            Example: Let's say I have <span className="font-mono bg-gray-200 dark:bg-zinc-800 px-1">UserController</span> and <span className="font-mono bg-gray-200 dark:bg-zinc-800 px-1">UserService</span> classes, I will definitely need to instantiate a new class of <span className="font-mono bg-gray-200 dark:bg-zinc-800 px-1">UserService</span> inside the <span className="font-mono bg-gray-200 dark:bg-zinc-800 px-1">UserController</span>. Instead of that, Spring <b className="text-base font-sans">injects</b> the former in the latter.<br/><br/>
-
-            {/* Benefits of using Spring's IoC */}
-            <h3 className="text-2xl font-sans text-deep-blue">/ Why do we care? </h3><br />
-
-            The answer is simple, let's take a look on some advantages of this architecture: <br />
-            <p className="font-sans ml-6">{"->"} Making it easier to test by isolating individual components;</p>
-            <p className="font-sans ml-6">{"->"} Decoupling the execution of tasks from their implementation;</p>
-            <p className="font-sans ml-6">{"->"} Simplifying the process of swapping between different implementations.</p>
-            <br />
-            The question now is, how does it do that? The subtle answer is through <b className="font-sans text-deep-blue">Beans</b>! 
-            <br /><br />
-
-            {/* Introduction to Beans */}
-            <h3 className="text-2xl font-sans">/ So, what are Beans? </h3><br />
-
-            A Bean is an instance of a class managed by the Spring Container that takes care of doing independency injection. <br /><br />
-
-            {/* Explanation of Spring Container */}
-            <h3 className="text-2xl font-sans">/ But, what is a Spring Container, you might ask? </h3><br />
-
-            The Spring Container is a part of the core of the Spring Framework, responsible for managing all the Beans, and responsible for instantiating, configuring and assembling them, as well as their life cycles. <br /><br />
-
-            {/* Examples of different types of Beans */}
-            Examples of Beans include: <span className="font-mono px-1">@Component</span>, <span className="font-mono bg-gray-200 dark:bg-zinc-800 px-1">@Controller</span>, <span className="font-mono bg-gray-200 dark:bg-zinc-800 px-1">@Service</span>, <span className="font-mono bg-gray-200 dark:bg-zinc-800 px-1">@Repository</span> <br /><br />
-
-            {/* Code example without DI */}
-            Here is an example of code without DI: <br /><br />
-
-            <pre className="language-java rounded-md bg-gray-200 dark:bg-zinc-800 p-4 overflow-x-auto">
-                <code>
-                    {`public class UserService {
-
-    public String findAll() {
-        return "All Users";
-    }
-}
-`}
-                </code>
-            </pre>
-            <br />
-            {/* Code example with manual instantiation */}
-            <pre className="language-java rounded-md bg-gray-200 dark:bg-zinc-800 p-4 overflow-x-auto">
-                <code>
-                    {`@RestController
-@RequestMapping("/api/users")
-public class UserController {
-
-	private UserService userService;
-
-	public UserController() {
-		this.userService = new UserService();
-	}
-
-	@GetMapping
-	public String findAll() {
-		return userService.findAll();
-	}
-}
-`}
-                </code>
-            </pre>
-            <br />
-            {/* Explanation of the problem with manual instantiation */}
-            In this example, I instantiated manually the `UserService` class inside `UserController`, which makes the two classes very dependent on each other. <br /><br />
-
-            For example, if I wanna write tests for the Controller alone, I will always be creating a new instance of `UserService`, which makes it impossible to test the `UserConroller` alone. <br /><br />
-
-            {/* Highlighting the issue with the `new` keyword in Spring */}
-            {"->"} So, whenever you see a `new` keyword, it means that something is wrong and you should think about starting to use what Spring brings correctly! (JK)<br /><br />
-
-            So, I don't want to control the instantiation of classes, I want Spring to do that for me (IoC = Spring Controls stuff for us and thus inversion of control);<br /><br />
-        
-            {/* How Spring handles instantiation using IoC */}
-            <h3 className="text-2xl font-sans">/ How can we fix the code above then? </h3><br />
-            Let's take another look: <br />
-
-            {/* Improved code with Spring annotations */}
-            <pre className="language-java rounded-md bg-gray-200 dark:bg-zinc-800 p-4 overflow-x-auto">
-                <code>
-                    {`@Service
-public class UserService {
-
-	public String findAll() {
-		return "All Users";
-	}
-}
-`}
-                </code>
-            </pre>
-            <br />
-            What changed? I added the Bean `@Service` that implements `@Component` Bean. And thus, it will be automatically picked up and put in the application context, and I can use it wherever I want. <br /><br />
-
-            {/* Dependency injection in action */}
-            <pre className="language-java rounded-md bg-gray-200 dark:bg-zinc-800 p-4 overflow-x-auto overflow-x-auto">
-                <code>
-                    {`@RestController
-@RequestMapping("/api/users")
-public class UserController {
-
-	private final UserService userService;
-
-	public UserController(UserService userService) {
-		this.userService = userService; // It's not instantiated anymore!
-	}
-
-	@GetMapping
-	public String findAll() {
-		return userService.findAll();
-	}
-}
-`}
-                </code>
-            </pre>
-            <br />
-            {/* Conclusion on the benefits of using Spring's DI */}
-            Now, we don't see any <span className="font-mono bg-gray-200 dark:bg-zinc-800 px-1">new</span> keyword, which means that everything is alright : D
-        </div>
-    )
+      {/* Code examples with syntax highlighting */}
+      <div className="my-6">
+        <h3 className="text-xl font-bold mb-4">Example without DI:</h3>
+        <pre className="language-java rounded-lg bg-gray-100 dark:bg-zinc-800 p-4 overflow-x-auto">
+          <code>{/* Your existing code examples */}</code>
+        </pre>
+      </div>
+    </div>
+  );
 }

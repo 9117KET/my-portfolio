@@ -35,7 +35,8 @@ export default function AboutMe() {
                 className="text-blue-500 underline hover:text-blue-700"
               >
                 LinkedIn
-              </a>.
+              </a>
+              .
             </li>
           </ul>
           {/* My CV button */}
@@ -45,7 +46,7 @@ export default function AboutMe() {
               target="_blank"
               className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition duration-300 ease-in-out shadow-lg"
             >
-              My CV
+              My Resume
             </a>
           </p>
         </div>
@@ -61,18 +62,19 @@ export default function AboutMe() {
       <div className="mt-10">
         {/* Decorative title separator for "About Me:" */}
         <div className="mt-8">
-          <div className="relative flex py-5 items-center">
-            <div className="flex-grow border-t border-gray-400"></div>
-            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400">
+          <div className="relative flex py-5 items-center group">
+            <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
+            <span
+              className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400 
+              transition-colors duration-300 group-hover:text-blue-500"
+            >
               <span className="text-blue-500">{`>`}</span> About Me:
             </span>
-            <div className="flex-grow border-t border-gray-400"></div>
+            <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
           </div>
 
           {/* Personal statements */}
-          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-          
-          </p>
+          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"></p>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
             <span className="text-blue-500">| </span>I enjoy teaching (started
             with maths in high school and later calculus I & II in university).
@@ -84,11 +86,18 @@ export default function AboutMe() {
           </p>
 
           {/* List of hobbies */}
-          <ul className="pl-5 sm:pl-10 md:pl-20 space-y-2 text-xs sm:text-sm md:text-lg dark:text-gray-300">
+          <ul className="pl-5 sm:pl-10 md:pl-20 space-y-3 text-xs sm:text-sm md:text-lg dark:text-gray-300">
             {hobbies.map((hobby, key) => (
-              <li key={key}>
-                <span className="text-blue-500">{">"} </span>
-                {hobby}
+              <li
+                key={key}
+                className="group flex items-center gap-2 transition-all duration-300 hover:translate-x-2"
+              >
+                <span className="text-blue-500 transform transition-transform duration-300 group-hover:scale-110">
+                  {">"}
+                </span>
+                <span className="transition-colors duration-300 group-hover:text-blue-500">
+                  {hobby}
+                </span>
               </li>
             ))}
           </ul>
@@ -112,8 +121,8 @@ export default function AboutMe() {
             ))}
             <li>
               <span>
-                For details of these projects, kindly refer to the project section in the
-                Navbar.
+                For details of these projects, kindly refer to the project
+                section in the Navbar.
               </span>
             </li>
           </ul>

@@ -5,19 +5,26 @@ import { projects } from "../utils/constants";
 import styles from "../utils/style";
 import { Helmet } from "react-helmet-async";
 
-const languages = ["All","Fullstack", "Data Science", "Artificial Intelligence"]; // Add languages as needed
+const languages = [
+  "All",
+  "Fullstack",
+  "Data Science",
+  "Artificial Intelligence",
+]; // Add languages as needed
 
 export default function Projects() {
-  // State to keep track of the selected programming language 
+  // State to keep track of the selected programming language
   const [selectedLanguage, setSelectedLanguage] = useState("All");
 
   // Filter projects based on the selected language
-  const filteredProjects = projects.filter(project => 
-    selectedLanguage === "All" || project.technologies.includes(selectedLanguage)
+  const filteredProjects = projects.filter(
+    (project) =>
+      selectedLanguage === "All" ||
+      project.technologies.includes(selectedLanguage)
   );
 
   return (
-    <div className='dark:bg-[#2D2E32] min-h-screen'>
+    <div className="dark:bg-[#2D2E32] min-h-screen">
       <Helmet>
         <title>projects;</title>
       </Helmet>
@@ -33,7 +40,11 @@ export default function Projects() {
           <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
             {/* Introduction text */}
             <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">
-              {`-> `}I primarily learn by working on projects. This method allows me to understand concepts more deeply and keeps me motivated, as I can see the progress and outcome of what I’m building. If I don’t complete a project, I find it difficult to let it go and remain determined to finish it
+              {`-> `}I primarily learn by working on projects. This method
+              allows me to understand concepts more deeply and keeps me
+              motivated, as I can see the progress and outcome of what I’m
+              building. If I don’t complete a project, I find it difficult to
+              let it go and remain determined to finish it
             </h3>
             {/* Divider with "My Projects" text */}
             <div className="relative flex py-3 md:py-5 items-center">
@@ -43,33 +54,40 @@ export default function Projects() {
               </span>
               <div className="flex-grow border-t border-gray-400"></div>
             </div>
-            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">Here are some of my favourite projects:</h3>
-            
+            <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">
+              Here are some of my favourite projects:
+            </h3>
+
             {/* Language filter buttons */}
             <div className="flex flex-wrap justify-center mt-6">
-              {languages.map(language => (
-                <span 
-                  key={language} 
-                  onClick={() => setSelectedLanguage(language)} 
-                  className={`cursor-pointer text-sm border border-lightText dark:border-gray-500 rounded-lg m-1 px-2 py-1 transition-all duration-300 hover:bg-blue-800 dark:hover:bg-blue-900 ${selectedLanguage === language ? "bg-blue-800" : "bg-gray-100 dark:bg-gray-700"}`}
+              {languages.map((language) => (
+                <button
+                  key={language}
+                  onClick={() => setSelectedLanguage(language)}
+                  className={`cursor-pointer text-sm font-medium border border-lightText dark:border-gray-500 rounded-lg m-1 px-4 py-2 transition-all duration-300 hover:bg-blue-800 dark:hover:bg-blue-900 ${
+                    selectedLanguage === language
+                      ? "bg-blue-800 text-white"
+                      : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
+                  }`}
+                  aria-label={`Filter projects by ${language}`}
                 >
                   {language}
-                </span>
+                </button>
               ))}
             </div>
-            
+
             {/* Display filtered projects */}
             <div className="flex flex-col">
-              {filteredProjects.map(project => (
-                <Project 
-                  key={project.id} 
-                  id={project.id} 
-                  demo={project.demo} 
-                  name={project.name} 
-                  github={project.github} 
-                  description={project.description} 
-                  technologies={project.technologies} 
-                  features={project.features} 
+              {filteredProjects.map((project) => (
+                <Project
+                  key={project.id}
+                  id={project.id}
+                  demo={project.demo}
+                  name={project.name}
+                  github={project.github}
+                  description={project.description}
+                  technologies={project.technologies}
+                  features={project.features}
                 />
               ))}
             </div>
@@ -77,5 +95,5 @@ export default function Projects() {
         </div>
       </div>
     </div>
-  )
+  );
 }

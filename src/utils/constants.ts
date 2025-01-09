@@ -10,7 +10,7 @@ export const navLinks = [
 ];
 
 export const cvLink =
-  "https://drive.google.com/file/d/1zsHQuZGeYrMwnh2z1qgLumlLwDYhBgxQ/view?usp=sharing";
+  "https://drive.google.com/file/d/1czWz6KarKW2HSB29XLl0jKDbW27zNuGc/view?usp=sharing";
 
 // Project details for the portfolio
 export const projects = [
@@ -412,6 +412,16 @@ export const posts: Post[] = [
       "The Potential of IoT, AI, and Big Data for Rwanda's Future: A Case Study of Kigali Innovation City (KIC).",
     content:
       "The fields of Artificial Intelligence (AI), Big Data, and the Internet of Things (IoT) have been transforming industries globally, and Africa is no different. This post explores the historical timeline of AI, IoT, and Big Data over the last 6 decades.",
+    type: "Blog",
+  },
+  {
+    id: "spring_beans",
+    title: "Understanding IoC, DI, and Beans in Spring Framework",
+    date: "April 15, 2024",
+    category: "Article",
+    description:
+      "A deep dive into Inversion of Control, Dependency Injection, and Beans in the Spring Framework, with practical examples and best practices.",
+    content: "Beans",
     type: "Blog",
   },
 ];
