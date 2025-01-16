@@ -38,6 +38,29 @@ export const projects = [
     demo: "https://ket.academy/",
   },
   {
+    id: "ai-chatbot",
+    name: "AI Chat Bot",
+    description:
+      "A full-stack chatbot application built with Next.js and OpenAI's GPT-3.5 API. The application features real-time message updates, secure API integration, and a responsive user interface designed for natural conversations.",
+    github: "https://github.com/9117KET/ai-chatbot",
+    features: [
+      "Real-time Chat: Implements instant message updates and responses using React hooks",
+      "Secure API Integration: Server-side implementation of OpenAI's GPT-3.5 API",
+      "Dynamic UI: Material-UI based interface with custom styling and message bubbles",
+      "State Management: Efficient handling of chat history and user interactions",
+      "Responsive Design: Fully adaptable chat interface across all device sizes",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Material-UI",
+      "OpenAI API",
+      "React Hooks",
+      "Tailwind CSS",
+    ],
+    demo: "https://github.com/9117KET/ai-chatbot",
+  },
+  {
     id: "aiflashcard",
     name: "AI Flashcard",
     description:
@@ -85,23 +108,6 @@ export const projects = [
     demo: "https://example.com/demo",
   },
   {
-    id: "portfolio",
-    name: "My Portfolio Websites",
-    description:
-      "This project, which I assume you are currently on reading this information, was developed with TypeScript, Tailwind CSS, and React. It showcases my skills, projects, experiences, and accomplishments in a professional and interactive manner. The website is fully responsive and user-friendly, designed to provide an engaging experience for visitors.",
-    github: "https://github.com/9117KET/my-portfolio.git",
-    features: [
-      "Project Showcase: Displays my portfolio projects with detailed descriptions, technologies used, and links to demos and repositories.",
-      "Responsive Design: Fully optimized for various devices, including desktops, tablets, and smartphones.",
-      "Dark and Light Modes: Offers a toggle feature to switch between dark and light themes.",
-      "Dynamic Navigation: Smooth and intuitive navigation with categorized sections.",
-      "Customizable Content: Designed to be easily updated with new projects, experiences, and achievements.",
-    ],
-    technologies: ["TypeScript", "React", "Tailwind CSS", "Vercel"],
-    demo: "https://my-portfolio-xi-flame-14.vercel.app/",
-  },
-
-  {
     id: "assistantai",
     name: "AI Customer Assistant Bot",
     description:
@@ -125,6 +131,183 @@ export const projects = [
     ],
     demo: "https://example.com/demo",
   },
+  {
+    id: "portfolio",
+    name: "My Portfolio Websites",
+    description:
+      "This project, which I assume you are currently on reading this information, was developed with TypeScript, Tailwind CSS, and React. It showcases my skills, projects, experiences, and accomplishments in a professional and interactive manner. The website is fully responsive and user-friendly, designed to provide an engaging experience for visitors.",
+    github: "https://github.com/9117KET/my-portfolio.git",
+    features: [
+      "Project Showcase: Displays my portfolio projects with detailed descriptions, technologies used, and links to demos and repositories.",
+      "Responsive Design: Fully optimized for various devices, including desktops, tablets, and smartphones.",
+      "Dark and Light Modes: Offers a toggle feature to switch between dark and light themes.",
+      "Dynamic Navigation: Smooth and intuitive navigation with categorized sections.",
+      "Customizable Content: Designed to be easily updated with new projects, experiences, and achievements.",
+    ],
+    technologies: ["TypeScript", "React", "Tailwind CSS", "Vercel"],
+    demo: "https://my-portfolio-xi-flame-14.vercel.app/",
+  },
+  {
+    id: "iot-framework",
+    name: "IoT Course Recommendation Framework",
+    description:
+      "A multipurpose recommendation framework designed to help users navigate and find relevant IoT courses from WaziUp's extensive catalog. The framework processes user preferences and learning goals to suggest personalized course paths, making it easier for learners to find the most suitable IoT courses for their needs.",
+    github: "https://github.com/9117KET/IoTTest.git",
+    features: [
+      "Smart Course Recommendations: Analyzes user preferences and learning goals to suggest relevant IoT courses.",
+      "Interactive Course Explorer: User-friendly interface for browsing and discovering IoT courses.",
+      "Personalized Learning Paths: Creates customized learning journeys based on user skill levels and interests.",
+      "Course Analytics: Provides insights into course popularity and user engagement.",
+      "Serves over 1500+ users with recommendations from a catalog of 300+ IoT courses.",
+    ],
+    technologies: ["JavaScript", "HTML5", "CSS"],
+    demo: "https://github.com/9117KET/IoTTest.git",
+  },
+  {
+    id: "sustainable-shopping",
+    name: "Sustainable Shopping Assistant",
+    description:
+      "A Flask-based web application designed to help users make environmentally conscious shopping decisions. The platform tracks product sustainability metrics and eco-ratings, providing users with detailed information about the environmental impact of their purchases.",
+    github: "https://github.com/9117KET/db-project.git",
+    features: [
+      "Admin Authentication: Secure portal for managing product data and eco-ratings",
+      "CRUD Operations: Complete management system for products, users, categories, and sustainability metrics",
+      "Dynamic Search & Filtering: Real-time product filtering with complex database queries",
+      "Responsive Design: Fully adaptable interface for all device sizes",
+      "Sustainability Metrics: Comprehensive tracking and display of product eco-ratings and environmental impact",
+    ],
+    technologies: [
+      "Python",
+      "Flask",
+      "MySQL",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap",
+    ],
+    demo: "https://github.com/9117KET/db-project.git",
+  },
+  {
+    id: "bmw-hackathon",
+    name: "BMW Causal ML Hackathon Project",
+    description:
+      "A machine learning project developed during a 3-day BMW Group hackathon, focusing on causal machine learning to predict car part quality. The project analyzed production data from over 370 sensors to identify factors affecting part quality and provide actionable recommendations for improving production outcomes.",
+    github:
+      "https://www.linkedin.com/posts/kinlo-ephriam-tangiri-a70113218_causal-machine-learning-activity-7269276878039834626-CKdF/?utm_source=share&utm_medium=member_desktop",
+    features: [
+      "Causal ML Implementation: Built models using DoWhy and CausalLearn frameworks for quality prediction",
+      "Data Processing Pipeline: Developed robust data cleaning and preprocessing workflows for 370+ sensor inputs",
+      "Production Optimization: Generated actionable insights to improve OK outcomes and reduce NOK rates",
+      "Interactive Dashboard: Created visualization tools for real-time monitoring and analysis",
+      "Team Collaboration: Worked in an agile team environment to deliver results within 48+ hours",
+    ],
+    technologies: [
+      "Python",
+      "DoWhy",
+      "CausalLearn",
+      "Pandas",
+      "Scikit-learn",
+      "Plotly",
+      "Streamlit",
+    ],
+    demo: "https://www.linkedin.com/posts/kinlo-ephriam-tangiri-a70113218_causal-machine-learning-activity-7269276878039834626-CKdF/?utm_source=share&utm_medium=member_desktop",
+  },
+  {
+    id: "brain-tumor",
+    name: "Brain Tumor Classification",
+    description:
+      "A deep learning project that utilizes neural networks to classify MRI scans into three distinct types of brain diseases. The system processes brain MRI scans and generates comprehensive reports for neurosurgeons, providing quick and accurate disease classification results.",
+    github: "https://github.com/9117KET/brain-tumor-classification",
+    features: [
+      "Neural Network Model: Custom-built neural network for accurate classification of brain MRI scans",
+      "High-Speed Processing: Generates comprehensive reports in under 200ms",
+      "Multi-Disease Classification: Accurately categorizes scans into 3 distinct brain disease types",
+      "Large Dataset Handling: Successfully trained and tested on 1000+ MRI scans",
+      "Medical Report Generation: Creates detailed multimodal MRI reports for neurosurgeons",
+    ],
+    technologies: [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "OpenCV",
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+    ],
+    demo: "https://www.youtube.com/watch?v=lmQEeJGh134",
+  },
+  {
+    id: "bank-churn",
+    name: "Bank Customer Churn Prediction",
+    description:
+      "An AI-powered system that analyzes banking customer data to predict potential churners. The project leverages multiple LLM models including Llama 3.1b and Groq to process a dataset of over 30,000 customers, providing automated personalized engagement solutions to improve customer retention.",
+    github: "https://github.com/9117KET/Customer-Churn-Prediction",
+    features: [
+      "Large-Scale Data Analysis: Processed and analyzed 30k+ customer records using advanced LLM models",
+      "Multi-Model Comparison: Evaluated and optimized predictions across five different LLM models",
+      "Feature Engineering: Implemented sophisticated data normalization and feature extraction techniques",
+      "Hyperparameter Optimization: Fine-tuned model parameters to maximize prediction accuracy",
+      "Automated Communication: Developed system for sending personalized retention emails based on predictions",
+    ],
+    technologies: [
+      "Python",
+      "Llama 3.1b",
+      "Groq",
+      "Vercel",
+      "Pandas",
+      "Scikit-learn",
+      "TensorFlow",
+    ],
+    demo: "https://github.com/9117KET/Customer-Churn-Prediction",
+  },
+  {
+    id: "image-gen",
+    name: "Real-time Image Generation with Natural Language",
+    description:
+      "A full-stack AI application that generates images based on natural language descriptions in real-time. Built with Next.js and TypeScript, the application features secure image storage using Vercel Blob storage and optimized image handling through Next.js image components.",
+    github: "https://github.com/9117KET/ai-image-generator",
+    features: [
+      "Real-time Generation: Creates images instantly based on text descriptions using AI",
+      "Secure Storage: Implements Vercel Blob storage for reliable image management",
+      "Optimized Performance: Utilizes Next.js image component for efficient image loading and display",
+      "Error Handling: Robust system with user-friendly feedback and loading states",
+      "Responsive Design: Fully adaptable interface with Tailwind CSS styling",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel",
+      "AI API",
+      "Blob Storage",
+    ],
+    demo: "https://github.com/9117KET/ai-image-generator",
+  },
+  {
+    id: "rate-professor",
+    name: "Rate My Professor RAG Application",
+    description:
+      "A full-stack professor review system leveraging Retrieval-Augmented Generation (RAG) to provide intelligent insights from student reviews. Built with Next.js and integrated with OpenAI's GPT-4 and Pinecone vector database, the application offers semantic search capabilities and real-time chat functionality.",
+    github: "https://github.com/9117KET/rag-rate-my-professor",
+    features: [
+      "RAG Implementation: Utilizes OpenAI and Pinecone for intelligent review analysis and insights",
+      "Semantic Search: Advanced search functionality across professor reviews using vector database",
+      "Real-time Chat: Dynamic chat interface with streaming responses from GPT-4",
+      "Secure Error Handling: Robust error management system for API integrations",
+      "Responsive UI: Material-UI based interface with dynamic content streaming",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "OpenAI GPT-4",
+      "Pinecone",
+      "Material-UI",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    demo: "https://github.com/9117KET/rag-rate-my-professor",
+  },
+  
 ];
 
 // Experience details for the portfolio
@@ -378,10 +561,12 @@ export const contacts = [
 // Descriptions of types of builds the portfolio owner can perform
 export const builds = [
   "KET Academy (An e-learning platform for secondary and high school students in Africa)",
+  "AI Chatbot",
   "AI Flashcards",
   "Expense Tracker",
   "AI Customer Support",
   "My portfolio websites",
+  "Rate my Professor RAG App",
   "Inventory management system",
   "IoT recommendation framework",
   "Sustainable Shopping Assistant",
