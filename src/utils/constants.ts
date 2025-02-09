@@ -10,7 +10,7 @@ export const navLinks = [
 ];
 
 export const cvLink =
-  "https://drive.google.com/file/d/14JQHoXZgEIo0dsQ21yandouYqTqyZgud/view?usp=sharing";
+  "https://drive.google.com/file/d/150RhzoavHCM8bI4RA6PKe_Ku4NUQpEsd/view?usp=sharing";
 
 // Project details for the portfolio
 export const projects = [
