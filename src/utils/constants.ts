@@ -38,6 +38,30 @@ export const projects = [
     demo: "https://ket.academy/",
   },
   {
+    id: "rate-professor",
+    name: "Rate My Professor RAG Application",
+    description:
+      "A full-stack professor review system leveraging Retrieval-Augmented Generation (RAG) to provide intelligent insights from student reviews. Built with Next.js and integrated with OpenAI's GPT-4 and Pinecone vector database, the application offers semantic search capabilities and real-time chat functionality.",
+    github: "https://github.com/9117KET/rag-rate-my-professor",
+    features: [
+      "RAG Implementation: Utilizes OpenAI and Pinecone for intelligent review analysis and insights",
+      "Semantic Search: Advanced search functionality across professor reviews using vector database",
+      "Real-time Chat: Dynamic chat interface with streaming responses from GPT-4",
+      "Secure Error Handling: Robust error management system for API integrations",
+      "Responsive UI: Material-UI based interface with dynamic content streaming",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "OpenAI GPT-4",
+      "Pinecone",
+      "Material-UI",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    demo: "https://rate-my-professor-seven.vercel.app/",
+  },
+  {
     id: "ai-chatbot",
     name: "AI Chat Bot",
     description:
@@ -283,31 +307,6 @@ export const projects = [
     ],
     demo: "https://github.com/9117KET/ai-image-generator",
   },
-  {
-    id: "rate-professor",
-    name: "Rate My Professor RAG Application",
-    description:
-      "A full-stack professor review system leveraging Retrieval-Augmented Generation (RAG) to provide intelligent insights from student reviews. Built with Next.js and integrated with OpenAI's GPT-4 and Pinecone vector database, the application offers semantic search capabilities and real-time chat functionality.",
-    github: "https://github.com/9117KET/rag-rate-my-professor",
-    features: [
-      "RAG Implementation: Utilizes OpenAI and Pinecone for intelligent review analysis and insights",
-      "Semantic Search: Advanced search functionality across professor reviews using vector database",
-      "Real-time Chat: Dynamic chat interface with streaming responses from GPT-4",
-      "Secure Error Handling: Robust error management system for API integrations",
-      "Responsive UI: Material-UI based interface with dynamic content streaming",
-    ],
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "OpenAI GPT-4",
-      "Pinecone",
-      "Material-UI",
-      "Prisma",
-      "PostgreSQL",
-    ],
-    demo: "https://github.com/9117KET/rag-rate-my-professor",
-  },
-  
 ];
 
 // Experience details for the portfolio
@@ -404,35 +403,35 @@ export const certificates = [
     id: "cert-003",
     title: "Introduction to Design Thinking",
     description:
-      "Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University",
+      "Dunin-Deshpande Queen's Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen's University",
     date: "March 2023",
   },
   {
     id: "cert-004",
     title: "Ignite Entrepreneurship",
     description:
-      "Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University",
+      "Dunin-Deshpande Queen's Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen's University",
     date: "March 2023",
   },
   {
     id: "cert-005",
     title: "Explore Entrepreneurship",
     description:
-      "Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University",
+      "Dunin-Deshpande Queen's Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen's University",
     date: "March 2023",
   },
   {
     id: "cert-006",
     title: "Launch Entrepreneurship",
     description:
-      "Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University",
+      "Dunin-Deshpande Queen's Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen's University",
     date: "September 2023",
   },
   {
     id: "cert-007",
     title: "Jim Leech Mastercard Foundation Fellowship on Entrepreneurship",
     description:
-      "Dunin-Deshpande Queen’s Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen’s University",
+      "Dunin-Deshpande Queen's Innovation Centre Canada through the Jim Leech Mastercard Foundation Fellowship at Queen's University",
     date: "September 2023",
   },
   {
@@ -588,25 +587,104 @@ export const hobbies = [
 
 // Blog posts
 export const posts: Post[] = [
+  // Technical Posts
   {
     id: "ai_africa",
     title: "AI, IoT, Big Data & Africa",
     date: "June 10, 2024",
-    category: "AI-Post",
+    category: "Post",
     description:
       "The Potential of IoT, AI, and Big Data for Rwanda's Future: A Case Study of Kigali Innovation City (KIC).",
     content:
       "The fields of Artificial Intelligence (AI), Big Data, and the Internet of Things (IoT) have been transforming industries globally, and Africa is no different. This post explores the historical timeline of AI, IoT, and Big Data over the last 6 decades.",
     type: "Blog",
   },
+  // {
+  //   id: "spring_beans",
+  //   title: "Understanding IoC, DI, and Beans in Spring Framework",
+  //   date: "April 15, 2024",
+  //   category: "Article",
+  //   description:
+  //     "A deep dive into Inversion of Control, Dependency Injection, and Beans in the Spring Framework, with practical examples and best practices.",
+  //   content: "Beans",
+  //   type: "Blog",
+  // },
+  // Podcasts
+  // {
+  //   id: "tech_africa",
+  //   title: "The Future of Tech in Africa",
+  //   date: "May 20, 2024",
+  //   category: "Podcast",
+  //   description:
+  //     "A discussion with African tech leaders about the growing technology ecosystem and opportunities for innovation across the continent.",
+  //   content:
+  //     "Episode 1: Join us as we explore the rapidly evolving tech landscape in Africa with leading entrepreneurs and innovators.",
+  //   type: "Podcast",
+  // },
+  // Technical Articles
   {
-    id: "spring_beans",
-    title: "Understanding IoC, DI, and Beans in Spring Framework",
-    date: "April 15, 2024",
+    id: "ml_basics",
+    title: "Machine Learning Fundamentals",
+    date: "March 15, 2024",
     category: "Article",
     description:
-      "A deep dive into Inversion of Control, Dependency Injection, and Beans in the Spring Framework, with practical examples and best practices.",
-    content: "Beans",
+      "A comprehensive guide to understanding basic machine learning concepts, algorithms, and their practical applications.",
+    content: "MLBasics",
+    type: "Blog",
+  },
+
+  {
+    id: "react_patterns",
+    title: "Advanced React Design Patterns",
+    date: "March 30, 2024",
+    category: "Article",
+    description:
+      "Exploring advanced React patterns including Compound Components, Render Props, and Custom Hooks with practical examples.",
+    content: "ReactPatterns",
+    type: "Blog",
+  },
+
+  // Technical Posts
+  {
+    id: "typescript_tips",
+    title: "TypeScript Best Practices in 2024",
+    date: "February 28, 2024",
+    category: "Post",
+    description:
+      "Essential TypeScript tips and tricks for writing more maintainable and type-safe code in modern web applications.",
+    content: "TypeScriptTips",
+    type: "Blog",
+  },
+  // More Podcasts
+  {
+    id: "startup_journey",
+    title: "From Idea to Launch: KET Academy's Story",
+    date: "February 15, 2024",
+    category: "Podcast",
+    description:
+      "The journey of building KET Academy, challenges faced, and lessons learned in creating an e-learning platform for African students.",
+    content:
+      "Episode 2: The story behind KET Academy and its mission to provide accessible education in Africa.",
+    type: "Podcast",
+  },
+  {
+    id: "ai_ethics",
+    title: "AI Ethics and Responsibility",
+    date: "January 30, 2024",
+    category: "Post",
+    description:
+      "Exploring the ethical considerations and responsibilities in AI development, with a focus on bias, transparency, and accountability.",
+    content: "AIEthics",
+    type: "Blog",
+  },
+  {
+    id: "phil_ethics",
+    title: "Fundamentals of Philosophical Ethics",
+    date: "January 15, 2024",
+    category: "Article",
+    description:
+      "Exploring key ethical theories and their practical applications in modern decision-making, based on university coursework.",
+    content: "PhilEthics",
     type: "Blog",
   },
 ];
