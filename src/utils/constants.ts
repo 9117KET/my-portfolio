@@ -687,4 +687,46 @@ export const posts: Post[] = [
     content: "PhilEthics",
     type: "Blog",
   },
+  // Project Journey Posts
+  {
+    id: "ket_academy_journey",
+    title:
+      "The KET Academy Journey: Building an E-learning Platform for Africa",
+    date: "June 15, 2024",
+    category: "Project Breakdown",
+    description:
+      "A detailed breakdown of the development process, challenges, and lessons learned while building KET Academy, an e-learning platform serving over 700 students in crisis-affected regions.",
+    content: "KETAcademyJourney",
+    type: "Blog",
+  },
+  // {
+  //   id: "rag_professor_journey",
+  //   title: "Developing the Rate My Professor RAG System",
+  //   date: "March 20, 2024",
+  //   category: "Project Journey",
+  //   description:
+  //     "Deep dive into building a Retrieval-Augmented Generation system for professor reviews, including architecture and implementation details.",
+  //   content: "RAGProfessorJourney",
+  //   type: "Blog",
+  // },
+  // {
+  //   id: "ai_flashcard_journey",
+  //   title: "AI Flashcard: Building an Intelligent Study Tool",
+  //   date: "March 10, 2024",
+  //   category: "Project Journey",
+  //   description:
+  //     "The development story of AI Flashcard, from conception to deployment, including technical decisions and learning outcomes.",
+  //   content: "AIFlashcardJourney",
+  //   type: "Blog",
+  // },
+  {
+    id: "iot_recommendation_framework",
+    title: "Building an IoT Course Recommendation Framework during my internship",
+    date: "August 30, 2024",
+    category: "Project Breakdown",
+    description:
+      "An in-depth look at the development process of a multipurpose recommendation framework for IoT courses during my internship in Dresden Germany, including challenges faced and solutions implemented.",
+    content: "IoTRecommendationFramework",
+    type: "Blog",
+  },
 ];

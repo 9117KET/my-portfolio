@@ -6,7 +6,7 @@ import BlogCard from "../components/BlogCard";
 import { useState } from "react";
 
 // Define categories for filtering
-const categories = ["All", "Post", "Podcast", "Article"];
+const categories = ["All", "Post", "Podcast", "Article", "Project Breakdown"];
 
 export default function Blog() {
   // State to keep track of the selected category

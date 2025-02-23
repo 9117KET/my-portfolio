@@ -6,6 +6,7 @@ import ReactPatterns from "../articles/ReactPatterns";
 import TypeScriptTips from "../articles/TypeScriptTips";
 import AIEthics from "../articles/AIEthics";
 import PhilEthics from "../articles/PhilEthics";
+import KETAcademyJourney from "../articles/KETAcademyJourney";
 import { formatDate } from "../utils/Date";
 
 interface BlogPostProps {
@@ -34,6 +35,7 @@ export default function BlogPost({
     TypeScriptTips: <TypeScriptTips />,
     AIEthics: <AIEthics />,
     PhilEthics: <PhilEthics />,
+    KETAcademyJourney: <KETAcademyJourney />,
   };
 
   // Component render
