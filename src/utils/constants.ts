@@ -543,12 +543,12 @@ export const contacts = [
     target: "_blank",
   },
   { id: "x", name: "X", link: "https://x.com/KinloEphriam", target: "_blank" },
-  {
-    id: "leetcode",
-    name: "LeetCode",
-    link: "https://leetcode.com/u/kinlotangiri911/",
-    target: "_blank",
-  },
+  // {
+  //   id: "leetcode",
+  //   name: "LeetCode",
+  //   link: "https://leetcode.com/u/kinlotangiri911/",
+  //   target: "_blank",
+  // },
   {
     id: "email",
     name: "Email",
@@ -699,29 +699,20 @@ export const posts: Post[] = [
     content: "KETAcademyJourney",
     type: "Blog",
   },
-  // {
-  //   id: "rag_professor_journey",
-  //   title: "Developing the Rate My Professor RAG System",
-  //   date: "March 20, 2024",
-  //   category: "Project Journey",
-  //   description:
-  //     "Deep dive into building a Retrieval-Augmented Generation system for professor reviews, including architecture and implementation details.",
-  //   content: "RAGProfessorJourney",
-  //   type: "Blog",
-  // },
-  // {
-  //   id: "ai_flashcard_journey",
-  //   title: "AI Flashcard: Building an Intelligent Study Tool",
-  //   date: "March 10, 2024",
-  //   category: "Project Journey",
-  //   description:
-  //     "The development story of AI Flashcard, from conception to deployment, including technical decisions and learning outcomes.",
-  //   content: "AIFlashcardJourney",
-  //   type: "Blog",
-  // },
+  {
+    id: "rate_professor_journey",
+    title: "Developing the Rate My Professor AI Assistant",
+    date: "October 20, 2023",
+    category: "Project Breakdown",
+    description:
+      "An in-depth look at the development process, challenges, and lessons learned while building the Rate My Professor AI Assistant, a platform for students to anonymously rate professors and interact with an AI chat interface.",
+    content: "RateProfessorJourney",
+    type: "Blog",
+  },
   {
     id: "iot_recommendation_framework",
-    title: "Building an IoT Course Recommendation Framework during my internship",
+    title:
+      "Building an IoT Course Recommendation Framework during my internship",
     date: "August 30, 2024",
     category: "Project Breakdown",
     description:

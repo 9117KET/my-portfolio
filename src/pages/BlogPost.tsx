@@ -8,6 +8,7 @@ import AIEthics from "../articles/AIEthics";
 import PhilEthics from "../articles/PhilEthics";
 import KETAcademyJourney from "../articles/KETAcademyJourney";
 import { formatDate } from "../utils/Date";
+import RateProfessorJourney from "../articles/RateProfessorJourney";
 
 interface BlogPostProps {
   title: string;
@@ -36,6 +37,7 @@ export default function BlogPost({
     AIEthics: <AIEthics />,
     PhilEthics: <PhilEthics />,
     KETAcademyJourney: <KETAcademyJourney />,
+    RateProfessorJourney: <RateProfessorJourney />,
   };
 
   // Component render
