@@ -147,9 +147,13 @@ export default function Misc() {
                     </p>
                     <button
                       className="text-blue-500 hover:text-blue-600 transition-all duration-300 text-sm sm:text-base"
-                      onClick={() =>
-                        alert(`More information about ${item.title}`)
-                      }
+                      onClick={() => {
+                        if ("link" in item) {
+                          window.open(item.link, "_blank");
+                        } else {
+                          alert(`More information about ${item.title}`);
+                        }
+                      }}
                     >
                       Learn More →
                     </button>
