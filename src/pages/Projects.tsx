@@ -40,11 +40,12 @@ export default function Projects() {
           <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
             {/* Introduction text */}
             <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">
-              {`-> `}I primarily learn by working on projects. This method
-              allows me to understand concepts more deeply and keeps me
-              motivated, as I can see the progress and outcome of what I’m
-              building. If I don’t complete a project, I find it difficult to
-              let it go and remain determined to finish it
+              {`-> `}I learn most effectively through hands-on project work.
+              This approach allows me to develop a deeper understanding of
+              concepts while maintaining motivation through visible progress and
+              tangible outcomes. I'm committed to completing every project I
+              start, driven by my determination to see each endeavor through to
+              completion.
             </h3>
             {/* Divider with "My Projects" text */}
             <div className="relative flex py-3 md:py-5 items-center">
@@ -55,7 +56,7 @@ export default function Projects() {
               <div className="flex-grow border-t border-gray-400"></div>
             </div>
             <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl dark:text-gray-300 text-black mb-5">
-              Here are some of my favourite projects:
+              Here are some of my favorite projects:
             </h3>
 
             {/* Language filter buttons */}

@@ -6,10 +6,16 @@ export default function ContactMe() {
       <div className="relative flex py-5 items-center">
         <div className="flex-grow border-t border-gray-400"></div>
         <span className="text-3xl font-semibold flex-shrink mx-4 text-gray-400">
-          <span className="text-blue-800">{`>`}</span> Contact Me:
+          <span className="text-blue-800">{`>`}</span> Connect With Me:
         </span>
         <div className="flex-grow border-t border-gray-400"></div>
       </div>
+
+      <p className="text-center mb-6 text-sm sm:text-base">
+        I'm always open to discussing new projects, opportunities, or
+        collaborations. Feel free to reach out through any of the platforms
+        below.
+      </p>
 
       <ul className="mt-4 flex space-x-4 text-lg dark:text-gray-300 flex-wrap justify-center sm:flex-nowrap">
         {contacts.map((contact) => (

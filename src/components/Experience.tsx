@@ -8,6 +8,7 @@ interface ExperienceProps {
     duration: string;
     responsibilities: string[];
     companyDescription: string;
+    category?: string;
   }[];
 }
 

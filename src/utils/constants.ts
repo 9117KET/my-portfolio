@@ -18,14 +18,14 @@ export const projects = [
     id: "academy",
     name: "KET Academy",
     description:
-      "KET Academy is an e-learning platform designed to provide academic resources to secondary and high school students, especially those affected by crises or natural disasters in Africa. The platform also empowers youths (ambassadors) with educational technology skills and provides tailored resources to support their learning journey. This is a project very close to my heart and one of my motivation for doing CS",
+      "KET Academy is an advanced e-learning platform designed to provide high-quality academic resources to secondary and high school students in Cameroon, with a particular focus on those affected by crises or natural disasters. The platform empowers youth ambassadors with educational technology skills while delivering tailored resources to support students' unique learning journeys. This project represents one of my core motivations for pursuing Computer Science—creating technology that expands educational access in underserved regions.",
     github: "https://github.com/ket-academy/ketacademy",
     features: [
-      "Tailored academic resources for students in crisis-affected regions.",
-      "Enhances students' skills with educational technology.",
-      "Designed to assist students affected by crises or natural disasters.",
-      "Fully responsive and accessible across various devices and platforms.",
-      "Since the launch of the first version, we have had over 700 users on the first version",
+      "Comprehensive academic resources specifically tailored for students in crisis-affected regions",
+      "Educational technology training modules to enhance student digital literacy skills",
+      "Specialized content design for learners in areas with limited internet connectivity",
+      "Fully responsive interface ensuring accessibility across various devices and platforms",
+      "Over 700 active users since the initial platform launch, with consistent growth in user engagement",
     ],
     technologies: [
       "React",
@@ -41,14 +41,14 @@ export const projects = [
     id: "rate-professor",
     name: "Rate My Professor RAG Application",
     description:
-      "A full-stack professor review system leveraging Retrieval-Augmented Generation (RAG) to provide intelligent insights from student reviews. Built with Next.js and integrated with OpenAI's GPT-4 and Pinecone vector database, the application offers semantic search capabilities and real-time chat functionality.",
+      "This sophisticated full-stack professor review system leverages Retrieval-Augmented Generation (RAG) to deliver intelligent insights from student feedback. Built with Next.js and seamlessly integrated with OpenAI's GPT-4 and Pinecone vector database technologies, the application provides advanced semantic search capabilities alongside real-time chat functionality. The system transforms traditional professor reviews into actionable, context-aware recommendations for students.",
     github: "https://github.com/9117KET/rag-rate-my-professor",
     features: [
-      "RAG Implementation: Utilizes OpenAI and Pinecone for intelligent review analysis and insights",
-      "Semantic Search: Advanced search functionality across professor reviews using vector database",
-      "Real-time Chat: Dynamic chat interface with streaming responses from GPT-4",
-      "Secure Error Handling: Robust error management system for API integrations",
-      "Responsive UI: Material-UI based interface with dynamic content streaming",
+      "Advanced RAG Implementation: Utilizes OpenAI and Pinecone technologies for sophisticated review analysis and contextual insights",
+      "High-Performance Semantic Search: Enables nuanced queries across professor reviews using vector embedding technology",
+      "Responsive Real-time Chat: Features a dynamic interface with streaming responses from GPT-4 for interactive user experience",
+      "Enterprise-Grade Error Handling: Implements robust error management systems for reliable API integrations",
+      "Intuitive User Interface: Material-UI based design with dynamic content streaming for seamless user interactions",
     ],
     technologies: [
       "Next.js",
@@ -65,14 +65,14 @@ export const projects = [
     id: "ai-chatbot",
     name: "AI Chat Bot",
     description:
-      "A full-stack chatbot application built with Next.js and OpenAI's GPT-3.5 API. The application features real-time message updates, secure API integration, and a responsive user interface designed for natural conversations.",
+      "A sophisticated full-stack conversational application built with Next.js and OpenAI's GPT-3.5 API. The platform features real-time message streaming, secure server-side API integration, and an elegantly designed responsive interface optimized for natural, engaging conversations. The application implements efficient state management for seamless interaction history preservation.",
     github: "https://github.com/9117KET/ai-chatbot",
     features: [
-      "Real-time Chat: Implements instant message updates and responses using React hooks",
-      "Secure API Integration: Server-side implementation of OpenAI's GPT-3.5 API",
-      "Dynamic UI: Material-UI based interface with custom styling and message bubbles",
-      "State Management: Efficient handling of chat history and user interactions",
-      "Responsive Design: Fully adaptable chat interface across all device sizes",
+      "Optimized Message Streaming: Implements instant message updates and smooth typing animations using React's advanced hooks",
+      "Secure API Architecture: Server-side implementation of OpenAI's GPT-3.5 API with robust authentication and error handling",
+      "Intuitive User Experience: Material-UI based interface with custom-designed conversation bubbles and visual feedback",
+      "Efficient Context Management: Sophisticated handling of conversation history enabling contextually relevant responses",
+      "Adaptive Design System: Fully responsive chat interface with optimized layouts for mobile, tablet, and desktop experiences",
     ],
     technologies: [
       "Next.js",
@@ -316,6 +316,7 @@ export const experience = [
     role: "Software Engineer Intern",
     company: "Waziup e.V.",
     duration: "May 2024 - August 2024",
+    category: "Software Development",
     responsibilities: [
       "Collaborated with the RnD hybrid workgroup to build a multipurpose recommendation framework.",
       "Contributed to both front-end and back-end development for IoT applications.",
@@ -327,10 +328,11 @@ export const experience = [
   },
   {
     id: "exp4",
-    role: "Founder and Developer",
+    role: "Lead developer",
     company: "KET Academy",
     location: "Yaoundé, Cameroon",
     duration: "2020 - Present",
+    category: "Software Development",
     responsibilities: [
       "Established and led a team of more than 25 youths to build an e-learning platform with resources in video and PDF formats.",
       "Developed two versions of the platform: one built using HTML, CSS, and JavaScript, and the most recent using TypeScript, React, Firebase, with authentication, personalized dashboards, and AI features.",
@@ -344,6 +346,7 @@ export const experience = [
     role: "Student Assistant Project Management",
     company: "YouthTeamUp (YTU)",
     duration: "Jan 2023 - Present",
+    category: "Management & Others",
     responsibilities: [
       "Planned and organized the Shallow-Virtual-Exchange (SVE) and Deep-Virtual-Exchange (DVE) programs for youths across African and European Universities.",
       "Coordinated the implementation of the Global Impact Project (GIP) for Constructor University students working on their Community Impact Projects.",
@@ -358,6 +361,7 @@ export const experience = [
     company: "Synthesis-Constructor Entrepreneurship & Innovation Centre",
     location: "Bremen, Germany",
     duration: "Nov 2023 - Apr 2024",
+    category: "Management & Others",
     responsibilities: [
       "Promoted Synthesis and Entrepreneurship initiatives at Constructor University.",
       "Contributed to empowering student entrepreneurs to become future-proof founders.",
@@ -366,13 +370,13 @@ export const experience = [
     companyDescription:
       "The Synthesis-Constructor Entrepreneurship & Innovation Centre supports students by fostering entrepreneurial skills and providing resources for aspiring student founders at Constructor University.",
   },
-
   {
     id: "exp5",
     role: "Teaching Assistant (TA) - Calculus and Linear Algebra",
     company: "Constructor University",
     location: "Bremen, Germany",
     duration: "Oct 2023 - Apr 2024",
+    category: "Management & Others",
     responsibilities: [
       "Organize tutorial sessions both online and in-person to assist first-year students in understanding concepts at a deeper level.",
       "Prepare responses to students' questions and provide detailed feedback on their work.",

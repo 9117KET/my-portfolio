@@ -22,12 +22,14 @@ export default function AboutMe() {
           {/* Introduction list */}
           <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
             <li>
-              Hello! I'm Kinlo, a final-year Computer Science student with a
-              minor in Data Science and an elective in Artificial Intelligence
-              and Machine Learning at Constructor University, Bremen, Germany. I
-              love building things and constantly seek improvement and striving
-              to become better with every opportunity I get. I actively share my
-              knowledge on various social media platforms, especially on&nbsp;
+              Hello! I'm Kinlo, a final-year Computer Science student at
+              Constructor University in Bremen, Germany. My academic focus
+              includes a minor in Data Science and specialized studies in
+              Artificial Intelligence and Machine Learning. I'm passionate about
+              building innovative solutions and consistently strive for
+              excellence in everything I undertake. I actively share my
+              knowledge and insights on various professional platforms,
+              particularly on&nbsp;
               <a
                 href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
                 target="_blank"
@@ -76,13 +78,15 @@ export default function AboutMe() {
           {/* Personal statements */}
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"></p>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>I enjoy teaching (started
-            with maths in high school and later calculus I & II in university).
+            <span className="text-blue-500">| </span>I enjoy teaching and have
+            extensive experience – from tutoring mathematics in high school to
+            becoming a Teaching Assistant (TA) at the university-level in
+            Calculus I & II.
           </p>
           <div style={{ height: "20px" }}></div>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
             <span className="text-blue-500">| </span>When not studying or
-            coding, i'll definitely be:
+            coding, you'll find me:
           </p>
 
           {/* List of hobbies */}
@@ -121,8 +125,8 @@ export default function AboutMe() {
             ))}
             <li>
               <span>
-                For details of these projects, kindly refer to the project
-                section in the Navbar.
+                For detailed information about these projects, please visit the
+                Projects section in the navigation menu.
               </span>
             </li>
           </ul>
@@ -138,12 +142,12 @@ export default function AboutMe() {
             <div className="flex-grow border-t border-gray-400"></div>
           </div>
           <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-800">| </span>Assistant project manager
+            <span className="text-blue-800">| </span>Assistant Project Manager
             for YouthTeamUp @ Constructor University
           </p>
           <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-800">| </span>Currently a SWE Resident at
-            Headstarter.
+            <span className="text-blue-800">| </span>Software Engineering
+            Resident at Headstarter
           </p>
         </div>
       </div>
