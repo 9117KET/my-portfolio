@@ -1,5 +1,4 @@
-/* eslint-disable react-refresh/only-export-components */
-import React, { Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
@@ -7,85 +6,36 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import { About, Blog, Misc, Projects, Experience } from "./utils/imports";
+import App from "./App.tsx";
 import { HelmetProvider } from "react-helmet-async";
-import App from "./App";
-import LoadingFallback from "./components/LoadingFallback";
-
-// Lazy load components for better performance
-// eslint-disable-next-line react-refresh/only-export-components
-const About = React.lazy(() => import("./pages/About"));
-const Blog = React.lazy(() => import("./pages/Blog"));
-const Misc = React.lazy(() => import("./pages/Misc"));
-const Projects = React.lazy(() => import("./pages/Projects"));
-const Experience = React.lazy(() => import("./pages/Experience"));
-const BlogPostPage = React.lazy(() => import("./pages/BlogPostPage"));
+import BlogPostPage from "./pages/BlogPostPage.tsx";
 
 // Create a router instance using the createBrowserRouter function
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route
-        path="/"
-        element={
-          <Suspense fallback={<LoadingFallback />}>
-            <About />
-          </Suspense>
-        }
-      />
-      <Route
-        path="projects"
-        element={
-          <Suspense fallback={<LoadingFallback />}>
-            <Projects />
-          </Suspense>
-        }
-      />
-      <Route
-        path="experience"
-        element={
-          <Suspense fallback={<LoadingFallback />}>
-            <Experience />
-          </Suspense>
-        }
-      />
-      <Route
-        path="blog"
-        element={
-          <Suspense fallback={<LoadingFallback />}>
-            <Blog />
-          </Suspense>
-        }
-      />
-      <Route
-        path="blog/:postId"
-        element={
-          <Suspense fallback={<LoadingFallback />}>
-            <BlogPostPage />
-          </Suspense>
-        }
-      />
-      <Route
-        path="misc"
-        element={
-          <Suspense fallback={<LoadingFallback />}>
-            <Misc />
-          </Suspense>
-        }
-      />
+      <Route path="/" element={<About />} /> {/* Route for the About page*/}
+      <Route path="projects" element={<Projects />} />{" "}
+      {/* Route for the Projects page*/}
+      <Route path="experience" element={<Experience />} />{" "}
+      {/* Route for the Experience page*/}
+      <Route path="blog" element={<Blog />} /> {/* Route for the Blog page*/}
+      <Route path="blog/:postId" element={<BlogPostPage />} />{" "}
+      {/* Route for individual Blog posts*/}
+      <Route path="misc" element={<Misc />} /> {/* Route for the Misc page*/}
     </Route>
   )
 );
 
 // Render the application into the DOM
-const rootElement = document.getElementById("root");
-if (!rootElement) {
-  throw new Error("Failed to find the root element");
-}
-
-ReactDOM.createRoot(rootElement).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <HelmetProvider>
-      <RouterProvider router={router} />
+      {" "}
+      {/* Provides a context for managing changes to the document head*/}
+      <RouterProvider router={router} />{" "}
+      {/* Provides the router context to the application*/}
     </HelmetProvider>
   </React.StrictMode>
 );
