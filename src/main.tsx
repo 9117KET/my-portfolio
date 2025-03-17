@@ -13,9 +13,7 @@ import LoadingFallback from "./components/LoadingFallback";
 
 // Lazy load components for better performance
 // eslint-disable-next-line react-refresh/only-export-components
-const About = React.lazy(() =>
-  import("./pages/About").then((module) => ({ default: module.About }))
-);
+const About = React.lazy(() => import("./pages/About"));
 const Blog = React.lazy(() => import("./pages/Blog"));
 const Misc = React.lazy(() => import("./pages/Misc"));
 const Projects = React.lazy(() => import("./pages/Projects"));

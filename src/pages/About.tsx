@@ -4,7 +4,7 @@ import ContactMe from "../components/ContactMe";
 import Navbar from "../components/Navbar";
 import styles from "../utils/style";
 
-export function About() {
+export default function About() {
   // Define the About component
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen overflow-hidden">
