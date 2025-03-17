@@ -1,4 +1,5 @@
 import { Post } from "../types/post";
+import { Project } from "../types/project";
 
 // Navigation links for the portfolio site
 export const navLinks = [
@@ -13,7 +14,7 @@ export const cvLink =
   "https://drive.google.com/file/d/150RhzoavHCM8bI4RA6PKe_Ku4NUQpEsd/view?usp=sharing";
 
 // Project details for the portfolio
-export const projects = [
+export const projects: Project[] = [
   {
     id: "academy",
     name: "KET Academy",
@@ -36,6 +37,7 @@ export const projects = [
       "MongoDB",
     ],
     demo: "https://ket.academy/",
+    category: "Fullstack",
   },
   {
     id: "rate-professor",
@@ -60,6 +62,7 @@ export const projects = [
       "PostgreSQL",
     ],
     demo: "https://rate-my-professor-seven.vercel.app/",
+    category: "AI/ML",
   },
   {
     id: "ai-chatbot",
@@ -83,6 +86,7 @@ export const projects = [
       "Tailwind CSS",
     ],
     demo: "https://github.com/9117KET/ai-chatbot",
+    category: "AI/ML",
   },
   {
     id: "aiflashcard",
@@ -106,6 +110,7 @@ export const projects = [
       "OpenAI API",
     ],
     demo: "https://example.com/demo",
+    category: "AI/ML",
   },
   {
     id: "expenses",
@@ -130,6 +135,7 @@ export const projects = [
       "Firebase",
     ],
     demo: "https://example.com/demo",
+    category: "Fullstack",
   },
   {
     id: "assistantai",
@@ -154,6 +160,7 @@ export const projects = [
       "Groq API",
     ],
     demo: "https://example.com/demo",
+    category: "AI/ML",
   },
   {
     id: "portfolio",
@@ -170,6 +177,7 @@ export const projects = [
     ],
     technologies: ["TypeScript", "React", "Tailwind CSS", "Vercel"],
     demo: "https://my-portfolio-xi-flame-14.vercel.app/",
+    category: "Fullstack",
   },
   {
     id: "iot-framework",
@@ -186,31 +194,33 @@ export const projects = [
     ],
     technologies: ["JavaScript", "HTML5", "CSS"],
     demo: "https://github.com/9117KET/IoTTest.git",
+    category: "Fullstack",
   },
-  {
-    id: "sustainable-shopping",
-    name: "Sustainable Shopping Assistant",
-    description:
-      "A Flask-based web application designed to help users make environmentally conscious shopping decisions. The platform tracks product sustainability metrics and eco-ratings, providing users with detailed information about the environmental impact of their purchases.",
-    github: "https://github.com/9117KET/db-project.git",
-    features: [
-      "Admin Authentication: Secure portal for managing product data and eco-ratings",
-      "CRUD Operations: Complete management system for products, users, categories, and sustainability metrics",
-      "Dynamic Search & Filtering: Real-time product filtering with complex database queries",
-      "Responsive Design: Fully adaptable interface for all device sizes",
-      "Sustainability Metrics: Comprehensive tracking and display of product eco-ratings and environmental impact",
-    ],
-    technologies: [
-      "Python",
-      "Flask",
-      "MySQL",
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Bootstrap",
-    ],
-    demo: "https://github.com/9117KET/db-project.git",
-  },
+  // {
+  //   id: "sustainable-shopping",
+  //   name: "Sustainable Shopping Assistant",
+  //   description:
+  //     "A Flask-based web application designed to help users make environmentally conscious shopping decisions. The platform tracks product sustainability metrics and eco-ratings, providing users with detailed information about the environmental impact of their purchases.",
+  //   github: "https://github.com/9117KET/db-project.git",
+  //   features: [
+  //     "Admin Authentication: Secure portal for managing product data and eco-ratings",
+  //     "CRUD Operations: Complete management system for products, users, categories, and sustainability metrics",
+  //     "Dynamic Search & Filtering: Real-time product filtering with complex database queries",
+  //     "Responsive Design: Fully adaptable interface for all device sizes",
+  //     "Sustainability Metrics: Comprehensive tracking and display of product eco-ratings and environmental impact",
+  //   ],
+  //   technologies: [
+  //     "Python",
+  //     "Flask",
+  //     "MySQL",
+  //     "HTML5",
+  //     "CSS3",
+  //     "JavaScript",
+  //     "Bootstrap",
+  //   ],
+  //   demo: "https://github.com/9117KET/db-project.git",
+  //   category: "Data Science",
+  // },
   {
     id: "bmw-hackathon",
     name: "BMW Causal ML Hackathon Project",
@@ -235,6 +245,7 @@ export const projects = [
       "Streamlit",
     ],
     demo: "https://www.linkedin.com/posts/kinlo-ephriam-tangiri-a70113218_causal-machine-learning-activity-7269276878039834626-CKdF/?utm_source=share&utm_medium=member_desktop",
+    category: "AI/ML",
   },
   {
     id: "brain-tumor",
@@ -256,9 +267,10 @@ export const projects = [
       "OpenCV",
       "NumPy",
       "Pandas",
-      "Scikit-learn",
+      "Matplotlib",
     ],
-    demo: "https://www.youtube.com/watch?v=lmQEeJGh134",
+    demo: "https://github.com/9117KET/brain-tumor-classification",
+    category: "AI/ML",
   },
   {
     id: "bank-churn",
@@ -283,6 +295,7 @@ export const projects = [
       "TensorFlow",
     ],
     demo: "https://github.com/9117KET/Customer-Churn-Prediction",
+    category: "AI/ML",
   },
   {
     id: "image-gen",
@@ -306,6 +319,7 @@ export const projects = [
       "Blob Storage",
     ],
     demo: "https://github.com/9117KET/ai-image-generator",
+    category: "AI/ML",
   },
 ];
 

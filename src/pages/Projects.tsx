@@ -5,22 +5,16 @@ import { projects } from "../utils/constants";
 import styles from "../utils/style";
 import { Helmet } from "react-helmet-async";
 
-const languages = [
-  "All",
-  "Fullstack",
-  "Data Science",
-  "Artificial Intelligence",
-]; // Add languages as needed
+const categories = ["All", "Fullstack", "Data Science", "AI/ML"];
 
 export default function Projects() {
-  // State to keep track of the selected programming language
-  const [selectedLanguage, setSelectedLanguage] = useState("All");
+  // State to keep track of the selected category
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  // Filter projects based on the selected language
+  // Filter projects based on the selected category
   const filteredProjects = projects.filter(
     (project) =>
-      selectedLanguage === "All" ||
-      project.technologies.includes(selectedLanguage)
+      selectedCategory === "All" || project.category === selectedCategory
   );
 
   return (
@@ -59,20 +53,20 @@ export default function Projects() {
               Here are some of my favorite projects:
             </h3>
 
-            {/* Language filter buttons */}
+            {/* Category filter buttons */}
             <div className="flex flex-wrap justify-center mt-6">
-              {languages.map((language) => (
+              {categories.map((category) => (
                 <button
-                  key={language}
-                  onClick={() => setSelectedLanguage(language)}
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
                   className={`cursor-pointer text-sm font-medium border border-lightText dark:border-gray-500 rounded-lg m-1 px-4 py-2 transition-all duration-300 hover:bg-blue-800 dark:hover:bg-blue-900 ${
-                    selectedLanguage === language
+                    selectedCategory === category
                       ? "bg-blue-800 text-white"
                       : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
                   }`}
-                  aria-label={`Filter projects by ${language}`}
+                  aria-label={`Filter projects by ${category}`}
                 >
-                  {language}
+                  {category}
                 </button>
               ))}
             </div>
