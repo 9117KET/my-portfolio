@@ -245,7 +245,7 @@ export const projects: Project[] = [
       "Streamlit",
     ],
     demo: "https://www.linkedin.com/posts/kinlo-ephriam-tangiri-a70113218_causal-machine-learning-activity-7269276878039834626-CKdF/?utm_source=share&utm_medium=member_desktop",
-    category: "AI/ML",
+    categories: ["AI/ML", "Data Science"],
   },
   {
     id: "brain-tumor",
@@ -295,7 +295,7 @@ export const projects: Project[] = [
       "TensorFlow",
     ],
     demo: "https://github.com/9117KET/Customer-Churn-Prediction",
-    category: "AI/ML",
+    categories: ["AI/ML", "Data Science"],
   },
   {
     id: "image-gen",

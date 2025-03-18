@@ -6,5 +6,6 @@ export interface Project {
   features: string[];
   technologies: string[];
   demo: string;
-  category: "Fullstack" | "Data Science" | "AI/ML";
+  category?: "Fullstack" | "Data Science" | "AI/ML"; // Legacy support
+  categories?: ("Fullstack" | "Data Science" | "AI/ML")[]; // New multi-category support
 }

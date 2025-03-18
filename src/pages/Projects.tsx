@@ -5,17 +5,25 @@ import { projects } from "../utils/constants";
 import styles from "../utils/style";
 import { Helmet } from "react-helmet-async";
 
-const categories = ["All", "Fullstack", "Data Science", "AI/ML"];
+type Category = "All" | "Fullstack" | "AI/ML" | "Data Science";
+const categories: Category[] = ["All", "Fullstack", "AI/ML", "Data Science"];
 
 export default function Projects() {
   // State to keep track of the selected category
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState<Category>("All");
 
   // Filter projects based on the selected category
-  const filteredProjects = projects.filter(
-    (project) =>
-      selectedCategory === "All" || project.category === selectedCategory
-  );
+  const filteredProjects = projects.filter((project) => {
+    if (selectedCategory === "All") return true;
+
+    // Handle projects that belong to multiple categories
+    if (project.categories && Array.isArray(project.categories)) {
+      return project.categories.includes(selectedCategory);
+    }
+
+    // Handle legacy single category projects
+    return project.category === selectedCategory;
+  });
 
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen">
