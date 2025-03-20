@@ -45,9 +45,8 @@ export default function Projects() {
               {`-> `}I learn most effectively through hands-on project work.
               This approach allows me to develop a deeper understanding of
               concepts while maintaining motivation through visible progress and
-              tangible outcomes. I'm committed to completing every project I
-              start, driven by my determination to see each endeavor through to
-              completion.
+              tangible outcomes. I'm always committed to completing every single
+              project I start.
             </h3>
             {/* Divider with "My Projects" text */}
             <div className="relative flex py-3 md:py-5 items-center">

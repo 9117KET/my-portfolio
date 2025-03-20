@@ -509,7 +509,7 @@ export const awards = [
   {
     title: "Diana Award Recipient Roll of Honor",
     description:
-      "Selected as a top 200 finalist from a pool of 1700 nominations allover the world for having a creating a positive contribution to society by building a platform that provide academic resources to students in Africa especially those affected by crisis.",
+      "Selected as a top 200 finalist from a pool of 1700 nominations all over the world for building a platform that provide academic resources to students in Cameroon especially those affected by crisis.",
     date: "2024",
     category: "Global",
     link: "https://diana-award.org.uk/our-programmes-and-initiatives/award-and-development/roll-of-honour/roll-of-honour-2024",
@@ -588,7 +588,7 @@ export const contacts = [
 
 // Descriptions of types of builds the portfolio owner can perform
 export const builds = [
-  "KET Academy (An e-learning platform for secondary and high school students in Africa)",
+  "KET Academy (An e-learning platform for secondary and high school students in Cameroon)",
   "AI Chatbot",
   "AI Flashcards",
   "Expense Tracker",

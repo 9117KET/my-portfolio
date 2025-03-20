@@ -25,11 +25,10 @@ export default function AboutMe() {
               Hello! I'm Kinlo, a final-year Computer Science student at
               Constructor University in Bremen, Germany. My academic focus
               includes a minor in Data Science and specialized studies in
-              Artificial Intelligence and Machine Learning. I'm passionate about
-              building innovative solutions and consistently strive for
-              excellence in everything I undertake. I actively share my
-              knowledge and insights on various professional platforms,
-              particularly on&nbsp;
+              Artificial Intelligence and Machine Learning. I love learning and
+              building innovative AI solutions. I actively share my knowledge
+              and insights on various professional platforms, particularly
+              on&nbsp;
               <a
                 href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
                 target="_blank"
@@ -46,8 +45,12 @@ export default function AboutMe() {
             <a
               href={cvLink}
               target="_blank"
-              className="bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition duration-300 ease-in-out shadow-lg"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg hover:from-blue-700 hover:to-blue-900 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
+              <span className="material-symbols-outlined mr-1 text-base">
+                description
+              </span>
               My Resume
             </a>
           </p>
@@ -78,15 +81,17 @@ export default function AboutMe() {
           {/* Personal statements */}
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"></p>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>I enjoy teaching and have
-            extensive experience – from tutoring mathematics in high school to
-            becoming a Teaching Assistant (TA) at the university-level in
-            Calculus I & II.
+            <span className="text-blue-500">| </span>I enjoy solving problems,
+            learning & teaching and I have extensive experience – from tutoring
+            mathematics in high school to becoming a Teaching Assistant (TA) at
+            the university-level in Calculus I & II. In high school, I also
+            started working on building an e-learning platform where I had to
+            learn everything from scratch.
           </p>
           <div style={{ height: "20px" }}></div>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
             <span className="text-blue-500">| </span>When not studying or
-            coding, you'll find me:
+            coding, I will either be:
           </p>
 
           {/* List of hobbies */}

@@ -12,8 +12,13 @@ export default function Navbar({ clicked }: { clicked: string }) {
     // Navbar container with dark mode background and fixed position
     <nav className="dark:bg-[#2D2E32] z-[99] p-6 inset-x-0 top-0 flex justify-between items-center py-6 bg-transparent w-full">
       <h1 className="text-4xl font-semibold text-zinc-800 dark:text-gray-300 mr-5">
-        <span className="text-blue-800">{`<`}</span>KET
-        <span className="text-blue-800">{`/>`}</span>
+        <a
+          href="/"
+          className="hover:text-blue-500 transition-colors duration-300"
+        >
+          <span className="text-blue-800">{`<`}</span>KET
+          <span className="text-blue-800">{`/>`}</span>
+        </a>
       </h1>
       <div className="hidden md:flex flex-1 justify-end items-center">
         <ul className="list-none flex justify-end items-center flex-1">
@@ -39,12 +44,12 @@ export default function Navbar({ clicked }: { clicked: string }) {
       <div className="relative">
         {/* Menu Button */}
         <div className="md:hidden flex gap-4 flex-1 justify-end items-center">
-          <div
+          <button
             className="cursor-pointer mt-2 dark:text-gray-300"
             onClick={() => setToggle((prev) => !prev)}
           >
             <span className="material-symbols-outlined text-3xl">menu</span>
-          </div>
+          </button>
           <Theme />
         </div>
 
@@ -62,12 +67,12 @@ export default function Navbar({ clicked }: { clicked: string }) {
           } fixed top-0 right-0 h-full w-64 bg-gradient-to-b bg-blue-300 dark:bg-blue-900 p-6 z-[99] transition-transform duration-300 ease-in-out`}
         >
           <div className="flex justify-between items-center mb-6">
-            <div
+            <button
               className="cursor-pointer dark:text-gray-300"
               onClick={() => setToggle(false)}
             >
               <span className="material-symbols-outlined text-3xl">close</span>
-            </div>
+            </button>
           </div>
           <ul className="list-none flex flex-col justify-start items-start gap-4 p-4">
             {navLinks.map((nav, index) => (
