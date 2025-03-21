@@ -26,9 +26,8 @@ export default function AboutMe() {
               Constructor University in Bremen, Germany. My academic focus
               includes a minor in Data Science and specialized studies in
               Artificial Intelligence and Machine Learning. I love learning and
-              building innovative AI solutions. I actively share my knowledge
-              and insights on various professional platforms, particularly
-              on&nbsp;
+              building innovative projects. I actively share my knowledge and
+              insights on various professional platforms, particularly on&nbsp;
               <a
                 href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
                 target="_blank"
@@ -81,12 +80,12 @@ export default function AboutMe() {
           {/* Personal statements */}
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"></p>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>I enjoy solving problems,
-            learning & teaching and I have extensive experience – from tutoring
-            mathematics in high school to becoming a Teaching Assistant (TA) at
-            the university-level in Calculus I & II. In high school, I also
-            started working on building an e-learning platform where I had to
-            learn everything from scratch.
+            <span className="text-blue-500">| </span>I enjoy learning new
+            things, solving problems, & teaching and I have experience – from
+            tutoring mathematics in high school to becoming a Teaching Assistant
+            (TA) at the university-level in Calculus I & II. After high school,
+            I started building an e-learning platform where I had to learn
+            everything from scratch.
           </p>
           <div style={{ height: "20px" }}></div>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
