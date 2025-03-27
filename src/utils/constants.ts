@@ -620,7 +620,7 @@ export const posts: Post[] = [
   {
     id: "ai_africa",
     title: "AI, IoT, Big Data & Africa",
-    date: "June 10, 2024",
+    date: "October 15, 2024",
     category: "Post",
     description:
       "The Potential of IoT, AI, and Big Data for Rwanda's Future: A Case Study of Kigali Innovation City (KIC).",
@@ -654,7 +654,7 @@ export const posts: Post[] = [
   {
     id: "ml_basics",
     title: "Machine Learning Fundamentals",
-    date: "March 15, 2024",
+    date: "November 5, 2024",
     category: "Article",
     description:
       "A comprehensive guide to understanding basic machine learning concepts, algorithms, and their practical applications.",
@@ -665,7 +665,7 @@ export const posts: Post[] = [
   {
     id: "react_patterns",
     title: "Advanced React Design Patterns",
-    date: "March 30, 2024",
+    date: "November 20, 2024",
     category: "Article",
     description:
       "Exploring advanced React patterns including Compound Components, Render Props, and Custom Hooks with practical examples.",
@@ -677,7 +677,7 @@ export const posts: Post[] = [
   {
     id: "typescript_tips",
     title: "TypeScript Best Practices in 2024",
-    date: "February 28, 2024",
+    date: "December 10, 2024",
     category: "Post",
     description:
       "Essential TypeScript tips and tricks for writing more maintainable and type-safe code in modern web applications.",
@@ -688,7 +688,7 @@ export const posts: Post[] = [
   {
     id: "startup_journey",
     title: "From Idea to Launch: KET Academy's Story",
-    date: "February 15, 2024",
+    date: "December 25, 2024",
     category: "Podcast",
     description:
       "The journey of building KET Academy, challenges faced, and lessons learned in creating an e-learning platform for African students.",
@@ -699,7 +699,7 @@ export const posts: Post[] = [
   {
     id: "ai_ethics",
     title: "AI Ethics and Responsibility",
-    date: "January 30, 2024",
+    date: "January 15, 2025",
     category: "Post",
     description:
       "Exploring the ethical considerations and responsibilities in AI development, with a focus on bias, transparency, and accountability.",
@@ -709,7 +709,7 @@ export const posts: Post[] = [
   {
     id: "phil_ethics",
     title: "Fundamentals of Philosophical Ethics",
-    date: "January 15, 2024",
+    date: "February 1, 2025",
     category: "Article",
     description:
       "Exploring key ethical theories and their practical applications in modern decision-making, based on university coursework.",
@@ -721,7 +721,7 @@ export const posts: Post[] = [
     id: "ket_academy_journey",
     title:
       "The KET Academy Journey: Building an E-learning Platform for Africa",
-    date: "June 15, 2024",
+    date: "February 15, 2025",
     category: "Project Breakdown",
     description:
       "A detailed breakdown of the development process, challenges, and lessons learned while building KET Academy, an e-learning platform serving over 700 students in crisis-affected regions.",
@@ -731,7 +731,7 @@ export const posts: Post[] = [
   {
     id: "rate_professor_journey",
     title: "Developing the Rate My Professor AI Assistant",
-    date: "October 20, 2023",
+    date: "March 1, 2025",
     category: "Project Breakdown",
     description:
       "An in-depth look at the development process, challenges, and lessons learned while building the Rate My Professor AI Assistant, a platform for students to anonymously rate professors and interact with an AI chat interface.",
@@ -742,7 +742,7 @@ export const posts: Post[] = [
     id: "iot_recommendation_framework",
     title:
       "Building an IoT Course Recommendation Framework during my internship",
-    date: "August 30, 2024",
+    date: "March 15, 2025",
     category: "Project Breakdown",
     description:
       "An in-depth look at the development process of a multipurpose recommendation framework for IoT courses during my internship in Dresden Germany, including challenges faced and solutions implemented.",
