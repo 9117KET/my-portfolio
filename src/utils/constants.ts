@@ -44,7 +44,7 @@ export const projects: Project[] = [
     name: "Rate My Professor RAG Application",
     description:
       "This sophisticated full-stack professor review system leverages Retrieval-Augmented Generation (RAG) to deliver intelligent insights from student feedback. Built with Next.js and seamlessly integrated with OpenAI's GPT-4 and Pinecone vector database technologies, the application provides advanced semantic search capabilities alongside real-time chat functionality. The system transforms traditional professor reviews into actionable, context-aware recommendations for students.",
-    github: "https://github.com/9117KET/rag-rate-my-professor",
+    github: "https://github.com/9117KET/rate-my-professor.git",
     features: [
       "Advanced RAG Implementation: Utilizes OpenAI and Pinecone technologies for sophisticated review analysis and contextual insights",
       "High-Performance Semantic Search: Enables nuanced queries across professor reviews using vector embedding technology",
@@ -748,5 +748,15 @@ export const posts: Post[] = [
       "An in-depth look at the development process of a multipurpose recommendation framework for IoT courses during my internship in Dresden Germany, including challenges faced and solutions implemented.",
     content: "IoTRecommendationFramework",
     type: "Blog",
+  },
+  {
+    type: "article",
+    id: "llm-understanding",
+    title: "How LLMs Work: The Underlying Logic",
+    date: "2025-04-01",
+    content: "LLMUnderstanding",
+    category: "Article",
+    description:
+      "A comprehensive exploration of Large Language Models (LLMs), their architecture, training processes, and real-world applications. Learn how these sophisticated AI systems understand and generate human-like text, and discover their transformative impact on various industries.",
   },
 ];

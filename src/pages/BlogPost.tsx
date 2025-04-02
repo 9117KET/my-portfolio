@@ -9,6 +9,7 @@ import PhilEthics from "../articles/PhilEthics";
 import KETAcademyJourney from "../articles/KETAcademyJourney";
 import { formatDate } from "../utils/Date";
 import RateProfessorJourney from "../articles/RateProfessorJourney";
+import LLMUnderstanding from "../articles/LLMUnderstanding";
 
 interface BlogPostProps {
   title: string;
@@ -17,35 +18,45 @@ interface BlogPostProps {
   category: string;
 }
 
-// BlogPost functional component definition
 export default function BlogPost({
   title,
   date,
   content,
   category,
 }: BlogPostProps) {
-  // Mapping content keys to React components
-  const record: Record<string, React.ReactNode> = {
-    Beans: <Beans />,
-    "The fields of Artificial Intelligence (AI), Big Data, and the Internet of Things (IoT) have been transforming industries globally, and Africa is no different. This post explores the historical timeline of AI, IoT, and Big Data over the last 6 decades.":
-      <AIAfrica />,
-    "Episode 2: The story behind KET Academy and its mission to provide accessible education in Africa.":
-      <KETAcademyPodcast />,
-    MLBasics: <MLBasics />,
-    ReactPatterns: <ReactPatterns />,
-    TypeScriptTips: <TypeScriptTips />,
-    AIEthics: <AIEthics />,
-    PhilEthics: <PhilEthics />,
-    KETAcademyJourney: <KETAcademyJourney />,
-    RateProfessorJourney: <RateProfessorJourney />,
+  const renderContent = () => {
+    switch (content) {
+      case "Beans":
+        return <Beans />;
+      case "AIAfrica":
+        return <AIAfrica />;
+      case "KETAcademyPodcast":
+        return <KETAcademyPodcast />;
+      case "MLBasics":
+        return <MLBasics />;
+      case "ReactPatterns":
+        return <ReactPatterns />;
+      case "TypeScriptTips":
+        return <TypeScriptTips />;
+      case "AIEthics":
+        return <AIEthics />;
+      case "PhilEthics":
+        return <PhilEthics />;
+      case "KETAcademyJourney":
+        return <KETAcademyJourney />;
+      case "RateProfessorJourney":
+        return <RateProfessorJourney />;
+      case "LLMUnderstanding":
+        return <LLMUnderstanding />;
+      default:
+        return <p>No content found</p>;
+    }
   };
 
-  // Component render
   return (
     <div>
       <h1 className="text-4xl text-center mb-8">{title}</h1>
-
-      {record[content] || <p>No content found</p>}
+      {renderContent()}
       <hr />
       <p className="text-lg italic mt-4">Published: {formatDate(date)}</p>
       {/* Updated category background color to deep blue */}
