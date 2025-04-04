@@ -759,4 +759,14 @@ export const posts: Post[] = [
     description:
       "A comprehensive exploration of Large Language Models (LLMs), their architecture, training processes, and real-world applications. Learn how these sophisticated AI systems understand and generate human-like text, and discover their transformative impact on various industries.",
   },
+  {
+    type: "article",
+    id: "ai-human-dev",
+    title: "Balancing AI and Human Intelligence in Software Development",
+    date: "2025-04-04",
+    content: "AIHumanDev",
+    category: "Article",
+    description:
+      "An in-depth exploration of how to effectively leverage AI in software development while maintaining and enhancing human expertise. Learn practical strategies for combining AI tools with human creativity and problem-solving skills to create better software.",
+  },
 ];

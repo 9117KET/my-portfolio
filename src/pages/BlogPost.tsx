@@ -10,12 +10,16 @@ import KETAcademyJourney from "../articles/KETAcademyJourney";
 import { formatDate } from "../utils/Date";
 import RateProfessorJourney from "../articles/RateProfessorJourney";
 import LLMUnderstanding from "../articles/LLMUnderstanding";
+import AIHumanDev from "../articles/AIHumanDev";
+import ShareButton from "../components/ShareButton";
+import { useLocation } from "react-router-dom";
 
 interface BlogPostProps {
   title: string;
   date: string;
   content: string;
   category: string;
+  description?: string;
 }
 
 export default function BlogPost({
@@ -23,7 +27,11 @@ export default function BlogPost({
   date,
   content,
   category,
+  description = "",
 }: BlogPostProps) {
+  const location = useLocation();
+  const currentUrl = window.location.origin + location.pathname;
+
   const renderContent = () => {
     switch (content) {
       case "Beans":
@@ -48,6 +56,8 @@ export default function BlogPost({
         return <RateProfessorJourney />;
       case "LLMUnderstanding":
         return <LLMUnderstanding />;
+      case "AIHumanDev":
+        return <AIHumanDev />;
       default:
         return <p>No content found</p>;
     }
@@ -55,14 +65,18 @@ export default function BlogPost({
 
   return (
     <div>
-      <h1 className="text-4xl text-center mb-8">{title}</h1>
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-4xl text-center flex-grow">{title}</h1>
+        <ShareButton title={title} url={currentUrl} description={description} />
+      </div>
       {renderContent()}
       <hr />
-      <p className="text-lg italic mt-4">Published: {formatDate(date)}</p>
-      {/* Updated category background color to deep blue */}
-      <p className="text-base bg-blue-800 dark:text-zinc-800 text-white w-fit px-4 py-1 rounded-xl mt-4">
-        {category}
-      </p>
+      <div className="flex justify-between items-center mt-4">
+        <p className="text-lg italic">Published: {formatDate(date)}</p>
+        <p className="text-base bg-blue-800 dark:text-zinc-800 text-white px-4 py-1 rounded-xl">
+          {category}
+        </p>
+      </div>
     </div>
   );
 }

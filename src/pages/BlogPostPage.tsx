@@ -23,7 +23,13 @@ export default function BlogPostPage() {
     <div className="dark:bg-[#2D2E32] min-h-screen overflow-hidden">
       {/* Set the page title using Helmet */}
       <Helmet>
-        <title>projects;</title>
+        <title>{post.title} - Blog</title>
+        <meta name="description" content={post.description} />
+        {/* Add Open Graph meta tags for better social sharing */}
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.description} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={window.location.href} />
       </Helmet>
       {/* Navigation bar with GoBack and Theme toggle components */}
       <div className="flex justify-between relative mx-[6%] sm:mx-[8%] mt-4">
@@ -42,6 +48,7 @@ export default function BlogPostPage() {
               category={post.category}
               content={post.content}
               date={post.date}
+              description={post.description}
             />
           </div>
         </div>
