@@ -9,7 +9,7 @@ export default function AboutMe() {
         <div>
           {/* Main heading with typewriter and caret animations */}
           <h1
-            className="text-xl sm:text-3xl md:text-6xl font-bold relative w-full md:w-[max-content] font-mono 
+            className="text-xl sm:text-3xl md:text-6xl font-bold relative w-[max-content] md:w-[max-content] font-mono 
                         before:absolute before:inset-0 before:animate-typewriter before:bg-white before:dark:bg-[#2D2E32] 
                         after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-blue-500
                         sm:before:w-[calc(100% + 0.125em)]"
