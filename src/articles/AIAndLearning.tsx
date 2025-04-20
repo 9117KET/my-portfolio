@@ -99,7 +99,7 @@ export default function AIAndLearning() {
           <ul className="list-disc pl-6 space-y-2">
             <li>
               <a
-                href="https://lnkd.in/eSbYEVJD"
+                href="https://www.youtube.com/watch?v=0xS68sl2D70&t=3348s&pp=ygUXZWZmb3J0IGlzIHRoZSBhbGdvcml0aG0%3D"
                 className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
               >
                 Veritasium's Video: What Everyone Gets Wrong About AI and
@@ -108,7 +108,7 @@ export default function AIAndLearning() {
             </li>
             <li>
               <a
-                href="https://lnkd.in/eJ_XzfEw"
+                href="https://www.artofsm.art/t/veritasium-what-everyone-gets-wrong-about-ai-and-learning-derek-muller-explains/7803/3"
                 className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
               >
                 Article on the topic
@@ -126,7 +126,7 @@ export default function AIAndLearning() {
         <p className="mb-4">
           I also believe this video will eventually become a reference point...
         </p>
-        <p className="mb-4">Kinlo Ephriam Tangiri #KET #Kinlo #AI</p>
+        <p className="mb-4">Kinlo Ephriam Tangiri #KET</p>
       </section>
     </div>
   );
