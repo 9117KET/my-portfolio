@@ -769,4 +769,24 @@ export const posts: Post[] = [
     description:
       "An in-depth exploration of how to effectively leverage AI in software development while maintaining and enhancing human expertise. Learn practical strategies for combining AI tools with human creativity and problem-solving skills to create better software.",
   },
+  {
+    id: "code-reading-skills",
+    title: "The Critical Skill of Code Reading in the AI Era",
+    date: "April 10, 2025",
+    category: "Article",
+    description:
+      "Explore why code reading and comprehension skills are becoming increasingly crucial in an era of AI-powered development, and learn practical strategies to improve these essential abilities.",
+    content: "CodeReadingSkills",
+    type: "Blog",
+  },
+  {
+    id: "ai-and-learning",
+    title: "What Everyone Gets Wrong About AI and Learning",
+    date: "April 20, 2025",
+    category: "Post",
+    description:
+      "Exploring the impact of AI on learning and cognitive development, based on insights from Veritasium's video about the importance of effort in learning.",
+    content: "AIAndLearning",
+    type: "Blog",
+  },
 ];

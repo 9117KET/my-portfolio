@@ -3,25 +3,78 @@ import Navbar from "../components/Navbar";
 import styles from "../utils/style";
 import { posts } from "../utils/constants";
 import BlogCard from "../components/BlogCard";
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
+import { useDebounce } from "../utils/hooks";
 
 // Define categories for filtering
 const categories = ["All", "Post", "Podcast", "Article", "Project Breakdown"];
+
+// Define sort options
+const sortOptions = [
+  { value: "newest", label: "Newest First" },
+  { value: "oldest", label: "Oldest First" },
+  { value: "title-asc", label: "Title (A-Z)" },
+  { value: "title-desc", label: "Title (Z-A)" },
+];
 
 export default function Blog() {
   // State to keep track of the selected category
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [sortBy, setSortBy] = useState("newest");
+  const [isSearching, setIsSearching] = useState(false);
 
-  // Filter posts based on the selected category
-  const filteredPosts = posts.filter((post) => {
-    const matchesCategory =
-      selectedCategory === "All" || post.category === selectedCategory;
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  // Debounce the search query to prevent excessive filtering
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+
+  // Clear search function
+  const clearSearch = useCallback(() => {
+    setSearchQuery("");
+  }, []);
+
+  // Filter and sort posts
+  const filteredAndSortedPosts = useMemo(() => {
+    setIsSearching(true);
+
+    // First filter posts
+    const filtered = posts.filter((post) => {
+      const matchesCategory =
+        selectedCategory === "All" || post.category === selectedCategory;
+
+      // If no search query, only filter by category
+      if (!debouncedSearchQuery) {
+        return matchesCategory;
+      }
+
+      // Search across multiple fields
+      const searchLower = debouncedSearchQuery.toLowerCase();
+      const matchesSearch =
+        post.title.toLowerCase().includes(searchLower) ||
+        post.description.toLowerCase().includes(searchLower) ||
+        post.category.toLowerCase().includes(searchLower);
+
+      return matchesCategory && matchesSearch;
+    });
+
+    // Then sort posts
+    const sorted = [...filtered].sort((a, b) => {
+      switch (sortBy) {
+        case "newest":
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        case "oldest":
+          return new Date(a.date).getTime() - new Date(b.date).getTime();
+        case "title-asc":
+          return a.title.localeCompare(b.title);
+        case "title-desc":
+          return b.title.localeCompare(a.title);
+        default:
+          return 0;
+      }
+    });
+
+    setIsSearching(false);
+    return sorted;
+  }, [selectedCategory, debouncedSearchQuery, sortBy]);
 
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen">
@@ -51,29 +104,72 @@ export default function Blog() {
               </p>
             </div>
 
-            {/* Search Bar */}
-            <div className="max-w-xl mx-auto mb-8">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search posts..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <svg
-                  className="absolute right-3 top-2.5 h-5 w-5 text-gray-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            {/* Search and Sort Controls */}
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+              {/* Search Bar */}
+              <div className="w-full md:w-1/2">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search posts by title, description, or category..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-10"
                   />
-                </svg>
+                  {searchQuery && (
+                    <button
+                      onClick={clearSearch}
+                      className="absolute right-10 top-2.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+                    >
+                      <svg
+                        className="h-5 w-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  )}
+                  <svg
+                    className="absolute right-3 top-2.5 h-5 w-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+                {isSearching && (
+                  <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    Searching...
+                  </div>
+                )}
+              </div>
+
+              {/* Sort Dropdown */}
+              <div className="w-full md:w-1/3">
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  {sortOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
 
@@ -96,8 +192,8 @@ export default function Blog() {
 
             {/* Blog Posts Grid */}
             <div className="grid gap-6 md:gap-8">
-              {filteredPosts.length > 0 ? (
-                filteredPosts.map((post) => (
+              {filteredAndSortedPosts.length > 0 ? (
+                filteredAndSortedPosts.map((post) => (
                   <BlogCard
                     key={post.id}
                     id={post.id}
@@ -110,7 +206,9 @@ export default function Blog() {
               ) : (
                 <div className="text-center py-12">
                   <p className="text-gray-600 dark:text-gray-400">
-                    No posts found matching your criteria.
+                    {isSearching
+                      ? "Searching..."
+                      : "No posts found matching your criteria."}
                   </p>
                 </div>
               )}

@@ -11,6 +11,8 @@ import { formatDate } from "../utils/Date";
 import RateProfessorJourney from "../articles/RateProfessorJourney";
 import LLMUnderstanding from "../articles/LLMUnderstanding";
 import AIHumanDev from "../articles/AIHumanDev";
+import CodeReadingSkills from "../articles/CodeReadingSkills";
+import AIAndLearning from "../articles/AIAndLearning";
 import ShareButton from "../components/ShareButton";
 import { useLocation } from "react-router-dom";
 
@@ -58,6 +60,10 @@ export default function BlogPost({
         return <LLMUnderstanding />;
       case "AIHumanDev":
         return <AIHumanDev />;
+      case "CodeReadingSkills":
+        return <CodeReadingSkills />;
+      case "AIAndLearning":
+        return <AIAndLearning />;
       default:
         return <p>No content found</p>;
     }
