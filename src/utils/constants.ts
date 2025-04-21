@@ -793,7 +793,7 @@ export const posts: Post[] = [
     type: "blog",
     id: "rate-professor-legal",
     title: "GDPR Legal Issues with My Rate My Professor AI Project",
-    date: "2023-06-15",
+    date: "2025-04-21",
     content: "RateProfessorLegal",
     category: "Developer Experience",
     description:
