@@ -789,4 +789,14 @@ export const posts: Post[] = [
     content: "AIAndLearning",
     type: "Blog",
   },
+  {
+    type: "blog",
+    id: "rate-professor-legal",
+    title: "GDPR Legal Issues with My Rate My Professor AI Project",
+    date: "2023-06-15",
+    content: "RateProfessorLegal",
+    category: "Developer Experience",
+    description:
+      "How an AI project I developed almost got me into legal trouble in Europe due to GDPR regulations.",
+  },
 ];

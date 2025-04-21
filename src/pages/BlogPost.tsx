@@ -13,6 +13,7 @@ import LLMUnderstanding from "../articles/LLMUnderstanding";
 import AIHumanDev from "../articles/AIHumanDev";
 import CodeReadingSkills from "../articles/CodeReadingSkills";
 import AIAndLearning from "../articles/AIAndLearning";
+import RateProfessorLegal from "../articles/RateProfessorLegal";
 import ShareButton from "../components/ShareButton";
 import { useLocation } from "react-router-dom";
 
@@ -56,6 +57,8 @@ export default function BlogPost({
         return <KETAcademyJourney />;
       case "RateProfessorJourney":
         return <RateProfessorJourney />;
+      case "RateProfessorLegal":
+        return <RateProfessorLegal />;
       case "LLMUnderstanding":
         return <LLMUnderstanding />;
       case "AIHumanDev":
