@@ -22,12 +22,12 @@ export default function AboutMe() {
           {/* Introduction list */}
           <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
             <li>
-              Hello! I'm Kinlo, a final-year Computer Science student at
-              Constructor University in Bremen, Germany. My academic focus
-              includes a minor in Data Science and specialized studies in
-              Artificial Intelligence and Machine Learning. I love learning and
-              building innovative projects. I actively share my knowledge and
-              insights on various professional platforms, particularly on&nbsp;
+              Hi! I am Kinlo, a final-year Computer Science student with a minor
+              in Data Science and specialization in Artificial Intelligence and
+              Machine Learning at Constructor University in Bremen, Germany. I
+              love learning, teaching and building projects. I actively share my
+              knowledge and insights mostly through writing on various
+              professional platforms, especially on&nbsp;
               <a
                 href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
                 target="_blank"
@@ -80,17 +80,19 @@ export default function AboutMe() {
           {/* Personal statements */}
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"></p>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>I enjoy learning new
-            things, solving problems, & teaching and I have experience – from
-            tutoring mathematics in high school to becoming a Teaching Assistant
-            (TA) at the university-level in Calculus I & II. After high school,
-            I started building an e-learning platform where I had to learn
-            everything from scratch.
+            <span className="text-blue-500">| </span>I enjoy learning, problem
+            solving, & teaching. I earned my first tutoring income in high
+            school teaching my classmates further mathematics and later at the
+            university, I become a Teaching Assistant (TA) for Calculus I & II.
+            After high school, I started building an e-learning platform with my
+            friend where we had to learn everything from scratch in order to
+            provide access to education for students in crisis regions of my
+            country where schools were disrupted.
           </p>
           <div style={{ height: "20px" }}></div>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>When not studying or
-            coding, I will either be:
+            <span className="text-blue-500">| </span>If I am not studying or
+            coding, I will definitely be:
           </p>
 
           {/* List of hobbies */}

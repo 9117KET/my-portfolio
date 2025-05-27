@@ -609,9 +609,9 @@ export const hobbies = [
   "Listening to podcasts (Diary of a CEO, Huberman Lab, Jordan Peterson)",
   "Watching documentaries, tutorials, and CIA/FBI/Crime series",
   //"Reading tech articles and self-development books",
-  "Studying chess positions",
+  "Playing Chess",
   "Playing Table Tennis",
-  "Learning Piano",
+  "Learning how to play the Piano",
 ];
 
 // Blog posts
