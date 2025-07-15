@@ -45,8 +45,11 @@ export default function Navbar({ clicked }: { clicked: string }) {
         {/* Menu Button */}
         <div className="md:hidden flex gap-4 flex-1 justify-end items-center">
           <button
-            className="cursor-pointer mt-2 dark:text-gray-300"
+            className="cursor-pointer mt-2 dark:text-gray-300 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onClick={() => setToggle((prev) => !prev)}
+            aria-expanded={toggle}
+            aria-controls="mobile-menu"
+            aria-label="Toggle navigation menu"
           >
             <span className="material-symbols-outlined text-3xl">menu</span>
           </button>
@@ -58,18 +61,23 @@ export default function Navbar({ clicked }: { clicked: string }) {
           className={`fixed inset-0 bg-black bg-opacity-50 z-[98] transition-opacity ${
             toggle ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
+          onClick={() => setToggle(false)}
+          aria-hidden="true"
         ></div>
 
         {/* Sliding Navbar */}
-        <div
+        <nav
+          id="mobile-menu"
           className={`${
             toggle ? "translate-x-0" : "translate-x-full"
           } fixed top-0 right-0 h-full w-64 bg-gradient-to-b bg-blue-300 dark:bg-blue-900 p-6 z-[99] transition-transform duration-300 ease-in-out`}
+          aria-label="Mobile navigation"
         >
           <div className="flex justify-between items-center mb-6">
             <button
-              className="cursor-pointer dark:text-gray-300"
+              className="cursor-pointer dark:text-gray-300 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
               onClick={() => setToggle(false)}
+              aria-label="Close navigation menu"
             >
               <span className="material-symbols-outlined text-3xl">close</span>
             </button>
@@ -79,16 +87,16 @@ export default function Navbar({ clicked }: { clicked: string }) {
               <li key={nav.id}>
                 <a
                   href={nav.id == "" ? "/" : nav.id}
-                  className={`cursor-pointer dark:text-gray-300 text-[16px] hover:text-violet-600 transition-all ${
+                  className={`cursor-pointer text-gray-900 dark:text-gray-300 text-[16px] hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 ${
                     index === navLinks.length - 1 ? "mb-0" : "mb-4"
-                  } dark:text-white`}
+                  }`}
                 >
                   {nav.name}
                 </a>
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
       </div>
     </nav>
   );

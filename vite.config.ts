@@ -11,7 +11,16 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom", "react-router-dom"],
+          vendor: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          icons: [
+            "@fortawesome/fontawesome-svg-core",
+            "@fortawesome/react-fontawesome",
+            "@fortawesome/free-solid-svg-icons",
+          ],
+          markdown: ["react-markdown", "remark-gfm", "remark-react"],
+          helmet: ["react-helmet-async"],
+          scroll: ["react-scroll"],
         },
       },
     },

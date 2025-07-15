@@ -45,7 +45,7 @@ export default function AboutMe() {
               href={cvLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg hover:from-blue-700 hover:to-blue-900 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <span className="material-symbols-outlined mr-1 text-base">
                 description
@@ -148,11 +148,11 @@ export default function AboutMe() {
             <div className="flex-grow border-t border-gray-400"></div>
           </div>
           <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-800">| </span>Assistant Project Manager
+            <span className="text-blue-500">| </span>Assistant Project Manager
             for YouthTeamUp @ Constructor University
           </p>
           <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-800">| </span>Software Engineering
+            <span className="text-blue-500">| </span>Software Engineering
             Resident at Headstarter
           </p>
         </div>

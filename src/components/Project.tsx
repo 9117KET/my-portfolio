@@ -1,3 +1,5 @@
+import React from "react";
+
 interface ProjectProps {
   id: string;
   name: string;
@@ -8,7 +10,7 @@ interface ProjectProps {
   demo?: string;
 }
 
-export default function Project({
+const Project = React.memo(function Project({
   id,
   name,
   features,
@@ -23,9 +25,7 @@ export default function Project({
       className="p-4 border-b border-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:border-gray-600 mt-6"
     >
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-        <h2 className="text-lg font-semibold dark:text-gray-300">
-          {name}
-        </h2>
+        <h2 className="text-lg font-semibold dark:text-gray-300">{name}</h2>
         <div className="flex gap-3">
           {demo && (
             <a
@@ -97,4 +97,6 @@ export default function Project({
       </div>
     </div>
   );
-}
+});
+
+export default Project;

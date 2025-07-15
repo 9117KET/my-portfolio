@@ -1,9 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  // Paths to all template files
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  // Paths to all template files - more specific for better purging
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.css",
+    "./vercel.json",
+  ],
+  safelist: [
+    // Safelist dynamic classes that might be purged
+    "animate-spin",
+    "animate-pulse",
+    "translate-x-0",
+    "translate-x-full",
+    "opacity-0",
+    "opacity-100",
+    "scale-110",
+    "scale-105",
+    "bg-blue-600",
+    "bg-blue-700",
+    "text-blue-500",
+    "hover:bg-blue-700",
+    "dark:bg-gray-800",
+    "dark:text-gray-300",
+  ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        mono: ["monospace"],
+      },
       animation: {
         typewriter: "typewriter 2s steps(11) forwards", // Typewriter effect
         caret:

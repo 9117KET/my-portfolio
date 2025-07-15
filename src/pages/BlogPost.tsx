@@ -1,21 +1,36 @@
-import Beans from "../articles/Beans";
-import AIAfrica from "../articles/AIAfrica";
-import KETAcademyPodcast from "../articles/KETAcademyPodcast";
-import MLBasics from "../articles/MLBasics";
-import ReactPatterns from "../articles/ReactPatterns";
-import TypeScriptTips from "../articles/TypeScriptTips";
-import AIEthics from "../articles/AIEthics";
-import PhilEthics from "../articles/PhilEthics";
-import KETAcademyJourney from "../articles/KETAcademyJourney";
+import { Suspense, lazy } from "react";
 import { formatDate } from "../utils/Date";
-import RateProfessorJourney from "../articles/RateProfessorJourney";
-import LLMUnderstanding from "../articles/LLMUnderstanding";
-import AIHumanDev from "../articles/AIHumanDev";
-import CodeReadingSkills from "../articles/CodeReadingSkills";
-import AIAndLearning from "../articles/AIAndLearning";
-import RateProfessorLegal from "../articles/RateProfessorLegal";
 import ShareButton from "../components/ShareButton";
 import { useLocation } from "react-router-dom";
+
+// Lazy load article components for better performance
+const Beans = lazy(() => import("../articles/Beans"));
+const AIAfrica = lazy(() => import("../articles/AIAfrica"));
+const KETAcademyPodcast = lazy(() => import("../articles/KETAcademyPodcast"));
+const MLBasics = lazy(() => import("../articles/MLBasics"));
+const ReactPatterns = lazy(() => import("../articles/ReactPatterns"));
+const TypeScriptTips = lazy(() => import("../articles/TypeScriptTips"));
+const AIEthics = lazy(() => import("../articles/AIEthics"));
+const PhilEthics = lazy(() => import("../articles/PhilEthics"));
+const KETAcademyJourney = lazy(() => import("../articles/KETAcademyJourney"));
+const RateProfessorJourney = lazy(
+  () => import("../articles/RateProfessorJourney"),
+);
+const LLMUnderstanding = lazy(() => import("../articles/LLMUnderstanding"));
+const AIHumanDev = lazy(() => import("../articles/AIHumanDev"));
+const CodeReadingSkills = lazy(() => import("../articles/CodeReadingSkills"));
+const AIAndLearning = lazy(() => import("../articles/AIAndLearning"));
+const RateProfessorLegal = lazy(() => import("../articles/RateProfessorLegal"));
+
+// Loading fallback for articles
+const ArticleLoader = () => (
+  <div className="flex items-center justify-center py-12">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+    <span className="ml-3 text-gray-600 dark:text-gray-400">
+      Loading article...
+    </span>
+  </div>
+);
 
 interface BlogPostProps {
   title: string;
@@ -33,43 +48,54 @@ export default function BlogPost({
   description = "",
 }: BlogPostProps) {
   const location = useLocation();
-  const currentUrl = window.location.origin + location.pathname;
+  const currentUrl = new URL(
+    location.pathname,
+    window.location.origin,
+  ).toString();
 
   const renderContent = () => {
-    switch (content) {
-      case "Beans":
-        return <Beans />;
-      case "AIAfrica":
-        return <AIAfrica />;
-      case "KETAcademyPodcast":
-        return <KETAcademyPodcast />;
-      case "MLBasics":
-        return <MLBasics />;
-      case "ReactPatterns":
-        return <ReactPatterns />;
-      case "TypeScriptTips":
-        return <TypeScriptTips />;
-      case "AIEthics":
-        return <AIEthics />;
-      case "PhilEthics":
-        return <PhilEthics />;
-      case "KETAcademyJourney":
-        return <KETAcademyJourney />;
-      case "RateProfessorJourney":
-        return <RateProfessorJourney />;
-      case "RateProfessorLegal":
-        return <RateProfessorLegal />;
-      case "LLMUnderstanding":
-        return <LLMUnderstanding />;
-      case "AIHumanDev":
-        return <AIHumanDev />;
-      case "CodeReadingSkills":
-        return <CodeReadingSkills />;
-      case "AIAndLearning":
-        return <AIAndLearning />;
-      default:
-        return <p>No content found</p>;
-    }
+    const ArticleComponent = () => {
+      switch (content) {
+        case "Beans":
+          return <Beans />;
+        case "AIAfrica":
+          return <AIAfrica />;
+        case "KETAcademyPodcast":
+          return <KETAcademyPodcast />;
+        case "MLBasics":
+          return <MLBasics />;
+        case "ReactPatterns":
+          return <ReactPatterns />;
+        case "TypeScriptTips":
+          return <TypeScriptTips />;
+        case "AIEthics":
+          return <AIEthics />;
+        case "PhilEthics":
+          return <PhilEthics />;
+        case "KETAcademyJourney":
+          return <KETAcademyJourney />;
+        case "RateProfessorJourney":
+          return <RateProfessorJourney />;
+        case "RateProfessorLegal":
+          return <RateProfessorLegal />;
+        case "LLMUnderstanding":
+          return <LLMUnderstanding />;
+        case "AIHumanDev":
+          return <AIHumanDev />;
+        case "CodeReadingSkills":
+          return <CodeReadingSkills />;
+        case "AIAndLearning":
+          return <AIAndLearning />;
+        default:
+          return <p>No content found</p>;
+      }
+    };
+
+    return (
+      <Suspense fallback={<ArticleLoader />}>
+        <ArticleComponent />
+      </Suspense>
+    );
   };
 
   return (

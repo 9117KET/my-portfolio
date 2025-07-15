@@ -1,9 +1,14 @@
-export function getTheme() {
-    const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+export type Theme = "light" | "dark";
 
-    const localTheme = localStorage.getItem('theme') ? localStorage.getItem('theme')! : null;
-    
-    const theme = localTheme != null ? localTheme : darkTheme.matches ? "dark" : "light";
-    
-    return theme;
+export function getTheme(): Theme {
+  const darkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const localTheme = localStorage.getItem("theme");
+
+  // Validate stored theme
+  if (localTheme === "dark" || localTheme === "light") {
+    return localTheme;
+  }
+
+  // Fallback to system preference
+  return darkTheme.matches ? "dark" : "light";
 }

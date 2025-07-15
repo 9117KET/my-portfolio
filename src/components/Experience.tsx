@@ -1,4 +1,4 @@
-//import React from 'react';
+import React from "react";
 
 interface ExperienceProps {
   experiences: {
@@ -12,7 +12,9 @@ interface ExperienceProps {
   }[];
 }
 
-const Experience = ({ experiences }: ExperienceProps) => {
+const Experience = React.memo(function Experience({
+  experiences,
+}: ExperienceProps) {
   if (!experiences || !Array.isArray(experiences)) {
     console.error("Invalid or undefined experiences provided:", experiences);
     return <div>No experiences available.</div>;
@@ -57,10 +59,10 @@ const Experience = ({ experiences }: ExperienceProps) => {
               <p className="pl-10">{companyDescription}</p>
             </div>
           </div>
-        )
+        ),
       )}
     </div>
   );
-};
+});
 
 export default Experience;

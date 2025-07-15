@@ -18,14 +18,14 @@ export default function About() {
           <Navbar clicked="about_me;" />{" "}
         </div>
       </div>
-      <div className={`${styles.flexStart} w-full`}>
+      <main id="main-content" className={`${styles.flexStart} w-full`}>
         {" "}
         <div className={`${styles.boxWidth}`}>
           {" "}
           <AboutMe />
           <ContactMe />
         </div>
-      </div>
+      </main>
     </div>
   );
 }

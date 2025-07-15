@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 interface BlogCardProps {
@@ -8,7 +9,7 @@ interface BlogCardProps {
   id: string;
 }
 
-export default function BlogCard({
+const BlogCard = React.memo(function BlogCard({
   id,
   title,
   date,
@@ -60,4 +61,6 @@ export default function BlogCard({
       </div>
     </Link>
   );
-}
+});
+
+export default BlogCard;
