@@ -13,6 +13,11 @@ export const navLinks = [
 export const cvLink =
   "https://drive.google.com/file/d/1S9dCWZmoe17LupDZjqgvPlt1CcDTWJiZ/view?usp=sharing";
 
+// Public link to Bachelor Thesis PDF (Google Drive, arXiv, or institutional repo)
+// Leave empty to hide the Thesis button on the About page
+export const thesisLink =
+  "https://drive.google.com/file/d/1RbUxhTiJ97A8l2tMcTKArqXo3gOVbBuD/view?usp=sharing";
+
 // Project details for the portfolio
 export const projects: Project[] = [
   {

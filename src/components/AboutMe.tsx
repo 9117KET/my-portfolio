@@ -1,4 +1,4 @@
-import { builds, hobbies, cvLink } from "../utils/constants";
+import { builds, hobbies, cvLink, thesisLink } from "../utils/constants";
 import profileImage from "../utils/images/28-removebg-preview.png";
 
 export default function AboutMe() {
@@ -39,8 +39,8 @@ export default function AboutMe() {
               .
             </li>
           </ul>
-          {/* My CV button */}
-          <p className="mt-4">
+          {/* Resume + Thesis buttons */}
+          <div className="mt-4 flex items-center gap-3 flex-wrap">
             <a
               href={cvLink}
               target="_blank"
@@ -52,7 +52,21 @@ export default function AboutMe() {
               </span>
               My Resume
             </a>
-          </p>
+
+            {thesisLink && (
+              <a
+                href={thesisLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <span className="material-symbols-outlined mr-1 text-base">
+                  school
+                </span>
+                Bachelor Thesis
+              </a>
+            )}
+          </div>
         </div>
         {/* Image container */}
         <div className="flex justify-center items-center">
