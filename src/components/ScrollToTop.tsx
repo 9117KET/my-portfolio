@@ -31,7 +31,7 @@ export default function ScrollToTop() {
           className="fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-blue-600 focus:outline-none z-[999]"
           aria-label="Scroll to top"
         >
-          <span className="material-symbols-outlined">arrow_upward</span>
+          <span className="text-xl">↑</span>
         </button>
       )}
     </>
