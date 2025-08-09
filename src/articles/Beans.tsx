@@ -6,7 +6,7 @@ hljs.registerLanguage("javascript", java);
 
 export default function Beans() {
   return (
-    <div className="font-sans mb-4 text-lg prose prose-lg dark:prose-invert max-w-none">
+    <div className="font-mono mb-4 max-w-none">
       {/* Introduction */}
       <p className="mb-6">
         In this post, I will introduce the concept of IoC (Inversion of

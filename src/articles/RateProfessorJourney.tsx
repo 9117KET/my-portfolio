@@ -1,6 +1,6 @@
 export default function RateProfessorJourney() {
   return (
-    <div className="font-sans mb-4 text-lg prose prose-lg dark:prose-invert max-w-none">
+    <div className="font-mono mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">

@@ -13,7 +13,7 @@ function App() {
       >
         Skip to main content
       </a>
-      <div>
+      <div className="font-mono text-sm sm:text-base md:text-lg">
         <Outlet /> {/* Render the current routes component */}
         <ScrollToTop /> {/* Added scroll component */}
       </div>

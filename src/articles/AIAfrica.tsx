@@ -1,6 +1,6 @@
 export default function AIAfrica() {
   return (
-    <div className="font-sans mb-4 text-lg prose prose-lg dark:prose-invert max-w-none">
+    <div className="font-mono mb-4 max-w-none">
       {/* Introduction */}
       <p className="mb-6">
         The fields of Artificial Intelligence (AI), Big Data, and the Internet
@@ -30,11 +30,12 @@ export default function AIAfrica() {
         </h2>
         <p>
           My motivation for writing this article came after noticing the gap in
-          technological adoption between developed and developing regions, Africa has the lowest developmental
-          and adoption rates compared to all other continents in the world, and
-          this is a huge problem given that Africa has one of the
-          fastest-growing economies. By 2035, Africa will have the youngest and
-          largest workforce in the world and will be home to many individuals.
+          technological adoption between developed and developing regions,
+          Africa has the lowest developmental and adoption rates compared to all
+          other continents in the world, and this is a huge problem given that
+          Africa has one of the fastest-growing economies. By 2035, Africa will
+          have the youngest and largest workforce in the world and will be home
+          to many individuals.
         </p>
       </section>
 

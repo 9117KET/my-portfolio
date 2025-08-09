@@ -629,8 +629,7 @@ export const posts: Post[] = [
     category: "Post",
     description:
       "The Potential of IoT, AI, and Big Data for Rwanda's Future: A Case Study of Kigali Innovation City (KIC).",
-    content:
-      "The fields of Artificial Intelligence (AI), Big Data, and the Internet of Things (IoT) have been transforming industries globally, and Africa is no different. This post explores the historical timeline of AI, IoT, and Big Data over the last 6 decades.",
+    content: "AIAfrica",
     type: "Blog",
   },
   // {
@@ -697,8 +696,7 @@ export const posts: Post[] = [
     category: "Podcast",
     description:
       "The journey of building KET Academy, challenges faced, and lessons learned in creating an e-learning platform for African students.",
-    content:
-      "Episode 2: The story behind KET Academy and its mission to provide accessible education in Africa.",
+    content: "KETAcademyPodcast",
     type: "Podcast",
   },
   {

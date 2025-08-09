@@ -1,6 +1,6 @@
 export default function AIAndLearning() {
   return (
-    <div className="font-sans mb-4 text-lg prose prose-lg dark:prose-invert max-w-none">
+    <div className="font-mono mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
