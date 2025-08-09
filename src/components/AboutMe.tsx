@@ -47,9 +47,6 @@ export default function AboutMe() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <span className="material-symbols-outlined mr-1 text-base">
-                description
-              </span>
               My Resume
             </a>
 
@@ -60,9 +57,6 @@ export default function AboutMe() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <span className="material-symbols-outlined mr-1 text-base">
-                  school
-                </span>
                 Bachelor Thesis
               </a>
             )}
