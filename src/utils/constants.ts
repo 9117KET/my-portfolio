@@ -11,7 +11,7 @@ export const navLinks = [
 ];
 
 export const cvLink =
-  "https://drive.google.com/file/d/1S9dCWZmoe17LupDZjqgvPlt1CcDTWJiZ/view?usp=sharing";
+  "https://drive.google.com/file/d/12zCWCH0sQEc44SFkXEgQWhbAE4Y_R5JF/view?usp=sharing";
 
 // Public link to Bachelor Thesis PDF (Google Drive, arXiv, or institutional repo)
 // Leave empty to hide the Thesis button on the About page
@@ -330,6 +330,21 @@ export const projects: Project[] = [
 
 // Experience details for the portfolio
 export const experience = [
+  {
+    id: "exp6",
+    role: "Full-Stack Engineering Intern",
+    company: "ABiQ",
+    location: "Remote",
+    duration: "July 2025 - Sep 2025",
+    category: "Software Development",
+    responsibilities: [
+      "Designed a concept for AI integration into backend workflows to automate content generation and updates.",
+      "Analyzed current Salesforce CMS, identified improvement areas, and assisted in scoping requirements for a new backend.",
+      "Led the creation of comprehensive IT documentation to streamline onboarding and internal operations.",
+    ],
+    companyDescription:
+      "ABiQ is a leading business intelligence platform tracking large-scale infrastructure, energy, transport, and industrial projects across Africa and the Middle East.",
+  },
   {
     id: "exp1",
     role: "Software Engineer Intern",
