@@ -13,6 +13,11 @@ export const navLinks = [
 export const cvLink =
   "https://drive.google.com/file/d/12zCWCH0sQEc44SFkXEgQWhbAE4Y_R5JF/view?usp=sharing";
 
+// Public link to Management Resume PDF (Google Drive, arXiv, or institutional repo)
+// Leave empty to hide the Management Resume button on the About page
+export const managementResumeLink =
+  "https://drive.google.com/file/d/1yA0Qw_59EPFv3GT3T24QD_-VmsZcjtzm/view?usp=sharing";
+
 // Public link to Bachelor Thesis PDF (Google Drive, arXiv, or institutional repo)
 // Leave empty to hide the Thesis button on the About page
 export const thesisLink =
@@ -343,7 +348,7 @@ export const experience = [
       "Led the creation of comprehensive IT documentation to streamline onboarding and internal operations.",
     ],
     companyDescription:
-      "ABiQ is a leading business intelligence platform tracking large-scale infrastructure, energy, transport, and industrial projects across Africa and the Middle East.",
+      "ABiQ is a leading business intelligence platform tracking large-scale infrastructure, energy, transport, and industrial projects across Africa and the Middle East",
   },
   {
     id: "exp1",
