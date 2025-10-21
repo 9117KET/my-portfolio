@@ -164,7 +164,7 @@ export default function AboutMe() {
         </div>
 
         {/* Current professional status */}
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <div className="relative flex py-5 items-center">
             <div className="flex-grow border-t border-gray-400"></div>
             <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400">
@@ -180,7 +180,7 @@ export default function AboutMe() {
             <span className="text-blue-500">| </span>Software Engineering
             Resident at Headstarter
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

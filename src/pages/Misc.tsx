@@ -15,11 +15,11 @@ const itemsToShow = {
 type Category = keyof typeof itemsToShow;
 
 const sortItems = <
-  T extends { date: string; title: string; description: string }
+  T extends { date: string; title: string; description: string },
 >(
   items: T[],
   sortBy: "date" | "title" | "description",
-  direction: "asc" | "desc" = "asc"
+  direction: "asc" | "desc" = "asc",
 ) => {
   return [...items].sort((a, b) => {
     const aValue = a[sortBy];
@@ -39,7 +39,7 @@ const sortItems = <
 
 export default function Misc() {
   const [selectedCategory, setSelectedCategory] = useState<Category>(
-    categories[0] as Category
+    categories[0] as Category,
   );
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig] = useState<{
@@ -54,19 +54,46 @@ export default function Misc() {
   const filteredItems = items.filter(
     (item) =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   const processedItems = sortItems(
     filteredItems,
     sortConfig.key,
-    sortConfig.direction
+    sortConfig.direction,
   );
 
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen">
       <Helmet>
-        <title>Miscellaneous</title>
+        <title>Certificates & Awards | Kinlo Ephriam Tangiri</title>
+        <meta
+          name="description"
+          content="Explore my certifications, awards, and achievements including Google AI certifications, Diana Award recognition, Global Student Prize finalist, and various entrepreneurship certificates."
+        />
+        <meta
+          name="keywords"
+          content="certifications, awards, achievements, Google AI, Diana Award, Global Student Prize, entrepreneurship certificates, professional development"
+        />
+        <meta
+          property="og:title"
+          content="Certificates & Awards | Kinlo Ephriam Tangiri"
+        />
+        <meta
+          property="og:description"
+          content="Explore my certifications, awards, and achievements including Google AI certifications, Diana Award recognition, and Global Student Prize finalist."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Certificates & Awards | Kinlo Ephriam Tangiri"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore my certifications, awards, and achievements including Google AI certifications, Diana Award recognition, and Global Student Prize finalist."
+        />
       </Helmet>
 
       <div className={`${styles.flexCenter}`}>
@@ -94,6 +121,9 @@ export default function Misc() {
                       : "text-black dark:text-white"
                   }`}
                   aria-label={`Filter items by ${category}`}
+                  aria-current={
+                    selectedCategory === category ? "true" : "false"
+                  }
                 >
                   {category}
                 </button>
@@ -154,6 +184,7 @@ export default function Misc() {
                           alert(`More information about ${item.title}`);
                         }
                       }}
+                      aria-label={`Learn more about ${item.title}`}
                     >
                       Learn More →
                     </button>

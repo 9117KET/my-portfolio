@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import App from "./App.tsx";
 import { HelmetProvider } from "react-helmet-async";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 // Lazy load pages for code splitting
 const About = lazy(() => import("./pages/About"));
@@ -16,6 +17,7 @@ const Misc = lazy(() => import("./pages/Misc"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Experience = lazy(() => import("./pages/Experience"));
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading component for suspense fallback
 const LoadingFallback = () => (
@@ -76,6 +78,15 @@ const router = createBrowserRouter(
           </Suspense>
         }
       />
+      {/* Catch-all route for 404 */}
+      <Route
+        path="*"
+        element={
+          <Suspense fallback={<LoadingFallback />}>
+            <NotFound />
+          </Suspense>
+        }
+      />
     </Route>,
   ),
 );
@@ -90,11 +101,13 @@ if (!rootElement) {
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <HelmetProvider>
-      {" "}
-      {/* Provides a context for managing changes to the document head*/}
-      <RouterProvider router={router} />{" "}
-      {/* Provides the router context to the application*/}
-    </HelmetProvider>
+    <ErrorBoundary>
+      <HelmetProvider>
+        {" "}
+        {/* Provides a context for managing changes to the document head*/}
+        <RouterProvider router={router} />{" "}
+        {/* Provides the router context to the application*/}
+      </HelmetProvider>
+    </ErrorBoundary>
   </React.StrictMode>,
 );

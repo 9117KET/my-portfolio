@@ -11,13 +11,40 @@ const categories = ["All", "Software Development", "Management & Others"];
 export default function Experiences() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const filteredExperiences = experience.filter(
-    (exp) => selectedCategory === "All" || exp.category === selectedCategory
+    (exp) => selectedCategory === "All" || exp.category === selectedCategory,
   );
 
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen">
       <Helmet>
-        <title>Experience</title>
+        <title>Experience | Kinlo Ephriam Tangiri</title>
+        <meta
+          name="description"
+          content="My professional experience including software engineering internships, project management roles, teaching assistant positions, and leadership roles at Constructor University and various organizations."
+        />
+        <meta
+          name="keywords"
+          content="software engineering experience, project management, teaching assistant, internships, professional experience, Constructor University"
+        />
+        <meta
+          property="og:title"
+          content="Experience | Kinlo Ephriam Tangiri"
+        />
+        <meta
+          property="og:description"
+          content="My professional experience including software engineering internships, project management roles, teaching assistant positions, and leadership roles."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Experience | Kinlo Ephriam Tangiri"
+        />
+        <meta
+          name="twitter:description"
+          content="My professional experience including software engineering internships, project management roles, teaching assistant positions, and leadership roles."
+        />
       </Helmet>
       <div className={`${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
@@ -55,6 +82,9 @@ export default function Experiences() {
                       : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
                   }`}
                   aria-label={`Filter experiences by ${category}`}
+                  aria-current={
+                    selectedCategory === category ? "true" : "false"
+                  }
                 >
                   {category}
                 </button>

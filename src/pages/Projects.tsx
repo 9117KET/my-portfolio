@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import Navbar from "../components/Navbar";
 import Project from "../components/Project";
 import { projects } from "../utils/constants";
 import styles from "../utils/style";
 import { Helmet } from "react-helmet-async";
+import { useDebounce } from "../utils/hooks";
 
 type Category = "All" | "Fullstack" | "AI/ML" | "Data Science";
 const categories: Category[] = ["All", "Fullstack", "AI/ML", "Data Science"];
@@ -11,24 +12,77 @@ const categories: Category[] = ["All", "Fullstack", "AI/ML", "Data Science"];
 export default function Projects() {
   // State to keep track of the selected category
   const [selectedCategory, setSelectedCategory] = useState<Category>("All");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
 
-  // Filter projects based on the selected category
-  const filteredProjects = projects.filter((project) => {
-    if (selectedCategory === "All") return true;
+  // Debounce the search query to prevent excessive filtering
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
 
-    // Handle projects that belong to multiple categories
-    if (project.categories && Array.isArray(project.categories)) {
-      return project.categories.includes(selectedCategory);
-    }
+  // Clear search function
+  const clearSearch = useCallback(() => {
+    setSearchQuery("");
+  }, []);
 
-    // Handle legacy single category projects
-    return project.category === selectedCategory;
-  });
+  // Filter projects based on the selected category and search query
+  const filteredProjects = useMemo(() => {
+    setIsSearching(true);
+
+    const filtered = projects.filter((project) => {
+      const matchesCategory =
+        selectedCategory === "All" ||
+        (project.categories && Array.isArray(project.categories)
+          ? project.categories.includes(selectedCategory)
+          : project.category === selectedCategory);
+
+      // If no search query, only filter by category
+      if (!debouncedSearchQuery) {
+        return matchesCategory;
+      }
+
+      // Search across multiple fields
+      const searchLower = debouncedSearchQuery.toLowerCase();
+      const matchesSearch =
+        project.name.toLowerCase().includes(searchLower) ||
+        project.description.toLowerCase().includes(searchLower) ||
+        project.technologies.some((tech) =>
+          tech.toLowerCase().includes(searchLower),
+        ) ||
+        project.features.some((feature) =>
+          feature.toLowerCase().includes(searchLower),
+        );
+
+      return matchesCategory && matchesSearch;
+    });
+
+    setIsSearching(false);
+    return filtered;
+  }, [selectedCategory, debouncedSearchQuery]);
 
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen">
       <Helmet>
-        <title>projects;</title>
+        <title>Projects | Kinlo Ephriam Tangiri</title>
+        <meta
+          name="description"
+          content="Explore my portfolio of software development projects including AI/ML applications, full-stack web applications, and data science projects. Built with React, TypeScript, Python, and modern technologies."
+        />
+        <meta
+          name="keywords"
+          content="software projects, AI projects, machine learning, React, TypeScript, Python, full-stack development, portfolio projects"
+        />
+        <meta property="og:title" content="Projects | Kinlo Ephriam Tangiri" />
+        <meta
+          property="og:description"
+          content="Explore my portfolio of software development projects including AI/ML applications, full-stack web applications, and data science projects."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Projects | Kinlo Ephriam Tangiri" />
+        <meta
+          name="twitter:description"
+          content="Explore my portfolio of software development projects including AI/ML applications, full-stack web applications, and data science projects."
+        />
       </Helmet>
       {/* Navigation bar */}
       <div className={`${styles.flexCenter}`}>
@@ -60,6 +114,57 @@ export default function Projects() {
               Here are some of my favorite projects:
             </h3>
 
+            {/* Search Bar */}
+            <div className="max-w-xl mx-auto mb-8">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search projects by name, description, or technology..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-10"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={clearSearch}
+                    className="absolute right-10 top-2.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+                  >
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                )}
+                <svg
+                  className="absolute right-3 top-2.5 h-5 w-5 text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+              {isSearching && (
+                <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                  Searching...
+                </div>
+              )}
+            </div>
+
             {/* Category filter buttons */}
             <div className="flex flex-wrap justify-center mt-6">
               {categories.map((category) => (
@@ -72,6 +177,9 @@ export default function Projects() {
                       : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
                   }`}
                   aria-label={`Filter projects by ${category}`}
+                  aria-current={
+                    selectedCategory === category ? "true" : "false"
+                  }
                 >
                   {category}
                 </button>
@@ -80,18 +188,28 @@ export default function Projects() {
 
             {/* Display filtered projects */}
             <div className="flex flex-col">
-              {filteredProjects.map((project) => (
-                <Project
-                  key={project.id}
-                  id={project.id}
-                  demo={project.demo}
-                  name={project.name}
-                  github={project.github}
-                  description={project.description}
-                  technologies={project.technologies}
-                  features={project.features}
-                />
-              ))}
+              {filteredProjects.length > 0 ? (
+                filteredProjects.map((project) => (
+                  <Project
+                    key={project.id}
+                    id={project.id}
+                    demo={project.demo}
+                    name={project.name}
+                    github={project.github}
+                    description={project.description}
+                    technologies={project.technologies}
+                    features={project.features}
+                  />
+                ))
+              ) : (
+                <div className="text-center py-12">
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {isSearching
+                      ? "Searching..."
+                      : "No projects found matching your criteria."}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
