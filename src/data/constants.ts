@@ -33,6 +33,7 @@ export const builds = [
   "IoT recommendation framework",
   "Sustainable Shopping Assistant",
   "BMW Group Hackathon on Causal ML",
+  "AWS Bedrock RAG Document Query Platform",
   "Brain Tumor Classification with Neural Network",
   "AI-powered Churn Prediction for a bank customer",
   "Pentagon-A real time image generation web app with natural language",

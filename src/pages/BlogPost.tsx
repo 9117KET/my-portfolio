@@ -14,13 +14,14 @@ const AIEthics = lazy(() => import("../articles/AIEthics"));
 const PhilEthics = lazy(() => import("../articles/PhilEthics"));
 const KETAcademyJourney = lazy(() => import("../articles/KETAcademyJourney"));
 const RateProfessorJourney = lazy(
-  () => import("../articles/RateProfessorJourney"),
+  () => import("../articles/RateProfessorJourney")
 );
 const LLMUnderstanding = lazy(() => import("../articles/LLMUnderstanding"));
 const AIHumanDev = lazy(() => import("../articles/AIHumanDev"));
 const CodeReadingSkills = lazy(() => import("../articles/CodeReadingSkills"));
 const AIAndLearning = lazy(() => import("../articles/AIAndLearning"));
 const RateProfessorLegal = lazy(() => import("../articles/RateProfessorLegal"));
+const AWSBedrockRAG = lazy(() => import("../articles/AWSBedrockRAG"));
 
 // Loading fallback for articles
 const ArticleLoader = () => (
@@ -50,7 +51,7 @@ export default function BlogPost({
   const location = useLocation();
   const currentUrl = new URL(
     location.pathname,
-    window.location.origin,
+    window.location.origin
   ).toString();
 
   const renderContent = () => {
@@ -86,6 +87,8 @@ export default function BlogPost({
           return <CodeReadingSkills />;
         case "AIAndLearning":
           return <AIAndLearning />;
+        case "AWSBedrockRAG":
+          return <AWSBedrockRAG />;
         default:
           return <p>No content found</p>;
       }

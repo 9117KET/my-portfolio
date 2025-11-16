@@ -35,7 +35,7 @@ export const experience = [
     role: "Lead developer",
     company: "KET Academy",
     location: "Yaoundé, Cameroon",
-    duration: "2020 - Present",
+    duration: "2020 - Dec 2025",
     category: "Software Development",
     responsibilities: [
       "Established and led a team of more than 25 youths to build an e-learning platform with resources in video and PDF formats.",
@@ -49,7 +49,7 @@ export const experience = [
     id: "exp2",
     role: "Student Assistant Project Management",
     company: "YouthTeamUp (YTU)",
-    duration: "Jan 2023 - Present",
+    duration: "Jan 2023 - Dec 2025",
     category: "Management & Others",
     responsibilities: [
       "Planned and organized the Shallow-Virtual-Exchange (SVE) and Deep-Virtual-Exchange (DVE) programs for youths across African and European Universities.",

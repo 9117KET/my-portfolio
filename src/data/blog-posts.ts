@@ -161,4 +161,15 @@ export const posts: Post[] = [
     description:
       "How an AI project I developed almost got me into legal trouble in Europe due to GDPR regulations.",
   },
+  {
+    id: "aws_bedrock_rag",
+    title:
+      "Building an Enterprise Document Query Platform with AWS Bedrock and RAG",
+    date: "Nov 15, 2025",
+    category: "Project Breakdown",
+    description:
+      "A comprehensive guide to building a production-ready document query platform using Retrieval-Augmented Generation (RAG) with Amazon Bedrock, Aurora Serverless PostgreSQL, and Terraform. Learn how to transform organizational knowledge access with AI-powered semantic search.",
+    content: "AWSBedrockRAG",
+    type: "Blog",
+  },
 ];
