@@ -112,20 +112,20 @@ export const posts: Post[] = [
     type: "Blog",
   },
   {
-    type: "article",
+    type: "Blog",
     id: "llm-understanding",
     title: "How LLMs Work: The Underlying Logic",
-    date: "2025-04-01",
+    date: "April 1, 2025",
     content: "LLMUnderstanding",
     category: "Article",
     description:
       "A comprehensive exploration of Large Language Models (LLMs), their architecture, training processes, and real-world applications. Learn how these sophisticated AI systems understand and generate human-like text, and discover their transformative impact on various industries.",
   },
   {
-    type: "article",
+    type: "Blog",
     id: "ai-human-dev",
     title: "Balancing AI and Human Intelligence in Software Development",
-    date: "2025-04-04",
+    date: "April 4, 2025",
     content: "AIHumanDev",
     category: "Article",
     description:
@@ -152,10 +152,10 @@ export const posts: Post[] = [
     type: "Blog",
   },
   {
-    type: "blog",
+    type: "Blog",
     id: "rate-professor-legal",
     title: "GDPR Legal Issues with My Rate My Professor AI Project",
-    date: "2025-04-21",
+    date: "April 21, 2025",
     content: "RateProfessorLegal",
     category: "Developer Experience",
     description:
@@ -165,7 +165,7 @@ export const posts: Post[] = [
     id: "aws_bedrock_rag",
     title:
       "Building an Enterprise Document Query Platform with AWS Bedrock and RAG",
-    date: "Nov 15, 2025",
+    date: "November 15, 2024",
     category: "Project Breakdown",
     description:
       "A comprehensive guide to building a production-ready document query platform using Retrieval-Augmented Generation (RAG) with Amazon Bedrock, Aurora Serverless PostgreSQL, and Terraform. Learn how to transform organizational knowledge access with AI-powered semantic search.",

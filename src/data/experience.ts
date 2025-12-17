@@ -5,7 +5,7 @@ export const experience = [
     role: "Full-Stack Engineering Intern",
     company: "ABiQ",
     location: "Remote",
-    duration: "July 2025 - Sep 2025",
+    duration: "July 2024 - Sep 2024",
     category: "Software Development",
     responsibilities: [
       "Designed a concept for AI integration into backend workflows to automate content generation and updates.",

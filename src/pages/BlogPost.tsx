@@ -22,6 +22,9 @@ const CodeReadingSkills = lazy(() => import("../articles/CodeReadingSkills"));
 const AIAndLearning = lazy(() => import("../articles/AIAndLearning"));
 const RateProfessorLegal = lazy(() => import("../articles/RateProfessorLegal"));
 const AWSBedrockRAG = lazy(() => import("../articles/AWSBedrockRAG"));
+const IoTRecommendationFramework = lazy(
+  () => import("../articles/IoTRecommendationFramework")
+);
 
 // Loading fallback for articles
 const ArticleLoader = () => (
@@ -89,6 +92,8 @@ export default function BlogPost({
           return <AIAndLearning />;
         case "AWSBedrockRAG":
           return <AWSBedrockRAG />;
+        case "IoTRecommendationFramework":
+          return <IoTRecommendationFramework />;
         default:
           return <p>No content found</p>;
       }

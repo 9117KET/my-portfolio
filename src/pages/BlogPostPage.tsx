@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import styles from "../utils/style";
 import BlogPost from "./BlogPost";
 import { useParams } from "react-router-dom";
@@ -13,9 +14,40 @@ export default function BlogPostPage() {
   // Find the post by postId from the predefined posts array
   const post = posts.find((post) => post.id === postId);
 
-  // Render a message if the post is not found
+  // Render a user-friendly error message if the post is not found
   if (!post) {
-    return <p>Post not found</p>;
+    return (
+      <div className="dark:bg-[#2D2E32] min-h-screen">
+        <Helmet>
+          <title>Post Not Found - Blog</title>
+          <meta
+            name="description"
+            content="The requested blog post could not be found."
+          />
+        </Helmet>
+        <div className="flex justify-between relative mx-[6%] sm:mx-[8%] mt-4">
+          <GoBack />
+          <Theme />
+        </div>
+        <div className={`${styles.flexCenter} min-h-[60vh]`}>
+          <div className={`${styles.boxWidth} text-center p-8`}>
+            <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+              Post Not Found
+            </h1>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+              The blog post you're looking for doesn't exist or may have been
+              moved.
+            </p>
+            <Link
+              to="/blog"
+              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Back to Blog
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   // Main component render
