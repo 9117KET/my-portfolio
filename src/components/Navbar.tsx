@@ -2,38 +2,120 @@
 import { navLinks } from "../utils/constants";
 import Theme from "./Theme";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 // Navbar functional component with "clicked" prop to track the active link
 export default function Navbar({ clicked }: { clicked: string }) {
+  // #region agent log
+  fetch("http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      location: "Navbar.tsx:Navbar",
+      message: "Navbar rendered",
+      data: {
+        clicked: clicked,
+        path: window.location.pathname,
+        timestamp: Date.now(),
+      },
+      timestamp: Date.now(),
+      sessionId: "debug-session",
+      runId: "run1",
+      hypothesisId: "D",
+    }),
+  }).catch(() => {});
+  // #endregion
   // state to manage the toggle state of the mobile menu
   const [toggle, setToggle] = useState(false);
+  const location = useLocation();
+
+  // #region agent log
+  fetch("http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      location: "Navbar.tsx:Navbar",
+      message: "Location changed",
+      data: { pathname: location.pathname, timestamp: Date.now() },
+      timestamp: Date.now(),
+      sessionId: "debug-session",
+      runId: "run1",
+      hypothesisId: "D",
+    }),
+  }).catch(() => {});
+  // #endregion
 
   return (
     // Navbar container with dark mode background and fixed position
     <nav className="dark:bg-[#2D2E32] z-[99] p-6 inset-x-0 top-0 flex justify-between items-center py-6 bg-transparent w-full">
       <h1 className="text-4xl font-semibold text-zinc-800 dark:text-gray-300 mr-5">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="hover:text-blue-500 transition-colors duration-300"
+          onClick={() => {
+            // #region agent log
+            fetch(
+              "http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  location: "Navbar.tsx:onClick",
+                  message: "Navigation clicked",
+                  data: { target: "/", timestamp: Date.now() },
+                  timestamp: Date.now(),
+                  sessionId: "debug-session",
+                  runId: "run1",
+                  hypothesisId: "D",
+                }),
+              }
+            ).catch(() => {});
+            // #endregion
+          }}
         >
           <span className="text-blue-800">{`<`}</span>KET
           <span className="text-blue-800">{`/>`}</span>
-        </a>
+        </Link>
       </h1>
       <div className="hidden md:flex flex-1 justify-end items-center">
         <ul className="list-none flex justify-end items-center flex-1">
           {navLinks.map((nav, index) => (
             <li key={index} className="mr-10">
-              <a
-                href={nav.id == "" ? "/" : nav.id}
+              <Link
+                to={nav.id == "" ? "/" : `/${nav.id}`}
                 className={`font-poppins font-normal cursor-pointer text-xl transition-all duration-300 border-b-2 border-transparent hover:border-blue-500 ${
                   clicked == nav.name
                     ? "text-blue-500 border-blue-500"
                     : "dark:text-gray-300"
                 }`}
+                onClick={() => {
+                  // #region agent log
+                  fetch(
+                    "http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a",
+                    {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        location: "Navbar.tsx:onClick",
+                        message: "Navigation clicked",
+                        data: {
+                          target: nav.id || "/",
+                          name: nav.name,
+                          currentPath: window.location.pathname,
+                          timestamp: Date.now(),
+                        },
+                        timestamp: Date.now(),
+                        sessionId: "debug-session",
+                        runId: "run1",
+                        hypothesisId: "A",
+                      }),
+                    }
+                  ).catch(() => {});
+                  // #endregion
+                }}
               >
                 {nav.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -85,14 +167,40 @@ export default function Navbar({ clicked }: { clicked: string }) {
           <ul className="list-none flex flex-col justify-start items-start gap-4 p-4">
             {navLinks.map((nav, index) => (
               <li key={nav.id}>
-                <a
-                  href={nav.id == "" ? "/" : nav.id}
+                <Link
+                  to={nav.id == "" ? "/" : `/${nav.id}`}
                   className={`cursor-pointer text-gray-900 dark:text-gray-300 text-[16px] hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 ${
                     index === navLinks.length - 1 ? "mb-0" : "mb-4"
                   }`}
+                  onClick={() => {
+                    setToggle(false);
+                    // #region agent log
+                    fetch(
+                      "http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a",
+                      {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                          location: "Navbar.tsx:mobile:onClick",
+                          message: "Mobile navigation clicked",
+                          data: {
+                            target: nav.id || "/",
+                            name: nav.name,
+                            currentPath: window.location.pathname,
+                            timestamp: Date.now(),
+                          },
+                          timestamp: Date.now(),
+                          sessionId: "debug-session",
+                          runId: "run1",
+                          hypothesisId: "A",
+                        }),
+                      }
+                    ).catch(() => {});
+                    // #endregion
+                  }}
                 >
                   {nav.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

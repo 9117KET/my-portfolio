@@ -6,13 +6,41 @@ import { useParams } from "react-router-dom";
 import { posts } from "../utils/constants";
 import Theme from "../components/Theme";
 import GoBack from "../components/GoBack";
+import type { Post } from "../types/post";
+
+// Helper to generate JSON-LD structured data for SEO.
+// This describes the current blog post as a Schema.org BlogPosting,
+// which search engines can use to show rich results.
+const generateStructuredData = (post: Post, url: string) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    author: {
+      "@type": "Person",
+      name: "Kinlo Ephriam Tangiri",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Kinlo Ephriam Portfolio",
+      url: window.location.origin,
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+};
 
 // Define the BlogPostPage component
 export default function BlogPostPage() {
   // Retrieve the postId from the URL parameters
   const { postId } = useParams();
   // Find the post by postId from the predefined posts array
-  const post = posts.find((post) => post.id === postId);
+  const post = posts.find((p) => p.id === postId);
 
   // Render a user-friendly error message if the post is not found
   if (!post) {
@@ -62,6 +90,10 @@ export default function BlogPostPage() {
         <meta property="og:description" content={post.description} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={window.location.href} />
+        {/* JSON-LD structured data for better SEO */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateStructuredData(post, window.location.href))}
+        </script>
       </Helmet>
       {/* Navigation bar with GoBack and Theme toggle components */}
       <div className="flex justify-between relative mx-[6%] sm:mx-[8%] mt-4">
