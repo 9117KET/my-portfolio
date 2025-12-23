@@ -10,11 +10,6 @@ export const navLinks = [
 export const cvLink =
   "https://drive.google.com/file/d/12zCWCH0sQEc44SFkXEgQWhbAE4Y_R5JF/view?usp=sharing";
 
-// Public link to Management Resume PDF (Google Drive, arXiv, or institutional repo)
-// Leave empty to hide the Management Resume button on the About page
-export const managementResumeLink =
-  "https://drive.google.com/file/d/1yA0Qw_59EPFv3GT3T24QD_-VmsZcjtzm/view?usp=sharing";
-
 // Public link to Bachelor Thesis PDF (Google Drive, arXiv, or institutional repo)
 // Leave empty to hide the Thesis button on the About page
 export const thesisLink =

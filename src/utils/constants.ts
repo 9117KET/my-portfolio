@@ -2,7 +2,6 @@
 export {
   navLinks,
   cvLink,
-  managementResumeLink,
   thesisLink,
   builds,
   hobbies,
