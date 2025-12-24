@@ -22,9 +22,9 @@ export default function AboutMe() {
           {/* Introduction list */}
           <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
             <li>
-              Hi! I am Kinlo, a final-year Computer Science student with a minor
+              Hi! I am Kinlo, am a Computer Science graduate with a minor
               in Data Science and specialization in Artificial Intelligence and
-              Machine Learning at Constructor University in Bremen, Germany. I
+              Machine Learning at Constructor University Germany. I
               love learning, teaching and building projects. I actively share my
               knowledge and insights mostly through writing on various
               professional platforms, especially on&nbsp;
