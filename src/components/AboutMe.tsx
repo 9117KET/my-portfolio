@@ -1,4 +1,10 @@
-import { builds, hobbies, cvLink, thesisLink } from "../utils/constants";
+import {
+  builds,
+  hobbies,
+  cvLink,
+  thesisLink,
+  // skills, // Commented out for now
+} from "../utils/constants";
 import profileImage from "../utils/images/28-removebg-preview.png";
 
 export default function AboutMe() {
@@ -17,15 +23,15 @@ export default function AboutMe() {
             Kinlo-Ephriam-Tangiri
           </h1>
           <h2 className="text-sm sm:text-xl md:text-2xl mt-2">
-            Tech Enthusiast & Student Entrepreneur
+            Tech Enthusiast
           </h2>
           {/* Introduction list */}
           <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
             <li>
-              Hi! I am Kinlo, am a Computer Science graduate with a minor
-              in Data Science and specialization in Artificial Intelligence and
-              Machine Learning at Constructor University Germany. I
-              love learning, teaching and building projects. I actively share my
+              Hi! I am Kinlo, am a Computer Science graduate with a minor in
+              Data Science and specialization in Artificial Intelligence and
+              Machine Learning at Constructor University Germany. I love
+              learning, teaching and building projects. I actively share my
               knowledge and insights mostly through writing on various
               professional platforms, especially on&nbsp;
               <a
@@ -92,10 +98,10 @@ export default function AboutMe() {
             solving, & teaching. I earned my first tutoring income in high
             school teaching my classmates further mathematics and later at the
             university, I become a Teaching Assistant (TA) for Calculus I & II.
-            After high school, I started building an e-learning platform with my
-            friend where we had to learn everything from scratch in order to
-            provide access to education for students in crisis regions of my
-            country where schools were disrupted.
+            After high school, I started building an e-learning platform from
+            scratch with a schoolmate to provide free access to educational
+            resources for crisis affected regions in my country disrupted by the
+            socio-political crisis.
           </p>
           <div style={{ height: "20px" }}></div>
           <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
@@ -120,6 +126,44 @@ export default function AboutMe() {
             ))}
           </ul>
         </div>
+
+        {/* Skills section - commented out for now */}
+        {/* <div className="mt-10">
+          <div className="relative flex py-5 items-center group">
+            <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
+            <span
+              className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400 
+              transition-colors duration-300 group-hover:text-blue-500"
+            >
+              <span className="text-blue-500">{`>`}</span> Skills & Experience:
+            </span>
+            <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
+          </div>
+          <div className="pl-2 md:pl-6 mt-4">
+            <p className="text-xs sm:text-sm md:text-lg dark:text-gray-300 mb-4">
+              <span className="text-blue-500">| </span>Years of experience with
+              various technologies:
+            </p>
+            <div className="flex flex-wrap gap-3 mt-4">
+              {skills.map(
+                (skill: { name: string; years: number }, key: number) => (
+                  <div
+                    key={key}
+                    className="group flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg 
+                             transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:scale-105"
+                  >
+                    <span className="text-blue-500 font-semibold text-xs sm:text-sm md:text-base">
+                      {skill.name}
+                    </span>
+                    <span className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm md:text-base">
+                      ({skill.years} {skill.years === 1 ? "year" : "years"})
+                    </span>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </div> */}
 
         {/* Section on capabilities */}
         <div className="mt-10">

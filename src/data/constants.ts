@@ -44,6 +44,35 @@ export const hobbies = [
   "Learning how to play the Piano",
 ];
 
+// Skills with years of experience
+export const skills = [
+  { name: "JavaScript", years: 5 },
+  { name: "HTML", years: 5 },
+  { name: "CSS", years: 5 },
+  { name: "Python", years: 3 },
+  { name: "React", years: 3 },
+  { name: "Next.js", years: 3 },
+  { name: "TypeScript", years: 2 },
+  { name: "Node.js", years: 2 },
+  { name: "Express", years: 2 },
+  { name: "MongoDB", years: 2 },
+  { name: "PostgreSQL", years: 2 },
+  { name: "MySQL", years: 2 },
+  { name: "Tailwind CSS", years: 2 },
+  { name: "Material-UI", years: 2 },
+  { name: "Prisma", years: 2 },
+  { name: "Firebase", years: 2 },
+  { name: "OpenAI API", years: 2 },
+  { name: "Pinecone", years: 2 },
+  { name: "TensorFlow", years: 2 },
+  { name: "Keras", years: 2 },
+  { name: "Pandas", years: 2 },
+  { name: "Scikit-learn", years: 2 },
+  { name: "Java", years: 2 },
+  { name: "Spring Boot", years: 2 },
+  { name: "LangChain", years: 2 },
+];
+
 // Contact information
 export const contacts = [
   {

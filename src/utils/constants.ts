@@ -6,6 +6,7 @@ export {
   builds,
   hobbies,
   contacts,
+  skills,
 } from "../data/constants";
 export { projects } from "../data/projects";
 export { experience } from "../data/experience";
