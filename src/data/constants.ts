@@ -1,6 +1,6 @@
 // Navigation links for the portfolio site
 export const navLinks = [
-  { id: "", name: "about_me" },
+  { id: "", name: "about" },
   { id: "projects", name: "projects" },
   { id: "experience", name: "experience" },
   { id: "misc", name: "misc" },

@@ -44,7 +44,7 @@ export default function About() {
         {" "}
         <div className={`${styles.boxWidth}`}>
           {" "}
-          <Navbar clicked="about_me;" />{" "}
+          <Navbar clicked="about" />{" "}
         </div>
       </div>
       <main id="main-content" className={`${styles.flexStart} w-full`}>
