@@ -2,48 +2,12 @@
 import { navLinks } from "../utils/constants";
 import Theme from "./Theme";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Navbar functional component with "clicked" prop to track the active link
 export default function Navbar({ clicked }: { clicked: string }) {
-  // #region agent log
-  fetch("http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      location: "Navbar.tsx:Navbar",
-      message: "Navbar rendered",
-      data: {
-        clicked: clicked,
-        path: window.location.pathname,
-        timestamp: Date.now(),
-      },
-      timestamp: Date.now(),
-      sessionId: "debug-session",
-      runId: "run1",
-      hypothesisId: "D",
-    }),
-  }).catch(() => {});
-  // #endregion
   // state to manage the toggle state of the mobile menu
   const [toggle, setToggle] = useState(false);
-  const location = useLocation();
-
-  // #region agent log
-  fetch("http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      location: "Navbar.tsx:Navbar",
-      message: "Location changed",
-      data: { pathname: location.pathname, timestamp: Date.now() },
-      timestamp: Date.now(),
-      sessionId: "debug-session",
-      runId: "run1",
-      hypothesisId: "D",
-    }),
-  }).catch(() => {});
-  // #endregion
 
   return (
     // Navbar container with dark mode background and fixed position
@@ -52,26 +16,6 @@ export default function Navbar({ clicked }: { clicked: string }) {
         <Link
           to="/"
           className="hover:text-blue-500 transition-colors duration-300"
-          onClick={() => {
-            // #region agent log
-            fetch(
-              "http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a",
-              {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                  location: "Navbar.tsx:onClick",
-                  message: "Navigation clicked",
-                  data: { target: "/", timestamp: Date.now() },
-                  timestamp: Date.now(),
-                  sessionId: "debug-session",
-                  runId: "run1",
-                  hypothesisId: "D",
-                }),
-              }
-            ).catch(() => {});
-            // #endregion
-          }}
         >
           <span className="text-blue-800">{`<`}</span>KET
           <span className="text-blue-800">{`/>`}</span>
@@ -88,31 +32,6 @@ export default function Navbar({ clicked }: { clicked: string }) {
                     ? "text-blue-500 border-blue-500"
                     : "dark:text-gray-300"
                 }`}
-                onClick={() => {
-                  // #region agent log
-                  fetch(
-                    "http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a",
-                    {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({
-                        location: "Navbar.tsx:onClick",
-                        message: "Navigation clicked",
-                        data: {
-                          target: nav.id || "/",
-                          name: nav.name,
-                          currentPath: window.location.pathname,
-                          timestamp: Date.now(),
-                        },
-                        timestamp: Date.now(),
-                        sessionId: "debug-session",
-                        runId: "run1",
-                        hypothesisId: "A",
-                      }),
-                    }
-                  ).catch(() => {});
-                  // #endregion
-                }}
               >
                 {nav.name}
               </Link>
@@ -174,29 +93,6 @@ export default function Navbar({ clicked }: { clicked: string }) {
                   }`}
                   onClick={() => {
                     setToggle(false);
-                    // #region agent log
-                    fetch(
-                      "http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a",
-                      {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                          location: "Navbar.tsx:mobile:onClick",
-                          message: "Mobile navigation clicked",
-                          data: {
-                            target: nav.id || "/",
-                            name: nav.name,
-                            currentPath: window.location.pathname,
-                            timestamp: Date.now(),
-                          },
-                          timestamp: Date.now(),
-                          sessionId: "debug-session",
-                          runId: "run1",
-                          hypothesisId: "A",
-                        }),
-                      }
-                    ).catch(() => {});
-                    // #endregion
                   }}
                 >
                   {nav.name}

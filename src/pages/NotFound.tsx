@@ -4,9 +4,6 @@ import styles from "../utils/style";
 import { Link } from "react-router-dom";
 
 export default function NotFound() {
-  // #region agent log
-  fetch('http://127.0.0.1:7243/ingest/387f3c16-d41f-42e8-befa-f9a8f845565a',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'NotFound.tsx:NotFound',message:'NotFound component mounted',data:{timestamp:Date.now(),path:window.location.pathname},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'E'})}).catch(()=>{});
-  // #endregion
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen">
       <Helmet>

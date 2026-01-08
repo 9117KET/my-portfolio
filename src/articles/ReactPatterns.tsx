@@ -1,5 +1,3 @@
-// import React from "react";
-
 export default function ReactPatterns() {
   return (
     <div className="font-mono mb-4 max-w-none">
