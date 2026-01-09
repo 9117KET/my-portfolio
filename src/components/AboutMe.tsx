@@ -23,7 +23,7 @@ export default function AboutMe() {
             Kinlo-Ephriam-Tangiri
           </h1>
           <h2 className="text-sm sm:text-xl md:text-2xl mt-2">
-            Tech Enthusiast
+            Tech and an AI Enthusiast 
           </h2>
           {/* Introduction list */}
           <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">

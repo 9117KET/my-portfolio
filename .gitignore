@@ -23,3 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 .claude/
+.cursor/
+
+# Documentation files (markdown)
+*.md
+
+
+# Cursor IDE files
+.cursor
+*.cursor
