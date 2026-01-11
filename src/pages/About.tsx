@@ -10,34 +10,34 @@ export default function About() {
       {" "}
       <Helmet>
         <title>
-          Kinlo Ephriam Tangiri | Software Engineer & Student Entrepreneur
+          Kinlo Ephriam Tangiri | Software Engineer & an AI Enthusiast
         </title>
         <meta
           name="description"
-          content="Kinlo Ephriam Tangiri is a final-year Computer Science student specializing in AI/ML at Constructor University. Passionate about building educational technology and AI solutions for underserved communities."
+          content="Hi! I am Kinlo, a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects. I actively share my knowledge and insights mostly through writing on various professional platforms, especially on LinkedIn."
         />
         <meta
           name="keywords"
-          content="Kinlo Ephriam Tangiri, software engineer, computer science student, AI ML specialist, educational technology, Constructor University, portfolio"
+          content="Kinlo Ephriam Tangiri, software engineer, computer science graduate, AI ML specialist, data science, educational technology, Constructor University, AI enthusiast, portfolio, LinkedIn"
         />
         <meta
           property="og:title"
-          content="Kinlo Ephriam Tangiri | Software Engineer & Student Entrepreneur"
+          content="Kinlo Ephriam Tangiri | Software Engineer & an AI Enthusiast"
         />
         <meta
           property="og:description"
-          content="Final-year Computer Science student specializing in AI/ML at Constructor University. Passionate about building educational technology and AI solutions."
+          content="Hi! I am Kinlo, a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={window.location.href} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Kinlo Ephriam Tangiri | Software Engineer & Student Entrepreneur"
+          content="Kinlo Ephriam Tangiri | Software Engineer & an AI Enthusiast"
         />
         <meta
           name="twitter:description"
-          content="Final-year Computer Science student specializing in AI/ML at Constructor University. Passionate about building educational technology and AI solutions."
+          content="Hi! I am Kinlo, a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects."
         />
       </Helmet>
       <div className={`${styles.flexCenter}`}>

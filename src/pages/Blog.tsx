@@ -79,10 +79,27 @@ export default function Blog() {
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen">
       <Helmet>
-        <title>Blog | Kinlo Ephriam</title>
+        <title>Blog | Kinlo Ephriam Tangiri</title>
         <meta
           name="description"
-          content="Read my latest thoughts and insights on technology, programming, and more."
+          content="Read my latest thoughts and insights on technology, programming, AI/ML, and more. I actively share my knowledge and insights through writing on various professional platforms."
+        />
+        <meta
+          name="keywords"
+          content="blog, technology, programming, AI, machine learning, software engineering, tech insights, Kinlo Ephriam Tangiri"
+        />
+        <meta property="og:title" content="Blog | Kinlo Ephriam Tangiri" />
+        <meta
+          property="og:description"
+          content="Read my latest thoughts and insights on technology, programming, AI/ML, and more."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={window.location.href} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog | Kinlo Ephriam Tangiri" />
+        <meta
+          name="twitter:description"
+          content="Read my latest thoughts and insights on technology, programming, AI/ML, and more."
         />
       </Helmet>
 
