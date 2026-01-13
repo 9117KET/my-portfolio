@@ -1,3 +1,7 @@
+// Import tech events and transform them to match Misc page format
+import { events as techEvents } from "./events";
+import { Event } from "../types/event";
+
 // Certificates
 export const certificates = [
   {
@@ -84,8 +88,25 @@ export const awards = [
   },
 ];
 
-// Events
+// Transform tech events to the format expected by Misc page
+// This allows tech events to be displayed in the Misc page with full details available
+const transformTechEvent = (event: Event) => {
+  return {
+    id: event.id,
+    title: event.title,
+    description: `${event.eventType} event by ${event.organizer}${event.location ? ` in ${event.location}` : ""}. Technologies: ${event.technologies.join(", ")}`,
+    date: event.date,
+    category: event.eventType,
+    // Store full event data for modal display
+    fullEventData: event,
+  };
+};
+
+// Events - combines old format events with new tech events
+// Tech events are transformed to show in the list, but full details are available in fullEventData
 export const events = [
+  ...techEvents.map(transformTechEvent),
+  // Keep old format events for backward compatibility
   {
     title: "Headstarter - Software Engineering Fellow",
     description:

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import styles from "../utils/style";
 import { certificates, awards, events } from "../utils/constants";
+import { Event } from "../types/event";
 
 const categories = ["Certificates", "Awards", "Events"];
 
@@ -14,6 +15,21 @@ const itemsToShow = {
 
 type Category = keyof typeof itemsToShow;
 
+// Type for items in Misc page - can be certificate, award, or event
+type MiscItem = {
+  id?: string;
+  title: string;
+  description: string;
+  date: string;
+  category?: string;
+  link?: string;
+  fullEventData?: Event;
+};
+
+/**
+ * Sort items with proper date handling for events
+ * For events, dates are parsed and sorted chronologically (newest first)
+ */
 const sortItems = <
   T extends { date: string; title: string; description: string },
 >(
@@ -22,8 +38,28 @@ const sortItems = <
   direction: "asc" | "desc" = "asc"
 ) => {
   return [...items].sort((a, b) => {
+    // eslint-disable-next-line security/detect-object-injection
     const aValue = a[sortBy];
+    // eslint-disable-next-line security/detect-object-injection
     const bValue = b[sortBy];
+
+    // Special handling for date sorting - parse dates for proper chronological sorting
+    if (sortBy === "date") {
+      const aDate = new Date(aValue);
+      const bDate = new Date(bValue);
+
+      // If dates are valid, sort chronologically
+      if (!isNaN(aDate.getTime()) && !isNaN(bDate.getTime())) {
+        return direction === "asc"
+          ? aDate.getTime() - bDate.getTime()
+          : bDate.getTime() - aDate.getTime();
+      }
+
+      // Fallback to string comparison if dates are invalid
+      return direction === "asc"
+        ? aValue.localeCompare(bValue)
+        : bValue.localeCompare(aValue);
+    }
 
     if (typeof aValue === "string" && typeof bValue === "string") {
       return direction === "asc"
@@ -42,15 +78,18 @@ export default function Misc() {
     categories[0] as Category
   );
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [sortConfig] = useState<{
     key: "date" | "title" | "description";
     direction: "asc" | "desc";
   }>({
     key: "date",
-    direction: "desc",
+    direction: "desc", // Newest first (descending order)
   });
 
-  const items = itemsToShow[selectedCategory];
+  // eslint-disable-next-line security/detect-object-injection
+  const items = itemsToShow[selectedCategory] as MiscItem[];
   const filteredItems = items.filter(
     (item) =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -62,6 +101,27 @@ export default function Misc() {
     sortConfig.key,
     sortConfig.direction
   );
+
+  // Handle Learn More click - show modal for tech events with full details
+  const handleLearnMore = (item: MiscItem) => {
+    // Check if this is a tech event with full event data
+    if (item.fullEventData) {
+      setSelectedEvent(item.fullEventData);
+      setIsModalOpen(true);
+    } else if (item.link) {
+      // For items with links, open in new tab
+      window.open(item.link, "_blank");
+    } else {
+      // Fallback for items without links or full data
+      alert(`More information about ${item.title}`);
+    }
+  };
+
+  // Close modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedEvent(null);
+  };
 
   return (
     <div className="dark:bg-[#2D2E32] min-h-screen">
@@ -177,13 +237,7 @@ export default function Misc() {
                     </p>
                     <button
                       className="text-blue-500 hover:text-blue-600 transition-all duration-300 text-sm sm:text-base"
-                      onClick={() => {
-                        if ("link" in item) {
-                          window.open(item.link, "_blank");
-                        } else {
-                          alert(`More information about ${item.title}`);
-                        }
-                      }}
+                      onClick={() => handleLearnMore(item)}
                       aria-label={`Learn more about ${item.title}`}
                     >
                       Learn More →
@@ -195,6 +249,180 @@ export default function Misc() {
           </div>
         </div>
       </div>
+
+      {/* Modal for Tech Event Details */}
+      {isModalOpen && selectedEvent && (
+        /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+          onClick={closeModal}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") {
+              closeModal();
+            }
+          }}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+        >
+          {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
+          <div
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+            onKeyDown={(e) => {
+              if (e.key === "Escape") {
+                closeModal();
+              }
+            }}
+            role="document"
+          >
+            <div className="p-6 md:p-8">
+              {/* Modal Header */}
+              <div className="flex justify-between items-start mb-6">
+                <h2
+                  id="modal-title"
+                  className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white flex-grow"
+                >
+                  {selectedEvent.title}
+                </h2>
+                <button
+                  onClick={closeModal}
+                  className="ml-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                  aria-label="Close modal"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Event Metadata */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span
+                  className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    selectedEvent.eventType === "Online"
+                      ? "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200"
+                      : "bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200"
+                  }`}
+                >
+                  {selectedEvent.eventType}
+                </span>
+                <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
+                  {selectedEvent.date}
+                </span>
+                <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
+                  by {selectedEvent.organizer}
+                </span>
+                {selectedEvent.location && (
+                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
+                    📍 {selectedEvent.location}
+                  </span>
+                )}
+              </div>
+
+              {/* Technology Tags */}
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  Technologies Discussed:
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedEvent.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-sm font-medium rounded-md bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* External Link */}
+              {selectedEvent.link && (
+                <div className="mb-6">
+                  <a
+                    href={selectedEvent.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+                  >
+                    <svg
+                      className="w-5 h-5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    Visit Event Website
+                  </a>
+                </div>
+              )}
+
+              {/* Key Takeaways */}
+              <div className="mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                  Key Takeaways
+                </h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+                  {selectedEvent.keyTakeaways.map((takeaway, index) => (
+                    <li key={index} className="text-base md:text-lg">
+                      {takeaway}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Experience */}
+              <div className="mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                  My Experience
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed whitespace-pre-line">
+                  {selectedEvent.experience}
+                </p>
+              </div>
+
+              {/* Applications */}
+              <div className="mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                  Practical Applications
+                </h3>
+                <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                  <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
+                    {selectedEvent.applications}
+                  </p>
+                </div>
+              </div>
+
+              {/* Close Button */}
+              <div className="flex justify-end mt-6">
+                <button
+                  onClick={closeModal}
+                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
