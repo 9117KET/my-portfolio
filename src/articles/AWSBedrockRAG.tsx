@@ -109,7 +109,13 @@ export default function AWSBedrockRAG() {
         </h2>
         <p className="mb-4">
           The solution follows a modular, cloud-native architecture built
-          entirely on AWS:
+          entirely on AWS. The architecture features{" "}
+          <strong>bi-directional communication</strong>
+          between all layers, enabling seamless data flow from user queries
+          through processing and back to users with responses and source
+          document access. The data layer maintains direct connections to the
+          user interface layer, allowing users to access source documents and
+          verify information directly.
         </p>
         <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 font-mono text-sm">
           <div className="mb-2">
@@ -118,10 +124,11 @@ export default function AWSBedrockRAG() {
           <div className="mb-2">│ User Interface Layer │</div>
           <div className="mb-2">│ Streamlit Chat Application │</div>
           <div className="mb-2">
-            └───────────────────────┬─────────────────────────────────────┘
+            └───────┬───────────────────────────────┬─────────────────────┘
           </div>
-          <div className="mb-2">│</div>
-          <div className="mb-2">▼</div>
+          <div className="mb-2"> ↕ ↕</div>
+          <div className="mb-2"> │ │</div>
+          <div className="mb-2"> ▼ ▲</div>
           <div className="mb-2">
             ┌─────────────────────────────────────────────────────────────┐
           </div>
@@ -136,8 +143,9 @@ export default function AWSBedrockRAG() {
           <div className="mb-2">
             └───────────────────────┬─────────────────────────────────────┘
           </div>
-          <div className="mb-2">│</div>
-          <div className="mb-2">▼</div>
+          <div className="mb-2"> ↕</div>
+          <div className="mb-2"> │</div>
+          <div className="mb-2"> ▼ ▲</div>
           <div className="mb-2">
             ┌─────────────────────────────────────────────────────────────┐
           </div>
@@ -150,26 +158,176 @@ export default function AWSBedrockRAG() {
           <div className="mb-2">
             └───────────────────────┬─────────────────────────────────────┘
           </div>
-          <div className="mb-2">┌───────────────┴───────────────┐</div>
-          <div className="mb-2">│ │</div>
-          <div className="mb-2">▼ ▼</div>
+          <div className="mb-2"> ↕</div>
+          <div className="mb-2"> │</div>
+          <div className="mb-2"> ┌──────────┴──────────┐</div>
+          <div className="mb-2"> ↕ ↕</div>
+          <div className="mb-2"> │ │</div>
+          <div className="mb-2"> ▼ ▲ ▼ ▲</div>
           <div className="mb-2">┌──────────────────┐ ┌──────────────────┐</div>
-          <div className="mb-2">│ Data Storage │ │ Vector Database │</div>
-          <div className="mb-2">│ Amazon S3 │ │ Aurora Serverless│</div>
-          <div className="mb-2">│ (PDF Documents) │ │ PostgreSQL │</div>
-          <div className="mb-2">│ │ │ + pgvector │</div>
-          <div className="mb-2">└──────────────────┘ └──────────────────┘</div>
+          <div className="mb-2">│ Data Storage     │ │ Vector Database │</div>
+          <div className="mb-2">│ Amazon S3        │ │ Aurora Serverless│</div>
+          <div className="mb-2">│ (PDF Documents)  │ │ PostgreSQL │</div>
+          <div className="mb-2">│ │ │ + pgvector   │</div>
+          <div className="mb-2">
+                                └───┬───────────────┘ └────────┬──────────┘
+          </div>
+          <div className="mb-2"> │ │</div>
+          <div className="mb-2"> └──────────┬───────────────┘</div>
+          <div className="mb-2"> ↕</div>
+          <div className="mb-2"> │</div>
+          <div className="mb-2"> ▼</div>
+          <div className="mb-2"> │</div>
+          <div className="mb-2"> │</div>
+          <div className="mb-2">Back to the UI</div>
         </div>
 
-        <h3 className="text-xl font-semibold mb-2">Data Flow</h3>
+        <h3 className="text-xl font-semibold mb-2">
+          Data Flow & Bi-Directional Communication
+        </h3>
+        <p className="mb-4">
+          The architecture uses <strong>bi-directional communication</strong>{" "}
+          throughout all layers, enabling both query processing and response
+          delivery. This design ensures that data flows seamlessly in both
+          directions, allowing the system to retrieve information, process it,
+          and return results while maintaining the ability to access source
+          documents directly.
+        </p>
+
+        <h4 className="text-lg font-semibold mb-2">
+          Forward Flow (Query Processing)
+        </h4>
+        <ol className="list-decimal pl-6 space-y-2 mb-4">
+          <li>
+            <strong>User Query:</strong> User submits a natural language query
+            through the Streamlit interface
+          </li>
+          <li>
+            <strong>Prompt Validation:</strong> Application layer validates and
+            categorizes the query using category filtering
+          </li>
+          <li>
+            <strong>Knowledge Base Query:</strong> Application layer requests
+            relevant context from Bedrock Knowledge Base
+          </li>
+          <li>
+            <strong>Vector Search:</strong> AI Services layer performs vector
+            similarity search in Aurora PostgreSQL to retrieve top 3 most
+            relevant document chunks
+          </li>
+          <li>
+            <strong>Embedding Retrieval:</strong> Vector database returns
+            semantically similar document embeddings
+          </li>
+          <li>
+            <strong>Context Augmentation:</strong> Retrieved context is combined
+            with the user query
+          </li>
+          <li>
+            <strong>Response Generation:</strong> Claude models generate
+            contextual answers using the retrieved information
+          </li>
+        </ol>
+
+        <h4 className="text-lg font-semibold mb-2">
+          Reverse Flow (Response Delivery)
+        </h4>
+        <ol className="list-decimal pl-6 space-y-2 mb-4">
+          <li>
+            <strong>Generated Response:</strong> AI Services layer returns the
+            generated answer to the Application layer
+          </li>
+          <li>
+            <strong>Response Processing:</strong> Application layer formats and
+            validates the response
+          </li>
+          <li>
+            <strong>User Display:</strong> User Interface layer displays the
+            answer to the user
+          </li>
+          <li>
+            <strong>Source Document Access:</strong> Data layer (S3 and Aurora)
+            provides direct access to source documents for citation and
+            verification
+          </li>
+        </ol>
+
+        <h4 className="text-lg font-semibold mb-2">
+          Why Bi-Directional Arrows?
+        </h4>
+        <p className="mb-4">
+          All arrows in the architecture are bi-directional because:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li>
+            <strong>Request-Response Pattern:</strong> Each layer sends requests
+            downstream and receives responses upstream, creating a natural
+            bi-directional flow
+          </li>
+          <li>
+            <strong>Error Handling & Feedback:</strong> Lower layers can send
+            error messages, status updates, and validation feedback back to
+            upper layers
+          </li>
+          <li>
+            <strong>State Management:</strong> The system maintains conversation
+            state and context that flows both ways between layers
+          </li>
+          <li>
+            <strong>Real-Time Updates:</strong> Changes in data storage (new
+            documents, updated embeddings) can trigger notifications back to the
+            user interface
+          </li>
+          <li>
+            <strong>Source Verification:</strong> Users can access original
+            documents from S3 and verify information directly from the data
+            layer
+          </li>
+        </ul>
+
+        <h4 className="text-lg font-semibold mb-2">
+          Data Layer to User Layer Connection
+        </h4>
+        <p className="mb-4">
+          The data layer (S3 and Aurora PostgreSQL) maintains a direct
+          connection back to the user layer, enabling:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li>
+            <strong>Source Document Access:</strong> Users can directly access
+            and download original PDF documents from S3 for verification and
+            detailed reading
+          </li>
+          <li>
+            <strong>Citation & References:</strong> The system can provide
+            direct links to source documents, allowing users to verify the
+            information provided in responses
+          </li>
+          <li>
+            <strong>Document Metadata:</strong> Users can view document
+            metadata, upload dates, versions, and other information stored in
+            the database
+          </li>
+          <li>
+            <strong>Query History:</strong> Historical queries and their
+            corresponding source documents can be retrieved directly from the
+            database
+          </li>
+          <li>
+            <strong>Feedback Loop:</strong> User feedback on response quality
+            can be stored back in the data layer for continuous improvement
+          </li>
+        </ul>
+
+        <h4 className="text-lg font-semibold mb-2">Document Ingestion Flow</h4>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
-            <strong>Document Ingestion:</strong> PDF files are uploaded to an S3
+            <strong>Document Upload:</strong> PDF files are uploaded to an S3
             bucket
           </li>
           <li>
             <strong>Automatic Processing:</strong> Bedrock Knowledge Base
-            automatically syncs and processes documents
+            automatically syncs and processes documents from S3
           </li>
           <li>
             <strong>Embedding Generation:</strong> Documents are chunked and
@@ -180,12 +338,9 @@ export default function AWSBedrockRAG() {
             PostgreSQL with HNSW indexes for fast similarity search
           </li>
           <li>
-            <strong>Query Processing:</strong> User queries trigger vector
-            similarity search to retrieve top 3 most relevant document chunks
-          </li>
-          <li>
-            <strong>Response Generation:</strong> Claude models generate
-            contextual answers using retrieved information
+            <strong>Metadata Storage:</strong> Document metadata, chunk
+            information, and source references are stored in the database for
+            retrieval and citation
           </li>
         </ol>
       </section>
@@ -548,7 +703,39 @@ export default function AWSBedrockRAG() {
 
           <div>
             <h3 className="text-xl font-semibold mb-2">
-              6. Secure Architecture
+              6. Bi-Directional Architecture
+            </h3>
+            <p className="mb-2">
+              The system uses bi-directional communication throughout all
+              layers, enabling:
+            </p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                <strong>Request-Response Flow:</strong> Seamless data flow from
+                queries to responses
+              </li>
+              <li>
+                <strong>Error Handling:</strong> Error messages and status
+                updates flow back to users
+              </li>
+              <li>
+                <strong>State Management:</strong> Conversation context
+                maintained across layers
+              </li>
+              <li>
+                <strong>Direct Data Access:</strong> Users can access source
+                documents directly from S3
+              </li>
+              <li>
+                <strong>Feedback Loop:</strong> User feedback flows back to data
+                layer for continuous improvement
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">
+              7. Secure Architecture
             </h3>
             <p className="mb-2">Multi-layer security implementation:</p>
             <ul className="list-disc pl-6 space-y-1">
@@ -831,13 +1018,47 @@ export default function AWSBedrockRAG() {
         </p>
 
         <h3 className="text-xl font-semibold mb-2">
+          Bi-Directional Communication Design
+        </h3>
+        <p className="mb-4">
+          The architecture implements bi-directional communication patterns
+          throughout all layers, ensuring that data flows seamlessly in both
+          directions. This design enables:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 mb-4">
+          <li>
+            <strong>Request-Response Pattern:</strong> Each layer can both send
+            requests and receive responses, creating a natural two-way
+            communication flow
+          </li>
+          <li>
+            <strong>Error Propagation:</strong> Errors and status messages flow
+            back from lower layers to upper layers, enabling proper error
+            handling and user feedback
+          </li>
+          <li>
+            <strong>State Synchronization:</strong> Conversation state and
+            context are maintained bi-directionally, ensuring consistent user
+            experience
+          </li>
+          <li>
+            <strong>Direct Data Access:</strong> The data layer connects
+            directly to the user layer, allowing users to access source
+            documents, verify citations, and view metadata without going through
+            the full processing pipeline
+          </li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mb-2">
           Error Handling & Resilience
         </h3>
         <p className="mb-4">
           The application includes comprehensive error handling to gracefully
           manage network issues, service unavailability, invalid inputs, and
           rate limiting. This ensures the system remains stable and provides a
-          good user experience even when errors occur.
+          good user experience even when errors occur. The bi-directional
+          architecture enables proper error propagation, allowing each layer to
+          handle errors appropriately and provide meaningful feedback to users.
         </p>
       </section>
 

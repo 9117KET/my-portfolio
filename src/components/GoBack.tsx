@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * GoBack Component
@@ -7,7 +9,7 @@ import { Link } from "react-router-dom";
  * from individual blog post pages.
  *
  * Design Decisions:
- * - Uses Material Symbols "arrow_back" icon instead of "reply" for better semantic meaning
+ * - Uses FontAwesome "arrow-left" icon for reliable rendering across all environments
  * - Includes text label "Back to Blog" for clarity and accessibility
  * - Responsive design: shows icon + text on larger screens, icon only on mobile
  * - Implements hover effects and transitions for better UX
@@ -30,7 +32,7 @@ export default function GoBack() {
       className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
       aria-label="Back to Blog"
     >
-      <span className="material-symbols-outlined text-xl">arrow_back</span>
+      <FontAwesomeIcon icon={faArrowLeft} className="text-xl" />
       <span className="font-medium hidden sm:inline">Back to Blog</span>
     </Link>
   );

@@ -3,6 +3,8 @@ import { navLinks } from "../utils/constants";
 import Theme from "./Theme";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 // Navbar functional component with "clicked" prop to track the active link
 export default function Navbar({ clicked }: { clicked: string }) {
@@ -52,7 +54,7 @@ export default function Navbar({ clicked }: { clicked: string }) {
             aria-controls="mobile-menu"
             aria-label="Toggle navigation menu"
           >
-            <span className="material-symbols-outlined text-3xl">menu</span>
+            <FontAwesomeIcon icon={faBars} className="text-3xl" />
           </button>
           <Theme />
         </div>
@@ -80,7 +82,7 @@ export default function Navbar({ clicked }: { clicked: string }) {
               onClick={() => setToggle(false)}
               aria-label="Close navigation menu"
             >
-              <span className="material-symbols-outlined text-3xl">close</span>
+              <FontAwesomeIcon icon={faXmark} className="text-3xl" />
             </button>
           </div>
           <ul className="list-none flex flex-col justify-start items-start gap-4 p-4">

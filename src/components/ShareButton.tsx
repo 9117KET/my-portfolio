@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShare, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * ShareButton Component Props Interface
- * 
+ *
  * Defines the structure of data required for the ShareButton component.
  * This follows TypeScript best practices for type safety and component contracts.
  */
@@ -14,32 +16,32 @@ interface ShareButtonProps {
 
 /**
  * ShareButton Component
- * 
+ *
  * Purpose: Provides a professional sharing button that allows users to share blog posts
  * via native sharing APIs (on mobile devices) or by copying the URL to clipboard.
- * 
+ *
  * Architecture Pattern: This component follows the Presentational Component pattern,
  * where it handles its own UI state (tooltip visibility) and user interactions (sharing/copying).
- * 
+ *
  * Design Decisions:
- * - Uses Material Symbols "share" icon for consistency with other UI elements
+ * - Uses FontAwesome "share" icon for reliable rendering across all environments
  * - Implements Web Share API for native sharing on supported devices (mobile)
  * - Falls back to clipboard copy for desktop browsers
  * - Shows a professional tooltip feedback when URL is copied
  * - Responsive design with proper spacing and sizing
  * - Dark mode support for modern UI consistency
  * - Smooth transitions and hover effects for better UX
- * 
+ *
  * Problem-Solving Approach:
  * - Progressive Enhancement: Uses native sharing when available, gracefully degrades to clipboard
  * - User Feedback: Visual tooltip confirms successful copy action
  * - Error Handling: Silently handles errors to prevent UI disruption
- * 
+ *
  * Accessibility:
  * - aria-label provides context for screen readers
  * - Focus states are visible for keyboard navigation
  * - Semantic button element ensures proper interaction
- * 
+ *
  * Real-life Application:
  * Similar to sharing buttons on professional platforms like Medium, Dev.to, or LinkedIn articles,
  * where users can easily share content with others.
@@ -54,10 +56,10 @@ export default function ShareButton({
 
   /**
    * handleShare Function
-   * 
+   *
    * Implements the sharing logic using the Web Share API when available,
    * or falls back to copying the URL to clipboard.
-   * 
+   *
    * Algorithm:
    * 1. Check if native sharing is available (mobile devices)
    * 2. If available, use navigator.share() for native sharing dialog
@@ -99,7 +101,7 @@ export default function ShareButton({
         className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-sm hover:shadow-md"
         aria-label={`Share: ${title}`}
       >
-        <span className="material-symbols-outlined text-xl">share</span>
+        <FontAwesomeIcon icon={faShare} className="text-xl" />
         <span className="font-medium hidden sm:inline">Share</span>
       </button>
 
@@ -111,7 +113,7 @@ export default function ShareButton({
           aria-live="polite"
         >
           <span className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-base">check_circle</span>
+            <FontAwesomeIcon icon={faCircleCheck} className="text-base" />
             Link copied!
           </span>
           {/* Tooltip arrow pointing to button */}
