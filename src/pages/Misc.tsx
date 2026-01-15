@@ -5,12 +5,12 @@ import styles from "../utils/style";
 import { certificates, awards, events } from "../utils/constants";
 import { Event } from "../types/event";
 
-const categories = ["Certificates", "Awards", "Events"];
+const categories = ["Events", "Certificates", "Awards"];
 
 const itemsToShow = {
+  Events: events,
   Certificates: certificates,
   Awards: awards,
-  Events: events,
 };
 
 type Category = keyof typeof itemsToShow;
