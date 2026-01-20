@@ -14,7 +14,7 @@ export default function About() {
         </title>
         <meta
           name="description"
-          content="Hi! I am Kinlo, a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects. I actively share my knowledge and insights mostly through writing on various professional platforms, especially on LinkedIn."
+          content="Hi! I am Kinlo, an AI-Native Software engineer. I am a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects. I actively share my knowledge and insights mostly through writing on various professional platforms, especially on LinkedIn."
         />
         <meta
           name="keywords"
@@ -26,7 +26,7 @@ export default function About() {
         />
         <meta
           property="og:description"
-          content="Hi! I am Kinlo, a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects."
+          content="Hi! I am Kinlo, an AI-Native Software engineer. I am a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={window.location.href} />
@@ -37,7 +37,7 @@ export default function About() {
         />
         <meta
           name="twitter:description"
-          content="Hi! I am Kinlo, a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects."
+          content="Hi! I am Kinlo, an AI-Native Software engineer. I am a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects."
         />
       </Helmet>
       <div className={`${styles.flexCenter}`}>

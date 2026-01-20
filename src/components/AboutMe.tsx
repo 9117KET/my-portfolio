@@ -28,7 +28,7 @@ export default function AboutMe() {
           {/* Introduction list */}
           <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
             <li>
-              Hi! I am Kinlo, am a Computer Science graduate with a minor in
+              Hi! I am Kinlo, an AI-Native Software engineer. I am a Computer Science graduate with a minor in
               Data Science and specialization in Artificial Intelligence and
               Machine Learning at Constructor University Germany. I love
               learning, teaching and building projects. I actively share my
