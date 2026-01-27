@@ -39,63 +39,6 @@ import { Event } from "../types/event";
  */
 export const events: Event[] = [
   {
-    id: "bmw-causal-ml-hackathon",
-    title:
-      "BMW Group Hackathon: Causal Machine Learning & Prescriptive Analytics",
-    date: "2025",
-    eventType: "In-Person",
-    organizer: "BMW Group",
-    location: "Constructor University",
-    technologies: [
-      "Causal Machine Learning",
-      "DoWhy",
-      "CausalLearn",
-      "Prescriptive Analytics",
-      "Predictive Modeling",
-      "Data Cleaning",
-      "Feature Engineering",
-      "Model Training",
-      "Data Visualization",
-      "Dashboard Development",
-      "Sensor Data Analysis",
-      "Manufacturing Analytics",
-      "Python",
-      "Machine Learning",
-      "Statistical Analysis",
-      "Causal Inference",
-      "DAG (Directed Acyclic Graphs)",
-      "Counterfactual Analysis",
-    ],
-    keyTakeaways: [
-      "Causal Machine Learning goes beyond correlation to identify cause-and-effect relationships, enabling actionable insights in manufacturing processes",
-      "DoWhy is a Python library that provides a unified interface for causal inference, implementing the four-step process: model, identify, estimate, and refute causal effects",
-      "CausalLearn is an open-source library that offers advanced causal discovery algorithms, including constraint-based, score-based, and functional causal model methods",
-      "Prescriptive Analytics extends beyond prediction to recommend specific actions that optimize outcomes, answering 'what should we do?' rather than just 'what will happen?'",
-      "Working with real production data (44,818 training points, 376 test points) from BMW's Dingolfing facility provided authentic experience with industrial-scale datasets",
-      "Sensor data from 370+ sensors requires sophisticated feature engineering and dimensionality reduction techniques to extract meaningful patterns",
-      "Causal models can identify which sensor readings or process parameters actually cause OK/NOK outcomes, not just correlate with them",
-      "The challenge required balancing model accuracy with interpretability, as prescriptive recommendations need to be explainable to manufacturing engineers",
-      "Dashboard visualization is crucial for translating complex ML outputs into actionable insights for non-technical stakeholders",
-      "Team collaboration in a time-constrained environment (3 days) required effective task distribution, parallel workstreams, and continuous integration of components",
-      "Causal inference helps answer counterfactual questions: 'What would happen if we changed this parameter?' enabling true prescriptive recommendations",
-      "The hackathon emphasized the importance of data cleaning and preprocessing, as real-world manufacturing data contains missing values, outliers, and inconsistencies",
-    ],
-    applications:
-      "Causal Machine Learning and Prescriptive Analytics have transformative applications across manufacturing and industrial operations. In automotive production, these techniques can identify root causes of quality issues, predict equipment failures before they occur, and recommend optimal process parameter adjustments to maximize yield rates. The approach enables manufacturers to move from reactive problem-solving to proactive optimization, reducing waste, improving quality, and increasing production efficiency. Beyond manufacturing, causal ML applies to healthcare (identifying treatment effectiveness), finance (understanding market drivers), and supply chain management (optimizing inventory levels). The key advantage is moving beyond 'what happened' to 'why it happened' and 'what should we do about it.' Prescriptive analytics transforms data into actionable recommendations, enabling decision-makers to optimize outcomes based on causal understanding rather than mere correlations. This is particularly valuable in complex systems with many interacting variables, where traditional machine learning might identify spurious correlations that don't hold under intervention.",
-    experience:
-      "This was my very first hackathon experience, and it was an incredible introduction to competitive data science and real-world industrial applications. BMW Group hosted an exclusive three-day hackathon for Constructor University students, focusing on Causal Machine Learning - a field that goes beyond traditional predictive modeling to understand cause-and-effect relationships.\n\n" +
-      "The challenge was centered around Causal Machine Learning and Prescriptive Analytics, working with a real BMW dataset collected at their Dingolfing production center. We received 44,818 training data points and 376 testing data points, representing sensor readings from over 370 sensors monitoring car part production processes. Our task was to build a Causal ML model using either DoWhy or CausalLearn to predict whether a car part would be OK (acceptable) or NOK (Not OK) after processing.\n\n" +
-      "Causal Machine Learning fundamentally differs from traditional ML by focusing on causal relationships rather than correlations. While standard ML might identify that 'high temperature correlates with NOK,' causal ML determines whether 'high temperature causes NOK' - a critical distinction for prescriptive recommendations. We used DoWhy, a Python library that implements a four-step causal inference framework: (1) Model - create a causal graph representing relationships, (2) Identify - determine if the causal effect can be estimated from data, (3) Estimate - compute the causal effect using methods like propensity score matching or instrumental variables, and (4) Refute - test the robustness of our estimates.\n\n" +
-      "The data cleaning process was extensive, as manufacturing sensor data contains missing values, outliers, and inconsistencies. We implemented techniques like median imputation for missing values, outlier detection using IQR (Interquartile Range) methods, and feature engineering to create meaningful aggregations from the 370+ sensor readings. Feature selection was crucial - we needed to identify which sensors actually influence part quality, not just correlate with it.\n\n" +
-      "Building the causal model required constructing a Directed Acyclic Graph (DAG) representing our understanding of the manufacturing process. This involved domain knowledge about which sensors might causally influence others and the final OK/NOK outcome. DoWhy's refutation methods helped us validate our causal assumptions, testing whether our estimates were robust to different assumptions.\n\n" +
-      "The prescriptive analytics component was particularly challenging - we needed to provide specific recommendations to increase OK outcomes or reduce NOK probabilities. This required counterfactual analysis: 'If we adjust sensor X from value A to value B, what would be the expected change in OK probability?' We developed a recommendation engine that suggested optimal parameter adjustments based on causal effect estimates.\n\n" +
-      "Creating the dashboard was essential for presenting our solution. We built visualizations showing: (1) Causal graph structure, (2) Feature importance based on causal effects (not correlations), (3) Predicted probabilities for test cases, (4) Prescriptive recommendations with expected impact, and (5) Model performance metrics. The dashboard needed to be interpretable by manufacturing engineers, not just data scientists.\n\n" +
-      "Working as a team with Mohamed Goda Ebrahim, Nuraly Astanakulov, and Fortune Atiba was both challenging and rewarding. We divided responsibilities: data cleaning and preprocessing, causal model development, prescriptive analytics implementation, and dashboard creation. The three-day timeline was intense - we brainstormed approaches even during non-hackathon hours, iterating on our solution based on preliminary results.\n\n" +
-      "The experience taught me the importance of causal thinking in machine learning. Traditional ML models can achieve high accuracy but may fail when deployed if they rely on spurious correlations. Causal ML provides a framework for building more robust, interpretable models that can guide real-world interventions. The hackathon also highlighted the value of clear communication - translating complex causal inference results into actionable recommendations for domain experts.\n\n" +
-      "This hackathon was an intense but valuable learning experience that introduced me to advanced ML concepts, real-world industrial data challenges, and the collaborative dynamics of competitive data science. The combination of theoretical causal inference methods with practical manufacturing problems created a perfect learning environment that I'll carry forward into future projects.",
-    link: "https://www.bmwgroup.com/",
-  },
-  {
     id: "neo4j-knowledge-graphs-ai-webinar",
     title: "Building Trustworthy AI with Knowledge Graphs and Neo4j",
     date: "January 13, 2026",

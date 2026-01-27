@@ -28,12 +28,8 @@ export default function AboutMe() {
           {/* Introduction list */}
           <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
             <li>
-              Hi! I am Kinlo, an AI-Native Software engineer. I am a Computer Science graduate with a minor in
-              Data Science and specialization in Artificial Intelligence and
-              Machine Learning at Constructor University Germany. I love
-              learning, teaching and building projects. I actively share my
-              knowledge and insights mostly through writing on various
-              professional platforms, especially on&nbsp;
+              Hi! I am Kinlo, an AI-Engineer. I actively share my
+              knowledge, projects, experiences and insights mostly through writing on the blog and misc section of this website as well as on my LinkedIn profile on&nbsp;
               <a
                 href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
                 target="_blank"
@@ -56,7 +52,7 @@ export default function AboutMe() {
               Resume
             </a>
 
-            {thesisLink && (
+            {/* {thesisLink && (
               <a
                 href={thesisLink}
                 target="_blank"
@@ -65,7 +61,7 @@ export default function AboutMe() {
               >
                 Thesis
               </a>
-            )}
+            )} */}
           </div>
         </div>
         {/* Image container */}
