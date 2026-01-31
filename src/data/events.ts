@@ -39,6 +39,37 @@ import { Event } from "../types/event";
  */
 export const events: Event[] = [
   {
+    id: "bmw-hackathon-causal-ml",
+    title: "My First Hackathon Experience with BMW Group",
+    date: "September 2024",
+    eventType: "In-Person",
+    organizer: "BMW Group",
+    location: "Constructor University",
+    technologies: [
+      "Causal Machine Learning",
+      "Prescriptive Analytics",
+      "DoWhy",
+      "CausalLearn",
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "Data Visualization",
+      "Dashboard",
+    ],
+    keyTakeaways: [
+      "The challenge centered on Causal ML and Prescriptive Analytics, using 44,818 training and 376 testing data points from a real BMW dataset from the Dingolfing production center.",
+      "We built a Causal ML model using DoWhy or CausalLearn to predict whether a car part would be OK or NOK (Not OK) after processing through over 370 sensors.",
+      "We documented data cleaning, fine-tuning, and model training; provided prescriptive recommendations to increase OK outcomes and reduce NOK; and created a clear dashboard to visualize the solution.",
+      "Working as a team (Mohamed Goda Ebrahim, Nuraly Astanakulov, Fortune Atiba) was challenging yet rewarding—three days of brainstorming approaches and solutions, including outside formal hackathon hours.",
+      "First hackathon experience highlighted the value of time-boxed problem-solving, real industrial data, and cross-functional collaboration.",
+    ],
+    applications:
+      "Causal ML and prescriptive analytics apply directly to manufacturing quality, supply chain, and operations: root-cause analysis for defects, sensor-driven predictions, and dashboards for decision-makers. Skills in DoWhy/CausalLearn transfer to any domain with observational data and interventions (e.g., marketing, healthcare, policy).",
+    experience:
+      "This was my very first hackathon. BMW Group hosted an exclusive three-day hackathon for Constructor University students, focusing on Causal Machine Learning. We worked with a real BMW dataset from the Dingolfing production center—44,818 training and 376 testing data points—and were tasked with building a Causal ML model using DoWhy or CausalLearn to predict whether a car part would be OK or NOK after being processed through over 370 sensors. We had to document our data cleaning, fine-tuning, and model training, provide prescriptive recommendations to increase OK outcomes or reduce NOK, and create a clear dashboard to visualize our solution. Building this as a team with Mohamed Goda Ebrahim, Nuraly Astanakulov, and Fortune Atiba was challenging yet awesome; for three days we brainstormed different approaches and solutions, even during non-hackathon periods. It was an intense but valuable learning experience.",
+    link: "https://www.linkedin.com/posts/kinlo-ephriam-tangiri-a70113218_causal-machine-learning-activity-7269276878039834626-CKdF/",
+  },
+  {
     id: "neo4j-knowledge-graphs-ai-webinar",
     title: "Building Trustworthy AI with Knowledge Graphs and Neo4j",
     date: "January 13, 2026",

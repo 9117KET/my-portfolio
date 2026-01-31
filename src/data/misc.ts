@@ -58,22 +58,29 @@ export const certificates = [
     date: "September 2023",
     link: "https://credentials.innovationcentre.queensu.ca/e1b27888-afac-423a-b18a-a3278ec4bc51",
   },
+  {
+    id: "cert-008",
+    title: "AWS AI/ML Nano Degree",
+    description: "Amazon Web Services nano degree in AI and Machine Learning",
+    date: "2025",
+    link: "https://www.udacity.com/certificate/e/ac7c6aec-8152-11f0-b847-63c4749bf0b9",
+  },
 ];
 
-// Awards
+// Awards (resume-aligned: Additional Qualifications)
 export const awards = [
   {
-    title: "Diana Award Recipient Roll of Honor",
+    title: "Diana Award Recipient",
     description:
-      "Selected as a top 200 finalist from a pool of 1700 nominations all over the world for building a platform that provide academic resources to students in Cameroon especially those affected by crisis.",
+      "Selected from 1700 nominees for building academic e-platforms for Africa.",
     date: "2024",
     category: "Global",
     link: "https://diana-award.org.uk/our-programmes-and-initiatives/award-and-development/roll-of-honour/roll-of-honour-2024",
   },
   {
-    title: "Global Student Top 50 Finalist",
+    title: "Top 50 Global Student Prize",
     description:
-      "Selected as a top 50 finalist from a pool of 3851 students making real impact in education and society.",
+      "Selected as a top 50 finalist from 3851 applicants across 122 countries.",
     date: "2023",
     category: "Global",
     link: "https://globalteacherprize.org/news/global-student-prize-finalists/2023-finalists-global-student-prize/1012/1012-Kinlo-Ephriam-Tangiri",
@@ -117,7 +124,7 @@ export const events = [
   {
     title: "McKinsey Forward Program",
     description:
-      "A three-month program focused on skills for future-proof work.",
+      "A three-month program focused on skills for future-proof work (Additional Qualification per resume).",
     date: "2023",
     category: "Leadership",
     link: "https://www.credly.com/badges/7ab48715-90f5-4221-a61b-81601bf934db/linked_in_profile",

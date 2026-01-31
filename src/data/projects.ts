@@ -1,7 +1,39 @@
 import { Project } from "../types/project";
 
-// Project details for the portfolio
+// Project details for the portfolio (resume-aligned; key projects with dates)
 export const projects: Project[] = [
+  {
+    id: "infrarader-ai",
+    name: "IR-AI / InfraRaderAI",
+    description:
+      "Business intelligence platform with Neo4j graph database, LangChain and LangGraph for agentic workflows. Enables graph-powered reasoning and structured data retrieval for enterprise use cases.",
+    github: "https://github.com/9117KET",
+    features: [
+      "Neo4j graph database for connected data and knowledge graphs",
+      "LangChain and LangGraph for agentic AI workflows",
+      "Business intelligence and structured reasoning over graph data",
+      "Enterprise-ready architecture for scalable analytics",
+    ],
+    technologies: ["Business Intelligence", "LangChain", "LangGraph", "Neo4j"],
+    demo: "https://github.com/9117KET",
+    category: "AI/ML",
+  },
+  {
+    id: "aws-bedrock-kb",
+    name: "AWS Bedrock Knowledge Base",
+    description:
+      "End-to-end RAG assistant using Terraform, Amazon Bedrock, and Claude 3 for company internal document Q&A. Production-ready document query platform with semantic search over organizational knowledge.",
+    github: "https://github.com/9117KET",
+    features: [
+      "RAG pipeline with Bedrock Knowledge Base and Claude 3",
+      "Terraform-managed infrastructure (Aurora Serverless, S3, Bedrock)",
+      "Semantic search over internal documentation",
+      "Secure, scalable Q&A for enterprise docs",
+    ],
+    technologies: ["Generative AI", "RAG", "Terraform", "AWS Bedrock", "Claude 3"],
+    demo: "https://github.com/9117KET",
+    category: "AI/ML",
+  },
   {
     id: "academy",
     name: "KET Academy",
@@ -28,9 +60,9 @@ export const projects: Project[] = [
   },
   {
     id: "rate-professor",
-    name: "Rate My Professor RAG Application",
+    name: "Rate My Professor",
     description:
-      "This sophisticated full-stack professor review system leverages Retrieval-Augmented Generation (RAG) to deliver intelligent insights from student feedback. Built with Next.js and seamlessly integrated with OpenAI's GPT-4 and Pinecone vector database technologies, the application provides advanced semantic search capabilities alongside real-time chat functionality. The system transforms traditional professor reviews into actionable, context-aware recommendations for students.",
+      "Full-stack review system with RAG, GPT-4 and Pinecone; secure API integration and chat UI. Enables students to anonymously rate professors and get context-aware recommendations from real feedback. (December 2024)",
     github: "https://github.com/9117KET/rate-my-professor.git",
     features: [
       "Advanced RAG Implementation: Utilizes OpenAI and Pinecone technologies for sophisticated review analysis and contextual insights",
@@ -170,7 +202,7 @@ export const projects: Project[] = [
     id: "iot-framework",
     name: "IoT Course Recommendation Framework",
     description:
-      "A multipurpose recommendation framework designed to help users navigate and find relevant IoT courses from WaziUp's extensive catalog. The framework processes user preferences and learning goals to suggest personalized course paths, making it easier for learners to find the most suitable IoT courses for their needs.",
+      "Recommendation framework that processes user preferences to suggest personalized IoT course paths from 300+ catalog, serving 1500+ users. Built during internship at WaziUp e.V. (October 2024).",
     github: "https://github.com/9117KET/IoTTest.git",
     features: [
       "Smart Course Recommendations: Analyzes user preferences and learning goals to suggest relevant IoT courses.",
@@ -207,7 +239,7 @@ export const projects: Project[] = [
       "Streamlit",
     ],
     demo: "https://www.linkedin.com/posts/kinlo-ephriam-tangiri-a70113218_causal-machine-learning-activity-7269276878039834626-CKdF/?utm_source=share&utm_medium=member_desktop",
-    categories: ["AI/ML", "Data Science"],
+    category: "AI/ML",
   },
   {
     id: "brain-tumor",
@@ -257,7 +289,7 @@ export const projects: Project[] = [
       "TensorFlow",
     ],
     demo: "https://github.com/9117KET/Customer-Churn-Prediction",
-    categories: ["AI/ML", "Data Science"],
+    category: "AI/ML",
   },
   {
     id: "image-gen",
