@@ -1,27 +1,35 @@
 import React from "react";
+import Card from "./Card";
+
+const MAX_RESPONSIBILITIES_SHOWN = 4;
+
+interface ExperienceItem {
+  id: string;
+  role: string;
+  company: string;
+  duration: string;
+  responsibilities: string[];
+  companyDescription: string;
+  category?: string;
+}
 
 interface ExperienceProps {
-  experiences: {
-    id: string;
-    role: string;
-    company: string;
-    duration: string;
-    responsibilities: string[];
-    companyDescription: string;
-    category?: string;
-  }[];
+  experiences: ExperienceItem[];
 }
 
 const Experience = React.memo(function Experience({
   experiences,
 }: ExperienceProps) {
   if (!experiences || !Array.isArray(experiences)) {
-    console.error("Invalid or undefined experiences provided:", experiences);
-    return <div>No experiences available.</div>;
+    return (
+      <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+        No experiences available.
+      </div>
+    );
   }
 
   return (
-    <div className="experience">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {experiences.map(
         ({
           id,
@@ -30,36 +38,41 @@ const Experience = React.memo(function Experience({
           duration,
           responsibilities,
           companyDescription,
-        }) => (
-          <div
-            key={id}
-            className="p-4 border-b border-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:border-gray-600 mt-6"
-          >
-            {/* Header section with role, company, and duration */}
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold dark:text-gray-300">
-                {role} - {company}
-              </h2>
-              <span className="text-sm bg-gray-200 dark:bg-gray-800 rounded-lg px-3 py-1">
-                {duration}
-              </span>
-            </div>
-            {/* Responsibilities list */}
-            <div className="mb-2 text-sm flex-1 ml-4 dark:text-gray-300">
-              <p>{`> `}Responsibilities:</p>
-              <ul className="pl-10">
-                {responsibilities.map((responsibility, index) => (
-                  <li key={`${id}-${index}`}>- {responsibility}</li>
+          category,
+        }) => {
+          const responsibilitiesToShow = responsibilities.slice(
+            0,
+            MAX_RESPONSIBILITIES_SHOWN
+          );
+          return (
+            <Card key={id} as="article">
+              <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
+                <h2 className="text-lg font-semibold dark:text-gray-200">
+                  {role} — {company}
+                </h2>
+                <span className="text-xs sm:text-sm px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 shrink-0">
+                  {duration}
+                </span>
+              </div>
+              {category && (
+                <span className="inline-block px-2 py-0.5 text-xs rounded border border-gray-300 dark:border-gray-500 text-gray-600 dark:text-gray-400 mb-3">
+                  {category}
+                </span>
+              )}
+              <p className="text-sm dark:text-gray-400 mb-4 line-clamp-2">
+                {companyDescription}
+              </p>
+              <p className="text-xs font-semibold dark:text-gray-300 mb-2">
+                {">"} Responsibilities
+              </p>
+              <ul className="space-y-1 text-sm dark:text-gray-300 list-disc list-inside">
+                {responsibilitiesToShow.map((responsibility, index) => (
+                  <li key={`${id}-${index}`}>{responsibility}</li>
                 ))}
               </ul>
-            </div>
-            {/* Company Description */}
-            <div className="mb-2 text-sm flex-1 ml-4 dark:text-gray-300">
-              <p>{`>`} Company Description:</p>
-              <p className="pl-10">{companyDescription}</p>
-            </div>
-          </div>
-        ),
+            </Card>
+          );
+        }
       )}
     </div>
   );

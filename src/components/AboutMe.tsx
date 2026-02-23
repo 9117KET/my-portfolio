@@ -2,18 +2,23 @@ import {
   builds,
   hobbies,
   cvLink,
-  thesisLink,
-  // skills, // Commented out for now
+  skills,
+  skillCategories,
 } from "../utils/constants";
 import profileImage from "../utils/images/28-removebg-preview.png";
+import Card from "./Card";
+import { Link } from "react-router-dom";
 
 export default function AboutMe() {
+  const skillsByName = Object.fromEntries(
+    skills.map((s) => [s.name, s.years])
+  );
+
   return (
     <div className="mt-5 mb-[-2%] p-6 sm:p-8 dark:text-gray-300 font-mono max-w-full overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Text container */}
         <div>
-          {/* Main heading with typewriter and caret animations */}
           <h1
             className="text-xl sm:text-3xl md:text-6xl font-bold relative w-[max-content] md:w-[max-content] font-mono 
                         before:absolute before:inset-0 before:animate-typewriter before:bg-white before:dark:bg-[#2D2E32] 
@@ -28,25 +33,19 @@ export default function AboutMe() {
           <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
             Bremen, Germany
           </p>
-          {/* Introduction list */}
-          <ul className="list-disc pl-5 text-xs sm:text-sm mt-4 font-mono">
-            <li>
-              Hi! I am Kinlo, a BSc in Computer Science with a Data Science Minor and Specialization in AI and ML. I actively share my knowledge,
-              projects, experiences and insights mostly through writing on the
-              blog and misc section of this website as well as on my LinkedIn
-              profile on&nbsp;
-              <a
-                href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 underline hover:text-blue-700"
-              >
-                LinkedIn
-              </a>
-              .
-            </li>
-          </ul>
-          {/* Resume + Thesis buttons */}
+          <p className="text-xs sm:text-sm mt-4">
+            Hi! I'm Kinlo - BSc Computer Science, Data Science minor, with AI/ML
+            specialization. I share projects and insights on this site and on{" "}
+            <a
+              href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline hover:text-blue-700"
+            >
+              LinkedIn
+            </a>
+            .
+          </p>
           <div className="mt-4 flex items-center gap-3 flex-wrap">
             <a
               href={cvLink}
@@ -56,20 +55,8 @@ export default function AboutMe() {
             >
               Resume
             </a>
-
-            {/* {thesisLink && (
-              <a
-                href={thesisLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Thesis
-              </a>
-            )} */}
           </div>
         </div>
-        {/* Image container */}
         <div className="flex justify-center items-center">
           <img
             src={profileImage}
@@ -78,137 +65,109 @@ export default function AboutMe() {
           />
         </div>
       </div>
+
       <div className="mt-10">
-        {/* Decorative title separator for "About Me:" */}
+        {/* About Me */}
         <div className="mt-8">
           <div className="relative flex py-5 items-center group">
             <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-            <span
-              className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400 
-              transition-colors duration-300 group-hover:text-blue-500"
-            >
-              <span className="text-blue-500">{`>`}</span> About Me:
+            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400 transition-colors duration-300 group-hover:text-blue-500">
+              <span className="text-blue-500">{">"}</span> About Me:
             </span>
             <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
           </div>
-
-          {/* Personal statements */}
-          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300"></p>
-          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>I enjoy learning, problem
-            solving, & teaching. I earned my first tutoring income in high
-            school teaching my classmates further mathematics and later at the
-            university, I become a Teaching Assistant (TA) for Calculus I & II.
-            After high school, I started building an e-learning platform from
-            scratch with a schoolmate to provide free access to educational
-            resources for crisis affected regions in my country disrupted by the
-            socio-political crisis.
+          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-base dark:text-gray-300 max-w-3xl">
+            I enjoy learning, problem solving, and teaching. I've tutored
+            mathematics and been a TA for Calculus I & II. After high school I
+            co-built an e-learning platform to provide free educational resources
+            in crisis-affected regions.
           </p>
-          <div style={{ height: "20px" }}></div>
-          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>If I am not studying or
-            coding, I will definitely be:
+          <p className="pl-2 md:pl-6 text-xs sm:text-sm md:text-base dark:text-gray-300 mt-3">
+            <span className="text-blue-500">|</span> When I'm not coding or
+            studying:
           </p>
-
-          {/* List of hobbies */}
-          <ul className="pl-5 sm:pl-10 md:pl-20 space-y-3 text-xs sm:text-sm md:text-lg dark:text-gray-300">
+          <div className="pl-2 md:pl-6 mt-2 flex flex-wrap gap-2">
             {hobbies.map((hobby, key) => (
-              <li
+              <span
                 key={key}
-                className="group flex items-center gap-2 transition-all duration-300 hover:translate-x-2"
+                className="px-3 py-1 text-xs sm:text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 text-gray-800 dark:text-gray-300"
               >
-                <span className="text-blue-500 transform transition-transform duration-300 group-hover:scale-110">
-                  {">"}
-                </span>
-                <span className="transition-colors duration-300 group-hover:text-blue-500">
-                  {hobby}
-                </span>
-              </li>
+                {hobby}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
 
-        {/* Skills section - commented out for now */}
-        {/* <div className="mt-10">
+        {/* Skills as category cards */}
+        <div className="mt-10">
           <div className="relative flex py-5 items-center group">
             <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-            <span
-              className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400 
-              transition-colors duration-300 group-hover:text-blue-500"
-            >
-              <span className="text-blue-500">{`>`}</span> Skills & Experience:
+            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400 transition-colors duration-300 group-hover:text-blue-500">
+              <span className="text-blue-500">{">"}</span> Skills & Experience:
             </span>
             <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
           </div>
-          <div className="pl-2 md:pl-6 mt-4">
-            <p className="text-xs sm:text-sm md:text-lg dark:text-gray-300 mb-4">
-              <span className="text-blue-500">| </span>Years of experience with
-              various technologies:
-            </p>
-            <div className="flex flex-wrap gap-3 mt-4">
-              {skills.map(
-                (skill: { name: string; years: number }, key: number) => (
-                  <div
-                    key={key}
-                    className="group flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-lg 
-                             transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:scale-105"
-                  >
-                    <span className="text-blue-500 font-semibold text-xs sm:text-sm md:text-base">
-                      {skill.name}
-                    </span>
-                    <span className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm md:text-base">
-                      ({skill.years} {skill.years === 1 ? "year" : "years"})
-                    </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            {skillCategories.map((cat) => {
+              const categorySkills = cat.skillNames
+                .map((name) => ({ name, years: skillsByName[name] }))
+                .filter((s) => s.years != null);
+              return (
+                <Card key={cat.id}>
+                  <h3 className="text-base font-semibold dark:text-gray-200 mb-3">
+                    {cat.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {categorySkills.map(({ name, years }) => (
+                      <span
+                        key={name}
+                        className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 text-gray-800 dark:text-gray-300"
+                      >
+                        {name}
+                        <span className="text-gray-500 dark:text-gray-400 ml-1">
+                          ({years}y)
+                        </span>
+                      </span>
+                    ))}
                   </div>
-                )
-              )}
-            </div>
+                </Card>
+              );
+            })}
           </div>
-        </div> */}
-
-        {/* Section on capabilities */}
-        <div className="mt-10">
-          <div className="relative flex py-5 items-center">
-            <div className="flex-grow border-t border-gray-400"></div>
-            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400">
-              <span className="text-blue-500">{`>`}</span> My Projects
-            </span>
-            <div className="flex-grow border-t border-gray-400"></div>
-          </div>
-          <ul className="pl-5 sm:pl-10 md:pl-20 mt-4 space-y-2 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            {builds.map((build, key) => (
-              <li key={key}>
-                <span className="text-blue-500">{">"} </span>
-                {build}
-              </li>
-            ))}
-            <li>
-              <span>
-                For detailed information about these projects, please visit the
-                Projects section in the navigation menu.
-              </span>
-            </li>
-          </ul>
         </div>
 
-        {/* Current professional status */}
-        {/* <div className="mt-8">
-          <div className="relative flex py-5 items-center">
-            <div className="flex-grow border-t border-gray-400"></div>
-            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400">
-              <span className="text-blue-500">{`>`}</span> My Current Role
+        {/* My Projects teaser */}
+        <div className="mt-10">
+          <div className="relative flex py-5 items-center group">
+            <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
+            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400 transition-colors duration-300 group-hover:text-blue-500">
+              <span className="text-blue-500">{">"}</span> My Projects
             </span>
-            <div className="flex-grow border-t border-gray-400"></div>
+            <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
           </div>
-          <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>Assistant Project Manager
-            for YouthTeamUp @ Constructor University
+          <div className="pl-2 md:pl-6 mt-4 flex flex-wrap gap-2">
+            {builds.slice(0, 6).map((build, key) => (
+              <span
+                key={key}
+                className="px-3 py-1 text-xs sm:text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-800/50 text-gray-800 dark:text-gray-300 truncate max-w-[280px] sm:max-w-none"
+                title={build}
+              >
+                {build.replace(/\s*-+$/g, "").trim()}
+              </span>
+            ))}
+          </div>
+          <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm dark:text-gray-400">
+            For details, visit the Projects section.
           </p>
-          <p className="pl-2 md:pl-6 mt-4 text-xs sm:text-sm md:text-lg dark:text-gray-300">
-            <span className="text-blue-500">| </span>Software Engineering
-            Resident at Headstarter
-          </p>
-        </div> */}
+          <div className="pl-2 md:pl-6 mt-3">
+            <Link
+              to="/projects"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 border border-blue-600 dark:border-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+            >
+              See all projects
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

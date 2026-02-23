@@ -110,6 +110,12 @@ export default function NotFound() {
                   Experience
                 </Link>
                 <Link
+                  to="/skills"
+                  className="p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors duration-300 text-sm font-medium text-gray-700 dark:text-gray-300"
+                >
+                  Skills
+                </Link>
+                <Link
                   to="/blog"
                   className="p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors duration-300 text-sm font-medium text-gray-700 dark:text-gray-300"
                 >

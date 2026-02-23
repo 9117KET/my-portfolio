@@ -20,7 +20,7 @@ const BlogCard = React.memo(function BlogCard({
     <Link
       to={`/blog/${id}`}
       key={id}
-      className="cursor-pointer group w-full transition-all duration-300 flex flex-col bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] overflow-hidden border border-gray-200 dark:border-gray-700"
+      className="cursor-pointer group w-full transition-all duration-300 flex flex-col rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#2D2E32] shadow-sm hover:shadow-md hover:-translate-y-0.5 overflow-hidden"
     >
       <div className="p-6">
         <div className="flex justify-between items-center mb-4">

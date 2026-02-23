@@ -15,6 +15,10 @@ const styles = {
 
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",
+
+  /** Shared card container: border, radius, padding, hover (use with Card.tsx or as class string) */
+  card:
+    "rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#2D2E32] p-5 sm:p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5",
 };
 
 export default styles;

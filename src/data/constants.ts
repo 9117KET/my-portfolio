@@ -3,6 +3,7 @@ export const navLinks = [
   { id: "", name: "about" },
   { id: "projects", name: "projects" },
   { id: "experience", name: "experience" },
+  { id: "skills", name: "skills" },
   { id: "misc", name: "misc" },
   { id: "blog", name: "blog" },
 ];
@@ -48,6 +49,8 @@ export const skills = [
   { name: "HTML/CSS", years: 5 },
   { name: "React", years: 3 },
   { name: "Next.js", years: 3 },
+  { name: "Tailwind CSS", years: 3 },
+  { name: "Material-UI", years: 2 },
   { name: "Node.js", years: 3 },
   { name: "FastAPI", years: 2 },
   { name: "Flask", years: 2 },
@@ -60,12 +63,63 @@ export const skills = [
   { name: "Neo4j", years: 1 },
   { name: "RAG", years: 2 },
   { name: "Git", years: 4 },
+  { name: "GitHub", years: 4},
   { name: "Docker", years: 2 },
   { name: "Firebase", years: 3 },
   { name: "GCP", years: 1 },
   { name: "AWS", years: 2 },
   { name: "Vercel", years: 2 },
   { name: "Salesforce CMS", years: 1 },
+];
+
+// Grouping for Skills cards on About page
+export const skillCategories = [
+  {
+    id: "backend",
+    title: "Backend",
+    skillNames: [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "C/C++",
+      "SQL",
+      "Node.js",
+      "FastAPI",
+      "Flask",
+    ],
+  },
+  {
+    id: "frontend",
+    title: "Frontend",
+    skillNames: [
+      "HTML/CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Material-UI",
+    ],
+  },
+  {
+    id: "data-ml",
+    title: "Data & ML",
+    skillNames: [
+      "TensorFlow",
+      "scikit-learn",
+      "pandas",
+      "NumPy",
+      "LangChain",
+      "LangGraph",
+      "Neo4j",
+      "RAG",
+    ],
+  },
+  {
+    id: "devops",
+    title: "DevOps & Tools",
+    skillNames: ["Git", "Docker", "Firebase", "GCP", "AWS", "Vercel", "Salesforce CMS"],
+  },
 ];
 
 // Contact information (resume-aligned)

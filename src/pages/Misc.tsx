@@ -221,29 +221,28 @@ export default function Misc() {
 
             <ul className="space-y-6">
               {processedItems.map((item) => (
-                <div
-                  key={"id" in item ? item.id : item.title}
-                  className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
-                >
-                  <h4 className="text-xl sm:text-2xl md:text-3xl dark:text-gray-300 text-black font-bold mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-base sm:text-lg md:text-xl dark:text-gray-400 text-gray-700 mb-3">
-                    {item.description}
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <p className="text-sm sm:text-base md:text-lg dark:text-gray-500 text-gray-600">
-                      {item.date}
+                <li key={"id" in item ? item.id : item.title}>
+                  <div className="rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#2D2E32] p-5 sm:p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
+                    <h4 className="text-xl sm:text-2xl md:text-3xl dark:text-gray-300 text-black font-bold mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-base sm:text-lg md:text-xl dark:text-gray-400 text-gray-700 mb-3">
+                      {item.description}
                     </p>
-                    <button
-                      className="text-blue-500 hover:text-blue-600 transition-all duration-300 text-sm sm:text-base"
-                      onClick={() => handleLearnMore(item)}
-                      aria-label={`Learn more about ${item.title}`}
-                    >
-                      Learn More →
-                    </button>
+                    <div className="flex justify-between items-center">
+                      <p className="text-sm sm:text-base md:text-lg dark:text-gray-500 text-gray-600">
+                        {item.date}
+                      </p>
+                      <button
+                        className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 text-sm sm:text-base"
+                        onClick={() => handleLearnMore(item)}
+                        aria-label={`Learn more about ${item.title}`}
+                      >
+                        Learn More →
+                      </button>
+                    </div>
                   </div>
-                </div>
+                </li>
               ))}
             </ul>
           </div>

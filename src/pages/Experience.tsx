@@ -54,21 +54,17 @@ export default function Experiences() {
       <div className={`${styles.flexStart} w-full`}>
         <div className={`${styles.boxWidth}`}>
           <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
-            <h3 className="text-xl dark:text-gray-300 text-black mb-5">
-              {`-> `}My professional journey has been a blend of challenging and
-              rewarding experiences that have shaped me into a self-driven and
-              highly motivated individual.
-            </h3>
-            <div className="relative flex py-5 items-center">
-              <div className="flex-grow border-t border-gray-400"></div>
-              <span className="text-3xl font-semibold flex-shrink mx-4 text-gray-400">
-                <span className="text-blue-800">{`>`}</span> My Experience:
-              </span>
-              <div className="flex-grow border-t border-gray-400"></div>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
-              Here are some of the roles I have held:
-            </h3>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold dark:text-gray-100 text-black mb-1">
+              Experience
+            </h1>
+            <p className="text-sm text-gray-500 dark:text-gray-400 font-mono mb-2">
+              <span className="text-blue-600 dark:text-blue-400">{">"}</span>{" "}
+              experience:~$ cat experience.md
+            </p>
+            <p className="text-sm sm:text-base dark:text-gray-300 text-black mb-6">
+              A blend of challenging and rewarding roles that have shaped my
+              growth as a self-driven professional.
+            </p>
 
             <div className="flex flex-wrap justify-center mt-6">
               {categories.map((category) => (
@@ -90,7 +86,7 @@ export default function Experiences() {
               ))}
             </div>
 
-            <div className="flex flex-col">
+            <div>
               <Experience experiences={filteredExperiences} />
             </div>
           </div>

@@ -6,7 +6,7 @@ export const projects: Project[] = [
     id: "infrarader-ai",
     name: "IR-AI / InfraRaderAI",
     description:
-      "Business intelligence platform with Neo4j graph database, LangChain and LangGraph for agentic workflows. Enables graph-powered reasoning and structured data retrieval for enterprise use cases.",
+      "Business intelligence platform with Neo4j graph database, LangChain and LangGraph for agentic workflows.",
     github: "https://github.com/9117KET",
     features: [
       "Neo4j graph database for connected data and knowledge graphs",
@@ -17,6 +17,9 @@ export const projects: Project[] = [
     technologies: ["Business Intelligence", "LangChain", "LangGraph", "Neo4j"],
     demo: "https://github.com/9117KET",
     category: "AI/ML",
+    year: 2026,
+    status: "In progress",
+    collaborators: ["Glen"],
   },
   {
     id: "aws-bedrock-kb",

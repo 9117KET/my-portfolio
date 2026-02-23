@@ -16,7 +16,7 @@ function App() {
       >
         Skip to main content
       </a>
-      <div className="font-mono text-sm sm:text-base md:text-lg bg-white dark:bg-[#2D2E32] min-h-screen transition-colors duration-200 relative">
+      <div className="font-mono text-sm sm:text-base md:text-lg bg-white dark:bg-[#2D2E32] min-h-screen transition-colors duration-200 relative bg-pattern">
         {/* Navigation loading overlay to prevent white flash */}
         {isNavigating && (
           <div className="fixed inset-0 bg-white dark:bg-[#2D2E32] z-40 transition-opacity duration-200"></div>

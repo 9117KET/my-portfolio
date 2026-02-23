@@ -24,3 +24,21 @@ body {
 body.dark {
   background-color: #2d2e32;
 }
+
+/* Subtle "asterisks" / dot pattern for main content – theme-aware */
+.bg-pattern {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
+
+html.dark .bg-pattern {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 1px
+  );
+}

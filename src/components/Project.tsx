@@ -1,4 +1,7 @@
 import React from "react";
+import Card from "./Card";
+
+const MAX_FEATURES_SHOWN = 4;
 
 interface ProjectProps {
   id: string;
@@ -8,6 +11,10 @@ interface ProjectProps {
   technologies: string[];
   features: string[];
   demo?: string;
+  year?: number;
+  status?: string;
+  collaborators?: string[];
+  category?: string;
 }
 
 const Project = React.memo(function Project({
@@ -18,27 +25,100 @@ const Project = React.memo(function Project({
   github,
   technologies,
   demo,
+  year,
+  status,
+  collaborators,
+  category,
 }: ProjectProps) {
+  const featuresToShow = features.slice(0, MAX_FEATURES_SHOWN);
+  const hasLiveDemo = demo && !demo.includes("github.com");
+
   return (
-    <div
-      id={id}
-      className="p-4 border-b border-gray-300 transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:border-gray-600 mt-6"
-    >
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-        <h2 className="text-lg font-semibold dark:text-gray-300">{name}</h2>
-        <div className="flex gap-3">
-          {demo && (
+    <Card as="article" className="flex flex-col h-full">
+      <div id={id} className="flex flex-col flex-1">
+        {/* Header: name + badges (year, category, status, collaborators) */}
+        <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
+          <h2 className="text-lg font-semibold dark:text-gray-300 pr-2">
+            {name}
+          </h2>
+          <div className="flex flex-wrap gap-2 justify-end">
+            {year != null && (
+              <span
+                className="inline-flex items-center text-xs text-gray-600 dark:text-gray-400"
+                aria-label={`Year: ${year}`}
+              >
+                <svg
+                  className="w-3.5 h-3.5 mr-1 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                {year}
+              </span>
+            )}
+            {category && (
+              <span className="px-2 py-0.5 text-xs rounded border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300">
+                {category}
+              </span>
+            )}
+            {status && (
+              <span className="px-2 py-0.5 text-xs rounded bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200">
+                {status}
+              </span>
+            )}
+            {collaborators && collaborators.length > 0 && (
+              <span className="text-xs text-gray-600 dark:text-gray-400">
+                With {collaborators.join(", ")}
+              </span>
+            )}
+          </div>
+        </div>
+
+        <p className="text-sm dark:text-gray-300 mb-4 leading-relaxed">
+          {description}
+        </p>
+
+        <div className="mb-4 flex-1">
+          <h3 className="text-sm font-semibold mb-2 dark:text-gray-300">
+            Key Features
+          </h3>
+          <ul className="space-y-1 text-sm dark:text-gray-300 list-disc list-inside">
+            {featuresToShow.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-wrap gap-2 mb-4">
+          {technologies.map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-300 rounded-lg bg-gray-50 dark:bg-gray-800/50"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        {/* Actions: View project / Live demo + Source code */}
+        <div className="pt-4 mt-auto border-t border-gray-200 dark:border-gray-600 flex flex-wrap gap-3">
+          {demo && hasLiveDemo && (
             <a
               href={demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
             >
-              <span>
-                {demo.includes("github.com") ? "Source Code" : "Live Demo"}
-              </span>
+              <span>View project</span>
               <svg
-                className="w-4 h-4 ml-2"
+                className="w-4 h-4 shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -56,11 +136,11 @@ const Project = React.memo(function Project({
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-colors duration-300"
+            className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:underline"
           >
-            <span>GitHub</span>
+            <span>Source code</span>
             <svg
-              className="w-4 h-4 ml-2"
+              className="w-4 h-4 shrink-0"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -69,35 +149,7 @@ const Project = React.memo(function Project({
           </a>
         </div>
       </div>
-
-      <p className="text-sm dark:text-gray-300 mb-6 leading-relaxed">
-        {description}
-      </p>
-
-      <div className="mb-6">
-        <h3 className="text-sm font-semibold mb-3 dark:text-gray-300">
-          Key Features
-        </h3>
-        <ul className="space-y-2 text-sm dark:text-gray-300 pl-10">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-start">
-              - {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-          <span
-            key={tech}
-            className="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-lg"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-    </div>
+    </Card>
   );
 });
 
