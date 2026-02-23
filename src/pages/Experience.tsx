@@ -5,7 +5,7 @@ import { experience } from "../utils/constants";
 import styles from "../utils/style";
 import { Helmet } from "react-helmet-async";
 
-const categories = ["All", "Software Development", "Management & Others"];
+const categories = ["All", "Software Development", "Education", "Management & Others"];
 
 export default function Experiences() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -66,27 +66,42 @@ export default function Experiences() {
               growth as a self-driven professional.
             </p>
 
-            <div className="flex flex-wrap justify-center mt-6">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`cursor-pointer text-sm font-medium border border-lightText dark:border-gray-500 rounded-lg m-1 px-4 py-2 transition-all duration-300 hover:bg-blue-800 dark:hover:bg-blue-900 ${
-                    selectedCategory === category
-                      ? "bg-blue-800 text-white"
-                      : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300"
-                  }`}
-                  aria-label={`Filter experiences by ${category}`}
-                  aria-current={
-                    selectedCategory === category ? "true" : "false"
-                  }
-                >
-                  {category}
-                </button>
-              ))}
+            <div className="mt-8 mb-8 flex flex-col items-center">
+              <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 text-center">
+                Filter by category
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`cursor-pointer text-sm font-medium rounded-lg px-5 py-2.5 transition-all duration-300 border-2 ${
+                      selectedCategory === category
+                        ? "bg-blue-600 dark:bg-blue-500 text-white border-blue-600 dark:border-blue-500 shadow-md"
+                        : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700"
+                    }`}
+                    aria-label={`Filter experiences by ${category}`}
+                    aria-current={
+                      selectedCategory === category ? "true" : "false"
+                    }
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <div>
+            <div className="relative flex py-4 items-center group">
+              <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+              <span className="text-sm font-medium flex-shrink mx-4 text-gray-500 dark:text-gray-400">
+                {selectedCategory === "All"
+                  ? "All roles"
+                  : selectedCategory}
+              </span>
+              <div className="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+            </div>
+
+            <div className="mt-6">
               <Experience experiences={filteredExperiences} />
             </div>
           </div>
