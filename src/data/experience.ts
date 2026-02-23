@@ -63,4 +63,37 @@ export const experience = [
     companyDescription:
       "Constructor University is a leading private university in Germany, offering a variety of academic programs with a focus on research and global education.",
   },
+  {
+    id: "exp7",
+    role: "Student Assistant Project Manager",
+    company: "YouthTeamUp (UTMOP)",
+    location: "Remote",
+    duration: "2025 - Present",
+    category: "Management & Others",
+    responsibilities: [
+      "Work closely with the Project Manager (Dr. Omid) to organize upcoming programs and bring implementation phases to life.",
+      "Support both Shallow and Deep Virtual Exchange programs connecting African and European youth for global impact projects (SDGs).",
+      "Assign tasks, support various roles, including social media management and follow up on task progress; track Key Performance Indicators (KPIs).",
+      "Collaborate with three PhD students in meetings to plan and deliver YouthTeamUp activities.",
+      "Update the YouthTeamUp website with the latest information and maintain follow-up with partners from universities and companies across Africa and Europe.",
+    ],
+    companyDescription:
+      "YouthTeamUp is an EU-sponsored program that unites African and European youths to connect and collaborate on Global Impact Projects, focusing on the Sustainable Development Goals. It runs Shallow and Deep Virtual Exchanges and supports hands-on work in IoT, AI, and Big Data. Partners include Constructor University, BongoHive, Fondazione Edulife, and universities across Africa and Europe.",
+  },
+  {
+    id: "exp8",
+    role: "Program Manager",
+    company: "Palaver Ventures, Palaver Institute",
+    location: "Remote (Kigali, Rwanda HQ)",
+    duration: "2026 - Present",
+    category: "Management & Others",
+    responsibilities: [
+      "Architect strategy for Palaver Ventures — the for-profit arm that translates Palaver research into products and services competing globally.",
+      "Plan and design strategies across six venture areas: Hardware Lab, Energies, AI, Social Media, Health, and Education.",
+      "Support the translation of pan-African research into tangible solutions for African and global challenges.",
+      "Report to CEO/COO and help shape the founding blueprint for Palaver Ventures operations.",
+    ],
+    companyDescription:
+      "Palaver Institute is a pan-African research institution headquartered in Kigali, Rwanda, with hubs in Cameroon, Ghana, South Africa, and Morocco. It builds intellectual infrastructure so African researchers can produce world-class work. Palaver Ventures is its for-profit arm, turning research into real-world solutions across hardware, energy, AI, health, education, and social platforms.",
+  },
 ];
