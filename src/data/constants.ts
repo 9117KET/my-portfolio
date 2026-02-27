@@ -9,7 +9,7 @@ export const navLinks = [
 ];
 
 export const cvLink =
-  "https://drive.google.com/file/d/1FwHxcewdilRUpH_pJNr9EyUUU_vvmlSD/view?usp=sharing";
+  "https://drive.google.com/file/d/1CM5guMhGqAP6IXEqFfAu2TynHD5r5rgu/view?usp=sharing";
 
 // Public link to Bachelor Thesis PDF (Google Drive, arXiv, or institutional repo)
 // Leave empty to hide the Thesis button on the About page
