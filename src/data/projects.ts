@@ -22,6 +22,27 @@ export const projects: Project[] = [
     collaborators: ["Glen"],
   },
   {
+    id: "deepblock",
+    name: "Deepblock",
+    description:
+      "Deepblock is a daily deep-work planner that helps you time-block focused work sessions, track routines, and stay consistent with job applications, language practice, and personal projects.",
+    github: "https://github.com/9117KET/ket_deepwork",
+    features: [
+      "Daily sections including 3 must-dos, Morning routine, High/Medium/Low priority, and Night routine in a vertical, Notion-style layout",
+      "One-click day filling: copy from yesterday or from the last same weekday without creating duplicate tasks",
+      "Time-blocked tasks with 24-hour start times and optional durations that highlight when active until completed or elapsed",
+      "Gentle focus guidance with three beeps per task—at the start, midpoint, and end of the allocated time window",
+      "Drag-and-drop reordering of tasks within each section using a grip handle for quick reprioritization",
+      "Weekly overview, deep work timer, and rotating motivation quotes in a sticky sidebar for context and focus",
+      "Interactive onboarding tour and in-app Help modal, with all planner data stored locally in the browser via localStorage",
+    ],
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "localStorage"],
+    demo: "https://ket-deepwork.vercel.app/",
+    category: "Fullstack",
+    year: 2026,
+    status: "In progress",
+  },
+  {
     id: "aws-bedrock-kb",
     name: "AWS Bedrock Knowledge Base",
     description:
