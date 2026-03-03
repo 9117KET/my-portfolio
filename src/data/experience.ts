@@ -68,7 +68,7 @@ export const experience = [
     role: "Student Assistant Project Manager",
     company: "YouthTeamUp (UTMOP)",
     location: "Remote",
-    duration: "2025 - Present",
+    duration: "February 2024 - December 2025",
     category: "Management & Others",
     responsibilities: [
       "Work closely with the Project Manager (Dr. Omid) to organize upcoming programs and bring implementation phases to life.",

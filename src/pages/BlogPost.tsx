@@ -16,6 +16,9 @@ const KETAcademyJourney = lazy(() => import("../articles/KETAcademyJourney"));
 const RateProfessorJourney = lazy(
   () => import("../articles/RateProfessorJourney")
 );
+const DeepblockJourney = lazy(
+  () => import("../articles/DeepblockJourney")
+);
 const LLMUnderstanding = lazy(() => import("../articles/LLMUnderstanding"));
 const AIHumanDev = lazy(() => import("../articles/AIHumanDev"));
 const CodeReadingSkills = lazy(() => import("../articles/CodeReadingSkills"));
@@ -80,6 +83,8 @@ export default function BlogPost({
           return <KETAcademyJourney />;
         case "RateProfessorJourney":
           return <RateProfessorJourney />;
+        case "DeepblockJourney":
+          return <DeepblockJourney />;
         case "RateProfessorLegal":
           return <RateProfessorLegal />;
         case "LLMUnderstanding":

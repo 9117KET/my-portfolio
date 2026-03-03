@@ -172,4 +172,14 @@ export const posts: Post[] = [
     content: "AWSBedrockRAG",
     type: "Blog",
   },
+  {
+    id: "deepblock-journey",
+    title: "Deepblock: Designing a Day Around Deep Work",
+    date: "March 10, 2026",
+    category: "Project Breakdown",
+    description:
+      "How I turned three years of struggling with productivity tools, a four-block day model, and my own deep-work habits into Deepblock – an open-source daily planner for focused work.",
+    content: "DeepblockJourney",
+    type: "Blog",
+  },
 ];
