@@ -128,6 +128,7 @@ export default function MLBasics() {
               collection of examples used to teach the algorithm. The quality,
               diversity, and volume of this data directly influence the model's
               performance and generalization capabilities.
+            </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">Features</h3>
@@ -154,6 +155,7 @@ export default function MLBasics() {
               accuracy, precision, recall, F1-score, and area under the ROC
               curve. Each metric highlights a different aspect of how well a
               model is doing.
+            </p>
           </div>
         </div>
       </section>
