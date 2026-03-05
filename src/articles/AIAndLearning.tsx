@@ -12,7 +12,7 @@ export default function AIAndLearning() {
           For quite a while now, I've been trying to understand how AI affects
           the way we learn and retain information. My curiosity has especially
           been around how it challenges traditional educational approaches to
-          teaching and learning—especially now that everyone is using it.
+          teaching and learning, especially now that everyone is using it.
         </p>
       </section>
 
@@ -29,7 +29,7 @@ export default function AIAndLearning() {
           <p className="mb-4">
             - It's very easy to complain about the educational system. The
             reality, however, is that efforts have been made to transform
-            education—from radio lessons, to television, to MOOCs, and now AI.
+            education, from radio lessons, to television, to MOOCs, and now AI.
             Yet, it seems that not much has fundamentally changed from the
             traditional model, and in some cases, things may even be getting
             worse.
@@ -45,7 +45,7 @@ export default function AIAndLearning() {
             </p>
             <p className="mb-4">
               System 2: The "deliberate system" that takes the brute-force
-              route—engaging deeply, thinking critically, and going through the
+              route, engaging deeply, thinking critically, and going through the
               stress of understanding details.
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function AIAndLearning() {
             - To effectively learn and develop our cognitive abilities, we need
             to strengthen both systems. The traditional education system, in its
             own way, tries to do this. However, AI is beginning to remove that
-            deliberate effort from our learning journeys—whether it's writing,
+            deliberate effort from our learning journeys, whether it's writing,
             coding, thinking, creating art, and so on.
           </p>
           <p className="mb-4">
@@ -63,7 +63,7 @@ export default function AIAndLearning() {
             taking that struggle away, and that's extremely concerning. As
             Albert Einstein once said, "Education is not the learning of facts,
             but the training of the mind to think." So, if we stop thinking and
-            start delegating that thinking to AI—what happens next? Hmm.
+            start delegating that thinking to AI, what happens next? Hmm.
           </p>
         </div>
       </section>
@@ -75,9 +75,9 @@ export default function AIAndLearning() {
         </h2>
         <p className="mb-4">On the flip side:</p>
         <p className="mb-4">
-          I'm a strong advocate for AI, and to be honest, AI isn't the
-          problem—it's the way we use it. I won't list all the benefits of AI
-          because they're obvious
+          I'm a strong advocate for AI, and to be honest, AI isn't the problem;
+          it's the way we use it. I won't list all the benefits of AI because
+          they're obvious.
         </p>
         <p className="mb-4">
           What I would recommend is that every university should create a

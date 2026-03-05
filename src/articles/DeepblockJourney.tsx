@@ -36,23 +36,23 @@ export default function DeepblockJourney() {
         </p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
-            <strong>5 a.m. – 9 a.m. — Personal Deep Work:</strong> Focused on
+            <strong>5 a.m. – 9 a.m.: Personal Deep Work</strong> Focused on
             personal development: working out, learning, reading, or building
             side projects. This is the block where you invest in yourself before
             the world starts asking for your attention.
           </li>
           <li>
-            <strong>9 a.m. – 5 p.m. — Work / Main Responsibilities:</strong>{" "}
+            <strong>9 a.m. – 5 p.m.: Work / Main Responsibilities</strong>{" "}
             Dedicated to your primary commitments: job, startup, or academic
             work. This is where you execute on your core responsibilities.
           </li>
           <li>
-            <strong>5 p.m. – 9 p.m. — Life and Relationships:</strong> Time for
+            <strong>5 p.m. – 9 p.m.: Life and Relationships</strong> Time for
             family, friends, hobbies, and sports. This block protects the part
             of life that doesn&apos;t show up on a resume but matters the most.
           </li>
           <li>
-            <strong>9 p.m. – 5 a.m. — Sleep and Recovery:</strong> A protected
+            <strong>9 p.m. – 5 a.m.: Sleep and Recovery</strong> A protected
             block for rest. Instead of treating sleep as leftover time, this
             model treats it as a first-class citizen in your schedule.
           </li>

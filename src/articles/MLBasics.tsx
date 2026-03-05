@@ -4,14 +4,12 @@ export default function MLBasics() {
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
-          Machine Learning (ML) has revolutionized countless aspects of our
-          daily lives—from personalized content recommendations on streaming
-          platforms to sophisticated voice assistants that respond to our
-          commands. This transformative technology continues to reshape
-          industries and enhance user experiences across digital platforms. In
-          this article, we'll explore the fundamental concepts of machine
-          learning in accessible terms, providing a comprehensive foundation for
-          understanding this powerful field.
+          Machine Learning (ML) shows up in most parts of our digital lives,
+          from personalized content recommendations on streaming platforms to
+          voice assistants that respond to our commands. In this article, we'll
+          walk through the core ideas behind machine learning in practical,
+          down-to-earth language so you have a solid starting point for the
+          field.
         </p>
       </section>
 
@@ -21,12 +19,12 @@ export default function MLBasics() {
           What is Machine Learning?
         </h2>
         <p className="mb-4">
-          At its core, machine learning represents a paradigm shift in how we
-          approach computing problems. Rather than explicitly programming every
-          possible rule and scenario, machine learning enables computers to
-          learn from experience and data—mirroring human learning processes.
-          This approach allows systems to identify patterns, make predictions,
-          and improve performance over time without constant human intervention.
+          At its core, machine learning is a different way of solving computing
+          problems. Rather than explicitly programming every possible rule and
+          scenario, machine learning enables computers to learn from experience
+          and data, a bit like how people learn from examples. This approach
+          allows systems to identify patterns, make predictions, and improve
+          performance over time without constant human intervention.
         </p>
         <p className="mb-4">
           For example, instead of meticulously coding rules to identify cats in
@@ -65,7 +63,7 @@ export default function MLBasics() {
             shared characteristics. Without labeled examples, these algorithms
             identify inherent structures within data. Applications include
             customer segmentation for targeted marketing, anomaly detection in
-            security systems, and topic modeling in document analysis—all
+            security systems, and topic modeling in document analysis, all
             without requiring pre-labeled datasets.
           </p>
 
@@ -126,11 +124,10 @@ export default function MLBasics() {
           <div>
             <h3 className="text-xl font-semibold mb-2">Training Data</h3>
             <p>
-              The foundation of any machine learning system—a curated collection
-              of examples used to teach the algorithm. The quality, diversity,
-              and volume of this data directly influence the model's performance
-              and generalization capabilities.
-            </p>
+              The foundation of any machine learning system is a curated
+              collection of examples used to teach the algorithm. The quality,
+              diversity, and volume of this data directly influence the model's
+              performance and generalization capabilities.
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">Features</h3>
@@ -153,11 +150,10 @@ export default function MLBasics() {
           <div>
             <h3 className="text-xl font-semibold mb-2">Evaluation Metrics</h3>
             <p>
-              Quantitative measures assessing model performance, including
+              Quantitative measures assessing model performance include
               accuracy, precision, recall, F1-score, and area under the ROC
-              curve—each providing unique insights into different aspects of
-              model effectiveness.
-            </p>
+              curve. Each metric highlights a different aspect of how well a
+              model is doing.
           </div>
         </div>
       </section>
@@ -173,8 +169,9 @@ export default function MLBasics() {
         </p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
-            Master Python programming—the industry-standard language for ML
-            development with its extensive ecosystem of specialized libraries
+            Master Python programming, which is the industry-standard language
+            for ML development thanks to its rich ecosystem of specialized
+            libraries
           </li>
           <li>
             Build a strong foundation in mathematics, focusing on linear
@@ -189,9 +186,9 @@ export default function MLBasics() {
             Machine Learning Repository, and Google Dataset Search
           </li>
           <li>
-            Develop progressive projects—from simple classification tasks to
-            more complex applications—building your portfolio while reinforcing
-            concepts
+            Develop progressive projects, starting with simple classification
+            tasks and gradually moving to more complex applications, so you
+            build your portfolio while reinforcing key concepts
           </li>
         </ol>
       </section>
@@ -202,15 +199,13 @@ export default function MLBasics() {
           Conclusion
         </h2>
         <p>
-          Machine learning represents a fascinating intersection of computer
-          science, statistics, and domain expertise that continues to transform
-          our digital landscape. Understanding these fundamental concepts
-          provides valuable insight into the technologies shaping our daily
-          experiences—whether you're aiming to pursue a career in the field,
-          enhance existing products with AI capabilities, or simply develop a
-          deeper appreciation for the intelligent systems around us. As machine
-          learning continues to evolve, these core principles remain the
-          essential building blocks for innovation and discovery.
+          Machine learning sits at the intersection of computer science,
+          statistics, and real-world domain knowledge. Understanding the basics
+          gives you a clearer view of the tools shaping many things you use
+          every day, whether you want to pursue a career in the field, add AI
+          features to existing products, or simply understand what&apos;s going
+          on behind the scenes. As the field keeps evolving, these core ideas
+          stay the main building blocks.
         </p>
       </section>
     </div>

@@ -48,7 +48,7 @@ const Experience = React.memo(function Experience({
             <Card key={id} as="article">
               <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
                 <h2 className="text-lg font-semibold dark:text-gray-200">
-                  {role} — {company}
+                  {role} at {company}
                 </h2>
                 <span className="text-xs sm:text-sm px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 shrink-0">
                   {duration}

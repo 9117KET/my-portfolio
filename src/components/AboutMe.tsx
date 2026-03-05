@@ -28,14 +28,17 @@ export default function AboutMe() {
             Kinlo-Ephriam-Tangiri
           </h1>
           <h2 className="text-sm sm:text-xl md:text-2xl mt-2">
-            Tech and an AI Enthusiast
+            Full-Stack Developer with AI Focus & Management Experience
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
             Bremen, Germany
           </p>
           <p className="text-xs sm:text-sm mt-4">
-            Hi! I'm Kinlo - BSc Computer Science, Data Science minor, with AI/ML
-            specialization. I share projects and insights on this site and on{" "}
+            Hi! I'm Kinlo - a full-stack developer with an AI/ML focus, a BSc in
+            Computer Science and a Data Science minor. I build end-to-end
+            products, work on AI-powered systems, and bring hands-on experience
+            in program and project management. I share projects and insights on
+            this site and on{" "}
             <a
               href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
               target="_blank"

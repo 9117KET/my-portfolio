@@ -10,7 +10,7 @@ export default function About() {
       {" "}
       <Helmet>
         <title>
-          Kinlo Ephriam Tangiri | Software Engineer & an AI Enthusiast
+          Kinlo Ephriam Tangiri | Full-Stack Developer (AI Focus) with Management Experience
         </title>
         <meta
           name="description"
@@ -18,11 +18,11 @@ export default function About() {
         />
         <meta
           name="keywords"
-          content="Kinlo Ephriam Tangiri, software engineer, computer science graduate, AI ML specialist, data science, educational technology, Constructor University, AI enthusiast, portfolio, LinkedIn"
+          content="Kinlo Ephriam Tangiri, full-stack developer, AI-focused developer, management experience, computer science graduate, AI ML specialist, data science, educational technology, Constructor University, portfolio, LinkedIn"
         />
         <meta
           property="og:title"
-          content="Kinlo Ephriam Tangiri | Software Engineer & an AI Enthusiast"
+          content="Kinlo Ephriam Tangiri | Full-Stack Developer (AI Focus) with Management Experience"
         />
         <meta
           property="og:description"
@@ -33,11 +33,11 @@ export default function About() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Kinlo Ephriam Tangiri | Software Engineer & an AI Enthusiast"
+          content="Kinlo Ephriam Tangiri | Full-Stack Developer (AI Focus) with Management Experience"
         />
         <meta
           name="twitter:description"
-          content="Hi! I am Kinlo, I am an AI-Engineer & a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects."
+          content="Hi! I am Kinlo, a full-stack developer with an AI/ML focus, a Computer Science degree and a Data Science minor, plus hands-on experience in program and project management. I love learning, teaching and building projects."
         />
       </Helmet>
       <div className={`${styles.flexCenter}`}>
