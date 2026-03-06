@@ -39,6 +39,43 @@ import { Event } from "../types/event";
  */
 export const events: Event[] = [
   {
+    id: "neo4j-genai-workshop-graph-rag",
+    title: "Neo4j Generative AI Workshop: Knowledge Graphs, Graph RAG & Retrieval",
+    date: "February 2026",
+    eventType: "Online",
+    organizer: "Neo4j",
+    location: undefined,
+    technologies: [
+      "Neo4j",
+      "Graph RAG",
+      "Knowledge Graphs",
+      "RAG",
+      "LLMs",
+      "Cypher",
+      "Vector Search",
+      "Text-to-Cypher",
+      "Python",
+      "OpenAI",
+      "Neo4j Graph RAG (Python)",
+      "Entity Extraction",
+      "Embeddings",
+    ],
+    keyTakeaways: [
+      "Gen AI: models that generate new content from training data; LLMs are statistical and can hallucinate. Supplying context in prompts (e.g. via RAG) improves accuracy and reduces hallucination.",
+      "RAG: user question → retriever finds relevant context (from docs, APIs, or a graph) → LLM gets question + context → better, grounded response. Retriever turns unstructured input into structured context.",
+      "Graph RAG (Microsoft research): combining RAG with a graph yields richer context, better accuracy, explainability, and flexible queries. Typical approach: vector search + graph traversal (or full-text search, or text-to-Cypher).",
+      "Knowledge graphs: structured representation of entities and relationships; can combine structured (e.g. CSV metadata) and unstructured (documents) data; lexical graph (unstructured) + domain graph (structured).",
+      "KG construction: load text → chunk → embed → LLM extracts entities/relationships → write to graph. Chunk size and a defined schema (node labels, relationship types, patterns) strongly affect usefulness and granularity.",
+      "Structured data: adding metadata (e.g. lesson, module, course, URL) to documents in the graph enables queries like 'which lessons cover technology X?' and enriches retrieval.",
+      "Retrieval: vector index on chunk embeddings (cosine similarity); vector + Cypher retriever returns text plus graph-derived facts (e.g. concepts, technologies); text-to-Cypher turns natural language into Cypher for precise, structured answers.",
+    ],
+    applications:
+      "Graph RAG and knowledge graphs apply wherever you need accurate, explainable AI over connected data: enterprise Q&A over internal docs, HR/talent search, customer 360, fraud detection, biomedical discovery, and semantic layers over existing DBs. Defining a schema and combining vector + graph retrieval (or text-to-Cypher) gives more concise, relevant context than vector-only RAG, reducing hallucination and improving traceability.",
+    experience:
+      "I attended the Neo4j Generative AI Workshop (part of the Road to Node series), which walked through building knowledge graphs from unstructured text and using them for retrieval-augmented generation. We started with definitions: what Gen AI and LLMs are, why context matters, and how RAG and Graph RAG improve accuracy. We used Graph Academy (graphacademy.neo4j.com) and the workshop notes document (dev.neo4j.com/workshop-genai-notes) for signup, course access, and environment setup. The hands-on part used the Neo4j Graph RAG Python package in a GitHub Codespace: we built a knowledge graph from PDFs (Gen AI Fundamentals lesson), experimented with chunk size and custom schemas (node types, relationships, patterns), added structured data from CSV (lesson, module, course, URL), then implemented vector + Cypher and text-to-Cypher retrievers for a RAG pipeline. Seeing how schema design and chunking changed the graph quality, and how retrieval queries could return both text and graph-derived facts, made the value of Graph RAG very concrete for production use cases.",
+    link: "https://graphacademy.neo4j.com/courses/workshop-genai/",
+  },
+  {
     id: "bmw-hackathon-causal-ml",
     title: "My First Hackathon Experience with BMW Group",
     date: "September 2024",

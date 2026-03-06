@@ -28,6 +28,9 @@ const AWSBedrockRAG = lazy(() => import("../articles/AWSBedrockRAG"));
 const IoTRecommendationFramework = lazy(
   () => import("../articles/IoTRecommendationFramework")
 );
+const Neo4jGenAIWorkshop = lazy(
+  () => import("../articles/Neo4jGenAIWorkshop")
+);
 
 // Loading fallback for articles
 const ArticleLoader = () => (
@@ -99,6 +102,8 @@ export default function BlogPost({
           return <AWSBedrockRAG />;
         case "IoTRecommendationFramework":
           return <IoTRecommendationFramework />;
+        case "Neo4jGenAIWorkshop":
+          return <Neo4jGenAIWorkshop />;
         default:
           return <p>No content found</p>;
       }
