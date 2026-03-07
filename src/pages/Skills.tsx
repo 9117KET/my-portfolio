@@ -15,7 +15,7 @@ export default function Skills() {
         <title>Skills | Kinlo Ephriam Tangiri</title>
         <meta
           name="description"
-          content="Technical skills and experience: Backend, Frontend, Data & ML, DevOps and tools. JavaScript, TypeScript, Python, React, Next.js, TensorFlow, LangChain, and more."
+          content="Technical skills and experience: Frontend, Data & ML, DevOps & Tools, Backend. JavaScript, TypeScript, Python, React, Next.js, TensorFlow, LangChain, Supabase, and more."
         />
         <meta
           name="keywords"
@@ -24,7 +24,7 @@ export default function Skills() {
         <meta property="og:title" content="Skills | Kinlo Ephriam Tangiri" />
         <meta
           property="og:description"
-          content="Technical skills: Backend, Frontend, Data & ML, DevOps and tools."
+          content="Technical skills: Frontend, Data & ML, DevOps & Tools, Backend."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={window.location.href} />
@@ -32,7 +32,7 @@ export default function Skills() {
         <meta name="twitter:title" content="Skills | Kinlo Ephriam Tangiri" />
         <meta
           name="twitter:description"
-          content="Technical skills: Backend, Frontend, Data & ML, DevOps and tools."
+          content="Technical skills: Frontend, Data & ML, DevOps & Tools, Backend."
         />
       </Helmet>
       <div className={styles.flexCenter}>

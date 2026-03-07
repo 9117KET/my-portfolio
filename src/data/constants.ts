@@ -63,31 +63,18 @@ export const skills = [
   { name: "Neo4j", years: 1 },
   { name: "RAG", years: 2 },
   { name: "Git", years: 4 },
-  { name: "GitHub", years: 4},
+  { name: "GitHub", years: 4 },
   { name: "Docker", years: 2 },
   { name: "Firebase", years: 3 },
   { name: "GCP", years: 1 },
   { name: "AWS", years: 2 },
   { name: "Vercel", years: 2 },
+  { name: "Supabase", years: 1 },
   { name: "Salesforce CMS", years: 1 },
 ];
 
-// Grouping for Skills cards on About page
+// Grouping for Skills cards on About page (order: Frontend, Data & ML, DevOps & Tools, Backend)
 export const skillCategories = [
-  {
-    id: "backend",
-    title: "Backend",
-    skillNames: [
-      "JavaScript",
-      "TypeScript",
-      "Python",
-      "C/C++",
-      "SQL",
-      "Node.js",
-      "FastAPI",
-      "Flask",
-    ],
-  },
   {
     id: "frontend",
     title: "Frontend",
@@ -118,7 +105,31 @@ export const skillCategories = [
   {
     id: "devops",
     title: "DevOps & Tools",
-    skillNames: ["Git", "Docker", "Firebase", "GCP", "AWS", "Vercel", "Salesforce CMS"],
+    skillNames: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Firebase",
+      "GCP",
+      "AWS",
+      "Vercel",
+      "Supabase",
+      "Salesforce CMS",
+    ],
+  },
+  {
+    id: "backend",
+    title: "Backend",
+    skillNames: [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "C/C++",
+      "SQL",
+      "Node.js",
+      "FastAPI",
+      "Flask",
+    ],
   },
 ];
 
