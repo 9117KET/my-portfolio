@@ -18,16 +18,16 @@ export default function AboutMe() {
     <section className="mt-8 mb-[-2%] max-w-full overflow-hidden">
       {/* Hero */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-8">
           <div className="flex items-center gap-3 mb-6">
             <span className="w-12 h-[1px] bg-primary/60"></span>
             <span className="font-label text-primary uppercase tracking-[0.2em] text-xs">
-              Full-Stack Developer • AI/ML Focus • Program & Product Ops
+              Full-Stack Developer • AI/ML Focus • Program & Product Experience
             </span>
           </div>
 
           <h1
-            className="text-[clamp(2.25rem,5vw,4.75rem)] font-headline font-extrabold tracking-tighter leading-[1.05] mb-6 relative w-fit sm:whitespace-nowrap
+            className="text-[clamp(2.0rem,4.2vw,4.25rem)] font-headline font-extrabold tracking-tighter leading-[1.05] mb-6 relative w-fit sm:whitespace-nowrap
               before:absolute before:inset-0 before:animate-typewriter before:bg-surface
               after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-primary
               sm:before:w-[calc(100% + 0.125em)]"
@@ -37,8 +37,8 @@ export default function AboutMe() {
 
           <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed max-w-2xl">
             Hi! I'm Kinlo - a full-stack developer with an AI/ML focus, a BSc in
-            Computer Science and a Data Science minor. I build end-to-end
-            products, work on AI-powered systems, and bring hands-on experience
+            Computer Science and a Data Science minor. I have built end-to-end
+            projects, and I bring hands-on experience
             in program and project management.
           </p>
 
@@ -55,7 +55,7 @@ export default function AboutMe() {
               href="#contact"
               className="font-label text-primary text-sm font-semibold tracking-wider hover:translate-x-1 transition-transform inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
             >
-              Get in touch{" "}
+              Get in touch
               <span className="material-symbols-outlined text-sm" aria-hidden="true">
                 arrow_forward
               </span>
@@ -76,8 +76,8 @@ export default function AboutMe() {
           </p>
         </div>
 
-        <div className="lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-md">
+        <div className="lg:col-span-4 flex justify-center lg:justify-end">
+          <div className="relative w-full max-w-sm">
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 blur-[100px] rounded-full -z-10"></div>
             <img
               src={profileImage}
@@ -158,7 +158,10 @@ export default function AboutMe() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                 {skillCategories.map((cat) => {
                   const categorySkills = cat.skillNames
-                    .map((name) => ({ name, years: skillsByName[name] }))
+                    .map((name) => ({
+                      name,
+                      years: skillsByName[name as keyof typeof skillsByName],
+                    }))
                     .filter((s) => s.years != null);
                   return (
                     <Card key={cat.id} variant="interactive">
