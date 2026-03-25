@@ -35,8 +35,8 @@ const Neo4jGenAIWorkshop = lazy(
 // Loading fallback for articles
 const ArticleLoader = () => (
   <div className="flex items-center justify-center py-12">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-    <span className="ml-3 text-gray-600 dark:text-gray-400">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+    <span className="ml-3 text-on-surface-variant">
       Loading article...
     </span>
   </div>
@@ -117,19 +117,39 @@ export default function BlogPost({
   };
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-4xl text-center flex-grow">{title}</h1>
-        <ShareButton title={title} url={currentUrl} description={description} />
-      </div>
+    <article className="max-w-3xl mx-auto">
+      <header className="mb-10">
+        <div className="flex items-start justify-between gap-6">
+          <div className="min-w-0">
+            <div className="flex items-center gap-4 text-outline font-label text-[11px] uppercase tracking-[0.2em] mb-4">
+              <span>{formatDate(date)}</span>
+              <span className="w-1 h-1 rounded-full bg-tertiary"></span>
+              <span className="text-tertiary">{category}</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter leading-[1.1] text-on-surface">
+              {title}
+            </h1>
+            {description ? (
+              <p className="text-xl text-on-surface-variant font-light leading-relaxed mt-5">
+                {description}
+              </p>
+            ) : null}
+          </div>
+
+          <div className="shrink-0 pt-2">
+            <ShareButton title={title} url={currentUrl} description={description} />
+          </div>
+        </div>
+      </header>
       {renderContent()}
-      <hr />
-      <div className="flex justify-between items-center mt-4">
-        <p className="text-lg italic">Published: {formatDate(date)}</p>
-        <p className="text-base bg-blue-800 dark:text-zinc-800 text-white px-4 py-1 rounded-xl">
-          {category}
+      <div className="mt-16 pt-10 border-t border-outline-variant/30 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+        <p className="text-sm text-on-surface-variant font-label tracking-widest uppercase">
+          Published: {formatDate(date)}
         </p>
+        <span className="inline-flex w-fit px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-primary/10 text-primary border border-primary/20">
+          {category}
+        </span>
       </div>
-    </div>
+    </article>
   );
 }

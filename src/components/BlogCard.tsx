@@ -20,28 +20,28 @@ const BlogCard = React.memo(function BlogCard({
     <Link
       to={`/blog/${id}`}
       key={id}
-      className="cursor-pointer group w-full transition-all duration-300 flex flex-col rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-[#2D2E32] shadow-sm hover:shadow-md hover:-translate-y-0.5 overflow-hidden"
+      className="cursor-pointer group w-full transition-all duration-300 flex flex-col rounded-xl border border-outline-variant/30 bg-surface-container-low shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:bg-surface-container-high overflow-hidden focus:outline-none focus:ring-2 focus:ring-primary/40"
     >
       <div className="p-6">
         <div className="flex justify-between items-center mb-4">
-          <span className="px-3 py-1 text-sm font-medium rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+          <span className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20 font-label uppercase tracking-wider">
             {category}
           </span>
-          <time className="text-sm text-gray-500 dark:text-gray-400">
+          <time className="text-sm text-on-surface-variant">
             {date}
           </time>
         </div>
 
-        <h3 className="text-xl md:text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+        <h3 className="text-xl md:text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors leading-tight">
           {title}
         </h3>
 
-        <p className="text-gray-600 dark:text-gray-300 line-clamp-3 mb-4">
+        <p className="text-on-surface-variant line-clamp-3 mb-4 leading-relaxed">
           {description}
         </p>
 
         <div className="flex items-center justify-end">
-          <span className="inline-flex items-center text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform">
+          <span className="inline-flex items-center text-primary group-hover:translate-x-1 transition-transform font-label uppercase tracking-wider text-xs">
             Read more
             <svg
               className="w-4 h-4 ml-1"

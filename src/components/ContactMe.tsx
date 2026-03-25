@@ -34,15 +34,18 @@ const contactIcons: Record<
 
 export default function ContactMe() {
   return (
-    <Card className="mt-8">
+    <Card className="mt-10" variant="elevated">
       <div className="relative flex py-5 items-center group">
-        <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-        <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-gray-400 transition-colors duration-300 group-hover:text-blue-500">
-          <span className="text-blue-500">{">"}</span> Connect With Me
+        <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
+        <span
+          id="contact"
+          className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-outline transition-colors duration-300 group-hover:text-primary"
+        >
+          <span className="text-primary">{">"}</span> Connect With Me
         </span>
-        <div className="flex-grow border-t border-gray-400 transform transition-transform duration-300 group-hover:scale-x-105"></div>
+        <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
       </div>
-      <p className="text-center mb-6 text-sm sm:text-base dark:text-gray-400">
+      <p className="text-center mb-6 text-sm sm:text-base text-on-surface-variant">
         I'm open to discussing projects, opportunities, or collaborations.
         Reach out on any platform below.
       </p>
@@ -53,7 +56,7 @@ export default function ContactMe() {
               href={contact.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors text-gray-800 dark:text-gray-300"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant/30 bg-surface-container-lowest hover:bg-surface-container-low transition-colors text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               {contactIcons[contact.id]?.("w-5 h-5 shrink-0") ?? null}
               <span className="text-sm font-medium">{contact.name}</span>

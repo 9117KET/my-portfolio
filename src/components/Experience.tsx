@@ -45,27 +45,27 @@ const Experience = React.memo(function Experience({
             MAX_RESPONSIBILITIES_SHOWN
           );
           return (
-            <Card key={id} as="article">
+            <Card key={id} as="article" variant="interactive">
               <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
-                <h2 className="text-lg font-semibold dark:text-gray-200">
+                <h2 className="text-lg font-semibold text-on-surface">
                   {role} at {company}
                 </h2>
-                <span className="text-xs sm:text-sm px-2 py-1 rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 shrink-0">
+                <span className="text-xs sm:text-sm px-2 py-1 rounded-lg border border-outline-variant/30 bg-surface-container-lowest text-on-surface shrink-0">
                   {duration}
                 </span>
               </div>
               {category && (
-                <span className="inline-block px-2 py-0.5 text-xs rounded border border-gray-300 dark:border-gray-500 text-gray-600 dark:text-gray-400 mb-3">
+                <span className="inline-block px-2 py-0.5 text-xs rounded border border-outline-variant/30 text-on-surface-variant mb-3 bg-surface-container-lowest">
                   {category}
                 </span>
               )}
-              <p className="text-sm dark:text-gray-400 mb-4 line-clamp-2">
+              <p className="text-sm text-on-surface-variant mb-4 line-clamp-2 leading-relaxed">
                 {companyDescription}
               </p>
-              <p className="text-xs font-semibold dark:text-gray-300 mb-2">
+              <p className="text-xs font-semibold text-on-surface mb-2 font-label tracking-widest uppercase">
                 {">"} Responsibilities
               </p>
-              <ul className="space-y-1 text-sm dark:text-gray-300 list-disc list-inside">
+              <ul className="space-y-1 text-sm text-on-surface-variant list-disc list-inside">
                 {responsibilitiesToShow.map((responsibility, index) => (
                   <li key={`${id}-${index}`}>{responsibility}</li>
                 ))}

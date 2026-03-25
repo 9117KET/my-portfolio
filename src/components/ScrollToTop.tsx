@@ -28,7 +28,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-blue-500 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-blue-600 focus:outline-none z-[999]"
+          className="fixed bottom-4 right-4 bg-primary-container text-on-surface p-3 rounded-full shadow-lg transition-all duration-300 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/40 z-[999]"
           aria-label="Scroll to top"
         >
           <span className="text-xl">↑</span>

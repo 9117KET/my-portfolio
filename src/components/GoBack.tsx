@@ -29,7 +29,7 @@ export default function GoBack() {
   return (
     <Link
       to="/blog"
-      className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 text-on-surface-variant hover:text-primary transition-all duration-200 rounded-lg hover:bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-primary/40"
       aria-label="Back to Blog"
     >
       <FontAwesomeIcon icon={faArrowLeft} className="text-xl" />

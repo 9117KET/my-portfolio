@@ -16,7 +16,6 @@ const Blog = lazy(() => import("./pages/Blog"));
 const Misc = lazy(() => import("./pages/Misc"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Experience = lazy(() => import("./pages/Experience"));
-const Skills = lazy(() => import("./pages/Skills"));
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -54,14 +53,6 @@ const router = createBrowserRouter(
         element={
           <Suspense fallback={<LoadingFallback />}>
             <Experience />
-          </Suspense>
-        }
-      />
-      <Route
-        path="skills"
-        element={
-          <Suspense fallback={<LoadingFallback />}>
-            <Skills />
           </Suspense>
         }
       />

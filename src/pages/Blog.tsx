@@ -1,10 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import Navbar from "../components/Navbar";
-import styles from "../utils/style";
 import { posts } from "../utils/constants";
 import BlogCard from "../components/BlogCard";
 import { useState, useMemo, useCallback } from "react";
 import { useDebounce } from "../utils/hooks";
+import PageShell from "../components/PageShell";
 
 // Define categories for filtering
 const categories = ["All", "Post", "Podcast", "Article", "Project Breakdown"];
@@ -77,7 +76,7 @@ export default function Blog() {
   }, [selectedCategory, debouncedSearchQuery, sortBy]);
 
   return (
-    <div className="dark:bg-[#2D2E32] min-h-screen">
+    <div className="min-h-screen">
       <Helmet>
         <title>Blog | Kinlo Ephriam Tangiri</title>
         <meta
@@ -102,140 +101,124 @@ export default function Blog() {
           content="Read my latest thoughts and insights on technology, programming, AI/ML, and more."
         />
       </Helmet>
+      <PageShell current="blog">
+        <div className="mt-5 p-2 sm:p-4 md:p-8">
+          <div className="text-center mb-12">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">
+              My Blog
+            </h1>
+            <p className="text-on-surface-variant text-lg">
+              Thoughts, insights, and experiences in tech and beyond
+            </p>
+          </div>
 
-      <div className={`${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar clicked="blog" />
-        </div>
-      </div>
-
-      <div className={`${styles.flexStart} w-full`}>
-        <div className={`${styles.boxWidth}`}>
-          <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-300`}>
-            <div className="text-center mb-12">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                My Blog
-              </h1>
-              <p className="text-gray-600 dark:text-gray-300 text-lg">
-                Thoughts, insights, and experiences in tech and beyond
-              </p>
-            </div>
-
-            {/* Search and Sort Controls */}
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
-              {/* Search Bar */}
-              <div className="w-full md:w-1/2">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search posts by title, description, or category..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-10"
-                  />
-                  {searchQuery && (
-                    <button
-                      onClick={clearSearch}
-                      className="absolute right-10 top-2.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-                    >
-                      <svg
-                        className="h-5 w-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </button>
-                  )}
-                  <svg
-                    className="absolute right-3 top-2.5 h-5 w-5 text-gray-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+          {/* Search and Sort Controls */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+            {/* Search Bar */}
+            <div className="w-full md:w-1/2">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search posts by title, description, or category..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 rounded-lg border border-outline-variant/30 bg-surface-container-lowest text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/40 focus:border-transparent pr-10"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={clearSearch}
+                    className="absolute right-10 top-2.5 text-outline hover:text-on-surface transition-colors"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                  </svg>
-                </div>
-                {isSearching && (
-                  <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                    Searching...
-                  </div>
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
                 )}
-              </div>
-
-              {/* Sort Dropdown */}
-              <div className="w-full md:w-1/3">
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                <svg
+                  className="absolute right-3 top-2.5 h-5 w-5 text-outline"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  {sortOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            {/* Categories */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category
-                      ? "bg-blue-600 text-white"
-                      : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-600"
-                  }`}
-                  aria-current={
-                    selectedCategory === category ? "true" : "false"
-                  }
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-            {/* Blog Posts Grid */}
-            <div className="grid gap-6 md:gap-8">
-              {filteredAndSortedPosts.length > 0 ? (
-                filteredAndSortedPosts.map((post) => (
-                  <BlogCard
-                    key={post.id}
-                    id={post.id}
-                    title={post.title}
-                    date={post.date}
-                    category={post.category}
-                    description={post.description}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
-                ))
-              ) : (
-                <div className="text-center py-12">
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {isSearching
-                      ? "Searching..."
-                      : "No posts found matching your criteria."}
-                  </p>
+                </svg>
+              </div>
+              {isSearching && (
+                <div className="mt-2 text-sm text-on-surface-variant">
+                  Searching...
                 </div>
               )}
             </div>
+
+            {/* Sort Dropdown */}
+            <div className="w-full md:w-1/3">
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="w-full px-4 py-2 rounded-lg border border-outline-variant/30 bg-surface-container-low text-on-surface focus:ring-2 focus:ring-primary/40 focus:border-transparent"
+              >
+                {sortOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Categories */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
+                  selectedCategory === category
+                    ? "bg-primary-container text-on-surface border-primary-container"
+                    : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
+                }`}
+                aria-current={selectedCategory === category ? "true" : "false"}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Blog Posts Grid */}
+          <div className="grid gap-6 md:gap-8">
+            {filteredAndSortedPosts.length > 0 ? (
+              filteredAndSortedPosts.map((post) => (
+                <BlogCard
+                  key={post.id}
+                  id={post.id}
+                  title={post.title}
+                  date={post.date}
+                  category={post.category}
+                  description={post.description}
+                />
+              ))
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-on-surface-variant">
+                  {isSearching
+                    ? "Searching..."
+                    : "No posts found matching your criteria."}
+                </p>
+              </div>
+            )}
           </div>
         </div>
-      </div>
+      </PageShell>
     </div>
   );
 }

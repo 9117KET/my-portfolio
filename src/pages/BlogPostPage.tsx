@@ -45,7 +45,7 @@ export default function BlogPostPage() {
   // Render a user-friendly error message if the post is not found
   if (!post) {
     return (
-      <div className="dark:bg-[#2D2E32] min-h-screen">
+      <div className="bg-surface text-on-surface min-h-screen">
         <Helmet>
           <title>Post Not Found - Blog</title>
           <meta
@@ -59,16 +59,16 @@ export default function BlogPostPage() {
         </div>
         <div className={`${styles.flexCenter} min-h-[60vh]`}>
           <div className={`${styles.boxWidth} text-center p-8`}>
-            <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+            <h1 className="text-4xl font-bold mb-4 text-on-surface">
               Post Not Found
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+            <p className="text-lg text-on-surface-variant mb-6">
               The blog post you're looking for doesn't exist or may have been
               moved.
             </p>
             <Link
               to="/blog"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-block px-6 py-3 bg-primary-container text-on-surface rounded-lg hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               Back to Blog
             </Link>
@@ -80,7 +80,7 @@ export default function BlogPostPage() {
 
   // Main component render
   return (
-    <div className="dark:bg-[#2D2E32] min-h-screen overflow-hidden">
+    <div className="bg-surface text-on-surface min-h-screen overflow-hidden">
       {/* Set the page title using Helmet */}
       <Helmet>
         <title>{post.title} - Blog</title>
@@ -105,7 +105,7 @@ export default function BlogPostPage() {
       <div className={`${styles.flexStart} w-full`}>
         <div className={`${styles.boxWidth}`}>
           {/* Blog post container */}
-          <div className={`${styles.boxWidth} mt-5 p-8 dark:text-gray-100`}>
+          <div className={`${styles.boxWidth} mt-5 p-8`}>
             {/* BlogPost component with post details */}
             <BlogPost
               title={post.title}

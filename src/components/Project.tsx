@@ -34,17 +34,17 @@ const Project = React.memo(function Project({
   const hasLiveDemo = demo && !demo.includes("github.com");
 
   return (
-    <Card as="article" className="flex flex-col h-full">
+    <Card as="article" variant="interactive" className="flex flex-col h-full">
       <div id={id} className="flex flex-col flex-1">
         {/* Header: name + badges (year, category, status, collaborators) */}
         <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
-          <h2 className="text-lg font-semibold dark:text-gray-300 pr-2">
+          <h2 className="text-lg font-semibold text-on-surface pr-2">
             {name}
           </h2>
           <div className="flex flex-wrap gap-2 justify-end">
             {year != null && (
               <span
-                className="inline-flex items-center text-xs text-gray-600 dark:text-gray-400"
+                className="inline-flex items-center text-xs text-on-surface-variant"
                 aria-label={`Year: ${year}`}
               >
                 <svg
@@ -64,32 +64,32 @@ const Project = React.memo(function Project({
               </span>
             )}
             {category && (
-              <span className="px-2 py-0.5 text-xs rounded border border-gray-300 dark:border-gray-500 text-gray-700 dark:text-gray-300">
+              <span className="px-2 py-0.5 text-xs rounded border border-outline-variant/30 text-on-surface-variant bg-surface-container-lowest">
                 {category}
               </span>
             )}
             {status && (
-              <span className="px-2 py-0.5 text-xs rounded bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200">
+              <span className="px-2 py-0.5 text-xs rounded bg-primary/10 text-primary border border-primary/20">
                 {status}
               </span>
             )}
             {collaborators && collaborators.length > 0 && (
-              <span className="text-xs text-gray-600 dark:text-gray-400">
+              <span className="text-xs text-on-surface-variant">
                 With {collaborators.join(", ")}
               </span>
             )}
           </div>
         </div>
 
-        <p className="text-sm dark:text-gray-300 mb-4 leading-relaxed">
+        <p className="text-sm text-on-surface-variant mb-4 leading-relaxed">
           {description}
         </p>
 
         <div className="mb-4 flex-1">
-          <h3 className="text-sm font-semibold mb-2 dark:text-gray-300">
+          <h3 className="text-sm font-semibold mb-2 text-on-surface">
             Key Features
           </h3>
-          <ul className="space-y-1 text-sm dark:text-gray-300 list-disc list-inside">
+          <ul className="space-y-1 text-sm text-on-surface-variant list-disc list-inside">
             {featuresToShow.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
@@ -100,7 +100,7 @@ const Project = React.memo(function Project({
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-300 rounded-lg bg-gray-50 dark:bg-gray-800/50"
+              className="px-3 py-1 text-sm border border-outline-variant/30 text-on-surface rounded-lg bg-surface-container-lowest"
             >
               {tech}
             </span>
@@ -108,13 +108,13 @@ const Project = React.memo(function Project({
         </div>
 
         {/* Actions: View project / Live demo + Source code */}
-        <div className="pt-4 mt-auto border-t border-gray-200 dark:border-gray-600 flex flex-wrap gap-3">
+        <div className="pt-4 mt-auto border-t border-outline-variant/30 flex flex-wrap gap-3">
           {demo && hasLiveDemo && (
             <a
               href={demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-on-surface transition-colors"
             >
               <span>View project</span>
               <svg
@@ -136,7 +136,7 @@ const Project = React.memo(function Project({
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:underline"
+            className="inline-flex items-center gap-2 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors"
           >
             <span>Source code</span>
             <svg

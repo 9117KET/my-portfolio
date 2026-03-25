@@ -1,13 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import AboutMe from "../components/AboutMe";
 import ContactMe from "../components/ContactMe";
-import Navbar from "../components/Navbar";
-import styles from "../utils/style";
+import PageShell from "../components/PageShell";
 
 export default function About() {
   return (
-    <div className="dark:bg-[#2D2E32] min-h-screen overflow-hidden">
-      {" "}
+    <div className="min-h-screen overflow-hidden">
       <Helmet>
         <title>
           Kinlo Ephriam Tangiri | Full-Stack Developer (AI Focus) with Management Experience
@@ -40,21 +38,10 @@ export default function About() {
           content="Hi! I am Kinlo, a full-stack developer with an AI/ML focus, a Computer Science degree and a Data Science minor, plus hands-on experience in program and project management. I love learning, teaching and building projects."
         />
       </Helmet>
-      <div className={`${styles.flexCenter}`}>
-        {" "}
-        <div className={`${styles.boxWidth}`}>
-          {" "}
-          <Navbar clicked="about" />{" "}
-        </div>
-      </div>
-      <main id="main-content" className={`${styles.flexStart} w-full`}>
-        {" "}
-        <div className={`${styles.boxWidth}`}>
-          {" "}
-          <AboutMe />
-          <ContactMe />
-        </div>
-      </main>
+      <PageShell current="about">
+        <AboutMe />
+        <ContactMe />
+      </PageShell>
     </div>
   );
 }
