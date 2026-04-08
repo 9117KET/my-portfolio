@@ -22,7 +22,7 @@ const Experience = React.memo(function Experience({
 }: ExperienceProps) {
   if (!experiences || !Array.isArray(experiences)) {
     return (
-      <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+      <div className="text-center py-8 text-on-surface-variant">
         No experiences available.
       </div>
     );
@@ -62,7 +62,7 @@ const Experience = React.memo(function Experience({
               <p className="text-sm text-on-surface-variant mb-4 line-clamp-2 leading-relaxed">
                 {companyDescription}
               </p>
-              <p className="text-xs font-semibold text-on-surface mb-2 font-label tracking-widest uppercase">
+              <p className="text-xs font-semibold text-on-surface mb-2 font-label tracking-wider uppercase">
                 {">"} Responsibilities
               </p>
               <ul className="space-y-1 text-sm text-on-surface-variant list-disc list-inside">

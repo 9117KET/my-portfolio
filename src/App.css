@@ -34,17 +34,17 @@
   --outline: 140 144 159;
   --outline-variant: 200 205 218;
 
-  --surface-container-lowest: 248 250 255;
-  --surface-container-low: 242 245 255;
-  --surface-container: 235 240 252;
-  --surface-container-high: 226 232 248;
-  --surface-container-highest: 215 223 245;
-  --surface-variant: 226 232 248;
+  --surface-container-lowest: 247 252 251;
+  --surface-container-low: 240 249 247;
+  --surface-container: 232 245 242;
+  --surface-container-high: 221 239 236;
+  --surface-container-highest: 209 232 229;
+  --surface-variant: 221 239 236;
 
-  --primary: 0 90 194;
-  --primary-container: 77 142 255;
+  --primary: 15 118 110;
+  --primary-container: 45 212 191;
   --on-primary: 255 255 255;
-  --tertiary: 223 116 18;
+  --tertiary: 180 83 9;
   --error: 176 0 32;
 }
 
@@ -65,10 +65,10 @@ html.dark {
   --surface-container-highest: 45 52 73;
   --surface-variant: 45 52 73;
 
-  --primary: 173 198 255;
-  --primary-container: 77 142 255;
-  --on-primary: 0 46 106;
-  --tertiary: 255 183 134;
+  --primary: 94 234 212;
+  --primary-container: 20 184 166;
+  --on-primary: 4 47 46;
+  --tertiary: 251 168 53;
   --error: 255 180 171;
 }
 

@@ -54,7 +54,11 @@ export default function Projects() {
     });
 
     setIsSearching(false);
-    return filtered;
+    return filtered.sort((a, b) => {
+      const aHasDemo = !!(a.demo && !a.demo.includes("github.com"));
+      const bHasDemo = !!(b.demo && !b.demo.includes("github.com"));
+      return Number(bHasDemo) - Number(aHasDemo);
+    });
   }, [selectedCategory, debouncedSearchQuery]);
 
   return (

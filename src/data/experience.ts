@@ -88,7 +88,7 @@ export const experience = [
     duration: "2026 - Present",
     category: "Management & Others",
     responsibilities: [
-      "Architect strategy for Palaver Ventures — the for-profit arm that translates Palaver research into products and services competing globally.",
+      "Architect strategy for Palaver Ventures, the for-profit arm that translates Palaver research into products and services competing globally.",
       "Plan and design strategies across six venture areas: Hardware Lab, Energies, AI, Social Media, Health, and Education.",
       "Support the translation of pan-African research into tangible solutions for African and global challenges.",
       "Report to CEO/COO and help shape the founding blueprint for Palaver Ventures operations.",

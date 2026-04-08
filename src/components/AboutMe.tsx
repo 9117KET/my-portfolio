@@ -19,20 +19,13 @@ export default function AboutMe() {
       {/* Hero */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-8">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="w-12 h-[1px] bg-primary/60"></span>
-            <span className="font-label text-primary uppercase tracking-[0.2em] text-xs">
-              Full-Stack Developer • AI/ML Focus • Program & Product Experience
-            </span>
-          </div>
-
           <h1
             className="text-[clamp(2.0rem,4.2vw,4.25rem)] font-headline font-extrabold tracking-tighter leading-[1.05] mb-6 relative w-fit sm:whitespace-nowrap
               before:absolute before:inset-0 before:animate-typewriter before:bg-surface
               after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-primary
               sm:before:w-[calc(100% + 0.125em)]"
           >
-            Kinlo-Ephriam-Tangiri
+            Kinlo - Ephriam -Tangiri
           </h1>
 
           <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed max-w-2xl">
@@ -47,7 +40,7 @@ export default function AboutMe() {
               href={cvLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-7 py-3.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:scale-[1.02] transition-transform focus:outline-none focus:ring-2 focus:ring-primary/40"
+              className="bg-primary text-on-primary px-7 py-3.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary/85 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               Download Resume
             </a>
@@ -124,23 +117,27 @@ export default function AboutMe() {
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           <Card className="lg:col-span-5 bg-surface-container-low border-outline-variant/20 overflow-hidden">
             <div className="flex gap-2 mb-6">
-              <div className="w-3 h-3 rounded-full bg-error/40"></div>
-              <div className="w-3 h-3 rounded-full bg-tertiary/40"></div>
-              <div className="w-3 h-3 rounded-full bg-primary/40"></div>
+              <div className="w-3 h-3 rounded-full bg-error/70"></div>
+              <div className="w-3 h-3 rounded-full bg-tertiary/70"></div>
+              <div className="w-3 h-3 rounded-full bg-primary/70"></div>
             </div>
             <div className="font-label text-sm text-primary/90 space-y-2">
-              <p className="opacity-60">// ket.dev profile data</p>
+              <p className="text-outline/70 italic">// ket.dev profile data</p>
               <p>
-                <span className="text-tertiary">location:</span> "Bremen, Germany"
+                <span className="text-tertiary">location:</span>{" "}
+                <span className="text-emerald-600 dark:text-emerald-400">"Bremen, Germany"</span>
               </p>
               <p>
-                <span className="text-tertiary">status:</span> "Open to impactful work"
+                <span className="text-tertiary">status:</span>{" "}
+                <span className="text-emerald-600 dark:text-emerald-400">"Open to impactful work"</span>
               </p>
               <p>
-                <span className="text-tertiary">stack:</span> ["React", "TypeScript", "Python", "RAG"]
+                <span className="text-tertiary">stack:</span>{" "}
+                [<span className="text-emerald-600 dark:text-emerald-400">"React", "TypeScript", "Python", "RAG"</span>]
               </p>
               <p>
-                <span className="text-tertiary">focus:</span> "AI-native product engineering"
+                <span className="text-tertiary">focus:</span>{" "}
+                <span className="text-emerald-600 dark:text-emerald-400">"Full-Stack & AI Engineering"</span>
               </p>
             </div>
           </Card>

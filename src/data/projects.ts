@@ -31,7 +31,7 @@ export const projects: Project[] = [
       "Daily sections including 3 must-dos, Morning routine, High/Medium/Low priority, and Night routine in a vertical, Notion-style layout",
       "One-click day filling: copy from yesterday or from the last same weekday without creating duplicate tasks",
       "Time-blocked tasks with 24-hour start times and optional durations that highlight when active until completed or elapsed",
-      "Gentle focus guidance with three beeps per task—at the start, midpoint, and end of the allocated time window",
+      "Gentle focus guidance with three beeps per task: at the start, midpoint, and end of the allocated time window",
       "Drag-and-drop reordering of tasks within each section using a grip handle for quick reprioritization",
       "Weekly overview, deep work timer, and rotating motivation quotes in a sticky sidebar for context and focus",
       "Interactive onboarding tour and in-app Help modal, with planner state and user data persisted via Supabase and localStorage",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     id: "academy",
     name: "KET Academy",
     description:
-      "KET Academy is an advanced e-learning platform designed to provide high-quality academic resources to secondary and high school students in Cameroon, with a particular focus on those affected by crises or natural disasters. The platform empowers youth ambassadors with educational technology skills while delivering tailored resources to support students' unique learning journeys. This project represents one of my core motivations for pursuing Computer Science—creating technology that expands educational access in underserved regions.",
+      "KET Academy is an advanced e-learning platform designed to provide high-quality academic resources to secondary and high school students in Cameroon, with a particular focus on those affected by crises or natural disasters. The platform empowers youth ambassadors with educational technology skills while delivering tailored resources to support students' unique learning journeys. This project represents one of my core motivations for pursuing Computer Science: creating technology that expands educational access in underserved regions.",
     github: "https://github.com/ket-academy/ketacademy",
     features: [
       "Comprehensive academic resources specifically tailored for students in crisis-affected regions",
