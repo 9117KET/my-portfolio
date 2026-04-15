@@ -7,7 +7,7 @@ type FooterLink = {
 };
 
 function pickFooterLinks(all: FooterLink[]): FooterLink[] {
-  const preferred = new Set(["github", "linkedin", "website", "email"]);
+  const preferred = new Set(["github", "linkedin", "email"]);
   const picked = all.filter((c) => preferred.has(c.id));
   return picked.length > 0 ? picked : all.slice(0, 3);
 }

@@ -148,22 +148,35 @@ export default function Projects() {
           </div>
 
           {/* Category filter buttons */}
-          <div className="flex flex-wrap justify-center mt-6">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`cursor-pointer text-sm font-medium border rounded-lg m-1 px-4 py-2 transition-all duration-300 ${
-                  selectedCategory === category
-                    ? "bg-primary-container text-on-surface border-primary-container"
-                    : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
-                }`}
-                aria-label={`Filter projects by ${category}`}
-                aria-current={selectedCategory === category ? "true" : "false"}
-              >
-                {category}
-              </button>
-            ))}
+          <div className="mt-8 mb-8 flex flex-col items-center">
+            <p className="text-sm font-semibold text-on-surface-variant mb-3 text-center">
+              Filter by category
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`cursor-pointer text-sm font-medium rounded-lg px-5 py-2.5 transition-all duration-300 border ${
+                    selectedCategory === category
+                      ? "bg-primary-container text-on-surface border-primary-container shadow-md"
+                      : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
+                  }`}
+                  aria-label={`Filter projects by ${category}`}
+                  aria-current={selectedCategory === category ? "true" : "false"}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative flex py-4 items-center group">
+            <div className="flex-grow border-t border-outline-variant/30"></div>
+            <span className="text-sm font-medium flex-shrink mx-4 text-on-surface-variant">
+              {selectedCategory === "All" ? "All projects" : selectedCategory}
+            </span>
+            <div className="flex-grow border-t border-outline-variant/30"></div>
           </div>
 
           {/* Display filtered projects - grid */}

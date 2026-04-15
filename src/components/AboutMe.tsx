@@ -29,9 +29,8 @@ export default function AboutMe() {
           </h1>
 
           <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed max-w-2xl">
-            Hi! I'm Kinlo - a full-stack developer with an AI/ML focus, a BSc in
-            Computer Science and a Data Science minor. I have built end-to-end
-            projects, and I bring hands-on experience
+            Hi! I'm Kinlo - A full-stack developer with an AI/ML focus, I have a BSc in
+            Computer Science and a Data Science minor and specialization in AI/ML, I also have experience
             in program and project management.
           </p>
 
@@ -42,13 +41,13 @@ export default function AboutMe() {
               rel="noopener noreferrer"
               className="bg-primary text-on-primary px-7 py-3.5 rounded-lg font-bold text-xs uppercase tracking-widest hover:bg-primary/85 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
-              Download Resume
+              View Resume
             </a>
             <a
               href="#contact"
               className="font-label text-primary text-sm font-semibold tracking-wider hover:translate-x-1 transition-transform inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
             >
-              Get in touch
+              Connect
               <span className="material-symbols-outlined text-sm" aria-hidden="true">
                 arrow_forward
               </span>

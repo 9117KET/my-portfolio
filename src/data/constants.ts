@@ -146,12 +146,7 @@ export const contacts = [
     link: "https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/",
     target: "_blank",
   },
-  {
-    id: "website",
-    name: "Website",
-    link: "https://kinloephraim.com",
-    target: "_blank",
-  },
+
   { id: "x", name: "X", link: "https://x.com/KinloEphriam", target: "_blank" },
   {
     id: "email",
