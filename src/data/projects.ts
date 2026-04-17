@@ -4,18 +4,19 @@ import { Project } from "../types/project";
 export const projects: Project[] = [
   {
     id: "infrarader-ai",
-    name: "IR-AI / InfraRaderAI",
+    name: "IR-AI / InfraRadar",
     description:
-      "Business intelligence platform with Neo4j graph database, LangChain and LangGraph for agentic workflows.",
+      "Full-stack SaaS tracking infrastructure projects across 14 regions. Built 30+ Deno Edge Functions for AI research agents, Stripe billing, and automated data ingestion from World Bank and AfDB feeds.",
     github: "https://github.com/9117KET",
     features: [
-      "Neo4j graph database for connected data and knowledge graphs",
-      "LangChain and LangGraph for agentic AI workflows",
-      "Business intelligence and structured reasoning over graph data",
-      "Enterprise-ready architecture for scalable analytics",
+      "Tracks infrastructure projects across 14 regions with real-time data ingestion",
+      "30+ Deno Edge Functions powering AI research agents and automated pipelines",
+      "Stripe billing integration for subscription management",
+      "Automated data ingestion from World Bank and AfDB feeds",
+      "LangGraph agentic workflows for structured reasoning over graph data",
     ],
-    technologies: ["Business Intelligence", "LangChain", "LangGraph", "Neo4j"],
-    demo: "https://github.com/9117KET",
+    technologies: ["React 18", "Supabase", "OpenAI", "LangGraph", "Stripe"],
+    demo: "https://infradar-ai.vercel.app/",
     category: "AI/ML",
     year: 2026,
     status: "In progress",
@@ -55,7 +56,7 @@ export const projects: Project[] = [
     name: "AWS Bedrock Knowledge Base",
     description:
       "End-to-end RAG assistant using Terraform, Amazon Bedrock, and Claude 3 for company internal document Q&A. Production-ready document query platform with semantic search over organizational knowledge.",
-    github: "https://github.com/9117KET",
+    github: "https://github.com/9117KET/RAG_document_Query_bedrock",
     features: [
       "RAG pipeline with Bedrock Knowledge Base and Claude 3",
       "Terraform-managed infrastructure (Aurora Serverless, S3, Bedrock)",

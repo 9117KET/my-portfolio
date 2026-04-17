@@ -5,12 +5,12 @@ export const experience = [
     role: "Full-Stack Engineering Intern",
     company: "ABiQ",
     location: "Remote, Dubai",
-    duration: "July 2025 - October 2025",
+    duration: "July 2025 - September 2025",
     category: "Software Development",
     responsibilities: [
-      "Designed AI-integration concept for backend workflows.",
-      "Analyzed Salesforce CMS and led IT documentation development.",
-      "Led the creation of comprehensive IT documentation to streamline onboarding and internal operations.",
+      "Integrated AI features into ABiQ's custom CMS backend.",
+      "Documented internal systems and operational data to streamline onboarding and internal operations.",
+      "Improved prompts used in research workflows.",
     ],
     companyDescription:
       "ABiQ is a leading business intelligence platform tracking large-scale infrastructure, energy, transport, and industrial projects across Africa and the Middle East.",
@@ -20,7 +20,7 @@ export const experience = [
     role: "Software Engineering Intern",
     company: "WaziUp e.V.",
     location: "Dresden, Germany",
-    duration: "June 2024 - November 2024",
+    duration: "June 2024 - September 2024",
     category: "Software Development",
     responsibilities: [
       "Built recommendation framework for IoT courses.",
@@ -82,18 +82,32 @@ export const experience = [
   },
   {
     id: "exp8",
-    role: "Program Manager",
-    company: "Palaver Ventures, Palaver Institute",
+    role: "Research Associate",
+    company: "Palaver Ventures",
     location: "Remote (Kigali, Rwanda HQ)",
-    duration: "2026 - Present",
+    duration: "February 2026 - Present",
     category: "Management & Others",
     responsibilities: [
-      "Architect strategy for Palaver Ventures, the for-profit arm that translates Palaver research into products and services competing globally.",
-      "Plan and design strategies across six venture areas: Hardware Lab, Energies, AI, Social Media, Health, and Education.",
+      "Researching how institutions turn research into startups, covering regulation, IP commercialisation, and comparable models.",
+      "Presenting findings in weekly updates to the team.",
       "Support the translation of pan-African research into tangible solutions for African and global challenges.",
-      "Report to CEO/COO and help shape the founding blueprint for Palaver Ventures operations.",
     ],
     companyDescription:
       "Palaver Institute is a pan-African research institution headquartered in Kigali, Rwanda, with hubs in Cameroon, Ghana, South Africa, and Morocco. It builds intellectual infrastructure so African researchers can produce world-class work. Palaver Ventures is its for-profit arm, turning research into real-world solutions across hardware, energy, AI, health, education, and social platforms.",
+  },
+  {
+    id: "exp9",
+    role: "Founding Team Member",
+    company: "Constructor Start",
+    location: "Bremen, Germany",
+    duration: "November 2023 - April 2024",
+    category: "Management & Others",
+    responsibilities: [
+      "Part of the founding team that launched the university entrepreneurship center.",
+      "Helped secure €25,000+ in initial funding.",
+      "Supported an incubator later linked to €100,000+ in startup funding.",
+    ],
+    companyDescription:
+      "Constructor Start is the entrepreneurship center at Constructor University Bremen, supporting student founders through incubation, mentorship, and access to funding.",
   },
 ];

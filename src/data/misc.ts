@@ -81,7 +81,7 @@ export const awards = [
     title: "Top 50 Global Student Prize",
     description:
       "Selected as a top 50 finalist from 3851 applicants across 122 countries.",
-    date: "2023",
+    date: "2024",
     category: "Global",
     link: "https://globalteacherprize.org/news/global-student-prize-finalists/2023-finalists-global-student-prize/1012/1012-Kinlo-Ephriam-Tangiri",
   },
