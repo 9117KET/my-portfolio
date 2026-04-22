@@ -5,7 +5,7 @@ import {
   skills,
   skillCategories,
 } from "../utils/constants";
-import profileImage from "../utils/images/28-removebg-preview.png";
+import profileImage from "../utils/images/photo.png";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 
