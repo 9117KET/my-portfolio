@@ -194,7 +194,7 @@ export const posts: Post[] = [
   },
   {
     id: "ontology-physics-tutor",
-    title: "Can We Stop AI Tutors From Lying? My Thesis on Ontology-Enhanced LLMs",
+    title: "My Thesis on Ontology-Enhanced LLMs",
     date: "May 20, 2026",
     category: "Project Breakdown",
     description:
