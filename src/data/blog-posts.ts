@@ -192,4 +192,14 @@ export const posts: Post[] = [
     content: "Neo4jGenAIWorkshop",
     type: "Blog",
   },
+  {
+    id: "ontology-physics-tutor",
+    title: "Can We Stop AI Tutors From Lying? My Thesis on Ontology-Enhanced LLMs",
+    date: "May 20, 2026",
+    category: "Project Breakdown",
+    description:
+      "I built an AI physics tutor that grounds Claude in a formal OWL ontology of Newtonian mechanics and measured whether it reduces hallucinations. The result was a 75% drop in hallucination rate - with a surprising accuracy trade-off that has implications for banking, automotive, healthcare, and any domain where AI explanation quality matters.",
+    content: "OntologyPhysicsTutor",
+    type: "Blog",
+  },
 ];

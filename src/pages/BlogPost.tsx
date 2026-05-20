@@ -31,6 +31,9 @@ const IoTRecommendationFramework = lazy(
 const Neo4jGenAIWorkshop = lazy(
   () => import("../articles/Neo4jGenAIWorkshop")
 );
+const OntologyPhysicsTutor = lazy(
+  () => import("../articles/OntologyPhysicsTutor")
+);
 
 // Loading fallback for articles
 const ArticleLoader = () => (
@@ -104,6 +107,8 @@ export default function BlogPost({
           return <IoTRecommendationFramework />;
         case "Neo4jGenAIWorkshop":
           return <Neo4jGenAIWorkshop />;
+        case "OntologyPhysicsTutor":
+          return <OntologyPhysicsTutor />;
         default:
           return <p>No content found</p>;
       }

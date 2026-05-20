@@ -3,6 +3,36 @@ import { Project } from "../types/project";
 // Project details for the portfolio (resume-aligned; key projects with dates)
 export const projects: Project[] = [
   {
+    id: "ai-physics-tutor",
+    name: "Ontology-Enhanced AI Physics Tutor",
+    description:
+      "Bachelor thesis project: a web-based AI physics tutor that grounds Claude 3 Opus in a formal OWL ontology of Newtonian mechanics to reduce hallucinations. Achieved a 75% reduction in hallucination rate (26.7% to 6.7%, Cohen's d = 0.53) measured against the Force Concept Inventory, with a stateless JWT session model and serverless deployment on Vercel.",
+    github: "https://github.com/9117KET/ai-avatar-ontology-integration-poc",
+    features: [
+      "OWL/RDF ontology of Newtonian mechanics with 30+ concept nodes, prerequisites, formulae, and misconception flags",
+      "Four-level context extraction pipeline that retrieves structured ontology facts per student question before every API call",
+      "Adaptive student model tracking concept exposure, understanding level, and identified misconceptions per session",
+      "Anti-hallucination grounding via Claude system prompt - instructions in the system parameter rather than user turn for privilege isolation",
+      "Empirical evaluation using the Force Concept Inventory (FCI) with Cohen's d effect size and paired t-test",
+      "Stateless JWT rate limiting for serverless Vercel deployment with alphanumeric input validation and CSP headers",
+    ],
+    technologies: [
+      "Python",
+      "Flask",
+      "Claude 3 Opus",
+      "OWL/RDF",
+      "Owlready2",
+      "pandas",
+      "scipy",
+      "JWT",
+      "Vercel",
+    ],
+    demo: "https://ai-avatar-ontology-integration-poc.vercel.app/",
+    category: "AI/ML",
+    year: 2025,
+    status: "Completed",
+  },
+  {
     id: "infrarader-ai",
     name: "IR-AI / InfraRadar",
     description:
