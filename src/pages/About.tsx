@@ -15,7 +15,7 @@ export default function About() {
         </title>
         <meta
           name="description"
-          content="Kinlo Ephriam Tangiri, Bremen. BSc in Computer Science, Data Science minor, AI/ML specialization. Thesis on reducing hallucination in LLM applications."
+          content="Kinlo Ephriam Tangiri, Bremen. Full-stack developer focused on AI applications. BSc Computer Science, AI/ML specialization, thesis on LLM hallucination."
         />
         <meta
           name="keywords"
@@ -27,7 +27,7 @@ export default function About() {
         />
         <meta
           property="og:description"
-          content="BSc in Computer Science with a Data Science minor, specialized in AI/ML. Thesis on reducing hallucination in LLM applications, plus program and project management experience."
+          content="Full-stack developer focused on AI applications. BSc in Computer Science with a Data Science minor and an AI/ML specialization, plus program and project management experience."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl()} />
@@ -38,7 +38,7 @@ export default function About() {
         />
         <meta
           name="twitter:description"
-          content="BSc in Computer Science with a Data Science minor, specialized in AI/ML. Thesis on reducing hallucination in LLM applications, plus program and project management experience."
+          content="Full-stack developer focused on AI applications. BSc in Computer Science with a Data Science minor and an AI/ML specialization, plus program and project management experience."
         />
       </Helmet>
       <PageShell>
