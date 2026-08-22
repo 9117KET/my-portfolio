@@ -1,6 +1,6 @@
 export default function AIHumanDev() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -18,7 +18,7 @@ export default function AIHumanDev() {
 
       {/* The AI Dependency Trap */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The AI Dependency Trap in Software Development
         </h2>
         <p className="mb-4">
@@ -41,7 +41,7 @@ export default function AIHumanDev() {
 
       {/* Understanding the Risks */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Critical Risks of Over-Reliance
         </h2>
         <div className="pl-6">
@@ -79,7 +79,7 @@ export default function AIHumanDev() {
 
       {/* The Human Edge */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Irreplaceable Human Edge
         </h2>
         <p className="mb-4">
@@ -112,7 +112,7 @@ export default function AIHumanDev() {
 
       {/* Effective Integration */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Balanced Approach: Effective AI Integration
         </h2>
         <div className="space-y-4">
@@ -148,7 +148,7 @@ export default function AIHumanDev() {
 
       {/* Best Practices */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Best Practices for AI-Assisted Development
         </h2>
         <div className="space-y-4">
@@ -181,7 +181,7 @@ export default function AIHumanDev() {
 
       {/* Further Learning */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Additional Learning Resources
         </h2>
         <div className="space-y-4">
@@ -193,7 +193,7 @@ export default function AIHumanDev() {
             <li>
               <a
                 href="https://www.youtube.com/watch?v=7EmboKQH8lM"
-                className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+                className="text-primary hover:text-on-surface transition-colors"
               >
                 Clean Code: A Handbook of Agile Software Craftsmanship
               </a>{" "}
@@ -202,7 +202,7 @@ export default function AIHumanDev() {
             <li>
               <a
                 href="https://www.youtube.com/watch?v=2qYll837a_0"
-                className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+                className="text-primary hover:text-on-surface transition-colors"
               >
                 The Pragmatic Programmer
               </a>{" "}
@@ -211,7 +211,7 @@ export default function AIHumanDev() {
             <li>
               <a
                 href="https://www.youtube.com/watch?v=azcrPFhaY9k"
-                className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+                className="text-primary hover:text-on-surface transition-colors"
               >
                 Think Like a Programmer
               </a>{" "}
@@ -223,7 +223,7 @@ export default function AIHumanDev() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p className="mb-4">

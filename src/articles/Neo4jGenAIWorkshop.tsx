@@ -6,10 +6,10 @@
 
 export default function Neo4jGenAIWorkshop() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Overview & links */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Overview
         </h2>
         <p className="mb-4">
@@ -18,8 +18,8 @@ export default function Neo4jGenAIWorkshop() {
           focuses on concepts and practices that matter for building
           production-ready, graph-powered RAG and AI applications.
         </p>
-        <div className="rounded-lg border border-gray-300 dark:border-gray-600 p-4 bg-gray-50 dark:bg-gray-800/50 mb-4">
-          <h3 className="text-lg font-semibold mb-2 dark:text-gray-200">
+        <div className="rounded-lg border border-outline-variant/40 p-4 bg-surface-container-low mb-4">
+          <h3 className="text-lg font-semibold mb-2 text-on-surface">
             Official resources
           </h3>
           <ul className="list-disc pl-6 space-y-1 text-sm">
@@ -28,7 +28,7 @@ export default function Neo4jGenAIWorkshop() {
                 href="https://dev.neo4j.com/workshop-genai-notes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 underline"
+                className="text-primary underline"
               >
                 Workshop notes (dev.neo4j.com/workshop-genai-notes)
               </a>{" "}
@@ -39,7 +39,7 @@ export default function Neo4jGenAIWorkshop() {
                 href="https://graphacademy.neo4j.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 underline"
+                className="text-primary underline"
               >
                 Graph Academy (graphacademy.neo4j.com)
               </a>{" "}
@@ -50,7 +50,7 @@ export default function Neo4jGenAIWorkshop() {
                 href="https://graphacademy.neo4j.com/courses/workshop-genai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 underline"
+                className="text-primary underline"
               >
                 Workshop course (Graph RAG, Knowledge Graphs & Retrieval)
               </a>
@@ -61,7 +61,7 @@ export default function Neo4jGenAIWorkshop() {
                 href="https://github.com/neo4j/graphrag-python"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 underline"
+                className="text-primary underline"
               >
                 Neo4j Graph RAG for Python
               </a>{" "}
@@ -77,7 +77,7 @@ export default function Neo4jGenAIWorkshop() {
 
       {/* What is Gen AI */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           What is Generative AI (in this context)
         </h2>
         <p className="mb-4">
@@ -91,7 +91,7 @@ export default function Neo4jGenAIWorkshop() {
 
       {/* RAG and Graph RAG */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           RAG and Graph RAG
         </h2>
         <p className="mb-4">
@@ -100,7 +100,7 @@ export default function Neo4jGenAIWorkshop() {
           APIs, or a graph). The LLM receives the question plus this context and
           produces a better, grounded answer.
         </p>
-        <pre className="mb-4 p-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm overflow-x-auto border border-gray-300 dark:border-gray-600">
+        <pre className="mb-4 p-4 rounded-lg bg-surface-container text-sm overflow-x-auto border border-outline-variant/40">
 {`  User question
        │
        ▼
@@ -118,7 +118,7 @@ export default function Neo4jGenAIWorkshop() {
           better accuracy, explainability, and support for flexible, relationship-based
           queries.
         </p>
-        <pre className="mb-4 p-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm overflow-x-auto border border-gray-300 dark:border-gray-600">
+        <pre className="mb-4 p-4 rounded-lg bg-surface-container text-sm overflow-x-auto border border-outline-variant/40">
 {`  User question
        │
        ▼
@@ -137,7 +137,7 @@ export default function Neo4jGenAIWorkshop() {
 
       {/* Knowledge graph construction */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Knowledge graph construction
         </h2>
         <p className="mb-4">
@@ -147,7 +147,7 @@ export default function Neo4jGenAIWorkshop() {
           relationships into the graph. The Neo4j Graph RAG Python package
           provides a &quot;Simple KG pipeline&quot; that does this.
         </p>
-        <pre className="mb-4 p-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-sm overflow-x-auto border border-gray-300 dark:border-gray-600">
+        <pre className="mb-4 p-4 rounded-lg bg-surface-container text-sm overflow-x-auto border border-outline-variant/40">
 {`  Unstructured text
        │
        ▼
@@ -178,7 +178,7 @@ export default function Neo4jGenAIWorkshop() {
 
       {/* Retrieval: vector, vector+Cypher, text-to-Cypher */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Retrieval in practice
         </h2>
         <p className="mb-4">
@@ -207,7 +207,7 @@ export default function Neo4jGenAIWorkshop() {
 
       {/* Key takeaways */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Key takeaways for industry use
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -239,7 +239,7 @@ export default function Neo4jGenAIWorkshop() {
 
       {/* Links */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Links
         </h2>
         <ul className="list-disc pl-6 space-y-1">
@@ -248,7 +248,7 @@ export default function Neo4jGenAIWorkshop() {
               href="https://dev.neo4j.com/workshop-genai-notes"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 underline"
+              className="text-primary underline"
             >
               Workshop notes
             </a>
@@ -258,7 +258,7 @@ export default function Neo4jGenAIWorkshop() {
               href="https://graphacademy.neo4j.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 underline"
+              className="text-primary underline"
             >
               Graph Academy
             </a>
@@ -268,7 +268,7 @@ export default function Neo4jGenAIWorkshop() {
               href="https://graphacademy.neo4j.com/courses/workshop-genai/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 underline"
+              className="text-primary underline"
             >
               Neo4j Generative AI Workshop course
             </a>
@@ -278,7 +278,7 @@ export default function Neo4jGenAIWorkshop() {
               href="https://github.com/neo4j/graphrag-python"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 underline"
+              className="text-primary underline"
             >
               Neo4j Graph RAG for Python
             </a>

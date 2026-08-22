@@ -1,6 +1,6 @@
 export default function AIEthics() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -15,7 +15,7 @@ export default function AIEthics() {
 
       {/* Bias in AI Systems */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           1. Bias in AI Systems: Real-World Impact
         </h2>
         <div className="mb-6">
@@ -53,7 +53,7 @@ export default function AIEthics() {
 
       {/* Transparency and Accountability */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           2. Transparency and Accountability
         </h2>
         <div className="mb-6">
@@ -91,7 +91,7 @@ export default function AIEthics() {
 
       {/* Privacy Concerns */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           3. Privacy and Data Protection
         </h2>
         <div className="mb-6">
@@ -128,7 +128,7 @@ export default function AIEthics() {
 
       {/* Future Considerations */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           4. Looking Forward: Responsible AI Development
         </h2>
         <p className="mb-4">
@@ -162,7 +162,7 @@ export default function AIEthics() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p>

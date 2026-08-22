@@ -1,6 +1,6 @@
 export default function AIAfrica() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <p className="mb-6">
         The fields of Artificial Intelligence (AI), Big Data, and the Internet
@@ -11,7 +11,7 @@ export default function AIAfrica() {
 
       {/* Historical Context */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Historical infographic of AI, IoT and Big Data developments
         </h2>
         <p>
@@ -25,7 +25,7 @@ export default function AIAfrica() {
 
       {/* Motivation */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           My motivation for writing this article
         </h2>
         <p>
@@ -41,7 +41,7 @@ export default function AIAfrica() {
 
       {/* Definitions */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Definition of concepts
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -64,7 +64,7 @@ export default function AIAfrica() {
 
       {/* Kigali Focus */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Kigali as the main point of focus
         </h2>
         <p>
@@ -82,7 +82,7 @@ export default function AIAfrica() {
 
       {/* Potential */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Potential of IoT, AI and Big Data in Rwanda (Africa)
         </h2>
         <p>
@@ -100,7 +100,7 @@ export default function AIAfrica() {
 
       {/* Challenges */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Challenges of Integrating AI, IoT, and Big Data in Africa
         </h2>
         <p>
@@ -117,7 +117,7 @@ export default function AIAfrica() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p>
@@ -126,7 +126,7 @@ export default function AIAfrica() {
           African continent. Stakeholders, VCs, and investors are encouraged to
           invest in the future through Africa.
         </p>
-        <blockquote className="border-l-4 border-blue-500 pl-4 my-4 italic">
+        <blockquote className="border-l-4 border-primary pl-4 my-4 italic">
           "Africa's boundless potential is the world's untapped opportunity,"
           #Kinlo Ephriam Tangiri
         </blockquote>
@@ -134,7 +134,7 @@ export default function AIAfrica() {
 
       {/* References */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           References
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -148,7 +148,7 @@ export default function AIAfrica() {
           <li>Investment Monitor: AI and Automation in Africa</li>
           <li>Minecofin: Kigali Innovation City Funding</li>
         </ul>
-        <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+        <p className="mt-4 text-sm text-on-surface-variant">
           Credits: Some of the images generated on this post used Dalle
         </p>
       </section>

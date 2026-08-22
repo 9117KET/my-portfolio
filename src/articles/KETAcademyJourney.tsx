@@ -1,9 +1,9 @@
 export default function KETAcademyJourney() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Motivation */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Project Motivation
         </h2>
         <p>
@@ -17,7 +17,7 @@ export default function KETAcademyJourney() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Initial Prototype
         </h2>
         <p>
@@ -34,7 +34,7 @@ export default function KETAcademyJourney() {
 
       {/* Architecture */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Technical Architecture
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -56,7 +56,7 @@ export default function KETAcademyJourney() {
 
       {/* Development Process */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Development Process
         </h2>
         <ol className="list-decimal pl-6 space-y-2">
@@ -70,7 +70,7 @@ export default function KETAcademyJourney() {
 
       {/* Project Breakdown */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Project Breakdown
         </h2>
         <div className="space-y-4">
@@ -140,7 +140,7 @@ export default function KETAcademyJourney() {
 
       {/* Challenges and Solutions */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Challenges and Solutions
         </h2>
         {/* Add content about specific challenges and how they were overcome */}
@@ -148,7 +148,7 @@ export default function KETAcademyJourney() {
 
       {/* Impact and Metrics */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Impact and Results
         </h2>
         {/* Add content about the project's impact */}
@@ -156,7 +156,7 @@ export default function KETAcademyJourney() {
 
       {/* Project Architecture Image */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Project Architecture Image
         </h2>
         <img
@@ -172,7 +172,7 @@ export default function KETAcademyJourney() {
 
       {/* Future Plans and Roadmap */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Future Plans and Roadmap
         </h2>
         <ul className="list-disc pl-6 space-y-2">

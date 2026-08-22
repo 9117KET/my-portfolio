@@ -5,10 +5,10 @@
 
 export default function IoTRecommendationFramework() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Introduction
         </h2>
         <p className="mb-6">
@@ -30,7 +30,7 @@ export default function IoTRecommendationFramework() {
 
       {/* The Problem */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Problem
         </h2>
         <p className="mb-4">
@@ -62,7 +62,7 @@ export default function IoTRecommendationFramework() {
 
       {/* The Solution */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Solution: Multipurpose Recommendation Framework
         </h2>
         <p className="mb-4">
@@ -117,7 +117,7 @@ export default function IoTRecommendationFramework() {
 
       {/* Technology Stack */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Technology Stack
         </h2>
         <p className="mb-4">
@@ -141,7 +141,7 @@ export default function IoTRecommendationFramework() {
 
       {/* Implementation Details */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Implementation Details
         </h2>
 
@@ -176,7 +176,7 @@ export default function IoTRecommendationFramework() {
 
       {/* Challenges & Solutions */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Challenges & Solutions
         </h2>
 
@@ -233,7 +233,7 @@ export default function IoTRecommendationFramework() {
 
       {/* Key Learnings */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Key Learnings
         </h2>
         <p className="mb-4">This project provided valuable insights into:</p>
@@ -259,7 +259,7 @@ export default function IoTRecommendationFramework() {
 
       {/* Future Improvements */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Future Improvements
         </h2>
         <p className="mb-4">
@@ -291,7 +291,7 @@ export default function IoTRecommendationFramework() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p className="mb-4">

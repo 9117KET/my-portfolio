@@ -7,7 +7,7 @@
  */
 export default function RateProfessorLegal() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Main Article Content */}
       <article className="space-y-6">
         <p className="text-xl font-semibold mb-6">
@@ -84,9 +84,9 @@ export default function RateProfessorLegal() {
         </p>
 
         <div className="mt-4 font-mono text-sm">
-          <span className="text-blue-600">#Kinlo</span>{" "}
-          <span className="text-blue-600">#KET</span>{" "}
-          <span className="text-blue-600">#AI</span>
+          <span className="text-primary">#Kinlo</span>{" "}
+          <span className="text-primary">#KET</span>{" "}
+          <span className="text-primary">#AI</span>
         </div>
       </article>
     </div>

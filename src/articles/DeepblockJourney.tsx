@@ -1,9 +1,9 @@
 export default function DeepblockJourney() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Motivation and Origin Story */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Why I Built Deepblock
         </h2>
         <p className="mb-4">
@@ -25,7 +25,7 @@ export default function DeepblockJourney() {
 
       {/* Four-Block Day Model */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Four-Block Day Model
         </h2>
         <p className="mb-4">
@@ -67,7 +67,7 @@ export default function DeepblockJourney() {
 
       {/* Friction with Existing Tools */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           When Generic Tools Weren&apos;t Enough
         </h2>
         <p className="mb-4">
@@ -96,7 +96,7 @@ export default function DeepblockJourney() {
 
       {/* From User to Builder */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           From User of Tools to Builder of Tools
         </h2>
         <p className="mb-4">
@@ -119,7 +119,7 @@ export default function DeepblockJourney() {
 
       {/* Designing the Daily Planner */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Designing Days Around Deep Work
         </h2>
         <p className="mb-4">
@@ -128,7 +128,7 @@ export default function DeepblockJourney() {
             href="https://ket-deepwork.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-400 underline"
+            className="text-primary underline"
           >
             the live Deepblock app
           </a>
@@ -152,7 +152,7 @@ export default function DeepblockJourney() {
 
       {/* Reducing Planning Overhead */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Planning Once, Reusing Often
         </h2>
         <p className="mb-4">
@@ -188,7 +188,7 @@ export default function DeepblockJourney() {
 
       {/* Time-Blocked Tasks and Focus */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Time-Blocked Tasks and Gentle Focus
         </h2>
         <p className="mb-4">
@@ -216,7 +216,7 @@ export default function DeepblockJourney() {
 
       {/* Weekly Overview and Deep-Work Timer */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Weekly Overview and Deep-Work Timer
         </h2>
         <p className="mb-4">
@@ -245,7 +245,7 @@ export default function DeepblockJourney() {
 
       {/* Why Open Source */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Why I Open-Sourced Deepblock
         </h2>
         <p className="mb-4">
@@ -254,7 +254,7 @@ export default function DeepblockJourney() {
             href="https://github.com/9117KET/ket_deepwork"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-400 underline"
+            className="text-primary underline"
           >
             github.com/9117KET/ket_deepwork
           </a>
@@ -287,7 +287,7 @@ export default function DeepblockJourney() {
 
       {/* What Deepblock Means to Me */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           What Deepblock Means to Me
         </h2>
         <p className="mb-4">

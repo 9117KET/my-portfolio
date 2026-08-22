@@ -1,6 +1,6 @@
 export default function OntologyPhysicsTutor() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Opening */}
       <section className="mb-8">
         <p className="mb-4">
@@ -23,7 +23,7 @@ export default function OntologyPhysicsTutor() {
 
       {/* The Problem */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Problem: Fluency Is Not the Same as Correctness
         </h2>
         <p className="mb-4">
@@ -76,7 +76,7 @@ export default function OntologyPhysicsTutor() {
 
       {/* What Is an Ontology */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           What Is an Ontology (and Why It Matters Here)
         </h2>
         <p className="mb-4">
@@ -123,7 +123,7 @@ export default function OntologyPhysicsTutor() {
 
       {/* What I Built */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           What I Built
         </h2>
 
@@ -154,16 +154,16 @@ export default function OntologyPhysicsTutor() {
           </li>
         </ul>
 
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 font-mono text-sm">
-          <div className="text-gray-500 dark:text-gray-400 mb-2">Pipeline overview</div>
+        <div className="bg-surface-container p-4 rounded-lg mb-6 font-mono text-sm">
+          <div className="text-on-surface-variant mb-2">Pipeline overview</div>
           <div>Student Question</div>
-          <div className="pl-4 text-blue-600 dark:text-blue-400">↓</div>
+          <div className="pl-4 text-primary">↓</div>
           <div>Ontology Context Extraction (OWL / Owlready2)</div>
-          <div className="pl-4 text-blue-600 dark:text-blue-400">↓</div>
+          <div className="pl-4 text-primary">↓</div>
           <div>Student Model Adaptation (concept tracking)</div>
-          <div className="pl-4 text-blue-600 dark:text-blue-400">↓</div>
+          <div className="pl-4 text-primary">↓</div>
           <div>Claude API   system= grounded context + anti-hallucination rules</div>
-          <div className="pl-4 text-blue-600 dark:text-blue-400">↓</div>
+          <div className="pl-4 text-primary">↓</div>
           <div>Grounded Response</div>
         </div>
 
@@ -192,8 +192,8 @@ export default function OntologyPhysicsTutor() {
             token against ontology node names
           </li>
         </ol>
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-6 overflow-x-auto">
-          <pre className="font-mono text-sm text-gray-800 dark:text-gray-200">{`# Simplified context extraction
+        <div className="bg-surface-container p-4 rounded-lg mb-6 overflow-x-auto">
+          <pre className="font-mono text-sm text-on-surface">{`# Simplified context extraction
 def _get_relevant_context(self, question: str):
     context = []
     law_mappings = {
@@ -219,8 +219,8 @@ def _get_relevant_context(self, question: str):
           API call the ontology context and anti-hallucination instructions
           live. The original version embedded them in the user-turn message:
         </p>
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 overflow-x-auto">
-          <pre className="font-mono text-sm text-gray-800 dark:text-gray-200">{`# Original: instructions in the user turn (vulnerable)
+        <div className="bg-surface-container p-4 rounded-lg mb-4 overflow-x-auto">
+          <pre className="font-mono text-sm text-on-surface">{`# Original: instructions in the user turn (vulnerable)
 enhanced_prompt = (
     f"{system_prompt}\\n\\nCONTEXT:\\n{context}\\n\\nQUESTION: {question}"
 )
@@ -235,8 +235,8 @@ response = client.messages.create(
           them stronger grounding in Claude&apos;s training and makes them
           significantly harder to override via user input:
         </p>
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 overflow-x-auto">
-          <pre className="font-mono text-sm text-gray-800 dark:text-gray-200">{`# Fixed: anti-hallucination instructions in the system parameter
+        <div className="bg-surface-container p-4 rounded-lg mb-4 overflow-x-auto">
+          <pre className="font-mono text-sm text-on-surface">{`# Fixed: anti-hallucination instructions in the system parameter
 response = client.messages.create(
     system=system_prompt_with_ontology_context,
     messages=[{"role": "user", "content": question}]
@@ -281,7 +281,7 @@ response = client.messages.create(
 
       {/* The Experiment */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Experiment
         </h2>
 
@@ -292,7 +292,7 @@ response = client.messages.create(
           understanding of Newtonian mechanics. Each question targets a known
           student misconception. For example:
         </p>
-        <div className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-4 rounded-lg mb-4">
+        <div className="bg-surface-container-low border border-outline-variant/30 p-4 rounded-lg mb-4">
           <p className="italic mb-3">
             &quot;Two metal balls are the same size but one weighs twice as much
             as the other. The balls are dropped from the roof of a single story
@@ -332,74 +332,74 @@ response = client.messages.create(
 
       {/* Results */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Results - and an Honest Trade-off
         </h2>
 
         <div className="overflow-x-auto mb-6">
           <table className="w-full border-collapse text-sm">
             <thead>
-              <tr className="bg-blue-50 dark:bg-blue-900/30">
-                <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold">
+              <tr className="bg-primary/10">
+                <th className="border border-outline-variant/40 px-4 py-2 text-left font-semibold">
                   Metric
                 </th>
-                <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold">
+                <th className="border border-outline-variant/40 px-4 py-2 text-left font-semibold">
                   Baseline (no ontology)
                 </th>
-                <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold">
+                <th className="border border-outline-variant/40 px-4 py-2 text-left font-semibold">
                   Ontology-Enhanced
                 </th>
-                <th className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left font-semibold">
+                <th className="border border-outline-variant/40 px-4 py-2 text-left font-semibold">
                   Change
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
+                <td className="border border-outline-variant/40 px-4 py-2">
                   Hallucination rate
                 </td>
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
+                <td className="border border-outline-variant/40 px-4 py-2">
                   26.7%
                 </td>
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 font-semibold">
+                <td className="border border-outline-variant/40 px-4 py-2 font-semibold">
                   6.7%
                 </td>
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-green-600 dark:text-green-400">
+                <td className="border border-outline-variant/40 px-4 py-2 text-primary">
                   -75%
                 </td>
               </tr>
-              <tr className="bg-gray-50 dark:bg-gray-800/50">
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
+              <tr className="bg-surface-container-low">
+                <td className="border border-outline-variant/40 px-4 py-2">
                   Answer accuracy
                 </td>
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 font-semibold">
+                <td className="border border-outline-variant/40 px-4 py-2 font-semibold">
                   86.7%
                 </td>
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
+                <td className="border border-outline-variant/40 px-4 py-2">
                   46.7%
                 </td>
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2 text-red-600 dark:text-red-400">
+                <td className="border border-outline-variant/40 px-4 py-2 text-error">
                   -40pp
                 </td>
               </tr>
               <tr>
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
+                <td className="border border-outline-variant/40 px-4 py-2">
                   Effect size (Cohen&apos;s d)
                 </td>
                 <td
-                  className="border border-gray-300 dark:border-gray-600 px-4 py-2"
+                  className="border border-outline-variant/40 px-4 py-2"
                   colSpan={3}
                 >
                   0.53 (medium)
                 </td>
               </tr>
-              <tr className="bg-gray-50 dark:bg-gray-800/50">
-                <td className="border border-gray-300 dark:border-gray-600 px-4 py-2">
+              <tr className="bg-surface-container-low">
+                <td className="border border-outline-variant/40 px-4 py-2">
                   p-value
                 </td>
                 <td
-                  className="border border-gray-300 dark:border-gray-600 px-4 py-2"
+                  className="border border-outline-variant/40 px-4 py-2"
                   colSpan={3}
                 >
                   0.082 (not significant at &alpha; = 0.05)
@@ -452,10 +452,10 @@ response = client.messages.create(
 
       {/* The Key Insight */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Insight Worth Remembering
         </h2>
-        <p className="mb-4 text-lg font-medium border-l-4 border-blue-600 pl-4 italic">
+        <p className="mb-4 text-lg font-medium border-l-4 border-primary pl-4 italic">
           Ontological constraints make AI say truer things - but they also make
           it less sure of which thing is the right answer.
         </p>
@@ -479,7 +479,7 @@ response = client.messages.create(
 
       {/* Engineering Challenges */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Engineering Challenges and Bugs Worth Documenting
         </h2>
         <p className="mb-4">
@@ -496,8 +496,8 @@ response = client.messages.create(
           different things: the combined std includes between-group variance,
           which can inflate or deflate the effect size.
         </p>
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 overflow-x-auto">
-          <pre className="font-mono text-sm text-gray-800 dark:text-gray-200">{`# Wrong: combined-sample std includes between-group variance
+        <div className="bg-surface-container p-4 rounded-lg mb-4 overflow-x-auto">
+          <pre className="font-mono text-sm text-on-surface">{`# Wrong: combined-sample std includes between-group variance
 pooled_std = float(pd.concat([baseline, ontology]).std())
 
 # Correct: pooled within-group std (Cohen's d standard formula)
@@ -533,8 +533,8 @@ pooled_std = float(np.sqrt(
           academic environments (OneDrive paths, university-managed machines).
           Fixed with:
         </p>
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 overflow-x-auto">
-          <pre className="font-mono text-sm text-gray-800 dark:text-gray-200">{`import urllib.request
+        <div className="bg-surface-container p-4 rounded-lg mb-4 overflow-x-auto">
+          <pre className="font-mono text-sm text-on-surface">{`import urllib.request
 ontology_uri = (
     "file:///" +
     urllib.request.pathname2url(ontology_path).lstrip("/")
@@ -545,7 +545,7 @@ onto = get_ontology(ontology_uri).load()`}</pre>
 
       {/* Applications Beyond Education */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Applications Beyond the Classroom
         </h2>
         <p className="mb-4">
@@ -649,7 +649,7 @@ onto = get_ontology(ontology_uri).load()`}</pre>
 
       {/* What I'd Do Differently */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           What I&apos;d Do Differently
         </h2>
 
@@ -705,7 +705,7 @@ onto = get_ontology(ontology_uri).load()`}</pre>
 
       {/* Future Directions */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Future Directions
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -739,7 +739,7 @@ onto = get_ontology(ontology_uri).load()`}</pre>
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p className="mb-4">
@@ -775,7 +775,7 @@ onto = get_ontology(ontology_uri).load()`}</pre>
 
       {/* Project Details */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Project Details
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -804,7 +804,7 @@ onto = get_ontology(ontology_uri).load()`}</pre>
               href="https://ai-avatar-ontology-integration-poc.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 underline"
+              className="text-primary underline"
             >
               ai-avatar-ontology-integration-poc.vercel.app
             </a>
@@ -815,13 +815,13 @@ onto = get_ontology(ontology_uri).load()`}</pre>
               href="https://github.com/9117KET/ai-avatar-ontology-integration-poc"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 underline"
+              className="text-primary underline"
             >
               github.com/9117KET/ai-avatar-ontology-integration-poc
             </a>
           </li>
         </ul>
-        <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+        <p className="mt-4 text-sm text-on-surface-variant">
           This project was developed as a bachelor thesis at Constructor
           University Bremen, 2025.
         </p>

@@ -1,6 +1,6 @@
 export default function LLMUnderstanding() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -18,7 +18,7 @@ export default function LLMUnderstanding() {
 
       {/* What are LLMs? */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Understanding Large Language Models
         </h2>
         <p className="mb-4">
@@ -42,7 +42,7 @@ export default function LLMUnderstanding() {
 
       {/* Core Components */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Core Components of LLMs
         </h2>
         <div className="pl-6">
@@ -82,7 +82,7 @@ export default function LLMUnderstanding() {
 
       {/* Business Applications */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Transformative Business Applications
         </h2>
         <p className="mb-4">
@@ -117,7 +117,7 @@ export default function LLMUnderstanding() {
 
       {/* Technical Considerations */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Technical Considerations and Best Practices
         </h2>
         <div className="space-y-4">
@@ -157,7 +157,7 @@ export default function LLMUnderstanding() {
 
       {/* Future Outlook */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Future Outlook and Industry Impact
         </h2>
         <p className="mb-4">
@@ -188,7 +188,7 @@ export default function LLMUnderstanding() {
 
       {/* Further Reading Section */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Further Reading
         </h2>
         <div className="space-y-4">
@@ -200,7 +200,7 @@ export default function LLMUnderstanding() {
               <li>
                 <a
                   href="https://arxiv.org/abs/1706.03762"
-                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                  className="text-primary hover:text-on-surface transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -211,7 +211,7 @@ export default function LLMUnderstanding() {
               <li>
                 <a
                   href="https://huggingface.co/blog"
-                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                  className="text-primary hover:text-on-surface transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -222,7 +222,7 @@ export default function LLMUnderstanding() {
               <li>
                 <a
                   href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier"
-                  className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                  className="text-primary hover:text-on-surface transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -237,7 +237,7 @@ export default function LLMUnderstanding() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p>

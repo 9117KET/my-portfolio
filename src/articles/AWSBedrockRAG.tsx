@@ -1,6 +1,6 @@
 export default function AWSBedrockRAG() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -24,7 +24,7 @@ export default function AWSBedrockRAG() {
 
       {/* The Problem */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Problem
         </h2>
         <p className="mb-4">
@@ -60,7 +60,7 @@ export default function AWSBedrockRAG() {
 
       {/* The Solution */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           The Solution: RAG-Powered Document Query Platform
         </h2>
         <p className="mb-4">
@@ -104,7 +104,7 @@ export default function AWSBedrockRAG() {
 
       {/* Architecture Overview */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Architecture Overview
         </h2>
         <p className="mb-4">
@@ -117,7 +117,7 @@ export default function AWSBedrockRAG() {
           user interface layer, allowing users to access source documents and
           verify information directly.
         </p>
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4 font-mono text-sm">
+        <div className="bg-surface-container p-4 rounded-lg mb-4 font-mono text-sm">
           <div className="mb-2">
             ┌─────────────────────────────────────────────────────────────┐
           </div>
@@ -347,7 +347,7 @@ export default function AWSBedrockRAG() {
 
       {/* Technology Stack */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Technology Stack
         </h2>
 
@@ -486,7 +486,7 @@ export default function AWSBedrockRAG() {
 
       {/* Implementation Details */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Implementation Details
         </h2>
 
@@ -612,7 +612,7 @@ export default function AWSBedrockRAG() {
 
       {/* Key Features */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Key Features
         </h2>
 
@@ -763,7 +763,7 @@ export default function AWSBedrockRAG() {
 
       {/* Challenges & Solutions */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Challenges & Solutions
         </h2>
 
@@ -851,7 +851,7 @@ export default function AWSBedrockRAG() {
 
       {/* Results & Outcomes */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Results & Outcomes
         </h2>
 
@@ -934,7 +934,7 @@ export default function AWSBedrockRAG() {
 
       {/* Future Improvements */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Future Improvements
         </h2>
 
@@ -993,7 +993,7 @@ export default function AWSBedrockRAG() {
 
       {/* Technical Highlights */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Technical Highlights
         </h2>
 
@@ -1064,7 +1064,7 @@ export default function AWSBedrockRAG() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p className="mb-4">
@@ -1114,7 +1114,7 @@ export default function AWSBedrockRAG() {
 
       {/* Project Details */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Project Details
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -1130,7 +1130,7 @@ export default function AWSBedrockRAG() {
             <strong>Status:</strong> Production-ready, deployed and tested
           </li>
         </ul>
-        <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+        <p className="mt-4 text-sm text-on-surface-variant">
           This project was completed as part of the AWS Nanodegree program,
           demonstrating practical application of cloud computing, AI/ML, and
           software engineering principles.

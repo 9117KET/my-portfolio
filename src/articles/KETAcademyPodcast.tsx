@@ -14,10 +14,10 @@ export default function KETAcademyPodcast() {
     return () => clearTimeout(timer);
   }, [isLoaded]);
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Episode Overview
         </h2>
         <p className="mb-6">
@@ -30,7 +30,7 @@ export default function KETAcademyPodcast() {
 
       {/* Key Topics */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           What You'll Learn
         </h2>
         <ul className="list-disc pl-6 space-y-3">
@@ -48,7 +48,7 @@ export default function KETAcademyPodcast() {
 
       {/* Description */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           About This Episode
         </h2>
         <p>
@@ -62,8 +62,8 @@ export default function KETAcademyPodcast() {
 
       {/* Listen Now Section */}
       <section className="mt-12">
-        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
-          <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <div className="bg-surface-container p-6 rounded-lg">
+          <h2 className="text-2xl font-bold mb-4 text-on-surface">
             Listen to the Episode
           </h2>
           <iframe
@@ -79,7 +79,7 @@ export default function KETAcademyPodcast() {
             onLoad={() => setIsLoaded(true)}
           ></iframe>
           {showFallback && (
-            <div className="rounded-md border border-blue-200 dark:border-gray-700 p-4 bg-blue-50 dark:bg-gray-800">
+            <div className="rounded-md border border-primary/30 p-4 bg-primary/10">
               <p className="mb-3 text-sm md:text-base">
                 The embedded Spotify player could not be loaded (network/privacy
                 settings may be blocking third-party iframes). You can open the
@@ -89,7 +89,7 @@ export default function KETAcademyPodcast() {
                 href={directLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="inline-flex items-center px-4 py-2 text-sm font-semibold text-on-primary bg-primary rounded-lg hover:bg-primary/85 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
                 Open on Spotify
               </a>

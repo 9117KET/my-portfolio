@@ -1,6 +1,6 @@
 export default function MLBasics() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -15,7 +15,7 @@ export default function MLBasics() {
 
       {/* What is Machine Learning? */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           What is Machine Learning?
         </h2>
         <p className="mb-4">
@@ -39,7 +39,7 @@ export default function MLBasics() {
 
       {/* Types of Machine Learning */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Three Fundamental Paradigms of Machine Learning
         </h2>
         <div className="pl-6">
@@ -84,7 +84,7 @@ export default function MLBasics() {
 
       {/* Common Applications */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Transformative Real-World Applications
         </h2>
         <p className="mb-4">
@@ -117,7 +117,7 @@ export default function MLBasics() {
 
       {/* Basic Concepts */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Essential Concepts in Machine Learning
         </h2>
         <div className="space-y-4">
@@ -162,7 +162,7 @@ export default function MLBasics() {
 
       {/* Getting Started */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Beginning Your Machine Learning Journey
         </h2>
         <p className="mb-4">
@@ -197,7 +197,7 @@ export default function MLBasics() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p>

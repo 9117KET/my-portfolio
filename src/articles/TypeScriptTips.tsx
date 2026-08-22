@@ -1,6 +1,6 @@
 export default function TypeScriptTips() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -13,14 +13,14 @@ export default function TypeScriptTips() {
 
       {/* Basic Types and Type Inference */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           1. Embrace Type Inference
         </h2>
         <p className="mb-4">
           TypeScript is smart enough to infer types in many cases. Don't
           over-annotate when unnecessary:
         </p>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded-lg mb-4">
+        <div className="bg-surface-container p-4 rounded-lg mb-4">
           <pre className="language-typescript">
             <code>
               {`// Unnecessary type annotation
@@ -41,14 +41,14 @@ function parseCoordinate(coord: string): { x: number; y: number } {
 
       {/* Interface vs Type */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           2. Interface vs Type: Making the Right Choice
         </h2>
         <p className="mb-4">
           Both interfaces and types can define object shapes, but they have
           subtle differences:
         </p>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded-lg mb-4">
+        <div className="bg-surface-container p-4 rounded-lg mb-4">
           <pre className="language-typescript">
             <code>
               {`// Interface: Better for object-oriented design and extendable APIs
@@ -67,14 +67,14 @@ type NumberOrString = number | string;`}
 
       {/* Strict Mode Benefits */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           3. Enable Strict Mode
         </h2>
         <p className="mb-4">
           Always enable strict mode in your tsconfig.json for better type
           safety:
         </p>
-        <div className="bg-gray-100 dark:bg-zinc-800 p-4 rounded-lg mb-4">
+        <div className="bg-surface-container p-4 rounded-lg mb-4">
           <pre className="language-json">
             <code>
               {`{
@@ -91,7 +91,7 @@ type NumberOrString = number | string;`}
 
       {/* Real-World Applications */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Real-World Applications
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -115,7 +115,7 @@ type NumberOrString = number | string;`}
 
       {/* Common Pitfalls */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Common Pitfalls to Avoid
         </h2>
         <ul className="list-disc pl-6 space-y-2">
@@ -128,14 +128,14 @@ type NumberOrString = number | string;`}
 
       {/* Resources */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Resources for Further Learning
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <a
               href="https://www.typescriptlang.org/docs/"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-primary hover:underline"
             >
               Official TypeScript Documentation
             </a>
@@ -143,7 +143,7 @@ type NumberOrString = number | string;`}
           <li>
             <a
               href="https://github.com/type-challenges/type-challenges"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-primary hover:underline"
             >
               Type Challenges Repository
             </a>
@@ -151,7 +151,7 @@ type NumberOrString = number | string;`}
           <li>
             <a
               href="https://basarat.gitbook.io/typescript/"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-primary hover:underline"
             >
               TypeScript Deep Dive
             </a>
@@ -159,7 +159,7 @@ type NumberOrString = number | string;`}
           <li>
             <a
               href="https://www.totaltypescript.com/"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-primary hover:underline"
             >
               Total TypeScript
             </a>
@@ -169,7 +169,7 @@ type NumberOrString = number | string;`}
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p>

@@ -1,9 +1,9 @@
 export default function RateProfessorJourney() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Introduction
         </h2>
         <p className="mb-4">
@@ -45,7 +45,7 @@ export default function RateProfessorJourney() {
 
       {/* System Architecture Overview */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           System Architecture Overview
         </h2>
         <p className="mb-4">
@@ -58,7 +58,7 @@ export default function RateProfessorJourney() {
         </p>
 
         <h3 className="text-xl font-semibold mb-2">Architectural Layers</h3>
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4">
+        <div className="bg-surface-container p-4 rounded-lg mb-4">
           <div className="mb-3">
             <strong>1. Presentation Layer (Frontend)</strong>
             <ul className="list-disc pl-6 mt-2 space-y-1">
@@ -149,7 +149,7 @@ export default function RateProfessorJourney() {
 
       {/* Technology Stack & Architectural Decisions */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Technology Stack & Architectural Decisions
         </h2>
 
@@ -217,7 +217,7 @@ export default function RateProfessorJourney() {
 
       {/* RAG Architecture & Business Value */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           RAG Architecture: Transforming Data into Business Value
         </h2>
         <p className="mb-4">
@@ -232,7 +232,7 @@ export default function RateProfessorJourney() {
         <h3 className="text-xl font-semibold mb-2">
           RAG Pipeline Architecture
         </h3>
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4">
+        <div className="bg-surface-container p-4 rounded-lg mb-4">
           <h4 className="text-lg font-semibold mb-2">
             1. Data Ingestion & Vectorization
           </h4>
@@ -265,7 +265,7 @@ export default function RateProfessorJourney() {
           </p>
         </div>
 
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4">
+        <div className="bg-surface-container p-4 rounded-lg mb-4">
           <h4 className="text-lg font-semibold mb-2">
             2. Semantic Search & Retrieval
           </h4>
@@ -298,7 +298,7 @@ export default function RateProfessorJourney() {
           </p>
         </div>
 
-        <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg mb-4">
+        <div className="bg-surface-container p-4 rounded-lg mb-4">
           <h4 className="text-lg font-semibold mb-2">
             3. Context-Augmented Generation
           </h4>
@@ -366,7 +366,7 @@ export default function RateProfessorJourney() {
 
       {/* Business Value & Impact */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Business Value & Impact
         </h2>
 
@@ -446,7 +446,7 @@ export default function RateProfessorJourney() {
 
       {/* System Integration & Data Synchronization */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           System Integration & Data Synchronization
         </h2>
         <p className="mb-4">
@@ -515,7 +515,7 @@ export default function RateProfessorJourney() {
 
       {/* User Experience Architecture */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           User Experience Architecture
         </h2>
         <p className="mb-4">
@@ -575,7 +575,7 @@ export default function RateProfessorJourney() {
 
       {/* Performance & Scalability Considerations */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Performance & Scalability Considerations
         </h2>
 
@@ -637,7 +637,7 @@ export default function RateProfessorJourney() {
 
       {/* Security & Privacy Architecture */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Security & Privacy Architecture
         </h2>
         <p className="mb-4">
@@ -687,7 +687,7 @@ export default function RateProfessorJourney() {
 
       {/* Future Architecture Enhancements */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Future Architecture Enhancements
         </h2>
         <p className="mb-4">
@@ -742,7 +742,7 @@ export default function RateProfessorJourney() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p className="mb-4">

@@ -1,6 +1,6 @@
 export default function AIAndLearning() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -18,7 +18,7 @@ export default function AIAndLearning() {
 
       {/* Key Points */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Key Insights from the Video
         </h2>
         <p className="mb-4">
@@ -70,7 +70,7 @@ export default function AIAndLearning() {
 
       {/* The Balanced Perspective */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Finding the Right Balance
         </h2>
         <p className="mb-4">On the flip side:</p>
@@ -91,7 +91,7 @@ export default function AIAndLearning() {
 
       {/* Resources */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Additional Resources
         </h2>
         <div className="space-y-4">
@@ -100,7 +100,7 @@ export default function AIAndLearning() {
             <li>
               <a
                 href="https://www.youtube.com/watch?v=0xS68sl2D70&t=3348s&pp=ygUXZWZmb3J0IGlzIHRoZSBhbGdvcml0aG0%3D"
-                className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+                className="text-primary hover:text-on-surface transition-colors"
               >
                 Veritasium's Video: What Everyone Gets Wrong About AI and
                 Learning
@@ -109,7 +109,7 @@ export default function AIAndLearning() {
             <li>
               <a
                 href="https://www.artofsm.art/t/veritasium-what-everyone-gets-wrong-about-ai-and-learning-derek-muller-explains/7803/3"
-                className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+                className="text-primary hover:text-on-surface transition-colors"
               >
                 Article on the topic
               </a>
@@ -120,7 +120,7 @@ export default function AIAndLearning() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Final Thoughts
         </h2>
         <p className="mb-4">

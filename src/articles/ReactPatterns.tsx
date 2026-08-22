@@ -1,6 +1,6 @@
 export default function ReactPatterns() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -14,7 +14,7 @@ export default function ReactPatterns() {
 
       {/* Compound Components */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           1. Compound Components Pattern
         </h2>
         <p className="mb-4">
@@ -23,11 +23,11 @@ export default function ReactPatterns() {
           them like HTML's select and option tags working together.
         </p>
 
-        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-surface-container p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold mb-4">
             Example: Custom Select Component
           </h3>
-          <pre className="language-typescript rounded-lg bg-gray-200 dark:bg-zinc-900 p-4 overflow-x-auto">
+          <pre className="language-typescript rounded-lg bg-surface-container p-4 overflow-x-auto">
             <code>{`
 // Select.tsx
 const SelectContext = React.createContext<any>(null);
@@ -77,7 +77,7 @@ Select.Option = ({ value, children }) => {
 
       {/* Render Props Pattern */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           2. Render Props Pattern
         </h2>
         <p className="mb-4">
@@ -87,11 +87,11 @@ Select.Option = ({ value, children }) => {
           fetching or state management.
         </p>
 
-        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-surface-container p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold mb-4">
             Example: Mouse Position Tracker
           </h3>
-          <pre className="language-typescript rounded-lg bg-gray-200 dark:bg-zinc-900 p-4 overflow-x-auto">
+          <pre className="language-typescript rounded-lg bg-surface-container p-4 overflow-x-auto">
             <code>{`
 const MouseTracker = ({ render }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -123,7 +123,7 @@ const MouseTracker = ({ render }) => {
 
       {/* Custom Hooks Pattern */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           3. Custom Hooks Pattern
         </h2>
         <p className="mb-4">
@@ -132,11 +132,11 @@ const MouseTracker = ({ render }) => {
           between components without adding more components to your tree.
         </p>
 
-        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-6">
+        <div className="bg-surface-container p-6 rounded-lg mb-6">
           <h3 className="text-xl font-semibold mb-4">
             Example: useLocalStorage Hook
           </h3>
-          <pre className="language-typescript rounded-lg bg-gray-200 dark:bg-zinc-900 p-4 overflow-x-auto">
+          <pre className="language-typescript rounded-lg bg-surface-container p-4 overflow-x-auto">
             <code>{`
 const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {
@@ -170,14 +170,14 @@ const [theme, setTheme] = useLocalStorage('theme', 'light');
 
       {/* Further Reading */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Further Reading and Resources
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
             <a
               href="https://reactpatterns.com/"
-              className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+              className="text-primary hover:text-on-surface transition-colors"
             >
               React Patterns Official Documentation
             </a>
@@ -185,7 +185,7 @@ const [theme, setTheme] = useLocalStorage('theme', 'light');
           <li>
             <a
               href="https://kentcdodds.com/blog/compound-components-with-react-hooks"
-              className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+              className="text-primary hover:text-on-surface transition-colors"
             >
               Kent C. Dodds: Compound Components with React Hooks
             </a>
@@ -193,7 +193,7 @@ const [theme, setTheme] = useLocalStorage('theme', 'light');
           <li>
             <a
               href="https://www.patterns.dev/react"
-              className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+              className="text-primary hover:text-on-surface transition-colors"
             >
               Patterns.dev - React Patterns
             </a>
@@ -201,7 +201,7 @@ const [theme, setTheme] = useLocalStorage('theme', 'light');
           <li>
             <a
               href="https://usehooks.com/"
-              className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+              className="text-primary hover:text-on-surface transition-colors"
             >
               useHooks - Collection of Custom React Hooks
             </a>

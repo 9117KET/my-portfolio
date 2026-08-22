@@ -1,6 +1,6 @@
 export default function CodeReadingSkills() {
   return (
-    <article className="prose dark:prose-invert max-w-none">
+    <article className="font-body mb-4 max-w-none">
       <section>
         <h2>Introduction</h2>
         <p>

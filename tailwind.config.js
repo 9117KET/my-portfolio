@@ -40,7 +40,15 @@ export default {
         headline: ["Inter", "sans-serif"],
         body: ["Inter", "sans-serif"],
         label: ["Space Grotesk", "monospace"],
-        mono: ["Space Grotesk", "ui-monospace", "monospace"],
+        // Real monospace: code blocks and <pre> depend on this via preflight.
+        mono: [
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Consolas",
+          "Liberation Mono",
+          "monospace",
+        ],
       },
     }, // Extend Tailwind's default theme
   },

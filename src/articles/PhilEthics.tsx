@@ -1,6 +1,6 @@
 export default function PhilEthics() {
   return (
-    <div className="font-mono mb-4 max-w-none">
+    <div className="font-body mb-4 max-w-none">
       {/* Introduction */}
       <section className="mb-8">
         <p className="mb-6">
@@ -14,7 +14,7 @@ export default function PhilEthics() {
 
       {/* Major Ethical Theories */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Major Ethical Theories
         </h2>
 
@@ -64,7 +64,7 @@ export default function PhilEthics() {
 
       {/* Contemporary Ethical Challenges */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Contemporary Ethical Challenges
         </h2>
         <ul className="list-disc pl-6 space-y-3">
@@ -89,7 +89,7 @@ export default function PhilEthics() {
 
       {/* Practical Decision-Making Framework */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           A Practical Framework for Ethical Decision-Making
         </h2>
         <ol className="list-decimal pl-6 space-y-3">
@@ -122,7 +122,7 @@ export default function PhilEthics() {
 
       {/* Personal Reflection */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Personal Reflection
         </h2>
         <p>
@@ -137,7 +137,7 @@ export default function PhilEthics() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-blue-800 dark:text-blue-400">
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">
           Conclusion
         </h2>
         <p>
