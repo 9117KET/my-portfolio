@@ -3,17 +3,17 @@ export const experience = [
   {
     id: "exp6",
     role: "Full-Stack Engineering Intern",
-    company: "ABiQ",
+    company: "africon GmbH (ABiQ)",
     location: "Remote, Dubai",
     duration: "July 2025 - September 2025",
     category: "Software Development",
     responsibilities: [
-      "Integrated AI features into ABiQ's custom CMS backend.",
+      "Designed AI backend integration concepts for the platform's content-generation workflows.",
       "Documented internal systems and operational data to streamline onboarding and internal operations.",
-      "Improved prompts used in research workflows.",
+      "Wrote and tested the prompts behind the platform's LLM features, evaluating the same prompt structure across ChatGPT and Gemini.",
     ],
     companyDescription:
-      "ABiQ is a leading business intelligence platform tracking large-scale infrastructure, energy, transport, and industrial projects across Africa and the Middle East.",
+      "ABiQ is africon GmbH's business intelligence platform, tracking large-scale infrastructure, energy, transport, and industrial projects across Africa and the Middle East.",
   },
   {
     id: "exp1",
