@@ -54,7 +54,7 @@ export default function Navbar() {
 
         <div className="relative md:hidden flex items-center gap-3">
           <button
-            className="p-2 rounded-md hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-primary/40 text-on-surface"
+            className="p-2 rounded-md hover:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-primary/40 text-on-surface"
             onClick={() => setToggle((prev) => !prev)}
             aria-expanded={toggle}
             aria-controls="mobile-menu"
@@ -86,7 +86,7 @@ export default function Navbar() {
                 Menu
               </div>
               <button
-                className="p-2 rounded-md hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-primary/40 text-on-surface"
+                className="p-2 rounded-md hover:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-primary/40 text-on-surface"
                 onClick={() => setToggle(false)}
                 aria-label="Close navigation menu"
               >

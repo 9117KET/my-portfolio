@@ -115,6 +115,7 @@ export default function Blog() {
               <div className="relative">
                 <input
                   type="text"
+                  aria-label="Search posts"
                   placeholder="Search posts by title, description, or category..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -123,9 +124,15 @@ export default function Blog() {
                 {searchQuery && (
                   <button
                     onClick={clearSearch}
+                    aria-label="Clear search"
                     className="absolute right-10 top-2.5 text-outline hover:text-on-surface transition-colors"
                   >
-                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -154,6 +161,7 @@ export default function Blog() {
             {/* Sort Dropdown */}
             <div className="w-full md:w-1/3">
               <select
+                aria-label="Sort posts"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="w-full px-4 py-2 rounded-lg border border-outline-variant/30 bg-surface-container-low text-on-surface focus:ring-2 focus:ring-primary/40 focus:border-transparent"
@@ -175,7 +183,7 @@ export default function Blog() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
                   selectedCategory === category
-                    ? "bg-primary-container text-on-surface border-primary-container"
+                    ? "bg-primary text-on-primary border-primary"
                     : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
                 }`}
                 aria-current={selectedCategory === category ? "true" : "false"}

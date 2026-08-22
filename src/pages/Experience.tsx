@@ -4,12 +4,17 @@ import { experience } from "../utils/constants";
 import { Helmet } from "react-helmet-async";
 import PageShell from "../components/PageShell";
 
-const categories = ["All", "Software Development", "Education", "Management & Others"];
+const categories = [
+  "All",
+  "Software Development",
+  "Education",
+  "Management & Others",
+];
 
 export default function Experiences() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const filteredExperiences = experience.filter(
-    (exp) => selectedCategory === "All" || exp.category === selectedCategory
+    (exp) => selectedCategory === "All" || exp.category === selectedCategory,
   );
 
   return (
@@ -69,11 +74,13 @@ export default function Experiences() {
                   onClick={() => setSelectedCategory(category)}
                   className={`cursor-pointer text-sm font-medium rounded-lg px-5 py-2.5 transition-all duration-300 border ${
                     selectedCategory === category
-                      ? "bg-primary-container text-on-surface border-primary-container shadow-md"
+                      ? "bg-primary text-on-primary border-primary shadow-md"
                       : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
                   }`}
                   aria-label={`Filter experiences by ${category}`}
-                  aria-current={selectedCategory === category ? "true" : "false"}
+                  aria-current={
+                    selectedCategory === category ? "true" : "false"
+                  }
                 >
                   {category}
                 </button>

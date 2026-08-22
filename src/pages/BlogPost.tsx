@@ -13,11 +13,9 @@ const AIEthics = lazy(() => import("../articles/AIEthics"));
 const PhilEthics = lazy(() => import("../articles/PhilEthics"));
 const KETAcademyJourney = lazy(() => import("../articles/KETAcademyJourney"));
 const RateProfessorJourney = lazy(
-  () => import("../articles/RateProfessorJourney")
+  () => import("../articles/RateProfessorJourney"),
 );
-const DeepblockJourney = lazy(
-  () => import("../articles/DeepblockJourney")
-);
+const DeepblockJourney = lazy(() => import("../articles/DeepblockJourney"));
 const LLMUnderstanding = lazy(() => import("../articles/LLMUnderstanding"));
 const AIHumanDev = lazy(() => import("../articles/AIHumanDev"));
 const CodeReadingSkills = lazy(() => import("../articles/CodeReadingSkills"));
@@ -25,22 +23,18 @@ const AIAndLearning = lazy(() => import("../articles/AIAndLearning"));
 const RateProfessorLegal = lazy(() => import("../articles/RateProfessorLegal"));
 const AWSBedrockRAG = lazy(() => import("../articles/AWSBedrockRAG"));
 const IoTRecommendationFramework = lazy(
-  () => import("../articles/IoTRecommendationFramework")
+  () => import("../articles/IoTRecommendationFramework"),
 );
-const Neo4jGenAIWorkshop = lazy(
-  () => import("../articles/Neo4jGenAIWorkshop")
-);
+const Neo4jGenAIWorkshop = lazy(() => import("../articles/Neo4jGenAIWorkshop"));
 const OntologyPhysicsTutor = lazy(
-  () => import("../articles/OntologyPhysicsTutor")
+  () => import("../articles/OntologyPhysicsTutor"),
 );
 
 // Loading fallback for articles
 const ArticleLoader = () => (
   <div className="flex items-center justify-center py-12">
     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-    <span className="ml-3 text-on-surface-variant">
-      Loading article...
-    </span>
+    <span className="ml-3 text-on-surface-variant">Loading article...</span>
   </div>
 );
 
@@ -62,7 +56,7 @@ export default function BlogPost({
   const location = useLocation();
   const currentUrl = new URL(
     location.pathname,
-    window.location.origin
+    window.location.origin,
   ).toString();
 
   const renderContent = () => {
@@ -139,7 +133,11 @@ export default function BlogPost({
           </div>
 
           <div className="shrink-0 pt-2">
-            <ShareButton title={title} url={currentUrl} description={description} />
+            <ShareButton
+              title={title}
+              url={currentUrl}
+              description={description}
+            />
           </div>
         </div>
       </header>

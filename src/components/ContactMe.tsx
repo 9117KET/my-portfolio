@@ -39,7 +39,7 @@ export default function ContactMe() {
         <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
         <span
           id="contact"
-          className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-outline transition-colors duration-300 group-hover:text-primary"
+          className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-on-surface-variant transition-colors duration-300 group-hover:text-primary"
         >
           <span className="text-primary">{">"}</span> Connect With Me
         </span>

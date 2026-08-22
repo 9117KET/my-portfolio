@@ -41,11 +41,11 @@ class ErrorBoundary extends Component<Props, State> {
       // Render custom fallback UI
       return (
         this.props.fallback || (
-          <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
-            <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center">
+          <div className="min-h-screen bg-surface flex items-center justify-center px-4">
+            <div className="max-w-md w-full bg-surface-container-low border border-outline-variant/30 rounded-xl shadow-lg p-6 text-center">
               <div className="mb-4">
                 <svg
-                  className="mx-auto h-12 w-12 text-red-500"
+                  className="mx-auto h-12 w-12 text-error"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -58,33 +58,33 @@ class ErrorBoundary extends Component<Props, State> {
                   />
                 </svg>
               </div>
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h2 className="text-xl font-semibold text-on-surface mb-2">
                 Oops! Something went wrong
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-on-surface-variant mb-4">
                 We encountered an unexpected error. Please try refreshing the
                 page.
               </p>
               <div className="space-y-2">
                 <button
                   onClick={() => window.location.reload()}
-                  className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                  className="w-full bg-primary text-on-primary px-4 py-2 rounded-lg hover:bg-primary/85 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary/40"
                 >
                   Refresh Page
                 </button>
                 <button
                   onClick={() => (window.location.href = "/")}
-                  className="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300"
+                  className="w-full bg-surface-container text-on-surface border border-outline-variant/30 px-4 py-2 rounded-lg hover:bg-surface-container-high transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary/40"
                 >
                   Go Home
                 </button>
               </div>
               {process.env.NODE_ENV === "development" && this.state.error && (
                 <details className="mt-4 text-left">
-                  <summary className="cursor-pointer text-sm text-gray-500 dark:text-gray-400">
+                  <summary className="cursor-pointer text-sm text-on-surface-variant">
                     Error Details (Development)
                   </summary>
-                  <pre className="mt-2 text-xs text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 p-2 rounded overflow-auto">
+                  <pre className="mt-2 text-xs text-error bg-error/10 border border-error/20 p-2 rounded overflow-auto">
                     {this.state.error.toString()}
                   </pre>
                 </details>

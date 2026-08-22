@@ -10,7 +10,7 @@ export default function Theme() {
   return (
     <button
       onClick={toggleTheme}
-      className="text-xl p-2 rounded-lg transition-colors duration-300 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-primary/40"
+      className="text-xl p-2 rounded-lg transition-colors duration-300 hover:bg-surface-container-high focus:outline-none focus:ring-2 focus:ring-primary/40"
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
       aria-pressed={theme === "dark"}
     >

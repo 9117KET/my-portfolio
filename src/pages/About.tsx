@@ -8,7 +8,8 @@ export default function About() {
     <div className="min-h-screen overflow-hidden">
       <Helmet>
         <title>
-          Kinlo Ephriam Tangiri | Full-Stack Developer (AI Focus) with Management Experience
+          Kinlo Ephriam Tangiri | Full-Stack Developer (AI Focus) with
+          Management Experience
         </title>
         <meta
           name="description"

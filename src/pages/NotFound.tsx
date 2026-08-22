@@ -43,7 +43,7 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Link
               to="/"
-              className="inline-flex items-center px-6 py-3 bg-primary-container text-on-surface rounded-lg hover:bg-primary transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary/40"
+              className="inline-flex items-center px-6 py-3 bg-primary text-on-primary rounded-lg hover:bg-primary/85 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               <svg
                 className="w-5 h-5 mr-2"

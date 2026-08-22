@@ -68,7 +68,7 @@ export default function BlogPostPage() {
             </p>
             <Link
               to="/blog"
-              className="inline-block px-6 py-3 bg-primary-container text-on-surface rounded-lg hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
+              className="inline-block px-6 py-3 bg-primary text-on-primary rounded-lg hover:bg-primary/85 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               Back to Blog
             </Link>

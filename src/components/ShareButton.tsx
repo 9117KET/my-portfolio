@@ -98,7 +98,7 @@ export default function ShareButton({
     <div className="relative inline-block">
       <button
         onClick={handleShare}
-        className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-sm hover:shadow-md"
+        className="inline-flex items-center gap-2 px-3 py-2 sm:px-4 bg-primary hover:bg-primary/85 text-on-primary rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-sm hover:shadow-md"
         aria-label={`Share: ${title}`}
       >
         <FontAwesomeIcon icon={faShare} className="text-xl" />
@@ -108,7 +108,7 @@ export default function ShareButton({
       {/* Success feedback tooltip - appears when URL is copied to clipboard */}
       {showCopiedTooltip && (
         <div
-          className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1.5 bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-lg whitespace-nowrap shadow-lg z-50 transition-opacity duration-200"
+          className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1.5 bg-surface-container-highest text-on-surface border border-outline-variant/30 text-sm rounded-lg whitespace-nowrap shadow-lg z-50 transition-opacity duration-200"
           role="status"
           aria-live="polite"
         >
@@ -117,7 +117,7 @@ export default function ShareButton({
             Link copied!
           </span>
           {/* Tooltip arrow pointing to button */}
-          <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 rotate-45 w-2 h-2 bg-gray-900 dark:bg-gray-700"></div>
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 rotate-45 w-2 h-2 bg-surface-container-highest border-b border-r border-outline-variant/30"></div>
         </div>
       )}
     </div>

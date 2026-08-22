@@ -34,7 +34,7 @@ const sortItems = <
 >(
   items: T[],
   sortBy: "date" | "title" | "description",
-  direction: "asc" | "desc" = "asc"
+  direction: "asc" | "desc" = "asc",
 ) => {
   return [...items].sort((a, b) => {
     // eslint-disable-next-line security/detect-object-injection
@@ -74,7 +74,7 @@ const sortItems = <
 
 export default function Misc() {
   const [selectedCategory, setSelectedCategory] = useState<Category>(
-    categories[0] as Category
+    categories[0] as Category,
   );
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
@@ -93,13 +93,13 @@ export default function Misc() {
   const filteredItems = items.filter(
     (item) =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   const processedItems = sortItems(
     filteredItems,
     sortConfig.key,
-    sortConfig.direction
+    sortConfig.direction,
   );
 
   // Handle Learn More click - show modal for tech events with full details
@@ -191,7 +191,7 @@ export default function Misc() {
                 onClick={() => setSelectedCategory(category as Category)}
                 className={`cursor-pointer text-sm border rounded-full px-4 py-2 transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-primary-container text-on-surface border-primary-container"
+                    ? "bg-primary text-on-primary border-primary"
                     : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
                 }`}
                 aria-label={`Filter items by ${category}`}
@@ -206,6 +206,7 @@ export default function Misc() {
             <div className="relative">
               <input
                 type="text"
+                aria-label="Search items"
                 placeholder="Search items..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -381,7 +382,7 @@ export default function Misc() {
 
               {/* Key Takeaways */}
               <div className="mb-6">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-xl md:text-2xl font-bold text-on-surface mb-3">
                   Key Takeaways
                 </h3>
                 <ul className="list-disc list-inside space-y-2 text-on-surface-variant">
@@ -395,7 +396,7 @@ export default function Misc() {
 
               {/* Experience */}
               <div className="mb-6">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-xl md:text-2xl font-bold text-on-surface mb-3">
                   My Experience
                 </h3>
                 <p className="text-on-surface-variant text-base md:text-lg leading-relaxed whitespace-pre-line">
@@ -405,7 +406,7 @@ export default function Misc() {
 
               {/* Applications */}
               <div className="mb-6">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-xl md:text-2xl font-bold text-on-surface mb-3">
                   Practical Applications
                 </h3>
                 <div className="bg-surface-container-low border-l-4 border-primary p-4 rounded-r-lg">
@@ -419,7 +420,7 @@ export default function Misc() {
               <div className="flex justify-end mt-6">
                 <button
                   onClick={closeModal}
-                  className="px-6 py-2 bg-primary-container text-on-surface rounded-lg hover:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
+                  className="px-6 py-2 bg-primary text-on-primary rounded-lg hover:bg-primary/85 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
                 >
                   Close
                 </button>

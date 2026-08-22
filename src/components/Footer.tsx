@@ -16,14 +16,14 @@ export default function Footer() {
   const links = pickFooterLinks(contacts);
 
   return (
-    <footer className="w-full border-t border-white/5 bg-slate-950">
+    <footer className="w-full border-t border-outline-variant/30 bg-surface-container-lowest">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="text-center md:text-left">
-          <div className="text-teal-300 font-bold tracking-tighter">
-            <span className="text-teal-200">{`<`}</span>KET
-            <span className="text-teal-200">{`/>`}</span>
+          <div className="text-primary font-bold tracking-tighter">
+            <span className="text-primary/70">{`<`}</span>KET
+            <span className="text-primary/70">{`/>`}</span>
           </div>
-          <p className="font-mono text-[10px] tracking-widest uppercase text-slate-500 mt-2">
+          <p className="font-label text-[10px] tracking-widest uppercase text-on-surface-variant mt-2">
             © {new Date().getFullYear()}
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function Footer() {
               href={l.link}
               target={l.link.startsWith("http") ? "_blank" : undefined}
               rel={l.link.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="font-mono text-[10px] tracking-widest uppercase text-slate-400 hover:text-teal-300 transition-colors opacity-80 hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
+              className="font-label text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
             >
               {l.name}
             </a>

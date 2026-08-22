@@ -89,7 +89,10 @@ export default function Projects() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1">
             Projects
           </h1>
-          <p className="text-sm font-mono text-on-surface-variant mb-2" aria-hidden="true">
+          <p
+            className="text-sm font-mono text-on-surface-variant mb-2"
+            aria-hidden="true"
+          >
             <span className="text-primary">{">"}</span>
             <span className="ml-2">projects:~</span>{" "}
             <span className="text-primary">$</span> cat projects.md
@@ -104,6 +107,7 @@ export default function Projects() {
             <div className="relative">
               <input
                 type="text"
+                aria-label="Search projects"
                 placeholder="Search projects by name, description, or technology..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -112,9 +116,15 @@ export default function Projects() {
               {searchQuery && (
                 <button
                   onClick={clearSearch}
+                  aria-label="Clear search"
                   className="absolute right-10 top-2.5 text-outline hover:text-on-surface transition-colors"
                 >
-                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -152,11 +162,13 @@ export default function Projects() {
                   onClick={() => setSelectedCategory(category)}
                   className={`cursor-pointer text-sm font-medium rounded-lg px-5 py-2.5 transition-all duration-300 border ${
                     selectedCategory === category
-                      ? "bg-primary-container text-on-surface border-primary-container shadow-md"
+                      ? "bg-primary text-on-primary border-primary shadow-md"
                       : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
                   }`}
                   aria-label={`Filter projects by ${category}`}
-                  aria-current={selectedCategory === category ? "true" : "false"}
+                  aria-current={
+                    selectedCategory === category ? "true" : "false"
+                  }
                 >
                   {category}
                 </button>
@@ -209,7 +221,7 @@ export default function Projects() {
               href="https://github.com/9117KET"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-container hover:bg-primary text-on-surface rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary/85 text-on-primary rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               All projects on GitHub
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

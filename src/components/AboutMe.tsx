@@ -49,7 +49,7 @@ export default function AboutMe() {
             </a>
           </div>
 
-          <p className="text-sm text-outline mt-8">
+          <p className="text-sm text-on-surface-variant mt-8">
             Bremen, Germany • Sharing updates on{" "}
             <a
               href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
@@ -80,7 +80,7 @@ export default function AboutMe() {
         <div className="mt-8">
           <div className="relative flex py-5 items-center group">
             <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-outline transition-colors duration-300 group-hover:text-primary">
+            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-on-surface-variant transition-colors duration-300 group-hover:text-primary">
               <span className="text-primary">{">"}</span> About Me:
             </span>
             <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
@@ -119,19 +119,19 @@ export default function AboutMe() {
               <p className="text-outline/70 italic">// ket.dev profile data</p>
               <p>
                 <span className="text-tertiary">location:</span>{" "}
-                <span className="text-emerald-600 dark:text-emerald-400">"Bremen, Germany"</span>
+                <span className="text-primary">"Bremen, Germany"</span>
               </p>
               <p>
                 <span className="text-tertiary">status:</span>{" "}
-                <span className="text-emerald-600 dark:text-emerald-400">"Open to impactful work"</span>
+                <span className="text-primary">"Open to impactful work"</span>
               </p>
               <p>
                 <span className="text-tertiary">stack:</span>{" "}
-                [<span className="text-emerald-600 dark:text-emerald-400">"React", "TypeScript", "Python", "RAG"</span>]
+                [<span className="text-primary">"React", "TypeScript", "Python", "RAG"</span>]
               </p>
               <p>
                 <span className="text-tertiary">focus:</span>{" "}
-                <span className="text-emerald-600 dark:text-emerald-400">"Full-Stack & AI Engineering"</span>
+                <span className="text-primary">"Full-Stack & AI Engineering"</span>
               </p>
             </div>
           </Card>
@@ -141,7 +141,7 @@ export default function AboutMe() {
             <div>
               <div className="relative flex py-5 items-center group">
                 <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-                <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-outline transition-colors duration-300 group-hover:text-primary">
+                <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-on-surface-variant transition-colors duration-300 group-hover:text-primary">
                   <span className="text-primary">{">"}</span> Skills & Experience:
                 </span>
                 <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
@@ -184,7 +184,7 @@ export default function AboutMe() {
         <div className="mt-10">
           <div className="relative flex py-5 items-center group">
             <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-outline transition-colors duration-300 group-hover:text-primary">
+            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-on-surface-variant transition-colors duration-300 group-hover:text-primary">
               <span className="text-primary">{">"}</span> My Projects
             </span>
             <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
