@@ -112,25 +112,25 @@ export default function AboutMe() {
           <Card className="lg:col-span-5 bg-surface-container-low border-outline-variant/20 overflow-hidden">
             <div className="flex gap-2 mb-6">
               <div className="w-3 h-3 rounded-full bg-error/70"></div>
-              <div className="w-3 h-3 rounded-full bg-tertiary/70"></div>
+              <div className="w-3 h-3 rounded-full bg-outline/50"></div>
               <div className="w-3 h-3 rounded-full bg-primary/70"></div>
             </div>
             <div className="font-label text-sm text-primary/90 space-y-2">
               <p className="text-outline/70 italic">// ket.dev profile data</p>
               <p>
-                <span className="text-tertiary">location:</span>{" "}
+                <span className="text-on-surface-variant">location:</span>{" "}
                 <span className="text-primary">"Bremen, Germany"</span>
               </p>
               <p>
-                <span className="text-tertiary">status:</span>{" "}
+                <span className="text-on-surface-variant">status:</span>{" "}
                 <span className="text-primary">"Open to impactful work"</span>
               </p>
               <p>
-                <span className="text-tertiary">stack:</span>{" "}
+                <span className="text-on-surface-variant">stack:</span>{" "}
                 [<span className="text-primary">"React", "TypeScript", "Python", "RAG"</span>]
               </p>
               <p>
-                <span className="text-tertiary">focus:</span>{" "}
+                <span className="text-on-surface-variant">focus:</span>{" "}
                 <span className="text-primary">"Full-Stack & AI Engineering"</span>
               </p>
             </div>

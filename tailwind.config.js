@@ -33,7 +33,6 @@ export default {
         primary: "rgb(var(--primary) / <alpha-value>)",
         "primary-container": "rgb(var(--primary-container) / <alpha-value>)",
         "on-primary": "rgb(var(--on-primary) / <alpha-value>)",
-        tertiary: "rgb(var(--tertiary) / <alpha-value>)",
         error: "rgb(var(--error) / <alpha-value>)",
       },
       fontFamily: {

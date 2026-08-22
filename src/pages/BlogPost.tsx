@@ -119,8 +119,8 @@ export default function BlogPost({
           <div className="min-w-0">
             <div className="flex items-center gap-4 text-outline font-label text-[11px] uppercase tracking-[0.2em] mb-4">
               <span>{formatDate(date)}</span>
-              <span className="w-1 h-1 rounded-full bg-tertiary"></span>
-              <span className="text-tertiary">{category}</span>
+              <span className="w-1 h-1 rounded-full bg-outline"></span>
+              <span className="text-on-surface-variant">{category}</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter leading-[1.1] text-on-surface">
               {title}

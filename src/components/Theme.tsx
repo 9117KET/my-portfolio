@@ -17,7 +17,7 @@ export default function Theme() {
       {theme === "dark" ? (
         // Icon for the sun if theme is dark
         <FontAwesomeIcon
-          className="rounded p-1 text-on-surface transition-colors duration-300 hover:text-tertiary"
+          className="rounded p-1 text-on-surface transition-colors duration-300 hover:text-primary"
           icon={faSun}
         />
       ) : (
