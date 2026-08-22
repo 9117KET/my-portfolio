@@ -19,9 +19,9 @@ export default function AboutMe() {
             in Data Science, and I specialized in Artificial Intelligence and
             Machine Learning. My thesis was on reducing hallucination in LLM
             applications across a range of industries. I also have experience in
-            program and project management, from building an e-learning platform
-            from scratch to two years as an assistant project manager on an
-            EU-sponsored program.
+            program and project management, from leading the team that built an
+            e-learning platform from scratch to two years as an assistant
+            project manager on an EU-sponsored program.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-6 items-center">
@@ -80,8 +80,8 @@ export default function AboutMe() {
           <p className="text-sm sm:text-base text-on-surface-variant max-w-3xl leading-relaxed">
             I enjoy learning, problem solving, and teaching. I've tutored
             mathematics and been a TA for Calculus I & II. After high school I
-            co-built an e-learning platform to provide free educational
-            resources in crisis-affected regions.
+            led a team of more than 25 to build an e-learning platform providing
+            free educational resources in crisis-affected regions.
           </p>
           <p className="text-sm sm:text-base text-on-surface-variant mt-6">
             When I'm not coding or studying:
