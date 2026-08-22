@@ -117,9 +117,7 @@ export default function AIAfrica() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p>
           As Rwanda continues to embrace AI, IoT, and Big Data, there is immense
           potential for growth and development not only in Rwanda but the entire
@@ -134,9 +132,7 @@ export default function AIAfrica() {
 
       {/* References */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          References
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">References</h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>JLL Africa: Kigali Innovation City</li>
           <li>Africa50: Kigali Innovation City</li>

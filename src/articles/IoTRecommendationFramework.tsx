@@ -30,9 +30,7 @@ export default function IoTRecommendationFramework() {
 
       {/* The Problem */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          The Problem
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">The Problem</h2>
         <p className="mb-4">
           WaziUp's catalog contains over 300+ IoT courses covering various
           topics, skill levels, and learning objectives. Users faced several
@@ -291,9 +289,7 @@ export default function IoTRecommendationFramework() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p className="mb-4">
           The IoT Course Recommendation Framework represents a significant step
           forward in making IoT education more accessible and personalized. By

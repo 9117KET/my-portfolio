@@ -54,10 +54,6 @@ export default function Experiences() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1">
             Experience
           </h1>
-          <p className="text-sm text-on-surface-variant font-mono mb-2">
-            <span className="text-primary">{">"}</span> experience:~$ cat
-            experience.md
-          </p>
           <p className="text-sm sm:text-base text-on-surface-variant mb-6">
             A blend of challenging and rewarding roles that have shaped my
             growth as a self-driven professional.

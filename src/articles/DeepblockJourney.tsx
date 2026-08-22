@@ -18,8 +18,9 @@ export default function DeepblockJourney() {
           But the more I tried to personalize Notion around how I actually live
           my days, the clearer one thing became: most tools are great at{" "}
           <span className="italic">storing</span> tasks, but not great at{" "}
-          <span className="italic">shaping a day</span>. I wanted something that could hold me inside a
-          deep-work rhythm. That&apos;s where Deepblock started.
+          <span className="italic">shaping a day</span>. I wanted something that
+          could hold me inside a deep-work rhythm. That&apos;s where Deepblock
+          started.
         </p>
       </section>
 
@@ -58,10 +59,10 @@ export default function DeepblockJourney() {
           </li>
         </ol>
         <p className="mt-4">
-          I loved this model because it forces you to
-          think about who you are in each block: learner, builder, worker,
-          human, sleeper. Deepblock is my attempt to turn this abstract model
-          into a concrete, usable daily planner.
+          I loved this model because it forces you to think about who you are in
+          each block: learner, builder, worker, human, sleeper. Deepblock is my
+          attempt to turn this abstract model into a concrete, usable daily
+          planner.
         </p>
       </section>
 
@@ -145,8 +146,9 @@ export default function DeepblockJourney() {
           These sections map naturally onto the four-block model. The 5-9 a.m.
           block holds routines and deep personal work. The 9-5 block is where
           most high-priority execution lives. The 5-9 p.m. block is reserved for
-          life, relationships, and hobbies. The 9 p.m. to 5 a.m. block is protected
-          for sleep. Deepblock reminds you who you&apos;re trying to be in each part of the day.
+          life, relationships, and hobbies. The 9 p.m. to 5 a.m. block is
+          protected for sleep. Deepblock reminds you who you&apos;re trying to
+          be in each part of the day.
         </p>
       </section>
 
@@ -168,9 +170,9 @@ export default function DeepblockJourney() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>Copy from yesterday:</strong> If today looks like
-            yesterday, you don&apos;t rebuild your entire plan. You reuse it and
-            adjust what&apos;s different.
+            <strong>Copy from yesterday:</strong> If today looks like yesterday,
+            you don&apos;t rebuild your entire plan. You reuse it and adjust
+            what&apos;s different.
           </li>
           <li>
             <strong>Copy from last same weekday:</strong> If your Thursdays
@@ -179,10 +181,10 @@ export default function DeepblockJourney() {
           </li>
         </ul>
         <p className="mt-4">
-          After years of planning in Notion, I realized most days are
-          variations on a theme, not brand-new compositions. Deepblock encodes
-          that insight directly into the UI so you spend less time planning and
-          more time doing.
+          After years of planning in Notion, I realized most days are variations
+          on a theme, not brand-new compositions. Deepblock encodes that insight
+          directly into the UI so you spend less time planning and more time
+          doing.
         </p>
       </section>
 
@@ -201,9 +203,8 @@ export default function DeepblockJourney() {
         <p className="mb-4">
           To gently guide focus, each task&apos;s allocated time is supported by
           three beeps: one at the start, one at the midpoint, and one at the
-          end. They are small nudges
-          that say: &quot;Start now,&quot; &quot;You&apos;re halfway
-          through,&quot; and &quot;Wrap up.&quot;
+          end. They are small nudges that say: &quot;Start now,&quot;
+          &quot;You&apos;re halfway through,&quot; and &quot;Wrap up.&quot;
         </p>
         <p>
           This ties directly into basic productivity psychology. Simple rules
@@ -220,12 +221,11 @@ export default function DeepblockJourney() {
           Weekly Overview and Deep-Work Timer
         </h2>
         <p className="mb-4">
-          Productivity is about patterns
-          over weeks and months. Deepblock includes a weekly overview that shows
-          the percentage of tasks you completed and a visual bar for your
-          progress across the week. Over time, this becomes a mirror where you
-          can see the weeks you were consistent and the weeks where life got in
-          the way.
+          Productivity is about patterns over weeks and months. Deepblock
+          includes a weekly overview that shows the percentage of tasks you
+          completed and a visual bar for your progress across the week. Over
+          time, this becomes a mirror where you can see the weeks you were
+          consistent and the weeks where life got in the way.
         </p>
         <p className="mb-4">
           To support focused execution, Deepblock also includes a deep-work
@@ -237,9 +237,8 @@ export default function DeepblockJourney() {
         <p>
           Alongside this, a motivation card surfaces short quotes inside the
           app. They&apos;re small, but they reflect a big belief: productivity
-          is also about state of mind.
-          Sometimes, one line at the right moment is enough to push you into
-          the next block.
+          is also about state of mind. Sometimes, one line at the right moment
+          is enough to push you into the next block.
         </p>
       </section>
 
@@ -275,12 +274,12 @@ export default function DeepblockJourney() {
             contributions for features I may not have considered.
           </li>
           <li>
-            <strong>Future Collaborators and Users:</strong> My long-term
-            vision is to add optional authentication, let users configure how
-            many blocks they want in a day, and integrate AI to suggest daily
-            plans based on historical behavior. Open-sourcing Deepblock means
-            anyone who resonates with this model can fork it, adapt it, and
-            build their own version instead of starting from zero.
+            <strong>Future Collaborators and Users:</strong> My long-term vision
+            is to add optional authentication, let users configure how many
+            blocks they want in a day, and integrate AI to suggest daily plans
+            based on historical behavior. Open-sourcing Deepblock means anyone
+            who resonates with this model can fork it, adapt it, and build their
+            own version instead of starting from zero.
           </li>
         </ol>
       </section>
@@ -291,17 +290,18 @@ export default function DeepblockJourney() {
           What Deepblock Means to Me
         </h2>
         <p className="mb-4">
-          Deepblock is the result of my three years
-          of friction with generic productivity tools, combined with research on
-          time, psychology, and deep work. It is a translation of an abstract
-          time-blocking model into something concrete that I use every day.
+          Deepblock is the result of my three years of friction with generic
+          productivity tools, combined with research on time, psychology, and
+          deep work. It is a translation of an abstract time-blocking model into
+          something concrete that I use every day.
         </p>
         <p className="mb-4">
           Today, I use Deepblock to structure job applications, language
-          practice(German), learning, side projects, and rest. For the first time, my
-          daily planner feels like it actually understands how I want my days to
-          feel. It&apos;s not finished, and that&apos;s the whole point. It&apos;s a
-          living experiment that I&apos;m iterating on in public.
+          practice(German), learning, side projects, and rest. For the first
+          time, my daily planner feels like it actually understands how I want
+          my days to feel. It&apos;s not finished, and that&apos;s the whole
+          point. It&apos;s a living experiment that I&apos;m iterating on in
+          public.
         </p>
         <p>
           That&apos;s why I built Deepblock. That&apos;s why I use it every day.
@@ -313,4 +313,3 @@ export default function DeepblockJourney() {
     </div>
   );
 }
-

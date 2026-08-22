@@ -1,19 +1,10 @@
-import {
-  builds,
-  hobbies,
-  cvLink,
-  skills,
-  skillCategories,
-} from "../utils/constants";
+import { builds, hobbies, cvLink, skillCategories } from "../utils/constants";
 import profileImage from "../utils/images/photo.png";
 import Card from "./Card";
+import SectionHeading from "./SectionHeading";
 import { Link } from "react-router-dom";
 
 export default function AboutMe() {
-  const skillsByName = Object.fromEntries(
-    skills.map((s) => [s.name, s.years])
-  );
-
   return (
     <section className="mt-8 mb-[-2%] max-w-full overflow-hidden">
       {/* Hero */}
@@ -24,9 +15,9 @@ export default function AboutMe() {
           </h1>
 
           <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed max-w-2xl">
-            Hi! I'm Kinlo, a full-stack developer with an AI/ML focus. I have a BSc in
-            Computer Science and a Data Science minor and specialization in AI/ML, I also have experience
-            in program and project management.
+            Hi! I'm Kinlo, a full-stack developer with an AI/ML focus. I have a
+            BSc in Computer Science and a Data Science minor and specialization
+            in AI/ML, I also have experience in program and project management.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-6 items-center">
@@ -43,14 +34,17 @@ export default function AboutMe() {
               className="font-label text-primary text-sm font-semibold tracking-wider hover:translate-x-1 transition-transform inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
             >
               Connect
-              <span className="material-symbols-outlined text-sm" aria-hidden="true">
+              <span
+                className="material-symbols-outlined text-sm"
+                aria-hidden="true"
+              >
                 arrow_forward
               </span>
             </a>
           </div>
 
           <p className="text-sm text-on-surface-variant mt-8">
-            Bremen, Germany • Sharing updates on{" "}
+            Based in Bremen, Germany. Open to new roles. Sharing updates on{" "}
             <a
               href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
               target="_blank"
@@ -78,24 +72,17 @@ export default function AboutMe() {
       <div className="mt-10">
         {/* About Me */}
         <div className="mt-8">
-          <div className="relative flex py-5 items-center group">
-            <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-on-surface-variant transition-colors duration-300 group-hover:text-primary">
-              <span className="text-primary">{">"}</span> About Me:
-            </span>
-            <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-          </div>
-          <p className="pl-2 md:pl-6 text-sm sm:text-base text-on-surface-variant max-w-3xl leading-relaxed">
+          <SectionHeading>About</SectionHeading>
+          <p className="text-sm sm:text-base text-on-surface-variant max-w-3xl leading-relaxed">
             I enjoy learning, problem solving, and teaching. I've tutored
             mathematics and been a TA for Calculus I & II. After high school I
-            co-built an e-learning platform to provide free educational resources
-            in crisis-affected regions.
+            co-built an e-learning platform to provide free educational
+            resources in crisis-affected regions.
           </p>
-          <p className="pl-2 md:pl-6 text-sm sm:text-base text-on-surface-variant mt-4">
-            <span className="text-primary">|</span> When I'm not coding or
-            studying:
+          <p className="text-sm sm:text-base text-on-surface-variant mt-6">
+            When I'm not coding or studying:
           </p>
-          <div className="pl-2 md:pl-6 mt-2 flex flex-wrap gap-2">
+          <div className="mt-3 flex flex-wrap gap-2">
             {hobbies.map((hobby, key) => (
               <span
                 key={key}
@@ -107,103 +94,48 @@ export default function AboutMe() {
           </div>
         </div>
 
-        {/* Terminal profile accent */}
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          <Card className="lg:col-span-5 bg-surface-container-low border-outline-variant/20 overflow-hidden">
-            <div className="flex gap-2 mb-6">
-              <div className="w-3 h-3 rounded-full bg-error/70"></div>
-              <div className="w-3 h-3 rounded-full bg-outline/50"></div>
-              <div className="w-3 h-3 rounded-full bg-primary/70"></div>
-            </div>
-            <div className="font-label text-sm text-primary/90 space-y-2">
-              <p className="text-outline/70 italic">// ket.dev profile data</p>
-              <p>
-                <span className="text-on-surface-variant">location:</span>{" "}
-                <span className="text-primary">"Bremen, Germany"</span>
-              </p>
-              <p>
-                <span className="text-on-surface-variant">status:</span>{" "}
-                <span className="text-primary">"Open to impactful work"</span>
-              </p>
-              <p>
-                <span className="text-on-surface-variant">stack:</span>{" "}
-                [<span className="text-primary">"React", "TypeScript", "Python", "RAG"</span>]
-              </p>
-              <p>
-                <span className="text-on-surface-variant">focus:</span>{" "}
-                <span className="text-primary">"Full-Stack & AI Engineering"</span>
-              </p>
-            </div>
-          </Card>
-
-          <div className="lg:col-span-7">
-            {/* Skills as category cards */}
-            <div>
-              <div className="relative flex py-5 items-center group">
-                <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-                <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-on-surface-variant transition-colors duration-300 group-hover:text-primary">
-                  <span className="text-primary">{">"}</span> Skills & Experience:
-                </span>
-                <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                {skillCategories.map((cat) => {
-                  const categorySkills = cat.skillNames
-                    .map((name) => ({
-                      name,
-                      years: skillsByName[name as keyof typeof skillsByName],
-                    }))
-                    .filter((s) => s.years != null);
-                  return (
-                    <Card key={cat.id} variant="interactive">
-                      <h3 className="text-base font-semibold text-on-surface mb-3">
-                        {cat.title}
-                      </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {categorySkills.map(({ name, years }) => (
-                          <span
-                            key={name}
-                            className="px-3 py-1 text-xs sm:text-sm border border-outline-variant/30 rounded-lg bg-surface-container-lowest text-on-surface"
-                          >
-                            {name}
-                            <span className="text-on-surface-variant ml-1">
-                              ({years}y)
-                            </span>
-                          </span>
-                        ))}
-                      </div>
-                    </Card>
-                  );
-                })}
-              </div>
-            </div>
+        {/* Skills */}
+        <div className="mt-12">
+          <SectionHeading>Skills</SectionHeading>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {skillCategories.map((cat) => (
+              <Card key={cat.id} variant="interactive">
+                <h3 className="text-base font-semibold text-on-surface mb-3">
+                  {cat.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {cat.skillNames.map((name) => (
+                    <span
+                      key={name}
+                      className="px-3 py-1 text-xs sm:text-sm border border-outline-variant/30 rounded-lg bg-surface-container-lowest text-on-surface"
+                    >
+                      {name}
+                    </span>
+                  ))}
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
 
         {/* My Projects teaser */}
         <div className="mt-10">
-          <div className="relative flex py-5 items-center group">
-            <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-            <span className="text-lg sm:text-xl md:text-3xl font-semibold flex-shrink mx-4 text-on-surface-variant transition-colors duration-300 group-hover:text-primary">
-              <span className="text-primary">{">"}</span> My Projects
-            </span>
-            <div className="flex-grow border-t border-outline-variant/30 transform transition-transform duration-300 group-hover:scale-x-105"></div>
-          </div>
-          <div className="pl-2 md:pl-6 mt-4 flex flex-wrap gap-2">
+          <SectionHeading>Selected work</SectionHeading>
+          <div className="flex flex-wrap gap-2">
             {builds.slice(0, 6).map((build, key) => (
               <span
                 key={key}
                 className="px-3 py-1 text-xs sm:text-sm border border-outline-variant/30 rounded-lg bg-surface-container-lowest text-on-surface truncate max-w-[280px] sm:max-w-none"
                 title={build}
               >
-                {build.replace(/\s*-+$/g, "").trim()}
+                {build}
               </span>
             ))}
           </div>
-          <p className="pl-2 md:pl-6 mt-4 text-sm text-on-surface-variant">
+          <p className="mt-4 text-sm text-on-surface-variant">
             For details, visit the Projects section.
           </p>
-          <div className="pl-2 md:pl-6 mt-3">
+          <div className="mt-3">
             <Link
               to="/projects"
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-primary border border-primary/60 rounded-lg hover:bg-surface-container-low transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"

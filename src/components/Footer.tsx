@@ -34,7 +34,9 @@ export default function Footer() {
               key={l.id}
               href={l.link}
               target={l.link.startsWith("http") ? "_blank" : undefined}
-              rel={l.link.startsWith("http") ? "noopener noreferrer" : undefined}
+              rel={
+                l.link.startsWith("http") ? "noopener noreferrer" : undefined
+              }
               className="font-label text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
             >
               {l.name}
@@ -45,4 +47,3 @@ export default function Footer() {
     </footer>
   );
 }
-

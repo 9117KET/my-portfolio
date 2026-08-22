@@ -223,9 +223,7 @@ export default function AIHumanDev() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p className="mb-4">
           The future of software development lies not in choosing between human
           intelligence and AI, but in creating a powerful synergy between both.

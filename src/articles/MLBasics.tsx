@@ -197,9 +197,7 @@ export default function MLBasics() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p>
           Machine learning sits at the intersection of computer science,
           statistics, and real-world domain knowledge. Understanding the basics

@@ -14,14 +14,14 @@ export const cvLink =
 // Descriptions of types of builds the portfolio owner can perform (resume-aligned)
 export const builds = [
   "IR-AI / InfraRaderAI (Business Intelligence, LangChain, LangGraph, Neo4j)",
-  "AWS Bedrock Knowledge Base (Generative AI, RAG) -------------------------",
-  "Rate My Professor (Full-Stack, RAG)--------------------------------------",
-  "IoT Course Recommendation Framework--------------------------------------",
-  "BMW Hackathon (Causal Machine Learning)----------------------------------",
-  "KET Academy (e-learning platform for secondary and high school students)-",
-  "AI Chatbot, AI Flashcards, Expense Tracker, AI Customer Support----------",
-  "My portfolio websites----------------------------------------------------",
-  "Brain Tumor Classification, Bank Churn Prediction, Image Generation------",
+  "AWS Bedrock Knowledge Base (Generative AI, RAG)",
+  "Rate My Professor (Full-Stack, RAG)",
+  "IoT Course Recommendation Framework",
+  "BMW Hackathon (Causal Machine Learning)",
+  "KET Academy (e-learning platform for secondary and high school students)",
+  "AI Chatbot, AI Flashcards, Expense Tracker, AI Customer Support",
+  "My portfolio websites",
+  "Brain Tumor Classification, Bank Churn Prediction, Image Generation",
 ];
 
 // Hobbies
@@ -32,40 +32,6 @@ export const hobbies = [
   "Playing Chess",
   "Playing Table Tennis",
   "Learning how to play the Piano",
-];
-
-// Skills (resume-aligned: Languages, Frameworks, AI/LLM, Tools)
-export const skills = [
-  { name: "JavaScript", years: 4 },
-  { name: "TypeScript", years: 3 },
-  { name: "Python", years: 3 },
-  { name: "C/C++", years: 2 },
-  { name: "SQL", years: 3 },
-  { name: "HTML/CSS", years: 5 },
-  { name: "React", years: 3 },
-  { name: "Next.js", years: 3 },
-  { name: "Tailwind CSS", years: 3 },
-  { name: "Material-UI", years: 2 },
-  { name: "Node.js", years: 3 },
-  { name: "FastAPI", years: 2 },
-  { name: "Flask", years: 2 },
-  { name: "TensorFlow", years: 2 },
-  { name: "scikit-learn", years: 2 },
-  { name: "pandas", years: 2 },
-  { name: "NumPy", years: 2 },
-  { name: "LangChain", years: 2 },
-  { name: "LangGraph", years: 2 },
-  { name: "Neo4j", years: 1 },
-  { name: "RAG", years: 2 },
-  { name: "Git", years: 4 },
-  { name: "GitHub", years: 4 },
-  { name: "Docker", years: 2 },
-  { name: "Firebase", years: 3 },
-  { name: "GCP", years: 1 },
-  { name: "AWS", years: 2 },
-  { name: "Vercel", years: 2 },
-  { name: "Supabase", years: 1 },
-  { name: "Salesforce CMS", years: 1 },
 ];
 
 // Grouping for Skills cards on About page (order: Frontend, Data & ML, DevOps & Tools, Backend)

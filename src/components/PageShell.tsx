@@ -19,7 +19,10 @@ export default function PageShell({
         </div>
       </div>
 
-      <main id="main-content" className="max-w-7xl mx-auto px-6 sm:px-8 pt-10 pb-24">
+      <main
+        id="main-content"
+        className="max-w-7xl mx-auto px-6 sm:px-8 pt-10 pb-24"
+      >
         {children}
       </main>
 
@@ -27,4 +30,3 @@ export default function PageShell({
     </div>
   );
 }
-

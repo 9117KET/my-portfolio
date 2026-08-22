@@ -169,9 +169,7 @@ type NumberOrString = number | string;`}
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p>
           TypeScript continues to evolve, and staying up-to-date with best
           practices will help you write more maintainable and robust

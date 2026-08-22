@@ -42,7 +42,7 @@ const Experience = React.memo(function Experience({
         }) => {
           const responsibilitiesToShow = responsibilities.slice(
             0,
-            MAX_RESPONSIBILITIES_SHOWN
+            MAX_RESPONSIBILITIES_SHOWN,
           );
           return (
             <Card key={id} as="article" variant="interactive">
@@ -63,7 +63,7 @@ const Experience = React.memo(function Experience({
                 {companyDescription}
               </p>
               <p className="text-xs font-semibold text-on-surface mb-2 font-label tracking-wider uppercase">
-                {">"} Responsibilities
+                Responsibilities
               </p>
               <ul className="space-y-1 text-sm text-on-surface-variant list-disc list-inside">
                 {responsibilitiesToShow.map((responsibility, index) => (
@@ -72,7 +72,7 @@ const Experience = React.memo(function Experience({
               </ul>
             </Card>
           );
-        }
+        },
       )}
     </div>
   );

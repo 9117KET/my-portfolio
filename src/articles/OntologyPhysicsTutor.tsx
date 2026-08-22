@@ -18,7 +18,10 @@ export default function OntologyPhysicsTutor() {
           that ended up teaching me something more interesting than the original
           hypothesis.
         </p>
-        <p>This is the breakdown of what I built, what I measured, and what I&apos;d do differently.</p>
+        <p>
+          This is the breakdown of what I built, what I measured, and what
+          I&apos;d do differently.
+        </p>
       </section>
 
       {/* The Problem */}
@@ -44,18 +47,20 @@ export default function OntologyPhysicsTutor() {
           The Force Concept Inventory (FCI), a validated diagnostic developed by
           Hestenes et al. (1992), shows that naive misconceptions about
           Newtonian mechanics are persistent and instruction-resistant. Students
-          who hold the Aristotelian belief that heavier objects fall faster often
-          retain it even after conventional physics instruction. An AI tutor that
-          confidently reinforces that misconception does measurable, lasting harm.
+          who hold the Aristotelian belief that heavier objects fall faster
+          often retain it even after conventional physics instruction. An AI
+          tutor that confidently reinforces that misconception does measurable,
+          lasting harm.
         </p>
         <p className="mb-2">
-          Three mainstream approaches exist to reduce hallucination, and all have problems:
+          Three mainstream approaches exist to reduce hallucination, and all
+          have problems:
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li>
-            <strong>Prompt engineering:</strong> Manually craft system prompts to
-            constrain the model. It works until it doesn&apos;t, requires domain
-            expertise to maintain, and does not scale.
+            <strong>Prompt engineering:</strong> Manually craft system prompts
+            to constrain the model. It works until it doesn&apos;t, requires
+            domain expertise to maintain, and does not scale.
           </li>
           <li>
             <strong>Fine-tuning:</strong> Retrain on curated data. Expensive,
@@ -82,8 +87,8 @@ export default function OntologyPhysicsTutor() {
         <p className="mb-4">
           A Web Ontology Language (OWL) ontology is a formal, machine-readable
           knowledge map. Unlike a database of facts, it encodes not just what
-          things are but how they relate and what constraints they must satisfy -
-          as logical axioms rather than statistical associations.
+          things are but how they relate and what constraints they must satisfy
+          - as logical axioms rather than statistical associations.
         </p>
         <p className="mb-4">
           The analogy I find useful: an LLM is a brilliant but forgetful expert
@@ -92,16 +97,14 @@ export default function OntologyPhysicsTutor() {
           concise, always correct. My system makes the LLM read that card before
           it speaks.
         </p>
-        <p className="mb-4">
-          For my physics ontology, each concept includes:
-        </p>
+        <p className="mb-4">For my physics ontology, each concept includes:</p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li>
-            <strong>Classes:</strong> Force, Mass, Acceleration, Law, PhysicalQuantity
+            <strong>Classes:</strong> Force, Mass, Acceleration, Law,
+            PhysicalQuantity
           </li>
           <li>
-            <strong>Properties:</strong>{" "}
-            <code>Force hasUnit Newton</code>,{" "}
+            <strong>Properties:</strong> <code>Force hasUnit Newton</code>,{" "}
             <code>NewtonsSecondLaw hasFormula F=ma</code>
           </li>
           <li>
@@ -109,8 +112,9 @@ export default function OntologyPhysicsTutor() {
             Second Law, you must first understand Force, Mass, and Acceleration
           </li>
           <li>
-            <strong>Instances:</strong> specific concepts with exact definitions,
-            common misconceptions flagged, and real-world applications linked
+            <strong>Instances:</strong> specific concepts with exact
+            definitions, common misconceptions flagged, and real-world
+            applications linked
           </li>
         </ul>
         <p>
@@ -150,7 +154,8 @@ export default function OntologyPhysicsTutor() {
           </li>
           <li>
             <strong>API server:</strong> Flask 3.x with JWT-based stateless rate
-            limiting, input validation, and security headers for serverless deployment
+            limiting, input validation, and security headers for serverless
+            deployment
           </li>
         </ul>
 
@@ -162,12 +167,16 @@ export default function OntologyPhysicsTutor() {
           <div className="pl-4 text-primary">↓</div>
           <div>Student Model Adaptation (concept tracking)</div>
           <div className="pl-4 text-primary">↓</div>
-          <div>Claude API   system= grounded context + anti-hallucination rules</div>
+          <div>
+            Claude API system= grounded context + anti-hallucination rules
+          </div>
           <div className="pl-4 text-primary">↓</div>
           <div>Grounded Response</div>
         </div>
 
-        <h3 className="text-xl font-semibold mb-2">The Knowledge Injection Pipeline</h3>
+        <h3 className="text-xl font-semibold mb-2">
+          The Knowledge Injection Pipeline
+        </h3>
         <p className="mb-4">
           When a student asks a question, the context extractor runs through
           four priority levels:
@@ -249,7 +258,9 @@ response = client.messages.create(
           access-control logic in the user&apos;s browser.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2">The Adaptive Student Model</h3>
+        <h3 className="text-xl font-semibold mb-2">
+          The Adaptive Student Model
+        </h3>
         <p className="mb-4">
           Rather than treating every student identically, the system maintains a
           per-session profile tracking:
@@ -271,11 +282,11 @@ response = client.messages.create(
         <p>
           The knowledge level update rule is principled: correct high-confidence
           answers increase the score; incorrect high-confidence answers flag a
-          misconception rather than ignorance, triggering a different pedagogical
-          response. Due to serverless constraints (a new tutor instance per HTTP
-          request), the adaptive features exist in code but accumulation across
-          sessions requires persistent storage - one of the clearest areas for
-          future work.
+          misconception rather than ignorance, triggering a different
+          pedagogical response. Due to serverless constraints (a new tutor
+          instance per HTTP request), the adaptive features exist in code but
+          accumulation across sessions requires persistent storage - one of the
+          clearest areas for future work.
         </p>
       </section>
 
@@ -302,7 +313,9 @@ response = client.messages.create(
           <ul className="list-none space-y-1 text-sm">
             <li>(A) About half as long for the heavier ball</li>
             <li>(B) About half as long for the lighter ball</li>
-            <li className="font-semibold">(C) About the same for both balls [correct]</li>
+            <li className="font-semibold">
+              (C) About the same for both balls [correct]
+            </li>
             <li>(D) Considerably less for the heavier ball</li>
             <li>(E) Considerably less for the lighter ball</li>
           </ul>
@@ -430,15 +443,17 @@ response = client.messages.create(
           conclusion.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2">Understanding the Trade-off</h3>
+        <h3 className="text-xl font-semibold mb-2">
+          Understanding the Trade-off
+        </h3>
         <p className="mb-4">
           The accuracy drop has a principled explanation. When the ontology
-          constrains the model to reason from structured definitions, it improves
-          the factual quality of explanations but can impair the model&apos;s
-          ability to navigate subtle distractor analysis. FCI questions are
-          designed to probe nuanced discriminative reasoning, and having more
-          formal context can introduce ambiguity rather than clarity when the
-          model needs to commit to a single answer.
+          constrains the model to reason from structured definitions, it
+          improves the factual quality of explanations but can impair the
+          model&apos;s ability to navigate subtle distractor analysis. FCI
+          questions are designed to probe nuanced discriminative reasoning, and
+          having more formal context can introduce ambiguity rather than clarity
+          when the model needs to commit to a single answer.
         </p>
         <p>
           The baseline model, drawing freely on broad training knowledge,
@@ -488,7 +503,9 @@ response = client.messages.create(
           reveal failure modes that are easy to repeat.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2">The Cohen&apos;s d Formula Error</h3>
+        <h3 className="text-xl font-semibold mb-2">
+          The Cohen&apos;s d Formula Error
+        </h3>
         <p className="mb-4">
           The original implementation computed a combined-sample standard
           deviation instead of the pooled within-group standard deviation
@@ -510,10 +527,10 @@ pooled_std = float(np.sqrt(
         </div>
         <p className="mb-4">
           This kind of error is common when implementing statistical formulas
-          from search results rather than deriving them from first principles. In
-          research code, a single formula error invalidates the effect size
-          claim. Always verify statistical formulas against a textbook derivation,
-          not just a code example.
+          from search results rather than deriving them from first principles.
+          In research code, a single formula error invalidates the effect size
+          claim. Always verify statistical formulas against a textbook
+          derivation, not just a code example.
         </p>
 
         <h3 className="text-xl font-semibold mb-2">Evaluation Fallback Bias</h3>
@@ -526,7 +543,9 @@ pooled_std = float(np.sqrt(
           non-imputation is always safer than a guess in evaluation code.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2">Windows File URI Encoding</h3>
+        <h3 className="text-xl font-semibold mb-2">
+          Windows File URI Encoding
+        </h3>
         <p className="mb-4">
           Loading the OWL ontology on Windows failed silently because paths with
           spaces produce invalid file URIs without proper encoding. Common in
@@ -590,20 +609,20 @@ onto = get_ontology(ontology_uri).load()`}</pre>
           Having worked on the BMW Causal ML Hackathon, where we analyzed 370+
           sensor inputs to predict part quality, I&apos;ve seen firsthand how
           complex the relationship between production variables and quality
-          outcomes is. An ontology of automotive quality concepts - defect types,
-          sensor relationships, production constraints - could ground an AI
-          assistant that helps production engineers diagnose root causes without
-          hallucinating statistical relationships that don&apos;t exist in the
-          data.
+          outcomes is. An ontology of automotive quality concepts - defect
+          types, sensor relationships, production constraints - could ground an
+          AI assistant that helps production engineers diagnose root causes
+          without hallucinating statistical relationships that don&apos;t exist
+          in the data.
         </p>
         <p className="mb-4">
-          In advanced driver-assistance systems (ADAS) development, safety-critical
-          concepts like minimum stopping distances, sensor fusion constraints, and
-          ISO 26262 safety integrity levels are precisely defined in standards
-          documents. Grounding an LLM in a formal ontology of these concepts
-          reduces the risk of an AI assistant hallucinating safety specifications
-          - which in ADAS contexts could influence design decisions with real
-          safety implications downstream.
+          In advanced driver-assistance systems (ADAS) development,
+          safety-critical concepts like minimum stopping distances, sensor
+          fusion constraints, and ISO 26262 safety integrity levels are
+          precisely defined in standards documents. Grounding an LLM in a formal
+          ontology of these concepts reduces the risk of an AI assistant
+          hallucinating safety specifications - which in ADAS contexts could
+          influence design decisions with real safety implications downstream.
         </p>
         <p className="mb-4">
           For automotive training platforms used to onboard engineers to new
@@ -619,19 +638,19 @@ onto = get_ontology(ontology_uri).load()`}</pre>
         <p className="mb-4">
           Medical ontologies like SNOMED CT and ICD-10 are among the most mature
           formal knowledge structures in existence, covering disease concepts,
-          clinical findings, and procedural terminology. Grounding a clinical LLM
-          assistant in these ontologies would improve factual reliability in
+          clinical findings, and procedural terminology. Grounding a clinical
+          LLM assistant in these ontologies would improve factual reliability in
           applications that support diagnostic reasoning or treatment protocol
           education.
         </p>
         <p className="mb-4">
-          The accuracy-hallucination trade-off is especially critical in medicine:
-          a wrong factual claim in an explanation is dangerous, but a system that
-          appropriately hedges on diagnosis is correct behavior, since diagnosis
-          is the clinician&apos;s role. The same pattern I found in physics
-          education - ontology grounding improves explanation quality at the cost
-          of decision confidence - maps cleanly to this context and is arguably
-          the right behavior for a clinical support tool.
+          The accuracy-hallucination trade-off is especially critical in
+          medicine: a wrong factual claim in an explanation is dangerous, but a
+          system that appropriately hedges on diagnosis is correct behavior,
+          since diagnosis is the clinician&apos;s role. The same pattern I found
+          in physics education - ontology grounding improves explanation quality
+          at the cost of decision confidence - maps cleanly to this context and
+          is arguably the right behavior for a clinical support tool.
         </p>
 
         <h3 className="text-xl font-semibold mb-2">
@@ -673,8 +692,8 @@ onto = get_ontology(ontology_uri).load()`}</pre>
           </li>
           <li>
             <strong>Compare against a RAG baseline.</strong> RAG is the dominant
-            industry approach to knowledge grounding. Not measuring against it is
-            a gap. My hypothesis: ontology grounding outperforms RAG on
+            industry approach to knowledge grounding. Not measuring against it
+            is a gap. My hypothesis: ontology grounding outperforms RAG on
             hallucination rate for concepts within the ontology&apos;s coverage,
             and underperforms for out-of-scope questions.
           </li>
@@ -684,8 +703,8 @@ onto = get_ontology(ontology_uri).load()`}</pre>
         <ol className="list-decimal pl-6 space-y-3">
           <li>
             <strong>Larger sample.</strong> n = 15 is underpowered. The full FCI
-            has 30 questions; running 5 repetitions per question would reach
-            n = 150 and give real statistical power at standard significance
+            has 30 questions; running 5 repetitions per question would reach n =
+            150 and give real statistical power at standard significance
             thresholds.
           </li>
           <li>
@@ -731,23 +750,22 @@ onto = get_ontology(ontology_uri).load()`}</pre>
             cost
           </li>
           <li>
-            Pilot the compliance training application with a partner organization
-            to validate the financial services applicability
+            Pilot the compliance training application with a partner
+            organization to validate the financial services applicability
           </li>
         </ul>
       </section>
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p className="mb-4">
           Ontology grounding is a practically viable approach to reducing
-          hallucinations in domain-specific AI. The 75% reduction in hallucination
-          rate (26.7% down to 6.7%, Cohen&apos;s d = 0.53) is a meaningful
-          engineering result, even as the p-value of 0.082 calls for larger
-          validation samples before strong statistical claims can be made.
+          hallucinations in domain-specific AI. The 75% reduction in
+          hallucination rate (26.7% down to 6.7%, Cohen&apos;s d = 0.53) is a
+          meaningful engineering result, even as the p-value of 0.082 calls for
+          larger validation samples before strong statistical claims can be
+          made.
         </p>
         <p className="mb-4">
           The accuracy-hallucination trade-off is not a failure mode - it is a
@@ -760,16 +778,16 @@ onto = get_ontology(ontology_uri).load()`}</pre>
           The architectural insight extends well beyond physics tutoring. Any
           domain with formally representable knowledge - financial regulation,
           automotive safety standards, clinical guidelines, legal statute - is a
-          candidate for this hybrid neuro-symbolic approach. The challenge in each
-          case is the same: build the ontology, measure the trade-off honestly,
-          and deploy the system in the task context where its specific properties
-          are an advantage rather than a limitation.
+          candidate for this hybrid neuro-symbolic approach. The challenge in
+          each case is the same: build the ontology, measure the trade-off
+          honestly, and deploy the system in the task context where its specific
+          properties are an advantage rather than a limitation.
         </p>
         <p>
           And the engineering lessons - verify statistical formulas from first
           principles, treat LLM system prompts as privilege boundaries, never
-          impute guesses in evaluation fallbacks - transfer to any research system
-          where measurement correctness matters.
+          impute guesses in evaluation fallbacks - transfer to any research
+          system where measurement correctness matters.
         </p>
       </section>
 

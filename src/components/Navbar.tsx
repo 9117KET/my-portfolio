@@ -12,17 +12,17 @@ export default function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full border-b border-outline-variant/20 bg-surface/80 backdrop-blur-xl shadow-2xl shadow-primary/10">
+    <nav className="w-full border-b border-outline-variant/40 bg-surface/85 backdrop-blur-xl">
       <div className="flex justify-between items-center h-16">
-        <h1 className="text-xl font-bold tracking-tighter text-on-surface mr-5">
-        <Link
-          to="/"
-          className="hover:text-primary transition-colors duration-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/40"
-        >
-          <span className="text-primary">{`<`}</span>KET
-          <span className="text-primary">{`/>`}</span>
-        </Link>
-      </h1>
+        <div className="text-xl font-bold tracking-tighter text-on-surface mr-5">
+          <Link
+            to="/"
+            className="hover:text-primary transition-colors duration-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/40"
+          >
+            <span className="text-primary">{`<`}</span>KET
+            <span className="text-primary">{`/>`}</span>
+          </Link>
+        </div>
         <div className="hidden md:flex flex-1 justify-end items-center gap-8">
           <ul className="list-none flex justify-end items-center gap-8">
             {navLinks.map((nav) => (

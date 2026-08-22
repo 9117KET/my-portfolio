@@ -38,9 +38,7 @@ const Project = React.memo(function Project({
       <div id={id} className="flex flex-col flex-1">
         {/* Header: name + badges (year, category, status, collaborators) */}
         <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
-          <h2 className="text-lg font-semibold text-on-surface pr-2">
-            {name}
-          </h2>
+          <h2 className="text-lg font-semibold text-on-surface pr-2">{name}</h2>
           <div className="flex flex-wrap gap-2 justify-end">
             {year != null && (
               <span

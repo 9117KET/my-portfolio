@@ -89,14 +89,6 @@ export default function Projects() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1">
             Projects
           </h1>
-          <p
-            className="text-sm font-mono text-on-surface-variant mb-2"
-            aria-hidden="true"
-          >
-            <span className="text-primary">{">"}</span>
-            <span className="ml-2">projects:~</span>{" "}
-            <span className="text-primary">$</span> cat projects.md
-          </p>
           <p className="text-sm sm:text-base text-on-surface-variant mb-6">
             A selection of projects that highlight my work in full-stack, AI/ML,
             and data science.

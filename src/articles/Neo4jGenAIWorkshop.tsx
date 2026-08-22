@@ -9,9 +9,7 @@ export default function Neo4jGenAIWorkshop() {
     <div className="font-body mb-4 max-w-none">
       {/* Overview & links */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Overview
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Overview</h2>
         <p className="mb-4">
           This breakdown summarizes the Neo4j Generative AI Workshop (Knowledge
           Graphs, Graph RAG, and Retrieval), part of the Road to Node series. It
@@ -43,7 +41,8 @@ export default function Neo4jGenAIWorkshop() {
               >
                 Graph Academy (graphacademy.neo4j.com)
               </a>{" "}
-              is where you sign up and enroll in the Generative AI Workshop course.
+              is where you sign up and enroll in the Generative AI Workshop
+              course.
             </li>
             <li>
               <a
@@ -82,10 +81,11 @@ export default function Neo4jGenAIWorkshop() {
         </h2>
         <p className="mb-4">
           Gen AI here means models that generate new content (e.g. text) from
-          training data. LLMs are statistical; they do not &quot;understand&quot;
-          in a human sense and can hallucinate. Supplying <strong>context</strong> in
-          the prompt (e.g. from a retriever) improves accuracy and reduces
-          hallucination. That is the core motivation for RAG and Graph RAG.
+          training data. LLMs are statistical; they do not
+          &quot;understand&quot; in a human sense and can hallucinate. Supplying{" "}
+          <strong>context</strong> in the prompt (e.g. from a retriever)
+          improves accuracy and reduces hallucination. That is the core
+          motivation for RAG and Graph RAG.
         </p>
       </section>
 
@@ -95,13 +95,13 @@ export default function Neo4jGenAIWorkshop() {
           RAG and Graph RAG
         </h2>
         <p className="mb-4">
-          In RAG (Retrieval Augmented Generation), the user question is sent to a
-          retriever, which fetches relevant context from a data store (documents,
-          APIs, or a graph). The LLM receives the question plus this context and
-          produces a better, grounded answer.
+          In RAG (Retrieval Augmented Generation), the user question is sent to
+          a retriever, which fetches relevant context from a data store
+          (documents, APIs, or a graph). The LLM receives the question plus this
+          context and produces a better, grounded answer.
         </p>
         <pre className="mb-4 p-4 rounded-lg bg-surface-container text-sm overflow-x-auto border border-outline-variant/40">
-{`  User question
+          {`  User question
        │
        ▼
   ┌─────────────┐     context      ┌─────┐
@@ -115,11 +115,11 @@ export default function Neo4jGenAIWorkshop() {
           <strong>Graph RAG</strong> (term from Microsoft research) combines RAG
           with a graph: you use both vector search and graph structure (e.g.
           traversals, patterns) to gather context. Benefits: richer context,
-          better accuracy, explainability, and support for flexible, relationship-based
-          queries.
+          better accuracy, explainability, and support for flexible,
+          relationship-based queries.
         </p>
         <pre className="mb-4 p-4 rounded-lg bg-surface-container text-sm overflow-x-auto border border-outline-variant/40">
-{`  User question
+          {`  User question
        │
        ▼
   ┌─────────────────────────┐
@@ -142,13 +142,13 @@ export default function Neo4jGenAIWorkshop() {
         </h2>
         <p className="mb-4">
           To build a knowledge graph from unstructured text you typically: load
-          text, chunk it, create embeddings (for vector search), send chunks to an
-          LLM to extract entities and relationships, then write nodes and
+          text, chunk it, create embeddings (for vector search), send chunks to
+          an LLM to extract entities and relationships, then write nodes and
           relationships into the graph. The Neo4j Graph RAG Python package
           provides a &quot;Simple KG pipeline&quot; that does this.
         </p>
         <pre className="mb-4 p-4 rounded-lg bg-surface-container text-sm overflow-x-auto border border-outline-variant/40">
-{`  Unstructured text
+          {`  Unstructured text
        │
        ▼
   Chunk ──► Embed ──► LLM (extract entities & relationships)
@@ -162,10 +162,10 @@ export default function Neo4jGenAIWorkshop() {
           <strong>Chunk size</strong> matters: larger chunks give the LLM more
           context but can produce fewer, coarser entities; smaller chunks (e.g.
           500 characters) often yield more granular, useful graphs. Defining a
-          <strong> schema</strong> (node labels, relationship types, and optionally
-          patterns) constrains what the LLM extracts and makes the graph more
-          consistent and queryable (e.g. &quot;Technology&quot;, &quot;Concept&quot;,
-          &quot;RELATED_TO&quot;, &quot;PART_OF&quot;).
+          <strong> schema</strong> (node labels, relationship types, and
+          optionally patterns) constrains what the LLM extracts and makes the
+          graph more consistent and queryable (e.g. &quot;Technology&quot;,
+          &quot;Concept&quot;, &quot;RELATED_TO&quot;, &quot;PART_OF&quot;).
         </p>
         <p className="mb-4">
           You can combine <strong>structured data</strong> (e.g. CSV with
@@ -184,22 +184,22 @@ export default function Neo4jGenAIWorkshop() {
         <p className="mb-4">
           <strong>Vector retriever:</strong> Create a vector index on chunk
           embeddings (e.g. OpenAI, 1536 dimensions, cosine similarity). Turn the
-          user question into an embedding and run a similarity search; return the
-          top-k chunks as context for the LLM.
+          user question into an embedding and run a similarity search; return
+          the top-k chunks as context for the LLM.
         </p>
         <p className="mb-4">
-          <strong>Vector + Cypher retriever:</strong> Same vector search, but the
-          retrieval query can also traverse the graph and return not only chunk
-          text but also related entities (e.g. technologies, concepts, lesson
-          URLs). That gives the LLM both passage content and graph-derived facts,
-          improving answers and traceability.
+          <strong>Vector + Cypher retriever:</strong> Same vector search, but
+          the retrieval query can also traverse the graph and return not only
+          chunk text but also related entities (e.g. technologies, concepts,
+          lesson URLs). That gives the LLM both passage content and
+          graph-derived facts, improving answers and traceability.
         </p>
         <p className="mb-4">
           <strong>Text-to-Cypher retriever:</strong> The user question is
           converted by an LLM into a Cypher query; that query runs on the graph
           and the results are passed as context to the answer LLM. Best for
-          precise, structured questions (e.g. &quot;How many technologies are
-          in the graph?&quot;, &quot;How does Neo4j relate to other
+          precise, structured questions (e.g. &quot;How many technologies are in
+          the graph?&quot;, &quot;How does Neo4j relate to other
           technologies?&quot;). For large or complex graphs, constraining
           text-to-Cypher to a subgraph or schema improves reliability.
         </p>
@@ -221,8 +221,9 @@ export default function Neo4jGenAIWorkshop() {
             concise and explainable retrieval than vector-only RAG.
           </li>
           <li>
-            KG construction: chunk size and a clear schema (nodes, relationships,
-            patterns) are levers for quality; iterate on a sample before scaling.
+            KG construction: chunk size and a clear schema (nodes,
+            relationships, patterns) are levers for quality; iterate on a sample
+            before scaling.
           </li>
           <li>
             Adding structured metadata (e.g. lesson, course, URL) to the graph
@@ -239,9 +240,7 @@ export default function Neo4jGenAIWorkshop() {
 
       {/* Links */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Links
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Links</h2>
         <ul className="list-disc pl-6 space-y-1">
           <li>
             <a

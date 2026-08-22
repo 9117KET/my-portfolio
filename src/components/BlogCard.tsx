@@ -27,9 +27,7 @@ const BlogCard = React.memo(function BlogCard({
           <span className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20 font-label uppercase tracking-wider">
             {category}
           </span>
-          <time className="text-sm text-on-surface-variant">
-            {date}
-          </time>
+          <time className="text-sm text-on-surface-variant">{date}</time>
         </div>
 
         <h3 className="text-xl md:text-2xl font-bold mb-3 text-on-surface group-hover:text-primary transition-colors leading-tight">

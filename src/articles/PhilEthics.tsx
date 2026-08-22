@@ -137,9 +137,7 @@ export default function PhilEthics() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p>
           The study of philosophical ethics provides us with valuable tools for
           navigating complex moral decisions. While no ethical framework is

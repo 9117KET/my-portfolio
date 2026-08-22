@@ -24,9 +24,7 @@ export default function AWSBedrockRAG() {
 
       {/* The Problem */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          The Problem
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">The Problem</h2>
         <p className="mb-4">
           Traditional document management systems present several challenges:
         </p>
@@ -165,12 +163,12 @@ export default function AWSBedrockRAG() {
           <div className="mb-2"> │ │</div>
           <div className="mb-2"> ▼ ▲ ▼ ▲</div>
           <div className="mb-2">┌──────────────────┐ ┌──────────────────┐</div>
-          <div className="mb-2">│ Data Storage     │ │ Vector Database │</div>
-          <div className="mb-2">│ Amazon S3        │ │ Aurora Serverless│</div>
-          <div className="mb-2">│ (PDF Documents)  │ │ PostgreSQL │</div>
-          <div className="mb-2">│ │ │ + pgvector   │</div>
+          <div className="mb-2">│ Data Storage │ │ Vector Database │</div>
+          <div className="mb-2">│ Amazon S3 │ │ Aurora Serverless│</div>
+          <div className="mb-2">│ (PDF Documents) │ │ PostgreSQL │</div>
+          <div className="mb-2">│ │ │ + pgvector │</div>
           <div className="mb-2">
-                                └───┬───────────────┘ └────────┬──────────┘
+            └───┬───────────────┘ └────────┬──────────┘
           </div>
           <div className="mb-2"> │ │</div>
           <div className="mb-2"> └──────────┬───────────────┘</div>
@@ -1064,9 +1062,7 @@ export default function AWSBedrockRAG() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p className="mb-4">
           This project demonstrates the power of combining AWS managed services
           with modern AI capabilities to solve real-world business challenges.

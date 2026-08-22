@@ -20,10 +20,7 @@ export default function Card({
   as: Component = "div",
   variant = "default",
 }: CardProps) {
-  const variantClass =
-    variant === "dense"
-      ? "p-4 sm:p-5"
-      : "p-5 sm:p-6";
+  const variantClass = variant === "dense" ? "p-4 sm:p-5" : "p-5 sm:p-6";
 
   const interactiveClass =
     variant === "interactive"

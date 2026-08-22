@@ -162,9 +162,7 @@ export default function AIEthics() {
 
       {/* Conclusion */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p>
           As artificial intelligence continues to evolve and permeate more
           aspects of our society, addressing ethical considerations becomes not

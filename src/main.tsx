@@ -81,15 +81,15 @@ const router = createBrowserRouter(
           </Suspense>
         }
       />
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 // Render the application into the DOM
 const rootElement = document.getElementById("root");
 if (!rootElement) {
   throw new Error(
-    "Root element not found. Make sure you have a div with id='root' in your HTML."
+    "Root element not found. Make sure you have a div with id='root' in your HTML.",
   );
 }
 
@@ -103,5 +103,5 @@ ReactDOM.createRoot(rootElement).render(
         {/* Provides the router context to the application*/}
       </HelmetProvider>
     </ErrorBoundary>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

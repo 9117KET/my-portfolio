@@ -742,9 +742,7 @@ export default function RateProfessorJourney() {
 
       {/* Conclusion */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-on-surface">
-          Conclusion
-        </h2>
+        <h2 className="text-2xl font-bold mb-4 text-on-surface">Conclusion</h2>
         <p className="mb-4">
           The Rate My Professor AI Assistant demonstrates how modern AI
           architectures can transform traditional data access patterns into
