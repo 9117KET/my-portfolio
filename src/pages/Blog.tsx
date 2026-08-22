@@ -101,7 +101,7 @@ export default function Blog() {
           content="Read my latest thoughts and insights on technology, programming, AI/ML, and more."
         />
       </Helmet>
-      <PageShell current="blog">
+      <PageShell>
         <div className="mt-5 p-2 sm:p-4 md:p-8">
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">

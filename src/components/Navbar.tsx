@@ -6,8 +6,8 @@ import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-// Navbar functional component. `clicked` is legacy; active state is router-driven.
-export default function Navbar({ clicked: _clicked }: { clicked?: string }) {
+// Navbar functional component. Active state is router-driven via NavLink.
+export default function Navbar() {
   // state to manage the toggle state of the mobile menu
   const [toggle, setToggle] = useState(false);
 

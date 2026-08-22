@@ -38,7 +38,7 @@ export default function About() {
           content="Hi! I am Kinlo, a full-stack developer with an AI/ML focus, a Computer Science degree and a Data Science minor, plus hands-on experience in program and project management. I love learning, teaching and building projects."
         />
       </Helmet>
-      <PageShell current="about">
+      <PageShell>
         <AboutMe />
         <ContactMe />
       </PageShell>

@@ -87,7 +87,7 @@ export default function Projects() {
           content="Explore my portfolio of software development projects including AI/ML applications, full-stack web applications, and data science projects."
         />
       </Helmet>
-      <PageShell current="projects">
+      <PageShell>
         <div className="mt-5 p-2 sm:p-4 md:p-8 text-on-surface">
           {/* Page title + terminal line */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1">

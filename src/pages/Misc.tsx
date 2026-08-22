@@ -154,7 +154,7 @@ export default function Misc() {
           content="Explore my certifications, awards, and achievements including Google AI certifications, Diana Award recognition, and Global Student Prize finalist."
         />
       </Helmet>
-      <PageShell current="misc">
+      <PageShell>
         <div className="mt-5 p-2 sm:p-4 md:p-8">
           <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-on-surface-variant mb-5 font-medium">
             Here's a collection of my certifications, awards, events,

@@ -44,7 +44,7 @@ export default function Experiences() {
           content="My professional experience including software engineering internships, project management roles, teaching assistant positions, and leadership roles."
         />
       </Helmet>
-      <PageShell current="experience">
+      <PageShell>
         <div className="mt-5 p-2 sm:p-4 md:p-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1">
             Experience

@@ -13,7 +13,7 @@ export default function NotFound() {
         />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <PageShell current="notfound">
+      <PageShell>
         <div className="flex flex-col items-center justify-center min-h-[60vh] text-center px-2 sm:px-8">
           {/* 404 Error Code */}
           <div className="mb-8">

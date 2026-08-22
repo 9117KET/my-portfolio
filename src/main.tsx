@@ -9,6 +9,7 @@ import {
 import App from "./App.tsx";
 import { HelmetProvider } from "react-helmet-async";
 import ErrorBoundary from "./components/ErrorBoundary";
+import LoadingFallback from "./components/LoadingFallback";
 
 // Lazy load pages for code splitting
 const About = lazy(() => import("./pages/About"));
@@ -18,15 +19,6 @@ const Projects = lazy(() => import("./pages/Projects"));
 const Experience = lazy(() => import("./pages/Experience"));
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-
-// Loading component for suspense fallback
-const LoadingFallback = () => {
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-white dark:bg-[#2D2E32] transition-colors duration-200 fixed inset-0 z-50">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-    </div>
-  );
-};
 
 // Create a router instance using the createBrowserRouter function
 const router = createBrowserRouter(

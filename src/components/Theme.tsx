@@ -1,6 +1,6 @@
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "../contexts/theme-context";
 
 // Theme component to handle light and dark mode switching
 export default function Theme() {
