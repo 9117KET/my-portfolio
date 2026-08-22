@@ -113,7 +113,7 @@ export default function BlogPost({
   };
 
   return (
-    <article className="max-w-3xl mx-auto">
+    <article>
       <header className="mb-10">
         <div className="flex items-start justify-between gap-6">
           <div className="min-w-0">

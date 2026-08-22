@@ -3,6 +3,8 @@ import Experience from "../components/Experience";
 import { experience } from "../utils/constants";
 import { Helmet } from "react-helmet-async";
 import PageShell from "../components/PageShell";
+import PageHeader from "../components/PageHeader";
+import FilterPills from "../components/FilterPills";
 
 const categories = [
   "All",
@@ -51,38 +53,17 @@ export default function Experiences() {
       </Helmet>
       <PageShell>
         <div className="mt-5 p-2 sm:p-4 md:p-8">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1">
-            Experience
-          </h1>
-          <p className="text-sm sm:text-base text-on-surface-variant mb-6">
+          <PageHeader title="Experience">
             A blend of challenging and rewarding roles that have shaped my
             growth as a self-driven professional.
-          </p>
+          </PageHeader>
 
-          <div className="mt-8 mb-8 flex flex-col items-center">
-            <p className="text-sm font-semibold text-on-surface-variant mb-3 text-center">
-              Filter by category
-            </p>
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`cursor-pointer text-sm font-medium rounded-lg px-5 py-2.5 transition-all duration-300 border ${
-                    selectedCategory === category
-                      ? "bg-primary text-on-primary border-primary shadow-md"
-                      : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
-                  }`}
-                  aria-label={`Filter experiences by ${category}`}
-                  aria-current={
-                    selectedCategory === category ? "true" : "false"
-                  }
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
+          <FilterPills
+            categories={categories}
+            selected={selectedCategory}
+            onSelect={setSelectedCategory}
+            noun="experiences"
+          />
 
           <div className="relative flex py-4 items-center group">
             <div className="flex-grow border-t border-outline-variant/30"></div>

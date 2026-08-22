@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { certificates, awards, events } from "../utils/constants";
 import { Event } from "../types/event";
 import PageShell from "../components/PageShell";
+import PageHeader from "../components/PageHeader";
+import FilterPills from "../components/FilterPills";
 
 const categories = ["Events", "Certificates", "Awards"];
 
@@ -179,30 +181,20 @@ export default function Misc() {
       </Helmet>
       <PageShell>
         <div className="mt-5 p-2 sm:p-4 md:p-8">
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-on-surface-variant mb-5 font-medium">
-            Here's a collection of my certifications, awards, events,
-            competitions, and more.
-          </h2>
+          <PageHeader title="Certificates & Awards">
+            A collection of my certifications, awards, events, competitions, and
+            more.
+          </PageHeader>
 
-          <div className="flex flex-wrap justify-center mt-6 gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category as Category)}
-                className={`cursor-pointer text-sm border rounded-full px-4 py-2 transition-all duration-300 ${
-                  selectedCategory === category
-                    ? "bg-primary text-on-primary border-primary"
-                    : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
-                }`}
-                aria-label={`Filter items by ${category}`}
-                aria-current={selectedCategory === category ? "true" : "false"}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          <FilterPills
+            categories={categories}
+            selected={selectedCategory}
+            onSelect={(c) => setSelectedCategory(c as Category)}
+            noun="items"
+            label="Show"
+          />
 
-          <div className="max-w-xl mx-auto mb-8 mt-6">
+          <div className="max-w-md mb-8">
             <div className="relative">
               <input
                 type="text"
@@ -228,9 +220,9 @@ export default function Misc() {
             </div>
           </div>
 
-          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-6 mb-4 text-on-surface text-center font-bold">
+          <h2 className="text-xl sm:text-2xl font-bold text-on-surface mt-8 mb-4">
             {selectedCategory}
-          </h3>
+          </h2>
 
           <ul className="space-y-6">
             {processedItems.map((item) => (

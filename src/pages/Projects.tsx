@@ -4,6 +4,8 @@ import { projects } from "../utils/constants";
 import { Helmet } from "react-helmet-async";
 import { useDebounce } from "../utils/hooks";
 import PageShell from "../components/PageShell";
+import PageHeader from "../components/PageHeader";
+import FilterPills from "../components/FilterPills";
 
 type Category = "All" | "Fullstack" | "AI/ML" | "Data Science";
 const categories: Category[] = ["All", "Fullstack", "AI/ML", "Data Science"];
@@ -86,16 +88,13 @@ export default function Projects() {
       <PageShell>
         <div className="mt-5 p-2 sm:p-4 md:p-8 text-on-surface">
           {/* Page title + terminal line */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-1">
-            Projects
-          </h1>
-          <p className="text-sm sm:text-base text-on-surface-variant mb-6">
+          <PageHeader title="Projects">
             A selection of projects that highlight my work in full-stack, AI/ML,
             and data science.
-          </p>
+          </PageHeader>
 
           {/* Search Bar */}
-          <div className="max-w-xl mx-auto mb-8">
+          <div className="max-w-md mb-8">
             <div className="relative">
               <input
                 type="text"
@@ -142,31 +141,12 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Category filter buttons */}
-          <div className="mt-8 mb-8 flex flex-col items-center">
-            <p className="text-sm font-semibold text-on-surface-variant mb-3 text-center">
-              Filter by category
-            </p>
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`cursor-pointer text-sm font-medium rounded-lg px-5 py-2.5 transition-all duration-300 border ${
-                    selectedCategory === category
-                      ? "bg-primary text-on-primary border-primary shadow-md"
-                      : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
-                  }`}
-                  aria-label={`Filter projects by ${category}`}
-                  aria-current={
-                    selectedCategory === category ? "true" : "false"
-                  }
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
+          <FilterPills
+            categories={categories}
+            selected={selectedCategory}
+            onSelect={(c) => setSelectedCategory(c as Category)}
+            noun="projects"
+          />
 
           <div className="relative flex py-4 items-center group">
             <div className="flex-grow border-t border-outline-variant/30"></div>

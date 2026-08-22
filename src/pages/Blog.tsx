@@ -4,6 +4,8 @@ import BlogCard from "../components/BlogCard";
 import { useState, useMemo, useCallback } from "react";
 import { useDebounce } from "../utils/hooks";
 import PageShell from "../components/PageShell";
+import PageHeader from "../components/PageHeader";
+import FilterPills from "../components/FilterPills";
 
 // Define categories for filtering
 const categories = ["All", "Post", "Podcast", "Article", "Project Breakdown"];
@@ -99,14 +101,9 @@ export default function Blog() {
       </Helmet>
       <PageShell>
         <div className="mt-5 p-2 sm:p-4 md:p-8">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface mb-4">
-              My Blog
-            </h1>
-            <p className="text-on-surface-variant text-lg">
-              Thoughts, insights, and experiences in tech and beyond
-            </p>
-          </div>
+          <PageHeader title="Blog">
+            Thoughts, insights, and experiences in tech and beyond.
+          </PageHeader>
 
           {/* Search and Sort Controls */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
@@ -175,23 +172,12 @@ export default function Blog() {
             </div>
           </div>
 
-          {/* Categories */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
-                  selectedCategory === category
-                    ? "bg-primary text-on-primary border-primary"
-                    : "bg-surface-container-low text-on-surface-variant border-outline-variant/30 hover:border-primary/40 hover:bg-surface-container-high"
-                }`}
-                aria-current={selectedCategory === category ? "true" : "false"}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          <FilterPills
+            categories={categories}
+            selected={selectedCategory}
+            onSelect={setSelectedCategory}
+            noun="posts"
+          />
 
           {/* Blog Posts Grid */}
           <div className="grid gap-6 md:gap-8">

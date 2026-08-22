@@ -1,11 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import styles from "../utils/style";
+import { Link, useParams } from "react-router-dom";
 import BlogPost from "./BlogPost";
-import { useParams } from "react-router-dom";
 import { posts } from "../utils/constants";
-import Theme from "../components/Theme";
 import GoBack from "../components/GoBack";
+import PageShell from "../components/PageShell";
 import type { Post } from "../types/post";
 
 // Helper to generate JSON-LD structured data for SEO.
@@ -35,88 +33,70 @@ const generateStructuredData = (post: Post, url: string) => {
   };
 };
 
-// Define the BlogPostPage component
 export default function BlogPostPage() {
-  // Retrieve the postId from the URL parameters
   const { postId } = useParams();
-  // Find the post by postId from the predefined posts array
   const post = posts.find((p) => p.id === postId);
 
-  // Render a user-friendly error message if the post is not found
   if (!post) {
     return (
-      <div className="bg-surface text-on-surface min-h-screen">
+      <PageShell>
         <Helmet>
-          <title>Post Not Found - Blog</title>
+          <title>Post Not Found | Kinlo Ephriam Tangiri</title>
           <meta
             name="description"
             content="The requested blog post could not be found."
           />
+          <meta name="robots" content="noindex, nofollow" />
         </Helmet>
-        <div className="flex justify-between relative mx-[6%] sm:mx-[8%] mt-4">
-          <GoBack />
-          <Theme />
+        <div className="max-w-3xl mx-auto py-16 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-on-surface">
+            Post not found
+          </h1>
+          <p className="text-lg text-on-surface-variant mb-8">
+            The blog post you're looking for doesn't exist or may have been
+            moved.
+          </p>
+          <Link
+            to="/blog"
+            className="inline-block px-6 py-3 bg-primary text-on-primary rounded-lg hover:bg-primary/85 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
+          >
+            Back to blog
+          </Link>
         </div>
-        <div className={`${styles.flexCenter} min-h-[60vh]`}>
-          <div className={`${styles.boxWidth} text-center p-8`}>
-            <h1 className="text-4xl font-bold mb-4 text-on-surface">
-              Post Not Found
-            </h1>
-            <p className="text-lg text-on-surface-variant mb-6">
-              The blog post you're looking for doesn't exist or may have been
-              moved.
-            </p>
-            <Link
-              to="/blog"
-              className="inline-block px-6 py-3 bg-primary text-on-primary rounded-lg hover:bg-primary/85 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40"
-            >
-              Back to Blog
-            </Link>
-          </div>
-        </div>
-      </div>
+      </PageShell>
     );
   }
 
-  // Main component render
   return (
-    <div className="bg-surface text-on-surface min-h-screen overflow-hidden">
-      {/* Set the page title using Helmet */}
+    <PageShell>
       <Helmet>
-        <title>{post.title} - Blog</title>
+        <title>{post.title} | Kinlo Ephriam Tangiri</title>
         <meta name="description" content={post.description} />
-        {/* Add Open Graph meta tags for better social sharing */}
+        <link rel="canonical" href={window.location.href} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={window.location.href} />
-        {/* JSON-LD structured data for better SEO */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.description} />
         <script type="application/ld+json">
           {JSON.stringify(generateStructuredData(post, window.location.href))}
         </script>
       </Helmet>
-      {/* Navigation bar with GoBack and Theme toggle components */}
-      <div className="flex justify-between relative mx-[6%] sm:mx-[8%] mt-4">
-        <GoBack />
-        <Theme />
-      </div>
 
-      {/* Main content area */}
-      <div className={`${styles.flexStart} w-full`}>
-        <div className={`${styles.boxWidth}`}>
-          {/* Blog post container */}
-          <div className={`${styles.boxWidth} mt-5 p-8`}>
-            {/* BlogPost component with post details */}
-            <BlogPost
-              title={post.title}
-              category={post.category}
-              content={post.content}
-              date={post.date}
-              description={post.description}
-            />
-          </div>
+      <div className="max-w-3xl mx-auto">
+        <div className="mb-8 -ml-3">
+          <GoBack />
         </div>
+        <BlogPost
+          title={post.title}
+          category={post.category}
+          content={post.content}
+          date={post.date}
+          description={post.description}
+        />
       </div>
-    </div>
+    </PageShell>
   );
 }
