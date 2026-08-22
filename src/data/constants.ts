@@ -138,20 +138,17 @@ export const contacts = [
     id: "github",
     name: "GitHub",
     link: "https://github.com/9117KET",
-    target: "_blank",
   },
   {
     id: "linkedin",
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/",
-    target: "_blank",
   },
 
-  { id: "x", name: "X", link: "https://x.com/KinloEphriam", target: "_blank" },
+  { id: "x", name: "X", link: "https://x.com/KinloEphriam" },
   {
     id: "email",
     name: "Email",
     link: "mailto:kinlotangiri1@gmail.com",
-    target: "_blank",
   },
 ];

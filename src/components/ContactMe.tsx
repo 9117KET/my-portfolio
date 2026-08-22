@@ -54,8 +54,12 @@ export default function ContactMe() {
           <li key={contact.id}>
             <a
               href={contact.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={contact.link.startsWith("http") ? "_blank" : undefined}
+              rel={
+                contact.link.startsWith("http")
+                  ? "noopener noreferrer"
+                  : undefined
+              }
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant/30 bg-surface-container-lowest hover:bg-surface-container-low transition-colors text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40"
             >
               {contactIcons[contact.id]?.("w-5 h-5 shrink-0") ?? null}

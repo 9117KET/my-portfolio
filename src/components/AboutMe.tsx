@@ -19,17 +19,12 @@ export default function AboutMe() {
       {/* Hero */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-8">
-          <h1
-            className="text-[clamp(2.0rem,4.2vw,4.25rem)] font-headline font-extrabold tracking-tighter leading-[1.05] mb-6 relative w-fit sm:whitespace-nowrap
-              before:absolute before:inset-0 before:animate-typewriter before:bg-surface
-              after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-primary
-              sm:before:w-[calc(100% + 0.125em)]"
-          >
-            Kinlo - Ephriam -Tangiri
+          <h1 className="typewriter text-[clamp(2.0rem,4.2vw,4.25rem)] font-headline font-extrabold tracking-tighter leading-[1.05] mb-6 relative w-fit sm:whitespace-nowrap">
+            Kinlo Ephriam Tangiri
           </h1>
 
           <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed max-w-2xl">
-            Hi! I'm Kinlo - A full-stack developer with an AI/ML focus, I have a BSc in
+            Hi! I'm Kinlo, a full-stack developer with an AI/ML focus. I have a BSc in
             Computer Science and a Data Science minor and specialization in AI/ML, I also have experience
             in program and project management.
           </p>

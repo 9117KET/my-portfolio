@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { certificates, awards, events } from "../utils/constants";
 import { Event } from "../types/event";
@@ -79,6 +79,7 @@ export default function Misc() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [sortConfig] = useState<{
     key: "date" | "title" | "description";
     direction: "asc" | "desc";
@@ -109,18 +110,40 @@ export default function Misc() {
       setIsModalOpen(true);
     } else if (item.link) {
       // For items with links, open in new tab
-      window.open(item.link, "_blank");
-    } else {
-      // Fallback for items without links or full data
-      alert(`More information about ${item.title}`);
+      window.open(item.link, "_blank", "noopener,noreferrer");
     }
   };
 
   // Close modal
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedEvent(null);
-  };
+  }, []);
+
+  // While the modal is open: close on Escape, lock background scrolling,
+  // and move focus into the dialog so keyboard users are not left behind
+  // on the page underneath. Focus returns to the trigger on close.
+  useEffect(() => {
+    if (!isModalOpen) return;
+
+    const trigger = document.activeElement as HTMLElement | null;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+      // Defer a frame: React unmounts the dialog after this cleanup runs,
+      // and that would blur whatever we focus synchronously here.
+      requestAnimationFrame(() => trigger?.focus?.());
+    };
+  }, [isModalOpen, closeModal]);
 
   return (
     <div className="min-h-screen">
@@ -273,6 +296,7 @@ export default function Misc() {
                   {selectedEvent.title}
                 </h2>
                 <button
+                  ref={closeButtonRef}
                   onClick={closeModal}
                   className="ml-4 text-outline hover:text-on-surface transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
                   aria-label="Close modal"
@@ -295,13 +319,7 @@ export default function Misc() {
 
               {/* Event Metadata */}
               <div className="flex flex-wrap gap-2 mb-6">
-                <span
-                  className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    selectedEvent.eventType === "Online"
-                      ? "bg-surface-container-low text-on-surface border border-outline-variant/30"
-                      : "bg-surface-container-low text-on-surface border border-outline-variant/30"
-                  }`}
-                >
+                <span className="px-3 py-1 rounded-full text-sm font-medium bg-surface-container-low text-on-surface border border-outline-variant/30">
                   {selectedEvent.eventType}
                 </span>
                 <span className="px-3 py-1 rounded-full text-sm font-medium bg-surface-container-low text-on-surface-variant border border-outline-variant/30">

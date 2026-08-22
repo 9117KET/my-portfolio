@@ -12,7 +12,6 @@ export default function Projects() {
   // State to keep track of the selected category
   const [selectedCategory, setSelectedCategory] = useState<Category>("All");
   const [searchQuery, setSearchQuery] = useState("");
-  const [isSearching, setIsSearching] = useState(false);
 
   // Debounce the search query to prevent excessive filtering
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
@@ -24,8 +23,6 @@ export default function Projects() {
 
   // Filter projects based on the selected category and search query
   const filteredProjects = useMemo(() => {
-    setIsSearching(true);
-
     const filtered = projects.filter((project) => {
       const matchesCategory =
         selectedCategory === "All" ||
@@ -53,7 +50,6 @@ export default function Projects() {
       return matchesCategory && matchesSearch;
     });
 
-    setIsSearching(false);
     return filtered.sort((a, b) => {
       const aHasDemo = !!(a.demo && !a.demo.includes("github.com"));
       const bHasDemo = !!(b.demo && !b.demo.includes("github.com"));
@@ -142,9 +138,6 @@ export default function Projects() {
                 />
               </svg>
             </div>
-            {isSearching && (
-              <div className="mt-2 text-sm text-on-surface-variant">Searching...</div>
-            )}
           </div>
 
           {/* Category filter buttons */}
@@ -201,7 +194,7 @@ export default function Projects() {
             ) : (
               <div className="col-span-full text-center py-12">
                 <p className="text-on-surface-variant">
-                  {isSearching ? "Searching..." : "No projects found matching your criteria."}
+                  No projects found matching your criteria.
                 </p>
               </div>
             )}

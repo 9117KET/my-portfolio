@@ -108,3 +108,65 @@ html.dark .bg-pattern {
     transparent 1px
   );
 }
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Hero typewriter reveal.
+   `--typewriter-steps` must match the character count of the heading text
+   so the stepping lines up with the letters (currently "Kinlo Ephriam
+   Tangiri" = 21). The mask is a solid block the width of the heading that
+   slides off to the right; the caret rides its trailing edge. */
+.typewriter {
+  --typewriter-steps: 21;
+  --typewriter-duration: 2s;
+}
+
+.typewriter::before,
+.typewriter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.typewriter::before {
+  left: 0;
+  right: 0;
+  background-color: rgb(var(--surface));
+  animation: typewriter var(--typewriter-duration)
+    steps(var(--typewriter-steps)) forwards;
+}
+
+.typewriter::after {
+  left: 0;
+  width: 0.125em;
+  background-color: rgb(var(--primary));
+  animation:
+    typewriter var(--typewriter-duration) steps(var(--typewriter-steps))
+      forwards,
+    blink 1s steps(1) infinite var(--typewriter-duration);
+}
+
+/* Respect users who ask for less motion: show the heading immediately
+   instead of hiding it behind an animated mask for two seconds. */
+@media (prefers-reduced-motion: reduce) {
+  .typewriter::before,
+  .typewriter::after {
+    display: none;
+  }
+}

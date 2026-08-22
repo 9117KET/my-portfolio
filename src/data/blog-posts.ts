@@ -185,7 +185,7 @@ export const posts: Post[] = [
   {
     id: "neo4j-genai-workshop",
     title: "Neo4j Generative AI Workshop: Graph RAG, Knowledge Graphs & Retrieval",
-    date: "March 06 2026",
+    date: "March 06, 2026",
     category: "Project Breakdown",
     description:
       "Key takeaways from the Neo4j Gen AI workshop: building knowledge graphs from text, Graph RAG benefits, vector and text-to-Cypher retrieval, with links and diagrams.",

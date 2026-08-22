@@ -21,7 +21,6 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("newest");
-  const [isSearching, setIsSearching] = useState(false);
 
   // Debounce the search query to prevent excessive filtering
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
@@ -33,8 +32,6 @@ export default function Blog() {
 
   // Filter and sort posts
   const filteredAndSortedPosts = useMemo(() => {
-    setIsSearching(true);
-
     // First filter posts
     const filtered = posts.filter((post) => {
       const matchesCategory =
@@ -71,7 +68,6 @@ export default function Blog() {
       }
     });
 
-    setIsSearching(false);
     return sorted;
   }, [selectedCategory, debouncedSearchQuery, sortBy]);
 
@@ -153,11 +149,6 @@ export default function Blog() {
                   />
                 </svg>
               </div>
-              {isSearching && (
-                <div className="mt-2 text-sm text-on-surface-variant">
-                  Searching...
-                </div>
-              )}
             </div>
 
             {/* Sort Dropdown */}
@@ -210,9 +201,7 @@ export default function Blog() {
             ) : (
               <div className="text-center py-12">
                 <p className="text-on-surface-variant">
-                  {isSearching
-                    ? "Searching..."
-                    : "No posts found matching your criteria."}
+                  No posts found matching your criteria.
                 </p>
               </div>
             )}
