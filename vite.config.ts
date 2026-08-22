@@ -10,15 +10,24 @@ export default defineConfig({
     minify: "terser",
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          icons: [
-            "@fortawesome/fontawesome-svg-core",
-            "@fortawesome/react-fontawesome",
-            "@fortawesome/free-solid-svg-icons",
-          ],
-          helmet: ["react-helmet-async"],
+        // Split by resolved module path rather than by package name. The
+        // array form silently stops matching when a dependency reorganises
+        // its entry points: after the react-router 6.30 bump it emitted an
+        // empty 0.03 kB vendor chunk and folded react into the router chunk.
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          const path = id.split("node_modules/").pop() ?? "";
+          // react-router must be tested before react, it contains "react"
+          if (path.startsWith("react-router") || path.startsWith("@remix-run"))
+            return "router";
+          if (path.startsWith("@fortawesome")) return "icons";
+          if (path.startsWith("react-helmet")) return "helmet";
+          if (
+            path.startsWith("react/") ||
+            path.startsWith("react-dom/") ||
+            path.startsWith("scheduler/")
+          )
+            return "vendor";
         },
       },
     },
