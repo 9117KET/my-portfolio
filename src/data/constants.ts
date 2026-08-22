@@ -10,10 +10,6 @@ export const navLinks = [
 export const cvLink =
   "https://drive.google.com/file/d/1CM5guMhGqAP6IXEqFfAu2TynHD5r5rgu/view?usp=sharing";
 
-// Public link to Bachelor Thesis PDF (Google Drive, arXiv, or institutional repo)
-// Leave empty to hide the Thesis button on the About page
-export const thesisLink =
-  "https://drive.google.com/file/d/1RbUxhTiJ97A8l2tMcTKArqXo3gOVbBuD/view?usp=sharing";
 
 // Descriptions of types of builds the portfolio owner can perform (resume-aligned)
 export const builds = [

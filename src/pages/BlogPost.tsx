@@ -4,7 +4,6 @@ import ShareButton from "../components/ShareButton";
 import { useLocation } from "react-router-dom";
 
 // Lazy load article components for better performance
-const Beans = lazy(() => import("../articles/Beans"));
 const AIAfrica = lazy(() => import("../articles/AIAfrica"));
 const KETAcademyPodcast = lazy(() => import("../articles/KETAcademyPodcast"));
 const MLBasics = lazy(() => import("../articles/MLBasics"));
@@ -69,8 +68,6 @@ export default function BlogPost({
   const renderContent = () => {
     const ArticleComponent = () => {
       switch (content) {
-        case "Beans":
-          return <Beans />;
         case "AIAfrica":
           return <AIAfrica />;
         case "KETAcademyPodcast":

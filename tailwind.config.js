@@ -7,23 +7,6 @@ export default {
     "./src/**/*.css",
     "./vercel.json",
   ],
-  safelist: [
-    // Safelist dynamic classes that might be purged
-    "animate-spin",
-    "animate-pulse",
-    "translate-x-0",
-    "translate-x-full",
-    "opacity-0",
-    "opacity-100",
-    "scale-110",
-    "scale-105",
-    "bg-blue-600",
-    "bg-blue-700",
-    "text-blue-500",
-    "hover:bg-blue-700",
-    "dark:bg-gray-800",
-    "dark:text-gray-300",
-  ],
   theme: {
     extend: {
       colors: {
@@ -54,33 +37,10 @@ export default {
         error: "rgb(var(--error) / <alpha-value>)",
       },
       fontFamily: {
-        // New system (preferred): body/headline/label as in mockups
         headline: ["Inter", "sans-serif"],
         body: ["Inter", "sans-serif"],
         label: ["Space Grotesk", "monospace"],
-
-        // Legacy (keep for existing components until migrated)
-        poppins: ["Poppins", "sans-serif"],
-        mono: ["monospace"],
-      },
-      animation: {
-        "fade-in": "fadeIn 0.5s ease-in",
-        "slide-up": "slideUp 0.5s ease-out",
-        "scale-in": "scaleIn 0.3s ease-in-out",
-      },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        slideUp: {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        scaleIn: {
-          "0%": { transform: "scale(0.9)", opacity: "0" },
-          "100%": { transform: "scale(1)", opacity: "1" },
-        },
+        mono: ["Space Grotesk", "ui-monospace", "monospace"],
       },
     }, // Extend Tailwind's default theme
   },
