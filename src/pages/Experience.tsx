@@ -2,6 +2,7 @@ import { useState } from "react";
 import Experience from "../components/Experience";
 import { experience } from "../utils/constants";
 import { Helmet } from "react-helmet-async";
+import { canonicalUrl } from "../utils/url";
 import PageShell from "../components/PageShell";
 import PageHeader from "../components/PageHeader";
 import FilterPills from "../components/FilterPills";
@@ -22,6 +23,7 @@ export default function Experiences() {
   return (
     <div className="min-h-screen">
       <Helmet>
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Experience | Kinlo Ephriam Tangiri</title>
         <meta
           name="description"
@@ -40,7 +42,7 @@ export default function Experiences() {
           content="My professional experience including software engineering internships, project management roles, teaching assistant positions, and leadership roles."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content={canonicalUrl()} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"

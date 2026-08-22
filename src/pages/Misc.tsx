@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { canonicalUrl } from "../utils/url";
 import { certificates, awards, events } from "../utils/constants";
 import { Event } from "../types/event";
 import PageShell from "../components/PageShell";
@@ -150,6 +151,7 @@ export default function Misc() {
   return (
     <div className="min-h-screen">
       <Helmet>
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Certificates & Awards | Kinlo Ephriam Tangiri</title>
         <meta
           name="description"
@@ -168,7 +170,7 @@ export default function Misc() {
           content="Explore my certifications, awards, and achievements including Google AI certifications, Diana Award recognition, and Global Student Prize finalist."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content={canonicalUrl()} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"

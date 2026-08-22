@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { canonicalUrl } from "../utils/url";
 import { posts } from "../utils/constants";
 import BlogCard from "../components/BlogCard";
 import { useState, useMemo, useCallback } from "react";
@@ -76,6 +77,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen">
       <Helmet>
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Blog | Kinlo Ephriam Tangiri</title>
         <meta
           name="description"
@@ -91,7 +93,7 @@ export default function Blog() {
           content="Read my latest thoughts and insights on technology, programming, AI/ML, and more."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content={canonicalUrl()} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog | Kinlo Ephriam Tangiri" />
         <meta

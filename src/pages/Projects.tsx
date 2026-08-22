@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback } from "react";
 import Project from "../components/Project";
 import { projects } from "../utils/constants";
 import { Helmet } from "react-helmet-async";
+import { canonicalUrl } from "../utils/url";
 import { useDebounce } from "../utils/hooks";
 import PageShell from "../components/PageShell";
 import PageHeader from "../components/PageHeader";
@@ -62,6 +63,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen">
       <Helmet>
+        <link rel="canonical" href={canonicalUrl()} />
         <title>Projects | Kinlo Ephriam Tangiri</title>
         <meta
           name="description"
@@ -77,7 +79,7 @@ export default function Projects() {
           content="Explore my portfolio of software development projects including AI/ML applications, full-stack web applications, and data science projects."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content={canonicalUrl()} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Projects | Kinlo Ephriam Tangiri" />
         <meta

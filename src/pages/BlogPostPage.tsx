@@ -4,6 +4,7 @@ import BlogPost from "./BlogPost";
 import { posts } from "../utils/constants";
 import GoBack from "../components/GoBack";
 import PageShell from "../components/PageShell";
+import { canonicalUrl } from "../utils/url";
 import type { Post } from "../types/post";
 
 // Helper to generate JSON-LD structured data for SEO.
@@ -72,16 +73,16 @@ export default function BlogPostPage() {
       <Helmet>
         <title>{post.title} | Kinlo Ephriam Tangiri</title>
         <meta name="description" content={post.description} />
-        <link rel="canonical" href={window.location.href} />
+        <link rel="canonical" href={canonicalUrl()} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content={canonicalUrl()} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.description} />
         <script type="application/ld+json">
-          {JSON.stringify(generateStructuredData(post, window.location.href))}
+          {JSON.stringify(generateStructuredData(post, canonicalUrl()))}
         </script>
       </Helmet>
 

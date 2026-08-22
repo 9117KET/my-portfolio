@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { canonicalUrl } from "../utils/url";
 import AboutMe from "../components/AboutMe";
 import ContactMe from "../components/ContactMe";
 import PageShell from "../components/PageShell";
@@ -7,6 +8,7 @@ export default function About() {
   return (
     <div className="min-h-screen overflow-hidden">
       <Helmet>
+        <link rel="canonical" href={canonicalUrl()} />
         <title>
           Kinlo Ephriam Tangiri | Full-Stack Developer (AI Focus) with
           Management Experience
@@ -28,7 +30,7 @@ export default function About() {
           content="Hi! I am Kinlo, a Computer Science graduate with a minor in Data Science and specialization in Artificial Intelligence and Machine Learning at Constructor University Germany. I love learning, teaching and building projects."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={window.location.href} />
+        <meta property="og:url" content={canonicalUrl()} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
