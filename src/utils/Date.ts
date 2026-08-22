@@ -1,5 +1,5 @@
 // formatDate is a small utility that converts a raw date string
-// into a human‑friendly format like "15 October 2024".
+// into a human-friendly format like "15 October 2024".
 //
 // It is intentionally defensive: blog posts might use different
 // string formats (e.g. "2024-10-15" or "October 15, 2024"), so

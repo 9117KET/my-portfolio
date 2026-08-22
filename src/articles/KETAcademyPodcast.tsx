@@ -82,7 +82,7 @@ export default function KETAcademyPodcast() {
             <div className="rounded-md border border-blue-200 dark:border-gray-700 p-4 bg-blue-50 dark:bg-gray-800">
               <p className="mb-3 text-sm md:text-base">
                 The embedded Spotify player could not be loaded (network/privacy
-                settings may be blocking third‑party iframes). You can open the
+                settings may be blocking third-party iframes). You can open the
                 episode directly on Spotify:
               </p>
               <a

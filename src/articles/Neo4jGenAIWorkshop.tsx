@@ -1,5 +1,5 @@
 /**
- * Neo4j Generative AI Workshop – breakdown for portfolio blog.
+ * Neo4j Generative AI Workshop: breakdown for portfolio blog.
  * Covers Graph RAG, knowledge graph construction, and retrieval (vector, vector+Cypher, text-to-Cypher).
  * Key parts only; industry-focused. Links and simple diagrams included.
  */
@@ -32,7 +32,7 @@ export default function Neo4jGenAIWorkshop() {
               >
                 Workshop notes (dev.neo4j.com/workshop-genai-notes)
               </a>{" "}
-              – All links, setup, and API keys for the workshop.
+              has all links, setup, and API keys for the workshop.
             </li>
             <li>
               <a
@@ -43,7 +43,7 @@ export default function Neo4jGenAIWorkshop() {
               >
                 Graph Academy (graphacademy.neo4j.com)
               </a>{" "}
-              – Sign up and enroll in the Generative AI Workshop course.
+              is where you sign up and enroll in the Generative AI Workshop course.
             </li>
             <li>
               <a
@@ -65,7 +65,7 @@ export default function Neo4jGenAIWorkshop() {
               >
                 Neo4j Graph RAG for Python
               </a>{" "}
-              – Package used in the hands-on (KG construction, retrievers).
+              is the package used in the hands-on (KG construction, retrievers).
             </li>
             <li>
               Microsoft research: search &quot;Microsoft Research Paper Graph

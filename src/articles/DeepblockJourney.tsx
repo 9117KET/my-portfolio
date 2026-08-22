@@ -36,23 +36,23 @@ export default function DeepblockJourney() {
         </p>
         <ol className="list-decimal pl-6 space-y-2">
           <li>
-            <strong>5 a.m. – 9 a.m.: Personal Deep Work</strong> Focused on
+            <strong>5 a.m. to 9 a.m.: Personal Deep Work</strong> Focused on
             personal development: working out, learning, reading, or building
             side projects. This is the block where you invest in yourself before
             the world starts asking for your attention.
           </li>
           <li>
-            <strong>9 a.m. – 5 p.m.: Work / Main Responsibilities</strong>{" "}
+            <strong>9 a.m. to 5 p.m.: Work / Main Responsibilities</strong>{" "}
             Dedicated to your primary commitments: job, startup, or academic
             work. This is where you execute on your core responsibilities.
           </li>
           <li>
-            <strong>5 p.m. – 9 p.m.: Life and Relationships</strong> Time for
+            <strong>5 p.m. to 9 p.m.: Life and Relationships</strong> Time for
             family, friends, hobbies, and sports. This block protects the part
             of life that doesn&apos;t show up on a resume but matters the most.
           </li>
           <li>
-            <strong>9 p.m. – 5 a.m.: Sleep and Recovery</strong> A protected
+            <strong>9 p.m. to 5 a.m.: Sleep and Recovery</strong> A protected
             block for rest. Instead of treating sleep as leftover time, this
             model treats it as a first-class citizen in your schedule.
           </li>
@@ -142,10 +142,10 @@ export default function DeepblockJourney() {
           <li>Night routine</li>
         </ul>
         <p>
-          These sections map naturally onto the four-block model. The 5–9 a.m.
-          block holds routines and deep personal work. The 9–5 block is where
-          most high-priority execution lives. The 5–9 p.m. block is reserved for
-          life, relationships, and hobbies. The 9 p.m.–5 a.m. block is protected
+          These sections map naturally onto the four-block model. The 5-9 a.m.
+          block holds routines and deep personal work. The 9-5 block is where
+          most high-priority execution lives. The 5-9 p.m. block is reserved for
+          life, relationships, and hobbies. The 9 p.m. to 5 a.m. block is protected
           for sleep. Deepblock reminds you who you&apos;re trying to be in each part of the day.
         </p>
       </section>
@@ -158,7 +158,7 @@ export default function DeepblockJourney() {
         <p className="mb-4">
           One of the biggest lies in productivity is that planning more always
           leads to doing more. In reality, a lot of us burn our best energy
-          planning instead of executing. I&apos;ve been there and spending 30–40
+          planning instead of executing. I&apos;ve been there and spending 30-40
           minutes making the perfect plan, then having nothing left for the
           actual work.
         </p>

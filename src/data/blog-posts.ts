@@ -178,7 +178,7 @@ export const posts: Post[] = [
     date: "March 04, 2026",
     category: "Project Breakdown",
     description:
-      "How I turned three years of struggling with productivity tools, a four-block day model, and my own deep-work habits into Deepblock – an open-source daily planner for focused work.",
+      "How I turned three years of struggling with productivity tools, a four-block day model, and my own deep-work habits into Deepblock, an open-source daily planner for focused work.",
     content: "DeepblockJourney",
     type: "Blog",
   },

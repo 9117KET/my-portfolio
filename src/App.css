@@ -91,7 +91,7 @@ body.dark {
   background-color: rgb(var(--surface));
 }
 
-/* Subtle "asterisks" / dot pattern for main content – theme-aware */
+/* Subtle "asterisks" / dot pattern for main content, theme-aware */
 .bg-pattern {
   background-image: radial-gradient(
     circle at center,
