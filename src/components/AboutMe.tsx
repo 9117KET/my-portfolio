@@ -16,13 +16,13 @@ export default function AboutMe() {
 
           <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed max-w-2xl">
             Hi! I'm Kinlo, a full-stack developer with a focus on AI
-            applications. I have a Bachelor's in Computer Science with a minor
-            in Data Science, and I specialized in Artificial Intelligence and
-            Machine Learning. My thesis was on reducing hallucination in LLM
-            applications across a range of industries. I also have experience in
-            program and project management, from leading the team that built an
-            e-learning platform from scratch to working as an assistant project
-            manager on an EU-sponsored program for two years.
+            integrations into applications. I have a Bachelor's degree in
+            Computer Science with a minor in Data Science, and I specialized in
+            Artificial Intelligence and Machine Learning. My thesis was on
+            reducing hallucination in Large Language Model applications. I also
+            have experience in program and project management, through building
+            an e-learning platform from scratch and also from working as an
+            assistant project manager on an EU-sponsored program for two years.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-6 items-center">
