@@ -15,7 +15,7 @@ export default function About() {
         </title>
         <meta
           name="description"
-          content="Kinlo Ephriam Tangiri, Bremen. Full-stack developer focused on AI applications. BSc Computer Science, AI/ML specialization, thesis on LLM hallucination."
+          content="Kinlo Ephriam Tangiri, Erlangen. Full-stack developer focused on AI applications. BSc Computer Science, AI/ML specialization, thesis on LLM hallucination."
         />
         <meta
           name="keywords"

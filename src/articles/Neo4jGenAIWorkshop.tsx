@@ -57,7 +57,7 @@ export default function Neo4jGenAIWorkshop() {
             </li>
             <li>
               <a
-                href="https://github.com/neo4j/graphrag-python"
+                href="https://github.com/neo4j/neo4j-graphrag-python"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary underline"
@@ -274,7 +274,7 @@ export default function Neo4jGenAIWorkshop() {
           </li>
           <li>
             <a
-              href="https://github.com/neo4j/graphrag-python"
+              href="https://github.com/neo4j/neo4j-graphrag-python"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary underline"
