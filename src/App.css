@@ -21,12 +21,16 @@
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
 }
 
 :root {
   /* Light theme tokens (RGB triplets).
-     The neutral ramp is genuinely neutral: teal appears only as an accent,
+     The neutral ramp is genuinely neutral: blue appears only as an accent,
      never mixed into the surfaces. Every fg/bg pair here clears WCAG AA. */
   --surface: 255 255 255;
   --background: 252 252 253;
@@ -43,15 +47,15 @@
   --surface-container-highest: 226 226 232;
   --surface-variant: 241 241 244;
 
-  --primary: 15 118 110;
-  --primary-container: 204 251 241;
+  --primary: 29 78 216;
+  --primary-container: 219 234 254;
   --on-primary: 255 255 255;
   --error: 180 35 24;
 }
 
 html.dark {
   /* Dark theme tokens. A neutral charcoal rather than a blue navy, so the
-     single teal accent is the only hue on the page. */
+     single blue accent is the only hue on the page. Blue marks what is clickable. */
   --surface: 20 20 23;
   --background: 20 20 23;
   --on-surface: 237 237 240;
@@ -67,9 +71,9 @@ html.dark {
   --surface-container-highest: 51 51 58;
   --surface-variant: 32 32 37;
 
-  --primary: 45 212 191;
-  --primary-container: 17 94 89;
-  --on-primary: 4 47 46;
+  --primary: 96 165 250;
+  --primary-container: 30 58 138;
+  --on-primary: 23 37 84;
   --error: 248 113 113;
 }
 
@@ -82,6 +86,15 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   transition: background-color 0.2s ease;
+}
+
+/* Everything clickable is blue (Kinlo, 15.10.2026). One selector so a new link cannot slip
+   through grey. Filled buttons keep their own on-primary text. Tailwind hover: and active-state
+   classes (two-class specificity) still win over this. */
+a:not(.bg-primary),
+button:not(.bg-primary),
+[role="button"]:not(.bg-primary) {
+  color: rgb(var(--primary));
 }
 
 /* Subtle "asterisks" / dot pattern for main content, theme-aware */

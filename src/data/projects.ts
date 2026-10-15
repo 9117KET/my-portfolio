@@ -27,14 +27,15 @@ export const projects: Project[] = [
       "JWT",
       "Vercel",
     ],
-    demo: "https://ai-avatar-ontology-integration-poc.vercel.app/",
+    // Demo hidden 15.10.2026: https://ai-avatar-ontology-integration-poc.vercel.app/ returns
+    // 500 FUNCTION_INVOCATION_FAILED. Restore once the Vercel project is redeployed.
     category: "AI/ML",
     year: 2025,
     status: "Completed",
   },
   {
     id: "infrarader-ai",
-    name: "IR-AI / InfraRadar",
+    name: "InfraRadar AI",
     description:
       "Full-stack SaaS tracking infrastructure projects across 14 regions. Built 30+ Deno Edge Functions for AI research agents, Lemon Squeezy billing, and automated data ingestion from World Bank and AfDB feeds.",
     github: "https://github.com/9117KET",
@@ -45,8 +46,14 @@ export const projects: Project[] = [
       "Automated data ingestion from World Bank and AfDB feeds",
       "LangGraph agentic workflows for structured reasoning over graph data",
     ],
-    technologies: ["React 18", "Supabase", "OpenAI", "LangGraph", "Lemon Squeezy"],
-    demo: "https://infradar-ai.vercel.app/",
+    technologies: [
+      "React 18",
+      "Supabase",
+      "OpenAI",
+      "LangGraph",
+      "Lemon Squeezy",
+    ],
+    demo: "https://infradarai.com",
     category: "AI/ML",
     year: 2026,
     status: "In progress",
@@ -93,7 +100,13 @@ export const projects: Project[] = [
       "Semantic search over internal documentation",
       "Secure, scalable Q&A for enterprise docs",
     ],
-    technologies: ["Generative AI", "RAG", "Terraform", "AWS Bedrock", "Claude 3"],
+    technologies: [
+      "Generative AI",
+      "RAG",
+      "Terraform",
+      "AWS Bedrock",
+      "Claude 3",
+    ],
     demo: "https://github.com/9117KET",
     category: "AI/ML",
   },
@@ -102,7 +115,6 @@ export const projects: Project[] = [
     name: "KET Academy",
     description:
       "KET Academy is an advanced e-learning platform designed to provide high-quality academic resources to secondary and high school students in Cameroon, with a particular focus on those affected by crises or natural disasters. The platform empowers youth ambassadors with educational technology skills while delivering tailored resources to support students' unique learning journeys. This project represents one of my core motivations for pursuing Computer Science: creating technology that expands educational access in underserved regions.",
-    github: "https://github.com/ket-academy/ketacademy",
     features: [
       "Comprehensive academic resources specifically tailored for students in crisis-affected regions",
       "Educational technology training modules to enhance student digital literacy skills",
@@ -309,7 +321,8 @@ export const projects: Project[] = [
     name: "Brain Tumor Classification",
     description:
       "A deep learning project that utilizes neural networks to classify MRI scans into three distinct types of brain diseases. The system processes brain MRI scans and generates comprehensive reports for neurosurgeons, providing quick and accurate disease classification results.",
-    github: "https://github.com/9117KET/brain-tumor-classification",
+    github:
+      "https://github.com/9117KET/Brain-tumur-classification-with-Xception-and-cnn",
     features: [
       "Neural Network Model: Custom-built neural network for accurate classification of brain MRI scans",
       "High-Speed Processing: Generates comprehensive reports in under 200ms",
@@ -326,7 +339,7 @@ export const projects: Project[] = [
       "Pandas",
       "Matplotlib",
     ],
-    demo: "https://github.com/9117KET/brain-tumor-classification",
+    demo: "https://github.com/9117KET/Brain-tumur-classification-with-Xception-and-cnn",
     category: "AI/ML",
   },
   {

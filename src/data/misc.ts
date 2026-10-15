@@ -62,36 +62,42 @@ export const certificates = [
     id: "cert-008",
     title: "AWS AI/ML Nano Degree",
     description: "Amazon Web Services nano degree in AI and Machine Learning",
-    date: "2025",
+    date: "November 2025",
     link: "https://www.udacity.com/certificate/e/ac7c6aec-8152-11f0-b847-63c4749bf0b9",
   },
 ];
 
-// Awards (resume-aligned: Additional Qualifications)
+// Awards (aligned with the CV of 15.10.2026)
 export const awards = [
+  {
+    title: "Filippas Engel Grand Prize",
+    description:
+      "Stiftung Filippas Engel, Germany. €10,000 grant, one of 7 award recipients.",
+    date: "September 2026",
+    category: "Global",
+  },
   {
     title: "Diana Award Recipient",
     description:
-      "Selected from 1700 nominees for building academic e-platforms for Africa.",
-    date: "2024",
+      "Recognised for social impact through KET Academy; selected from 1,700+ nominees.",
+    date: "December 2024",
     category: "Global",
     link: "https://diana-award.org.uk/our-programmes-and-initiatives/award-and-development/roll-of-honour/roll-of-honour-2024",
   },
   {
     title: "Top 50 Global Student Prize",
     description:
-      "Selected as a top 50 finalist from 3851 applicants across 122 countries.",
-    date: "2024",
+      "Selected as a top 50 finalist from 3,851 applicants across 122 countries.",
+    date: "September 2023",
     category: "Global",
     link: "https://globalteacherprize.org/news/global-student-prize-finalists/2023-finalists-global-student-prize/1012/1012-Kinlo-Ephriam-Tangiri",
   },
   {
     title: "Ambassador Award for Excellent Encouragement",
     description:
-      "Awarded for ranking 2nd globally as International Youth Maths Competition Ambassador for Cameroon.",
-    date: "2023",
+      "International Youth Math Challenge. Ranked 2nd globally among country ambassadors.",
+    date: "September 2023",
     category: "Mathematics",
-    link: "https://iymc.info/c/AmbassadorCertificate-AC-2024-KINTANGIRI-d1dc194a93b9e53fd15d2a3c47748505.pdf",
   },
 ];
 
@@ -118,7 +124,7 @@ export const events = [
     title: "Headstarter - Software Engineering Fellow",
     description:
       "Built and deployed 4 AI projects in 5 weeks using React JS, Firebase, and more.",
-    date: "2023",
+    date: "July 2024 - November 2024",
     category: "Engineering",
   },
   {

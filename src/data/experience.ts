@@ -1,99 +1,65 @@
-// Experience details for the portfolio (aligned with resume)
+// Experience details for the portfolio (aligned with the CV of 15.10.2026)
 export const experience = [
   {
+    id: "exp8",
+    role: "Research Associate (Program Manager), Palaver Ventures",
+    company: "Palaver Institute",
+    location: "Kigali, Rwanda",
+    duration: "February 2026 - Present",
+    category: "Management & Others",
+    responsibilities: [
+      "Researched how leading universities, including TUM, ETH Zurich, Harvard, Oxford, and Princeton, transform academic research into commercial products, startups, and services.",
+      "Analysed research commercialisation strategies, intellectual property (IP), regulatory frameworks, and university spin-off models to identify best practices for Palaver Ventures.",
+      "Coordinated research activities, evaluated institutional models, and presented findings and strategic recommendations through weekly progress reports.",
+    ],
+    companyDescription:
+      "Palaver Institute is a pan-African research institution headquartered in Kigali, Rwanda, with hubs in Cameroon, Ghana, South Africa, and Morocco. It builds intellectual infrastructure so African researchers can produce world-class work. Palaver Ventures is its for-profit arm, turning research into real-world solutions across hardware, energy, AI, health, education, and social platforms.",
+  },
+  {
     id: "exp6",
-    role: "Full-Stack Engineering Intern",
-    company: "africon GmbH (ABiQ)",
-    location: "Remote, Dubai",
+    role: "Full-Stack Engineer",
+    company: "ABiQ Solutions FZCO",
+    location: "Dubai, UAE",
     duration: "July 2025 - September 2025",
     category: "Software Development",
     responsibilities: [
-      "Designed AI backend integration concepts for the platform's content-generation workflows.",
-      "Documented internal systems and operational data to streamline onboarding and internal operations.",
-      "Wrote and tested the prompts behind the platform's LLM features, evaluating the same prompt structure across ChatGPT and Gemini.",
+      "Evaluated the existing Salesforce CMS and documented its migration to a modern, AI-ready technology stack, including system architecture and migration requirements.",
+      "Designed data flows and API integration plans to incorporate LLM-generated insights into the business intelligence platform.",
+      "Developed and tested AI prompt templates using OpenAI, Claude and Gemini, documenting workflows for the research team.",
+      "Presented technical findings, system architecture, and migration recommendations in weekly sessions with the dev team and new CEO of the company.",
     ],
     companyDescription:
-      "ABiQ is africon GmbH's business intelligence platform, tracking large-scale infrastructure, energy, transport, and industrial projects across Africa and the Middle East.",
+      "ABiQ is a business intelligence platform tracking large-scale infrastructure, energy, transport, and industrial projects across Africa and the Middle East.",
   },
   {
     id: "exp1",
     role: "Software Engineering Intern",
     company: "WaziUp e.V.",
     location: "Dresden, Germany",
-    duration: "June 2024 - September 2024",
+    duration: "June 2024 - August 2024",
     category: "Software Development",
     responsibilities: [
-      "Built recommendation framework for IoT courses.",
-      "Researched recommendation approaches for personalized learning paths.",
-      "Prototyped system using JavaScript, HTML, and CSS.",
-      "Collaborated with the RnD hybrid workgroup on IoT solutions for African entrepreneurs.",
+      "Developed an interactive self-assessment tool using JavaScript to evaluate learners' knowledge and support personalised course recommendations.",
+      "Built a content-based recommendation prototype in Python to suggest relevant courses to new learners without prior activity or learning history.",
+      "Documented system design, implementation, and improvement opportunities, presenting the prototype and technical findings to the R&D team.",
     ],
     companyDescription:
       "WaziUp e.V. is an IoT-focused organization promoting cutting-edge technologies and capacity building in emerging countries. They develop affordable, adaptable, and end-to-end IoT solutions, focusing on empowering 'glocal' (global and local) IoT entrepreneurs.",
   },
   {
-    id: "exp4",
-    role: "Lead Developer",
-    company: "KET Academy",
-    location: "Yaoundé, Cameroon",
-    duration: "March 2022 - June 2024",
-    category: "Software Development",
-    responsibilities: [
-      "Led a team of 25+ to build an e-learning platform with resources in video and PDF formats.",
-      "Developed full-stack React-based platform serving 700+ students with Firebase.",
-      "Implemented dashboards with React Hooks and Firebase; responsive UI with Tailwind CSS.",
-      "Reached over 15,000+ students indirectly via various social media channels.",
-    ],
-    companyDescription:
-      "KET Academy is an e-learning platform that provides academic resources to secondary and high school students, with a focus on empowering youths in crisis-affected regions of Africa.",
-  },
-  {
-    id: "exp5",
-    role: "Teaching Assistant, Calculus and Linear Algebra",
-    company: "Constructor University",
-    location: "Bremen, Germany",
-    duration: "October 2023 - April 2024",
-    category: "Education",
-    responsibilities: [
-      "Organized hybrid tutorial sessions to assist first-year students in understanding concepts at a deeper level.",
-      "Evaluated assignments and examination sheets, ensuring accurate grading and feedback.",
-      "Created exam preparation roadmaps to help students effectively review course materials.",
-      "Prepared responses to students' questions and provided detailed feedback on their work.",
-    ],
-    companyDescription:
-      "Constructor University is a leading private university in Germany, offering a variety of academic programs with a focus on research and global education.",
-  },
-  {
     id: "exp7",
-    role: "Student Assistant Project Manager",
-    company: "YouthTeamUp (UTMOP)",
-    location: "Remote",
-    duration: "February 2024 - December 2025",
+    role: "Assistant Project Manager",
+    company: "YouthTeamUp, Constructor University",
+    location: "Bremen, Germany",
+    duration: "February 2024 - August 2025",
     category: "Management & Others",
     responsibilities: [
-      "Work closely with the Project Manager (Dr. Omid) to organize upcoming programs and bring implementation phases to life.",
-      "Support both Shallow and Deep Virtual Exchange programs connecting African and European youth for global impact projects (SDGs).",
-      "Assign tasks, support various roles, including social media management and follow up on task progress; track Key Performance Indicators (KPIs).",
-      "Collaborate with three PhD students in meetings to plan and deliver YouthTeamUp activities.",
-      "Update the YouthTeamUp website with the latest information and maintain follow-up with partners from universities and companies across Africa and Europe.",
+      "Supported the delivery of a €200,000 EU-funded programme, coordinating activities across 8 partner institutions in Africa and Europe.",
+      "Organised an international exchange event for 200+ participants, managing event planning, logistics, and stakeholder communication.",
+      "Monitored project KPIs, prepared progress reports for EU funders, and maintained the project website.",
     ],
     companyDescription:
       "YouthTeamUp is an EU-sponsored program that unites African and European youths to connect and collaborate on Global Impact Projects, focusing on the Sustainable Development Goals. It runs Shallow and Deep Virtual Exchanges and supports hands-on work in IoT, AI, and Big Data. Partners include Constructor University, BongoHive, Fondazione Edulife, and universities across Africa and Europe.",
-  },
-  {
-    id: "exp8",
-    role: "Research Associate",
-    company: "Palaver Ventures",
-    location: "Remote (Kigali, Rwanda HQ)",
-    duration: "February 2026 - Present",
-    category: "Management & Others",
-    responsibilities: [
-      "Researching how institutions turn research into startups, covering regulation, IP commercialisation, and comparable models.",
-      "Presenting findings in weekly updates to the team.",
-      "Support the translation of pan-African research into tangible solutions for African and global challenges.",
-    ],
-    companyDescription:
-      "Palaver Institute is a pan-African research institution headquartered in Kigali, Rwanda, with hubs in Cameroon, Ghana, South Africa, and Morocco. It builds intellectual infrastructure so African researchers can produce world-class work. Palaver Ventures is its for-profit arm, turning research into real-world solutions across hardware, energy, AI, health, education, and social platforms.",
   },
   {
     id: "exp9",
@@ -109,5 +75,34 @@ export const experience = [
     ],
     companyDescription:
       "Constructor Start is the entrepreneurship center at Constructor University Bremen, supporting student founders through incubation, mentorship, and access to funding.",
+  },
+  {
+    id: "exp5",
+    role: "Teaching Assistant, Calculus and Linear Algebra",
+    company: "Constructor University",
+    location: "Bremen, Germany",
+    duration: "October 2023 - April 2024",
+    category: "Education",
+    responsibilities: [
+      "Led exam preparation and problem-solving sessions, helping students understand complex mathematical concepts through practical examples.",
+      "Graded assignments, provided feedback, and created short educational videos addressing frequently asked questions and common learning difficulties.",
+    ],
+    companyDescription:
+      "Constructor University is a leading private university in Germany, offering a variety of academic programs with a focus on research and global education.",
+  },
+  {
+    id: "exp4",
+    role: "Founder and Lead Developer",
+    company: "KET Academy",
+    location: "Yaoundé, Cameroon",
+    duration: "March 2022 - September 2024",
+    category: "Software Development",
+    responsibilities: [
+      "Founded and developed an e-learning platform using React and Firebase, serving 700+ students preparing for national examinations.",
+      "Led a team of 25+ volunteers, built an automated recruitment system, and designed a 4-week training programme and student outreach campaigns.",
+      "Secured over €12,000 in grants and funding, developing a sustainable model to support the platform's operations and growth.",
+    ],
+    companyDescription:
+      "KET Academy is an e-learning platform that provides academic resources to secondary and high school students, with a focus on empowering youths in crisis-affected regions of Africa.",
   },
 ];

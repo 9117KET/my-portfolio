@@ -240,13 +240,15 @@ export default function Misc() {
                     <p className="text-sm sm:text-base md:text-lg text-on-surface-variant">
                       {item.date}
                     </p>
-                    <button
-                      className="text-primary hover:text-on-surface transition-all duration-300 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
-                      onClick={() => handleLearnMore(item)}
-                      aria-label={`Learn more about ${item.title}`}
-                    >
-                      Learn More →
-                    </button>
+                    {(item.fullEventData || item.link) && (
+                      <button
+                        className="text-primary hover:text-on-surface transition-all duration-300 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 rounded"
+                        onClick={() => handleLearnMore(item)}
+                        aria-label={`Learn more about ${item.title}`}
+                      >
+                        Learn More →
+                      </button>
+                    )}
                   </div>
                 </div>
               </li>

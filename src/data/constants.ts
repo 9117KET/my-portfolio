@@ -10,13 +10,12 @@ export const navLinks = [
 export const cvLink =
   "https://drive.google.com/file/d/1CM5guMhGqAP6IXEqFfAu2TynHD5r5rgu/view?usp=sharing";
 
-
 // Descriptions of types of builds the portfolio owner can perform (resume-aligned)
 export const builds = [
-  "IR-AI / InfraRaderAI (Business Intelligence, LangChain, LangGraph, Neo4j)",
+  "InfraRadar AI (Business Intelligence, React, Supabase, OpenAI)",
   "AWS Bedrock Knowledge Base (Generative AI, RAG)",
   "Rate My Professor (Full-Stack, RAG)",
-  "IoT Course Recommendation Framework",
+  "Self-assessment tool and course recommendation prototype (WaziUp)",
   "BMW Hackathon (Causal Machine Learning)",
   "KET Academy (e-learning platform for secondary and high school students)",
   "AI Chatbot, AI Flashcards, Expense Tracker, AI Customer Support",

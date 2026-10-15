@@ -813,19 +813,7 @@ onto = get_ontology(ontology_uri).load()`}</pre>
             <strong>Supervisor:</strong> Prof. Dr. Omid Fatahi Valilai
           </li>
           <li>
-            <strong>Status:</strong> Thesis submitted; live demo deployed on
-            Vercel
-          </li>
-          <li>
-            <strong>Live demo:</strong>{" "}
-            <a
-              href="https://ai-avatar-ontology-integration-poc.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline"
-            >
-              ai-avatar-ontology-integration-poc.vercel.app
-            </a>
+            <strong>Status:</strong> Thesis submitted
           </li>
           <li>
             <strong>Source code:</strong>{" "}

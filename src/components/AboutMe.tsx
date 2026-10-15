@@ -22,7 +22,8 @@ export default function AboutMe() {
             reducing hallucination in Large Language Model applications. I also
             have experience in program and project management, through building
             an e-learning platform from scratch and also from working as an
-            assistant project manager on an EU-sponsored program for two years.
+            assistant project manager on an EU-funded programme from February
+            2024 to August 2025.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-6 items-center">
@@ -49,7 +50,7 @@ export default function AboutMe() {
           </div>
 
           <p className="text-sm text-on-surface-variant mt-8">
-            Based in Bremen, Germany. Open to new roles. Sharing updates on{" "}
+            Based in Erlangen, Germany. Open to new roles. Sharing updates on{" "}
             <a
               href="https://www.linkedin.com/in/kinlo-ephriam-tangiri-a70113218/"
               target="_blank"
